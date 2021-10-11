@@ -18,6 +18,12 @@
                     unset($array[0]);
                     require_once "./app/controllers/admin/{$this->controller}.php";
                 }
+                else {
+                    require_once "./app/controllers/{$this->controller}.php";
+                }
+            }
+            else {
+                require_once "./app/controllers/{$this->controller}.php";
             }
 
             $this->controller = new $this->controller();

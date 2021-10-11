@@ -28,7 +28,7 @@
                 "TenTheLoai" => "GT"
             );
             $kq = $this->my_model->select_row($this->table_name, "ID_TheLoai, TenTheLoai", $where);
-            var_dump($kq);
+            print_r($kq);
         }
     }
 ?>
