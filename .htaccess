@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-F
+# not rewrite css, js and images
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png|otf|eot|ttf|woff|woff2|ico)$ [NC]
+
+RewriteRule ^(.+)$ index.php?url=$1 [L]
+
+# rewrite css, js and images, from root
+RewriteRule ^(.+)$/[^/]+/[^/]+/(.+)$ $1  [L]
