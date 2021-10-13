@@ -30,5 +30,9 @@
             $kq = $this->my_model->select_row($this->table_name, "ID_TheLoai, TenTheLoai", $where);
             print_r($kq);
         }
+
+        public function abc() {
+            echo 123;
+        }
     }
 ?>

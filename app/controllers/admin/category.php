@@ -9,7 +9,7 @@
         }
 
         public function index() {
-            $kq = $this->category_model->select_array();
+            $kq = $this->category_model->select_row();
             $data = [
                 "page" => "admin/index",
                 "array" => $kq

@@ -9,12 +9,12 @@
         }
 
         public function index() {
-//            $kq = $this->post_model->select_array();
-//            $data = [
-//                "page" => "admin/index",
-//                "array" => $kq
-//            ];
-//            $this->view("adminlayout", $data);
+            $kq = $this->post_model->select_row();
+            $data = [
+                "page" => "admin/index",
+                "array" => $kq
+            ];
+            $this->view("adminlayout", $data);
         }
 
         public function getallpost() {
