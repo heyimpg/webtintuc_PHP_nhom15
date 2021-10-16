@@ -92,7 +92,6 @@
                     ));
                 }
             }
-
         }
 
         public function delete($where = null) {
@@ -147,6 +146,10 @@
             $query = $this->conn->prepare($sql);
             $query->execute($values_where);
             return $query->fetch(PDO::FETCH_ASSOC);
+        }
+
+        public function closeConnection() {
+            $this->conn = NULL;
         }
     }
 

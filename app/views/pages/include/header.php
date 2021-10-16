@@ -25,7 +25,7 @@
                     <div class="top-header-content d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="./assets/img/core-img/logo.png" alt=""></a>
+                            <a href="home"><img src="./assets/img/core-img/logo.png" alt=""></a>
                         </div>
 
                         <!-- Login Search Area -->
@@ -58,7 +58,7 @@
 
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.html"><img src="./assets/img/core-img/logo.png" alt=""></a>
+                        <a href="home><img src="./assets/img/core-img/logo.png" alt=""></a>
                     </div>
 
                     <!-- Navbar Toggler -->
@@ -77,17 +77,17 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active"><a href="home">Home</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="home">Home</a></li>
                                         <li><a href="catagories-post.html">Catagories</a></li>
                                         <li><a href="single-post.html">Single Articles</a></li>
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                         <li><a href="#">Dropdown</a>
                                             <ul class="dropdown">
-                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="home">Home</a></li>
                                                 <li><a href="catagories-post.html">Catagories</a></li>
                                                 <li><a href="single-post.html">Single Articles</a></li>
                                                 <li><a href="about.html">About Us</a></li>
@@ -100,7 +100,7 @@
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Catagories</li>
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="home">Home</a></li>
                                             <li><a href="catagories-post.html">Catagories</a></li>
                                             <li><a href="single-post.html">Single Articles</a></li>
                                             <li><a href="about.html">About Us</a></li>
@@ -108,7 +108,7 @@
                                         </ul>
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Catagories</li>
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="home">Home</a></li>
                                             <li><a href="catagories-post.html">Catagories</a></li>
                                             <li><a href="single-post.html">Single Articles</a></li>
                                             <li><a href="about.html">About Us</a></li>
@@ -116,7 +116,7 @@
                                         </ul>
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Catagories</li>
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="home">Home</a></li>
                                             <li><a href="catagories-post.html">Catagories</a></li>
                                             <li><a href="single-post.html">Single Articles</a></li>
                                             <li><a href="about.html">About Us</a></li>
@@ -157,14 +157,16 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#">Politics</a></li>
-                                <li><a href="#">Breaking News</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Technology</a></li>
-                                <li><a href="#">Health</a></li>
-                                <li><a href="#">Travel</a></li>
-                                <li><a href="#">Sports</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <?php
+                                    if(isset($data)) {
+                                        foreach ($data['categories'] as $category) {
+
+                                ?>
+                                <li><a href="#"><?php echo $category['TenCTTheLoai']; ?></a></li>
+                                <?php
+                                        }
+                                    }
+                                ?>
                             </ul>
                         </div>
                         <!-- Nav End -->

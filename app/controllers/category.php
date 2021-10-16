@@ -11,8 +11,12 @@
             $kq = $this->category_model->select_array();
             $data = [
                 "page" => "{$this->template}/index",
-                "array" => $kq
+                "categories" => $kq
             ];
             $this->view("layout", $data);
         }
+
+        public function add() {}
+
+        public function demo() {}
     }

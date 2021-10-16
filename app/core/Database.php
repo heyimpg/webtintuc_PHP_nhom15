@@ -6,7 +6,7 @@
         private $username = "root";
         private $password = "";
         private $database_name = "webtintuc";
-        public $conn;
+        protected $conn;
 
         public function __construct() {
             try {
@@ -16,10 +16,6 @@
             } catch(PDOException $ex) {
                 echo "Connection failed: " . $ex->getMessage();
             }
-        }
-
-        public function closeConnection() {
-            $this->conn = NULL;
         }
 
     }

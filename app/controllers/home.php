@@ -1,38 +1,27 @@
 <?php
     class home extends Controller {
-        private Model $my_model;
-        private String $table_name = "theloai";
+        private CategoryModel $categoryModel;
+        private PostModel $postModel;
 
         public function __construct() {
-//            $this->my_model = $this->model("Model");
+            $this->categoryModel = $this->model("CategoryModel");
+            $this->postModel = $this->model("PostModel");
         }
 
         public function index() {
-//            $kq = $this->my_model->get_all_data("$this->table_name", "*", $where);
+            $categories = $this->categoryModel->select_array();
+            $post = $this->postModel->select_array();
+            $this->postModel->closeConnection();
             $data = [
                 "page" => "home/index",
-//                "array" => $kq
+                "categories" => $categories,
+                "posts" => $post
             ];
-//            $where = array(
-//                "ID_TheLoai" => 22
-//            );
             $this->view("layout", $data);
         }
 
         public function add() {
-            $array = array(
-                "TenTheLoai" => "TT"
-            );
-            $where = array(
-                "ID_TheLoai" => 22,
-                "TenTheLoai" => "GT"
-            );
-            $kq = $this->my_model->select_row($this->table_name, "ID_TheLoai, TenTheLoai", $where);
-            print_r($kq);
-        }
 
-        public function abc() {
-            echo 123;
         }
     }
 ?>
