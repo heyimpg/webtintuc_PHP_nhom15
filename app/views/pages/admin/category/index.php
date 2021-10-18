@@ -6,24 +6,41 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="x_content">
-        <form class="" action="" method="post" novalidate>
-            </p>
-            <span class="section">Personal Info</span>
-            <div class="field item form-group">
-                <label class="col-form-label col-md-3 col-sm-3  label-align">Name<span class="required">*</span></label>
-                <div class="col-md-6 col-sm-6">
-                    <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="ex. John f. Kennedy" required="required" />
-                </div>
-            </div>
-        </form>
-        <div>
-            <?php
-                if(isset($data)) {
-                    var_dump($data["array"]);
-                }
-            ?>
-        </div>
+    <div class="table-responsive">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th><input type="checkbox" id="check-all" class="flat"></th>
+                    <th class="column-title">Tên danh mục </th>
+                    <th class="column-title">Publish</th>
+                    <th class="column-title">Ngày Tạo </th>
+                    <th class="column-title">Ngày Cập Nhật</th>
+                    <th class="column-title no-link last"><span class="nobr">Action</span></th>
+                    <th class="bulk-actions" colspan="7">
+                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    if (isset($data)) {
+                        foreach ($data["categories"] as $category) {
+                ?>
+                    <tr class="even pointer">
+                        <td class="a-center align-middle"><input type="checkbox" class="flat" name="table_records"></td>
+                        <td class="align-middle"><?= $category["TenCTTheLoai"] ?></td>
+                        <td class="align-middle"><?= $category["Publish"] ?></td>
+                        <td class="align-middle"><?= $category["NgayTao"] ?></td>
+                        <td class="align-middle"><?= $category["NgayCapNhat"] ?></td>
+                        <td class=" last">
+                            <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
+                            <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
