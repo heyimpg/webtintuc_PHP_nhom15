@@ -138,24 +138,28 @@
 
         public function getData($data = "*", $where = null) {
             $sql = "select $data from $this->table ";
-            $values_where = array();
+            // $values = array();
             if ($where != null) {
-                $where_array = array_keys($where);
-                $values_where = array_values($where);
-                $isFields_where = true;
+                $fields = array_keys($where);
+                $values = array_values($where);
+                $isFields = true;
                 $stringWhere = "where";
-                for ($i = 0; $i < count($where_array); $i++) {
-                    if (!$isFields_where) {
+                for ($i = 0; $i < count($fields); $i++) {
+                    if (!$isFields) {
                         $sql .= " and ";
                         $stringWhere = "";
                     }
-                    $isFields_where = false;
-                    $sql .= " $stringWhere $where_array[$i] = ?";
+                    $isFields = false;
+                    $sql .= " $stringWhere $fields[$i] = ?";
                 }
+                $query = $this->conn->prepare($sql);
+                $query->execute($values);
+            }else {
+                $query = $this->conn->prepare($sql);
+                $query->execute();
             }
-            $query = $this->conn->prepare($sql);
-            $query->execute($values_where);
-            return $query->fetch(PDO::FETCH_ASSOC);
+            // $query->execute($values);
+            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }
 
         public function closeConnection() {

@@ -1,22 +1,27 @@
 <?php
     class category extends Controller {
-        private CategoryModel $category_model;
-        private String $template = "category";
+        private CategoryModel $categoryModel;
+        private PostModel $postModel;
 
         public function __construct() {
-            $this->category_model = $this->model("CategoryModel");
+            $this->categoryModel = $this->model("CategoryModel");
+            $this->postModel = $this->model("PostModel");
         }
 
-        public function index() {
-            $kq = $this->category_model->getAllData();
+        public function index($ID_BaiViet) {
+            $categories = $this->categoryModel->getAllData();
+            $detail_post = $this->postModel->getData("*",["ID_BaiViet"=>$ID_BaiViet]);
+            $category_post = $this->postModel->getAllData("*",["ID_CTTheLoai"=>1]);
+            $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
+            $this->postModel->closeConnection();
             $data = [
-                "page" => "{$this->template}/index",
-                "categories" => $kq
+                "page" => "home/detail",
+                "categories" => $categories,
+                "detail_post" => $detail_post,
+                "category_post" => $category_post,
+                "popular_post" => $popular_post
             ];
             $this->view("layout", $data);
         }
-
-        public function add() {}
-
-        public function demo() {}
     }
+?>

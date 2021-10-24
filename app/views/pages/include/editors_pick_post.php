@@ -16,10 +16,10 @@
                     <div class="col-12 col-lg-4">
                         <div class="single-blog-post">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+                                <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-title">
+                                <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                     <h6><?= $post["GioiThieu"] ?></h6>
                                 </a>
                                 <div class="post-meta">
@@ -44,10 +44,10 @@
                 <!-- Single Post -->
                 <div class="single-blog-post style-2">
                     <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+                        <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                     </div>
                     <div class="post-data">
-                        <a href="#" class="post-title">
+                        <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                             <h6><?= $post["GioiThieu"] ?></h6>
                         </a>
                         <div class="post-meta">

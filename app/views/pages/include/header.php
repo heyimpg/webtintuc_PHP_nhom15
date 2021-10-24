@@ -12,7 +12,7 @@
                     <div class="top-header-content d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="home">
+                            <a href="<?=BASE_URL?>">
                                 <h3>Trang báo việt</h3>
                                 <p>Tin mới mỗi ngày</p>
                             </a>

@@ -15,11 +15,11 @@
                     <div class="col-12 col-md-6">
                         <div class="single-blog-post style-3">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+                                <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                             </div>
                             <div class="post-data">
                                 <a href="#" class="post-catagory">Finance</a>
-                                <a href="#" class="post-title">
+                                <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                     <h6><?= $post["GioiThieu"] ?></h6>
                                 </a>
                                 <div class="post-meta d-flex align-items-center">
@@ -46,12 +46,12 @@
                         if(isset($data)){
                             foreach ($data["popular_post"] as $key => $post) {
                     ?>
-                    <div class="single-popular-post">
-                        <a href="#">
-                            <h6><span><?=$key+1?>.</span> <?=$post["TieuDe"]?></h6>
-                        </a>
-                        <p><?=$post["NgayDang"]?></p>
-                    </div>
+                        <div class="single-popular-post">
+                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>">
+                                <h6><span><?=$key+1?>.</span> <?=$post["TieuDe"]?></h6>
+                            </a>
+                            <p><?=$post["NgayDang"]?></p>
+                        </div>
                     <?php }}?>
 
                 </div>

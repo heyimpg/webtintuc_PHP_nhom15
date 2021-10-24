@@ -11,11 +11,11 @@
                     ?>
                         <div class="single-blog-post featured-post">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/<?=$first_post['AnhDaiDien']?>" alt=""></a>
+                                <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?=$first_post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
                                 <a href="#" class="post-catagory">Finance</a>
-                                <a href="#" class="post-title">
+                                <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>" class="post-title">
                                     <h6><?=$first_post['TieuDe']?></h6>
                                 </a>
                                 <div class="post-meta">
@@ -42,12 +42,12 @@
                         ?>
                         <div class="single-blog-post featured-post-2">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/<?=$post['AnhDaiDien']?>" alt=""></a>
+                                <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?=$post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
                                 <a href="#" class="post-catagory">Finance</a>
                                 <div class="post-meta">
-                                    <a href="#" class="post-title">
+                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                         <h6><?=$post['GioiThieu']?>...</h6>
                                     </a>
                                     <!-- Post Like & Post Comment -->
@@ -71,12 +71,12 @@
                 ?>
                 <div class="single-blog-post small-featured-post d-flex">
                     <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+                        <a href="<?php echo DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                     </div>
                     <div class="post-data">
                         <a href="#" class="post-catagory">Finance</a>
                         <div class="post-meta">
-                            <a href="#" class="post-title">
+                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                 <h6><?=$post['TieuDe']?></h6>
                             </a>
                             <p class="post-date"><?=$post['NgayDang']?></span></p>
