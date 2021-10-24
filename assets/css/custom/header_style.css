@@ -1,0 +1,13 @@
+/* Header */
+.top-header-content .logo a h3,
+.top-header-content .logo a p
+{
+    color: white;
+    font-style: oblique;
+}
+
+.top-header-content .logo:hover,
+.login-search-area .login a:hover
+{
+    opacity: 0.8;
+}

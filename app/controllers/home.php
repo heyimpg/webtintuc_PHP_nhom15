@@ -9,13 +9,23 @@
         }
 
         public function index() {
-            $categories = $this->categoryModel->select_array();
-            $post = $this->postModel->select_array();
+            $categories = $this->categoryModel->getAllData();
+            $featured_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>1]);
+            $category_post = $this->postModel->getAllData("*",["ID_CTTheLoai"=>1]);
+            $latest_post = $this->postModel->getAllData("*",NULL, "NgayDang",false);
+            $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
+            $side_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>3], "NgayDang", false, 6);
+            $world_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>4], "NgayDang", false);
             $this->postModel->closeConnection();
             $data = [
                 "page" => "home/index",
                 "categories" => $categories,
-                "posts" => $post
+                "featured_post" => $featured_post,
+                "category_post" => $category_post,
+                "latest_post" => $latest_post,
+                "popular_post" => $popular_post,
+                "side_post" => $side_post,
+                "world_post" => $world_post
             ];
             $this->view("layout", $data);
         }

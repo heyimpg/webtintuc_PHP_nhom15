@@ -8,7 +8,7 @@
         }
 
         public function index() {
-            $kq = $this->category_model->select_array();
+            $kq = $this->category_model->getAllData();
             $data = [
                 "page" => "{$this->template}/index",
                 "categories" => $kq

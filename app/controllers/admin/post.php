@@ -9,7 +9,7 @@
         }
 
         public function index() {
-            $kq = $this->post_model->select_row();
+            $kq = $this->post_model->getData();
             $data = [
                 "page" => "admin/index",
                 "array" => $kq
@@ -18,7 +18,7 @@
         }
 
         public function getallpost() {
-            $kq = $this->post_model->select_array();
+            $kq = $this->post_model->getAllData();
             $data = [
                 "page" => "admin/index",
                 "array" => $kq

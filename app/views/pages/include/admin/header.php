@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="http://localhost:8080/CNPM/webtintuc_PHP_nhom15/">
+    <base href="<?= BASE_URL?>">
     <title>Trang quản trị</title>
 	<link rel="shortcut icon" href="assets/admin/build/images/favicon.ico"/>
     <!-- Bootstrap -->

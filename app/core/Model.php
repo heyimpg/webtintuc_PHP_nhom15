@@ -4,7 +4,7 @@
     {
         protected String $table = "";
 
-        public function select_array($data = "*", $where = NULL) {
+        public function getAllData($data = "*", $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
             $sql = "select $data from $this->table ";
             if ($where != NULL) {
                 $fields = array_keys($where);
@@ -21,17 +21,27 @@
                     $isFields = false;
                     $sql .= "$stringWhere $fields[$i] = ?";
                 }
+                if($sort != NULL) {
+                    $sql .=" order by ";
+                    $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
+                }
+                $sql .= " limit $limit";
                 $query = $this->conn->prepare($sql);
                 $query->execute($values);
             }
             else {
+                if($sort != NULL) {
+                    $sql .=' order by ';
+                    $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
+                }
+                $sql .= " limit $limit";
                 $query = $this->conn->prepare($sql);
                 $query->execute();
             }
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function add($data = NULL) {
+        public function addData($data = NULL) {
             $fields = array_keys($data);
             $fields_list = implode(",", $fields);
             $values = array_values($data);
@@ -53,7 +63,7 @@
             }
         }
 
-        public function update($data=null, $where=null) {
+        public function updateData($data=null, $where=null) {
             if($data != null && $where != null) {
                 $fields = array_keys($data);
                 $values = array_values($data);
@@ -94,7 +104,7 @@
             }
         }
 
-        public function delete($where = null) {
+        public function deleteData($where = null) {
             $sql = "delete from $this->table";
             $values_where = array();
             if ($where != null) {
@@ -126,7 +136,7 @@
             }
         }
 
-        public function select_row($data = "*", $where = null) {
+        public function getData($data = "*", $where = null) {
             $sql = "select $data from $this->table ";
             $values_where = array();
             if ($where != null) {

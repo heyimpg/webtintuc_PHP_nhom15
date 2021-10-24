@@ -1,13 +1,40 @@
-<?php
-    require_once "./app/views/pages/include/header.php";
-?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="<?= BASE_URL?>">
+    <title>Trang đọc tin tức</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- img -->
+    <link rel="shortcut icon" href="./assets/img/core-img/favicon.ico">
+</head>
 
-<!-- <div class="main"> Main Content Div -->
-<?php
-    if (isset($data)) {
-        require_once "./app/views/pages/{$data['page']}.php";
-    }
-?>
-<!-- </div> End Main Content Div -->
+<body>
+        <!-- Header -->
+    <?php require_once "./app/views/pages/include/header.php"; ?>
+        <!-- Main -->
+    <?php
+        if (isset($data))
+            require_once "./app/views/pages/{$data['page']}.php";
+    ?>
+        <!-- Footer -->
+    <?php require_once "./app/views/pages/include/footer.php"; ?>
+</body>
 
-<?php require_once "./app/views/pages/include/footer.php"; ?>
+    <!-- JS -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="./assets/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="./assets/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="./assets/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="./assets/js/active.js"></script>
+</body>
+</html>

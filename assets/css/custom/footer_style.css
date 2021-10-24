@@ -1,0 +1,7 @@
+/* Footer */
+.footer-logo a h3,
+.footer-logo a p
+{
+    color: white;
+    font-style: oblique;
+}

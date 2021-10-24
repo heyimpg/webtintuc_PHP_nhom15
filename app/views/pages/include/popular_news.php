@@ -3,13 +3,13 @@
         <div class="row">
             <div class="col-12 col-lg-8">
                 <div class="section-heading">
-                    <h6>Popular News</h6>
+                    <h6>Tin mới cập nhật</h6>
                 </div>
 
                 <div class="row">
                     <?php
                         if(isset($data)){
-                            foreach ($data['posts'] as $post) {
+                            foreach ($data['latest_post'] as $post) {
                     ?>
                     <!-- Single Post -->
                     <div class="col-12 col-md-6">
@@ -20,7 +20,7 @@
                             <div class="post-data">
                                 <a href="#" class="post-catagory">Finance</a>
                                 <a href="#" class="post-title">
-                                    <h6><?php echo $post["GioiThieu"]; ?></h6>
+                                    <h6><?= $post["GioiThieu"] ?></h6>
                                 </a>
                                 <div class="post-meta d-flex align-items-center">
                                     <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span>392</span></a>
@@ -35,53 +35,37 @@
 
             <div class="col-12 col-lg-4">
                 <div class="section-heading">
-                    <h6>Info</h6>
+                    <h6>Tin phổ biến</h6>
                 </div>
                 <!-- Popular News Widget -->
                 <div class="popular-news-widget mb-30">
-                    <h3>4 Most Popular News</h3>
+                    <h3>Top tin phổ biến nhất</h3>
 
                     <!-- Single Popular Blog -->
+                    <?php
+                        if(isset($data)){
+                            foreach ($data["popular_post"] as $key => $post) {
+                    ?>
                     <div class="single-popular-post">
                         <a href="#">
-                            <h6><span>1.</span> Amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales.</h6>
+                            <h6><span><?=$key+1?>.</span> <?=$post["TieuDe"]?></h6>
                         </a>
-                        <p>April 14, 2018</p>
+                        <p><?=$post["NgayDang"]?></p>
                     </div>
+                    <?php }}?>
 
-                    <!-- Single Popular Blog -->
-                    <div class="single-popular-post">
-                        <a href="#">
-                            <h6><span>2.</span> Consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer.</h6>
-                        </a>
-                        <p>April 14, 2018</p>
-                    </div>
-
-                    <!-- Single Popular Blog -->
-                    <div class="single-popular-post">
-                        <a href="#">
-                            <h6><span>3.</span> Adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo.</h6>
-                        </a>
-                        <p>April 14, 2018</p>
-                    </div>
-
-                    <!-- Single Popular Blog -->
-                    <div class="single-popular-post">
-                        <a href="#">
-                            <h6><span>4.</span> Eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
-                        </a>
-                        <p>April 14, 2018</p>
-                    </div>
                 </div>
 
                 <!-- Newsletter Widget -->
                 <div class="newsletter-widget">
-                        <h4>Newsletter</h4>
-                        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <h4>Liên hệ hợp tác</h4>
+                        <p>Nếu bạn có nhu cầu quảng cáo sản phẩm thông qua website, vui lòng nhập thông tin cá nhân vào bên dưới,
+                             chúng tôi sẽ sớm liên hệ với bạn !</p>
                         <form action="#" method="post">
-                            <input type="text" name="text" placeholder="Name">
+                            <input type="text" name="text" placeholder="Tên">
+                            <input type="number" name="phone" placeholder="SDT">
                             <input type="email" name="email" placeholder="Email">
-                            <button type="submit" class="btn w-100">Subscribe</button>
+                            <button type="submit" class="btn w-100">Gửi đi</button>
                         </form>
                     </div>
             </div>
