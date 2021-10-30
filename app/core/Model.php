@@ -33,6 +33,21 @@
             return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }
 
+        public function getDatafromMultiTable($data = "*", $where = null) {
+            $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
+            $sql = $this->queryGetData($sql, $where);
+            if ($where != NULL) {
+                $values = array_values($where);
+                $query = $this->conn->prepare($sql);
+                $query->execute($values);
+            }else {
+                $query = $this->conn->prepare($sql);
+                $query->execute();
+            }
+
+            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
+        }
+
         public function getAllDatafromMultiTable($data = "*", $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
             $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
             $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);

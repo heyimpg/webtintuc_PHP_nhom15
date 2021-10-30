@@ -13,7 +13,7 @@
                                 <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory">Finance</a>
+                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
                                 <a href="#" class="post-title">
                                     <h6><?=$post["TieuDe"]?></h6>
                                 </a>
@@ -209,7 +209,7 @@
                                     <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                                 </div>
                                 <div class="post-data">
-                                    <a href="#" class="post-catagory">Finance</a>
+                                    <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
                                     <div class="post-meta">
                                         <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                             <h6><?=$post['TieuDe']?></h6>
