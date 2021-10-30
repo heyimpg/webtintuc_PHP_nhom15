@@ -6,13 +6,53 @@
 
         public function getAllData($data = "*", $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
             $sql = "select $data from $this->table ";
+            $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);
+            if ($where != NULL) {
+                $values = array_values($where);
+                $query = $this->conn->prepare($sql);
+                $query->execute($values);
+            }else {
+                $query = $this->conn->prepare($sql);
+                $query->execute();
+            }
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function getData($data = "*", $where = null) {
+            $sql = "select $data from $this->table ";
+            $sql = $this->queryGetData($sql, $where);
+            if ($where != NULL) {
+                $values = array_values($where);
+                $query = $this->conn->prepare($sql);
+                $query->execute($values);
+            }else {
+                $query = $this->conn->prepare($sql);
+                $query->execute();
+            }
+
+            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
+        }
+
+        public function getAllDatafromMultiTable($data = "*", $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
+            $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
+            $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);
+            if ($where != NULL) {
+                $values = array_values($where);
+                $query = $this->conn->prepare($sql);
+                $query->execute($values);
+            }else {
+                $query = $this->conn->prepare($sql);
+                $query->execute();
+            }
+            
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
             if ($where != NULL) {
                 $fields = array_keys($where);
-                $fields_list = implode("", $fields);
-                $values = array_values($where);
                 $isFields = true;
                 $stringWhere = "where";
-                // where
                 for($i=0; $i < count($fields); $i++) {
                     if(!$isFields) {
                         $sql .= " and ";
@@ -26,19 +66,14 @@
                     $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
                 }
                 $sql .= " limit $limit";
-                $query = $this->conn->prepare($sql);
-                $query->execute($values);
-            }
-            else {
+            }else {
                 if($sort != NULL) {
                     $sql .=' order by ';
                     $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
                 }
                 $sql .= " limit $limit";
-                $query = $this->conn->prepare($sql);
-                $query->execute();
             }
-            return $query->fetchAll(PDO::FETCH_ASSOC);
+            return $sql;
         }
 
         public function addData($data = NULL) {
@@ -134,32 +169,6 @@
                     "message" => "delete data unsuccessfully",
                 ));
             }
-        }
-
-        public function getData($data = "*", $where = null) {
-            $sql = "select $data from $this->table ";
-            // $values = array();
-            if ($where != null) {
-                $fields = array_keys($where);
-                $values = array_values($where);
-                $isFields = true;
-                $stringWhere = "where";
-                for ($i = 0; $i < count($fields); $i++) {
-                    if (!$isFields) {
-                        $sql .= " and ";
-                        $stringWhere = "";
-                    }
-                    $isFields = false;
-                    $sql .= " $stringWhere $fields[$i] = ?";
-                }
-                $query = $this->conn->prepare($sql);
-                $query->execute($values);
-            }else {
-                $query = $this->conn->prepare($sql);
-                $query->execute();
-            }
-            // $query->execute($values);
-            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }
 
         public function closeConnection() {

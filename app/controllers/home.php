@@ -10,10 +10,15 @@
 
         public function index() {
             $categories = $this->categoryModel->getAllData();
-            $featured_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>1]);
-            $category_post = $this->postModel->getAllData("*",["ID_CTTheLoai"=>1]);
-            $latest_post = $this->postModel->getAllData("*",NULL, "NgayDang",false);
+            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            //Featured
+            $featured_post = $this->postModel->getAllDatafromMultiTable("*",["ID_LoaiTin"=>1]);
+            $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_CTTheLoai"=>2]);
+            //Latest
+            $latest_post = $this->postModel->getAllDatafromMultiTable("*",NULL, "NgayDang",false);
+            // $latest_post = $this->postModel->getAllData("*",NULL, "NgayDang",false);
             $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
+            //Other
             $side_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>3], "NgayDang", false, 6);
             $world_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>4], "NgayDang", false);
             $this->postModel->closeConnection();

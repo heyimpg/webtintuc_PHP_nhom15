@@ -1,6 +1,7 @@
 <div class="featured-post-area">
     <div class="container">
         <div class="row">
+<!-- Featured Post -->
             <div class="col-12 col-md-6 col-lg-8">
                 <div class="row">
                     <!-- Single Featured Post -->
@@ -14,9 +15,9 @@
                                 <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?=$first_post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory">Finance</a>
+                                <a href="#" class="post-catagory"><?= $first_post['TenCTTheLoai'] ?></a>
                                 <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>" class="post-title">
-                                    <h6><?=$first_post['TieuDe']?></h6>
+                                    <h6><?= $first_post['TieuDe'] ?></h6>
                                 </a>
                                 <div class="post-meta">
                                     <p class="post-author">By <a href="#">Christinne Williams</a></p>
@@ -45,7 +46,7 @@
                                 <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?=$post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory">Finance</a>
+                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
                                 <div class="post-meta">
                                     <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                         <h6><?=$post['GioiThieu']?>...</h6>
@@ -62,7 +63,7 @@
                     </div>
                 </div>
             </div>
-
+<!-- Category Post -->
             <div class="col-12 col-md-6 col-lg-4">
                 <!-- Single Featured Post -->
                 <?php
@@ -74,7 +75,7 @@
                         <a href="<?php echo DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                     </div>
                     <div class="post-data">
-                        <a href="#" class="post-catagory">Finance</a>
+                        <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
                         <div class="post-meta">
                             <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                 <h6><?=$post['TieuDe']?></h6>
