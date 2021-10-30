@@ -11,9 +11,10 @@ Công việc đã làm:
     + Đặt lại tên một số hàm trong file core > Model
     + Thay đổi cấu trúc bảng trong csdl (thêm bảng LoaiTin - kèm column tương ứng ở bảng khác dùng nó - equal khóa ngoại)
     + Xây dựng trang chi tiết
-Công việc cần làm:
     + Join bảng để fill dữ liệu nốt những trường cần tới
+Công việc cần làm:
     + Xây dựng cấu trúc bên Admin (Định dạng lại cả cấu trúc thư mục như bên client)
     + Xây dựng trang danh mục (xem danh sách các bài viết thuộc một danh mục nào đó)
+    + Xây dựng trang login, register
 Vướng mắc:
     + Có dùng khóa ngoại k?
