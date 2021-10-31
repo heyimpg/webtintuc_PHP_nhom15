@@ -76,7 +76,7 @@
                                         foreach ($data['categories'] as $category) {
 
                                 ?>
-                                <li><a href="#"><?php echo $category['TenCTTheLoai']; ?></a></li>
+                                <li><a href="<?= CATEGORY_URL.$category["ID_CTTheLoai"] ?>"><?php echo $category['TenCTTheLoai']; ?></a></li>
                                 <?php
                                         }
                                     }

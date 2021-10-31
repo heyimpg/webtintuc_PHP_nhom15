@@ -15,14 +15,14 @@
 
 <body>
         <!-- Header -->
-    <?php require_once "./app/views/pages/include/header.php"; ?>
+    <?php require_once "./app/views/pages/include/home/header.php"; ?>
         <!-- Main -->
     <?php
         if (isset($data))
             require_once "./app/views/pages/{$data['page']}.php";
     ?>
         <!-- Footer -->
-    <?php require_once "./app/views/pages/include/footer.php"; ?>
+    <?php require_once "./app/views/pages/include/home/footer.php"; ?>
 </body>
 
     <!-- JS -->

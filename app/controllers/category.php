@@ -13,11 +13,13 @@
             $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
             //Category
             $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_CTTheLoai"=>$ID_CTTheLoai]);
+            $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
             $this->postModel->closeConnection();
             $data = [
                 "page" => "home/category",
                 "categories" => $categories,
-                "category_post" => $category_post
+                "category_post" => $category_post,
+                "popular_post" => $popular_post
             ];
             $this->view("layout", $data);
         }

@@ -2,6 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8">
+<!-- Blog posts -->
                     <div class="blog-posts-area">
                         <?php
                             if(isset($data)){
@@ -195,50 +196,12 @@
 
                 <div class="col-12 col-lg-4">
                     <div class="blog-sidebar-area">
-
-                        <!-- Latest Posts Widget -->
+<!-- Category Post -->
                         <div class="latest-posts-widget mb-50">
-
-                            <?php
-                                if(isset($data)){
-                                    foreach ($data['category_post'] as $post) {
-                            ?>
-                            <!-- Single Featured Post -->
-                            <div class="single-blog-post small-featured-post d-flex">
-                                <div class="post-thumb">
-                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
-                                </div>
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
-                                    <div class="post-meta">
-                                        <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
-                                            <h6><?=$post['TieuDe']?></h6>
-                                        </a>
-                                        <p class="post-date"><?=$post['NgayDang']?></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php }}?>
-
+                            <?php require_once "./app/views/pages/include/home/areas/category.php"; ?>
                         </div>
-
-                        <!-- Popular News Widget -->
-                        <div class="popular-news-widget mb-50">
-                            <h3>Top tin phổ biến nhất</h3>
-
-                            <!-- Single Popular Blog -->
-                            <?php
-                                if(isset($data)){
-                                    foreach ($data["popular_post"] as $key => $post) {
-                            ?>
-                                <div class="single-popular-post">
-                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>">
-                                        <h6><span><?=$key+1?>.</span> <?=$post["TieuDe"]?></h6>
-                                    </a>
-                                    <p><?=$post["NgayDang"]?></p>
-                                </div>
-                            <?php }}?>
-                        </div>
+<!-- Popular News -->             
+                        <?php require_once "./app/views/pages/include/home/areas/popular.php"; ?>
 
                         <!-- Newsletter Widget -->
                         <div class="newsletter-widget mb-50">

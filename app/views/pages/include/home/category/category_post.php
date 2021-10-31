@@ -4,33 +4,8 @@
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="blog-posts-area">
-                        <?php
-                            if(isset($data)){
-                                foreach ($data['category_post'] as $key => $post) {
-                        ?>
-                        <!-- Single Featured Post -->
-                        <div class="single-blog-post featured-post mb-30">
-                            <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
-                                <a href="#" class="post-title">
-                                    <h6><?=$post["TieuDe"]?></h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-author">By <a href="#">Christinne Williams</a></p>
-                                    <p class="post-excerp"><?=$post["GioiThieu"]?></p>
-                                    <!-- Post Like & Post Comment -->
-                                    <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <?php }}?>
-
+                    <!-- Category_2 Post -->           
+                    <?php require_once "./app/views/pages/include/home/areas/category_2.php"; ?>
                     </div>
 
                     <nav aria-label="Page navigation example">
@@ -48,44 +23,8 @@
 
                 <div class="col-12 col-lg-4">
                     <div class="blog-sidebar-area">
-
-                        <!-- Popular News Widget -->
-                        <div class="popular-news-widget mb-50">
-                            <h3>4 Most Popular News</h3>
-
-                            <!-- Single Popular Blog -->
-                            <div class="single-popular-post">
-                                <a href="#">
-                                    <h6><span>1.</span> Amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales.</h6>
-                                </a>
-                                <p>April 14, 2018</p>
-                            </div>
-
-                            <!-- Single Popular Blog -->
-                            <div class="single-popular-post">
-                                <a href="#">
-                                    <h6><span>2.</span> Consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer.</h6>
-                                </a>
-                                <p>April 14, 2018</p>
-                            </div>
-
-                            <!-- Single Popular Blog -->
-                            <div class="single-popular-post">
-                                <a href="#">
-                                    <h6><span>3.</span> Adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo.</h6>
-                                </a>
-                                <p>April 14, 2018</p>
-                            </div>
-
-                            <!-- Single Popular Blog -->
-                            <div class="single-popular-post">
-                                <a href="#">
-                                    <h6><span>4.</span> Eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
-                                </a>
-                                <p>April 14, 2018</p>
-                            </div>
-                        </div>
-
+                    <!-- Popular News -->
+                    <?php require_once "./app/views/pages/include/home/areas/popular.php"; ?>
                         <!-- Newsletter Widget -->
                         <div class="newsletter-widget mb-50">
                             <h4>Newsletter</h4>
