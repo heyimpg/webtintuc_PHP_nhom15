@@ -8,18 +8,16 @@
             $this->postModel = $this->model("PostModel");
         }
 
-        public function index($ID_BaiViet) {
+        public function index($ID_CTTheLoai) {
             $categories = $this->categoryModel->getAllData();
-            $detail_post = $this->postModel->getData("*",["ID_BaiViet"=>$ID_BaiViet]);
-            $category_post = $this->postModel->getAllData("*",["ID_CTTheLoai"=>1]);
-            $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
+            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            //Category
+            $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_CTTheLoai"=>$ID_CTTheLoai]);
             $this->postModel->closeConnection();
             $data = [
-                "page" => "home/detail",
+                "page" => "home/category",
                 "categories" => $categories,
-                "detail_post" => $detail_post,
-                "category_post" => $category_post,
-                "popular_post" => $popular_post
+                "category_post" => $category_post
             ];
             $this->view("layout", $data);
         }
