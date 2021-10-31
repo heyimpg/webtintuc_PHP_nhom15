@@ -5,30 +5,30 @@
                 <!-- Breaking News Widget -->
                 <div class="breaking-news-area d-flex align-items-center">
                     <div class="news-title">
-                        <p>Breaking News</p>
+                        <p>Tin mới</p>
                     </div>
                     <div id="breakingNewsTicker" class="ticker">
                         <ul>
-                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                            <li><a href="#">Welcome to Colorlib Family.</a></li>
-                            <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
+                            <li><a href="#">Vụ ám sát tổng thống dẫn tới thành lập mật vụ Mỹ</a></li>
+                            <li><a href="#">Thống đốc bị tát trong lễ nhậm chức</a></li>
+                            <li><a href="#">Sáu tướng Cảnh sát biển bị cách chức, xóa tư cách</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Breaking News Widget -->
                 <div class="breaking-news-area d-flex align-items-center mt-15">
-                        <div class="news-title title2">
-                            <p>International</p>
-                        </div>
-                        <div id="internationalTicker" class="ticker">
-                            <ul>
-                                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                <li><a href="#">Welcome to Colorlib Family.</a></li>
-                                <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
-                            </ul>
-                        </div>
+                    <div class="news-title title2">
+                        <p>Lời chúc</p>
                     </div>
+                    <div id="internationalTicker" class="ticker">
+                        <ul>
+                            <li><a href="#">Chào mừng bạn tới với "trang báo việt"</a></li>
+                            <li><a href="#">Chúc bạn ngày mới vui vẻ</a></li>
+                            <li><a href="#"><?= date("D M j G:i:s T Y")?></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <!-- Hero Add -->

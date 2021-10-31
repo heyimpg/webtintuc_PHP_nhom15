@@ -1,172 +1,97 @@
 <div class="featured-post-area">
     <div class="container">
         <div class="row">
+            <!-- Featured Post -->
             <div class="col-12 col-md-6 col-lg-8">
                 <div class="row">
                     <!-- Single Featured Post -->
                     <div class="col-12 col-lg-7">
+                        <?php
+                        if(isset($data)){
+                            $first_post = $data['featured_post'][0]; 
+                    ?>
                         <div class="single-blog-post featured-post">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/16.jpg" alt=""></a>
+                                <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>"><img
+                                        src="./assets/img/bg-img/<?=$first_post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory">Finance</a>
-                                <a href="#" class="post-title">
-                                    <h6>Financial news: A new company is born today at the stock market</h6>
+                                <a href="#" class="post-catagory"><?= $first_post['TenCTTheLoai'] ?></a>
+                                <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>" class="post-title">
+                                    <h6><?= $first_post['TieuDe'] ?></h6>
                                 </a>
                                 <div class="post-meta">
                                     <p class="post-author">By <a href="#">Christinne Williams</a></p>
-                                    <p class="post-excerp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placerat. Sed varius leo ac leo fermentum, eu cursus nunc maximus. Integer convallis nisi nibh, et ornare neque ullamcorper ac. Nam id congue lectus, a venenatis massa. Maecenas justo libero, vulputate vel nunc id, blandit feugiat sem. </p>
+                                    <p class="post-excerp"><?=$first_post['GioiThieu']?>...</p>
                                     <!-- Post Like & Post Comment -->
                                     <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span>10</span></a>
+                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt="">
+                                            <span>392</span></a>
+                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png"
+                                                alt=""> <span>10</span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php }?>
                     </div>
 
                     <div class="col-12 col-lg-5">
                         <!-- Single Featured Post -->
+                        <?php
+                        if(isset($data)){
+                            foreach ($data['featured_post'] as $key => $post) {
+                                if($key!=0)
+                                {
+                        ?>
                         <div class="single-blog-post featured-post-2">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/17.jpg" alt=""></a>
+                                <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img
+                                        src="./assets/img/bg-img/<?=$post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory">Finance</a>
+                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
                                 <div class="post-meta">
-                                    <a href="#" class="post-title">
-                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placerat. Sed varius leo ac...</h6>
+                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
+                                        <h6><?=$post['GioiThieu']?>...</h6>
                                     </a>
                                     <!-- Post Like & Post Comment -->
                                     <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span>10</span></a>
+                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt="">
+                                            <span>392</span></a>
+                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png"
+                                                alt=""> <span>10</span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Single Featured Post -->
-                        <div class="single-blog-post featured-post-2">
-                            <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/18.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-catagory">Finance</a>
-                                <div class="post-meta">
-                                    <a href="#" class="post-title">
-                                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placerat. Sed varius leo ac...</h6>
-                                    </a>
-                                    <!-- Post Like & Post Comment -->
-                                    <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span>10</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php }}}?>
                     </div>
                 </div>
             </div>
-
+            <!-- Category Post -->
             <div class="col-12 col-md-6 col-lg-4">
                 <!-- Single Featured Post -->
+                <?php
+                    if(isset($data)){
+                        foreach ($data['category_post'] as $post) {
+                ?>
                 <div class="single-blog-post small-featured-post d-flex">
                     <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/19.jpg" alt=""></a>
+                        <a href="<?php echo DETAIL_URL.$post["ID_BaiViet"] ?>"><img
+                                src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                     </div>
                     <div class="post-data">
-                        <a href="#" class="post-catagory">Finance</a>
+                        <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
                         <div class="post-meta">
-                            <a href="#" class="post-title">
-                                <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
+                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
+                                <h6><?=$post['TieuDe']?></h6>
                             </a>
-                            <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
+                            <p class="post-date"><?=$post['NgayDang']?></span></p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-blog-post small-featured-post d-flex">
-                    <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/20.jpg" alt=""></a>
-                    </div>
-                    <div class="post-data">
-                        <a href="#" class="post-catagory">Politics</a>
-                        <div class="post-meta">
-                            <a href="#" class="post-title">
-                                <h6>Sed a elit euismod augue semper congue sit amet ac sapien.</h6>
-                            </a>
-                            <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-blog-post small-featured-post d-flex">
-                    <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/21.jpg" alt=""></a>
-                    </div>
-                    <div class="post-data">
-                        <a href="#" class="post-catagory">Health</a>
-                        <div class="post-meta">
-                            <a href="#" class="post-title">
-                                <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
-                            </a>
-                            <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-blog-post small-featured-post d-flex">
-                    <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/22.jpg" alt=""></a>
-                    </div>
-                    <div class="post-data">
-                        <a href="#" class="post-catagory">Finance</a>
-                        <div class="post-meta">
-                            <a href="#" class="post-title">
-                                <h6>Augue semper congue sit amet ac sapien. Fusce consequat.</h6>
-                            </a>
-                            <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-blog-post small-featured-post d-flex">
-                    <div class="post-thumb">
-                        <a href="#"><img src="./assets/img/bg-img/23.jpg" alt=""></a>
-                    </div>
-                    <div class="post-data">
-                        <a href="#" class="post-catagory">Travel</a>
-                        <div class="post-meta">
-                            <a href="#" class="post-title">
-                                <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
-                            </a>
-                            <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Featured Post -->
-                <div class="single-blog-post small-featured-post d-flex">
-                        <div class="post-thumb">
-                            <a href="#"><img src="./assets/img/bg-img/24.jpg" alt=""></a>
-                        </div>
-                        <div class="post-data">
-                            <a href="#" class="post-catagory">Politics</a>
-                            <div class="post-meta">
-                                <a href="#" class="post-title">
-                                    <h6>Augue semper congue sit amet ac sapien. Fusce consequat.</h6>
-                                </a>
-                                <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
-                            </div>
-                        </div>
-                    </div>
+                <?php }}?>
             </div>
         </div>
     </div>
