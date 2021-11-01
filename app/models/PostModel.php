@@ -11,22 +11,15 @@
             $this->foreign_key = $foreign_key;
         }
 
-        /**
-         * Get the value of table
-         */ 
         public function getTable()
         {
-                return $this->table;
+            return $this->table;
         }
 
-        /**
-         * Set the value of table
-         */ 
         public function setTable($table)
         {
-                $this->table = $table;
-
-                return $this;
+            $this->table = $table;
+            return $this;
         }
     }
 ?>

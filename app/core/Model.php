@@ -3,8 +3,10 @@
     class Model extends Database
     {
         protected String $table = "";
+        private const DEFAULT_LIMIT = 4;
+        private const DEFAULT_STR = "*";
 
-        public function getAllData($data = "*", $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
+        public function getAllData($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
             $sql = "select $data from $this->table ";
             $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);
             if ($where != NULL) {
@@ -18,7 +20,7 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function getData($data = "*", $where = null) {
+        public function getData($data = self::DEFAULT_STR, $where = null) {
             $sql = "select $data from $this->table ";
             $sql = $this->queryGetData($sql, $where);
             if ($where != NULL) {
@@ -33,7 +35,7 @@
             return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }
 
-        public function getDatafromMultiTable($data = "*", $where = null) {
+        public function getDatafromMultiTable($data = self::DEFAULT_STR, $where = null) {
             $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
             $sql = $this->queryGetData($sql, $where);
             if ($where != NULL) {
@@ -48,7 +50,7 @@
             return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }
 
-        public function getAllDatafromMultiTable($data = "*", $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
+        public function getAllDatafromMultiTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
             $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
             $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);
             if ($where != NULL) {
@@ -63,7 +65,7 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = 4) {
+        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
             if ($where != NULL) {
                 $fields = array_keys($where);
                 $isFields = true;

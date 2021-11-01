@@ -3,6 +3,7 @@ Thiết kế website đọc báo bằng PHP, mySQL
 
 Sử dụng mô hình MVC version 2
 
+<<<<<<< HEAD
 24/10/2021
 Công việc đã làm:
     + Thêm file config tại core > config vì phần URL dùng chung mà ở mỗi máy lại có đường dẫn khác nhau download code về thay đổi là chạy đc
@@ -20,3 +21,6 @@ Công việc cần làm:
     + Thêm phần comments các bài viết
 Vướng mắc:
     + Có dùng khóa ngoại k?
+=======
+31/10/2021: Đọc code của phần client, chỉnh sửa lại cấu trúc của project và ghép code phần client vào nhánh hai-dev
+>>>>>>> hai-dev-1.0

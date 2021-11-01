@@ -33,12 +33,12 @@
         public function add() {
             if (isset($_POST["submit"])) {
                 $data_post = $_POST["data_post"];
-                $data_post["Publish"] ? $publish = 1 : $publish = 0;
+                isset($data_post["Publish"]) ? $publish = 1 : $publish = 0;
                 $data_post["Publish"] = $publish;
                 $result = $this->category_model->addData($data_post);
                 $return = json_decode($result, true);
                 if ($return["type"] == "success") {
-                    header("location: $this->template/index");
+                    header("Location: index");
                 }
             }
             $data = [

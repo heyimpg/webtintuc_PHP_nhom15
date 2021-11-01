@@ -8,7 +8,6 @@
     <div class="main-footer-area">
         <div class="container">
             <div class="row">
-
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget-area mt-80">
@@ -28,7 +27,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-6 col-lg-2">
                     <div class="footer-widget-area mt-80">
@@ -43,7 +41,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-4 col-lg-2">
                     <div class="footer-widget-area mt-80">
@@ -62,7 +59,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-4 col-lg-2">
                     <div class="footer-widget-area mt-80">
@@ -81,7 +77,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-4 col-lg-2">
                     <div class="footer-widget-area mt-80">
@@ -101,7 +96,6 @@
             </div>
         </div>
     </div>
-
     <!-- Bottom Footer Area -->
     <div class="bottom-footer-area">
         <div class="container h-100">
