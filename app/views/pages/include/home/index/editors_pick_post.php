@@ -10,10 +10,10 @@
             </div>
 
             <!-- World News -->
-            <div class="section-heading">
-                <h6>Tin thế giới</h6>
-            </div>
             <div class="col-12 col-md-5 col-lg-3">
+                <div class="section-heading">
+                    <h6>Tin thế giới</h6>
+                </div>
                 <?php require_once "./app/views/pages/include/home/areas/world.php"; ?>
             </div>
         </div>

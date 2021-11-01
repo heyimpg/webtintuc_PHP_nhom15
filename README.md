@@ -12,9 +12,11 @@ Công việc đã làm:
     + Thay đổi cấu trúc bảng trong csdl (thêm bảng LoaiTin - kèm column tương ứng ở bảng khác dùng nó - equal khóa ngoại)
     + Xây dựng trang chi tiết
     + Join bảng để fill dữ liệu nốt những trường cần tới
+    + Xây dựng trang danh mục (xem danh sách các bài viết thuộc một danh mục nào đó)
+    + Xây dựng trang login, register (fe)
 Công việc cần làm:
     + Xây dựng cấu trúc bên Admin (Định dạng lại cả cấu trúc thư mục như bên client)
-    + Xây dựng trang danh mục (xem danh sách các bài viết thuộc một danh mục nào đó)
-    + Xây dựng trang login, register
+    + Xây dựng trang login, register (be)
+    + Thêm phần comments các bài viết
 Vướng mắc:
     + Có dùng khóa ngoại k?
