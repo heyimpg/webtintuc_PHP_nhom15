@@ -14,7 +14,6 @@
                     <th class="column-title">Tên danh mục </th>
                     <th class="column-title">Publish</th>
                     <th class="column-title">Ngày Tạo </th>
-                    <th class="column-title">Ngày Cập Nhật</th>
                     <th class="column-title no-link last"><span class="nobr">Action</span></th>
                     <th class="bulk-actions" colspan="7">
                         <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
@@ -27,11 +26,13 @@
                         foreach ($data["categories"] as $category) {
                 ?>
                     <tr class="even pointer">
-                        <td class="a-center align-middle"><input type="checkbox" class="flat" name="table_records"></td>
+                        <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
                         <td class="align-middle"><?= $category["TenCTTheLoai"] ?></td>
-                        <td class="align-middle"><?= $category["Publish"] ?></td>
+<!--                        <td class="align-middle">--><?//= $category["Publish"] ?><!--</td>-->
+                        <th>
+                            <input type="checkbox" class="flat" <?php if($category["Publish"]== 1) {echo "checked";}?>/>
+                        </th>
                         <td class="align-middle"><?= $category["NgayTao"] ?></td>
-                        <td class="align-middle"><?= $category["NgayCapNhat"] ?></td>
                         <td class=" last">
                             <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
                             <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>
