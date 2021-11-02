@@ -12,7 +12,8 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label for="name">Tên danh mục *</label>
-                        <input type="text" class="form-control" name="data_post[TenCTTheLoai]" id="name">
+                        <input type="text" onkeyup="removeAccents(this)" class="form-control" name="data_post[TenCTTheLoai]" id="name">
+                        <input hidden type="text" name="data_post[Slug]" id="slug">
                     </div>
                      <div class="form-group">
                         <label for="publish">Publish *</label>
@@ -24,7 +25,34 @@
                 </div>
             </div>
         </form>
-        <div>
-        </div>
-    </div>
+    <div>
 </div>
+
+<script>
+    function removeAccents(str) {
+        let substr = str.value;
+        var AccentsMap = [
+            "aàảãáạăằẳẵắặâầẩẫấậ",
+            "AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬ",
+            "dđ", "DĐ",
+            "eèẻẽéẹêềểễếệ",
+            "EÈẺẼÉẸÊỀỂỄẾỆ",
+            "iìỉĩíị",
+            "IÌỈĨÍỊ",
+            "oòỏõóọôồổỗốộơờởỡớợ",
+            "OÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢ",
+            "uùủũúụưừửữứự",
+            "UÙỦŨÚỤƯỪỬỮỨỰ",
+            "yỳỷỹýỵ",
+            "YỲỶỸÝỴ",
+            " .:/@#<>%^*()",
+        ];
+        for (var i=0; i<AccentsMap.length; i++) {
+            var re = new RegExp('[' + AccentsMap[i].substr(1) + ']', 'g');
+            var char = AccentsMap[i][0];
+            substr = substr.replace(re, char);
+            substr = substr.replace(/\s/g,'-');
+        }
+        document.querySelector('#slug').value = substr;
+    }
+</script>
