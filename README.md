@@ -3,7 +3,6 @@ Thiết kế website đọc báo bằng PHP, mySQL
 
 Sử dụng mô hình MVC version 2
 
-<<<<<<< HEAD
 24/10/2021
 Công việc đã làm:
     + Thêm file config tại core > config vì phần URL dùng chung mà ở mỗi máy lại có đường dẫn khác nhau download code về thay đổi là chạy đc
@@ -15,12 +14,11 @@ Công việc đã làm:
     + Join bảng để fill dữ liệu nốt những trường cần tới
     + Xây dựng trang danh mục (xem danh sách các bài viết thuộc một danh mục nào đó)
     + Xây dựng trang login, register (fe)
+    + Thêm xử logic show/hide login, register (fe)
+    + Thêm xử lý login - be (1/3)
 Công việc cần làm:
     + Xây dựng cấu trúc bên Admin (Định dạng lại cả cấu trúc thư mục như bên client)
     + Xây dựng trang login, register (be)
     + Thêm phần comments các bài viết
 Vướng mắc:
     + Có dùng khóa ngoại k?
-=======
-31/10/2021: Đọc code của phần client, chỉnh sửa lại cấu trúc của project và ghép code phần client vào nhánh hai-dev
->>>>>>> hai-dev-1.0

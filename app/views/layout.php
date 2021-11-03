@@ -9,7 +9,6 @@
     <title>Trang đọc tin tức</title>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/login/overlay_model.css">
     <!-- img -->
     <link rel="shortcut icon" href="./assets/img/core-img/favicon.ico">
     <!-- font -->
@@ -43,6 +42,7 @@
 <!-- Active js -->
 <script src="./assets/js/active.js"></script>
 <!-- Login js -->
+<script src="./assets/js/declare_variable.js"></script>
 <script src="./assets/js/sign_in.js"></script>
 <script src="./assets/js/sign_up.js"></script>
 </body>
