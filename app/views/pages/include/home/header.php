@@ -22,8 +22,8 @@
                         <div class="login-search-area d-flex align-items-center">
                             <!-- Login -->
                             <div class="login d-flex">
-                                <a href="#">Đăng nhập</a>
-                                <a href="#">Đăng ký</a>
+                                <a href="#" id="btn-sign_in">Đăng nhập</a>
+                                <a href="#" id="btn-sign_up">Đăng ký</a>
                             </div>
                             <!-- Search Form -->
                             <div class="search-form">
