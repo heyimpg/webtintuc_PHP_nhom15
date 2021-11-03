@@ -1,6 +1,34 @@
 <!-- //Meta tag Keywords -->
 <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/css/login/style.css" type="text/css" media="all" />
+<style>
+    .modal-sign_in {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        padding-top: 80px;
+    }
+
+    .modal-sign_in.open {
+        display: flex;
+    }
+
+    .modal__container-sign_in {
+        min-height: 200px;
+        width: 900px;
+        max-width: calc(100% - 50px);
+        max-height: calc(100% - 50px);
+        background-color: #fff;
+        animation: fadeInModal ease 0.5s;
+    }
+</style>
 
 <!-- Overlay -->
 <div class="modal-sign_in modal_fixed">

@@ -1,11 +1,6 @@
-// Login Form - Sign in
-var btnShowLogin_signIn = document.querySelector("#btn-sign_in");
-var modal_signIn = document.querySelector(".modal-sign_in");
-var modalContainer_signIn = document.querySelector(".modal__container-sign_in");
-var nav_signIn = document.querySelector("#stickyMenu-sticky-wrapper");
-// var btnClose = document.querySelector(".header__close");
 function showModal_signIn(){
   modal_signIn.classList.add("open");
+  modal_signUp.classList.remove("open");
   nav_signIn.style.display = "none";
 }
 
