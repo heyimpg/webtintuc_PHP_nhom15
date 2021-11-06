@@ -28,4 +28,7 @@ Vướng mắc:
 Thêm hai column slug and type vào trong bảng chitiettheloai  
 Thêm class Redirect vào phần core, cho ra thông báo khi thêm danh mục bài viết thành công 
 + tốn mấy tiếng fix session_start();
+=======  
+category: danh mục cha
+subcategory: danh mục con
 

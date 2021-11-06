@@ -289,7 +289,7 @@ define(function(require) {
                 if (boundPercent == null) {
                     boundPercent = percentExtent[idx];
                 }
-                // Use scale.parse to math round for category or time axis.
+                // Use scale.parse to math round for subcategory or time axis.
                 boundValue = scale.parse(numberUtil.linearMap(
                     boundPercent, percentExtent, dataExtent, true
                 ));

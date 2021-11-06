@@ -57,7 +57,7 @@ define(function (require) {
         niceScaleExtent(angleAxis, angleAxis.model);
         niceScaleExtent(radiusAxis, radiusAxis.model);
 
-        // Fix extent of category angle axis
+        // Fix extent of subcategory angle axis
         if (angleAxis.type === 'category' && !angleAxis.onBand) {
             var extent = angleAxis.getExtent();
             var diff = 360 / angleAxis.scale.count();

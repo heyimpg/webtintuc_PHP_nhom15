@@ -1,6 +1,6 @@
 <?php
     class CategoryModel extends Model
     {
-        protected String $table = "chitiettheloai";
+        protected String $table = "theloai";
     }
 ?>

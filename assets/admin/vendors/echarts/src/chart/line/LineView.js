@@ -272,7 +272,7 @@ define(function(require) {
                 });
 
                 // In the case data zoom triggerred refreshing frequently
-                // Data may not change if line has a category axis. So it should animate nothing
+                // Data may not change if line has a subcategory axis. So it should animate nothing
                 if (!isPointsSame(this._stackedOnPoints, stackedOnPoints)
                     || !isPointsSame(this._points, points)
                 ) {

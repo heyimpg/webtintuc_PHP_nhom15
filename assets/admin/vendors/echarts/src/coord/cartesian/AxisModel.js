@@ -88,7 +88,7 @@ define(function(require) {
     });
 
     function getAxisType(axisDim, option) {
-        // Default axis with data is category axis
+        // Default axis with data is subcategory axis
         return option.type || (option.data ? 'category' : 'value');
     }
 

@@ -65,7 +65,7 @@ define(function(require) {
                 var value = getDataItemValue(itemOpt);
                 var val = converDataValue(value && value[dimIndex], dimensions[dimIndex]);
                 if (categoryDimIndex === dimIndex) {
-                    // If given value is a category string
+                    // If given value is a subcategory string
                     if (typeof val === 'string') {
                         // Lazy get categories
                         categories = categories || categoryAxisModel.getCategories();
@@ -120,7 +120,7 @@ define(function(require) {
                 },
                 {
                     name: 'y',
-                    // If two category axes
+                    // If two subcategory axes
                     type: getDimTypeByAxis(yAxisType),
                     stackable: isStackable(yAxisType)
                 }
@@ -201,14 +201,14 @@ define(function(require) {
         var nameList = [];
 
         if (result && result.categoryAxisModel) {
-            // FIXME Two category axis
+            // FIXME Two subcategory axis
             var categories = result.categoryAxisModel.getCategories();
             if (categories) {
                 var dataLen = data.length;
                 // Ordered data is given explicitly like
                 // [[3, 0.2], [1, 0.3], [2, 0.15]]
                 // or given scatter data,
-                // pick the category
+                // pick the subcategory
                 if (zrUtil.isArray(data[0]) && data[0].length > 1) {
                     nameList = [];
                     for (var i = 0; i < dataLen; i++) {

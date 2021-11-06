@@ -1,5 +1,5 @@
 <?php
-    class PostModel extends Model
+    class AdminPostModel extends Model
     {
         protected String $table = "baiviet";
     }

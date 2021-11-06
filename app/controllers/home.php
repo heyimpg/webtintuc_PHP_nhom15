@@ -1,15 +1,15 @@
 <?php
     class home extends Controller {
-        private CategoryModel $categoryModel;
+        private SubCategoryModel $subCategoryModel;
         private PostModel $postModel;
 
         public function __construct() {
-            $this->categoryModel = $this->model("CategoryModel");
+            $this->subCategoryModel = $this->model("SubCategoryModel");
             $this->postModel = $this->model("PostModel");
         }
 
         public function index() {
-            $categories = $this->categoryModel->getAllData();
+            $categories = $this->subCategoryModel->getAllData();
             $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
             //Featured
             $featured_post = $this->postModel->getAllDatafromMultiTable("*",["ID_LoaiTin"=>1]);

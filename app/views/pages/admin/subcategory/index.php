@@ -31,16 +31,16 @@
                 <tbody>
                     <?php
                         if (isset($data)) {
-                            foreach ($data["categories"] as $category) {
+                            foreach ($data["subcategories"] as $subcategory) {
                     ?>
                         <tr class="even pointer">
                             <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
-                            <td class="align-middle"><?= $category["TenCTTheLoai"] ?></td>
-    <!--                        <td class="align-middle">--><?//= $category["Publish"] ?><!--</td>-->
+                            <td class="align-middle"><?= $subcategory["TenCTTheLoai"] ?></td>
+    <!--                        <td class="align-middle">--><?//= $subcategory["Publish"] ?><!--</td>-->
                             <th>
-                                <input type="checkbox" class="flat" <?php if($category["Publish"]== 1) {echo "checked";}?>/>
+                                <input type="checkbox" class="flat" <?php if($subcategory["Publish"]== 1) {echo "checked";}?>/>
                             </th>
-                            <td class="align-middle"><?= $category["NgayTao"] ?></td>
+                            <td class="align-middle"><?= $subcategory["NgayTao"] ?></td>
                             <td class=" last">
                                 <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
                                 <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>

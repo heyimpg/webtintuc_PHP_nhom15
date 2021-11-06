@@ -18,7 +18,7 @@ define(function (require) {
                 categoriesData.setItemVisual(idx, 'color', color);
             });
 
-            // Assign category color to visual
+            // Assign subcategory color to visual
             if (categoriesData.count()) {
                 data.each(function (idx) {
                     var model = data.getItemModel(idx);

@@ -11,9 +11,24 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="name">Tên danh mục *</label>
+                        <label for="name">Tên danh mục con *</label>
                         <input type="text" onkeyup="removeAccents(this)" class="form-control" name="data_post[TenCTTheLoai]" id="name">
                         <input hidden type="text" name="data_post[Slug]" id="slug">
+                    </div>
+                    <div class="form-group">
+                        <label for="parent_category">Danh mục cha</label>
+                        <select name="data_post['ID_TheLoai']" class="form-control" id="parent_category">
+                            <option value="" selected disabled hidden>Chọn danh mục cha</option>
+                            <?php
+                                if(isset($data["categories"]) && $data["categories"] != null) {
+                                    foreach ($data["categories"] as $key => $value) {
+                            ?>
+                                        <option value="<?=$value["TenTheLoai"]?>"><?= $value["TenTheLoai"] ?></option>
+                            <?php
+                                    }
+                                }
+                            ?>
+                        </select>
                     </div>
                      <div class="form-group">
                         <label for="publish">Publish *</label>

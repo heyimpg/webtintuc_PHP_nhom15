@@ -531,7 +531,7 @@ define(function (require) {
                 var lastHover = this._lastHover;
                 if (axisPointerType === 'cross') {
                     // If hover data not changed
-                    // Possible when two axes are all category
+                    // Possible when two axes are all subcategory
                     if (dataEqual(lastHover.data, value)) {
                         contentNotChange = true;
                     }

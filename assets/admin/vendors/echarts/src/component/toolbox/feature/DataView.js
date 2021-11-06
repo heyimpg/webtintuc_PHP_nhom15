@@ -12,7 +12,7 @@ define(function (require) {
     var ITEM_SPLITER = '\t';
     /**
      * Group series into two types
-     *  1. on category axis, like line, bar
+     *  1. on subcategory axis, like line, bar
      *  2. others, like scatter, pie
      * @param {module:echarts/model/Global} ecModel
      * @return {Object}

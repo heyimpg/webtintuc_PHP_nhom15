@@ -23,7 +23,7 @@ define(function(require) {
             z: 4,                       // 二级层叠
             show: true,
 
-            axisType: 'time',  // 模式是时间类型，支持 value, category
+            axisType: 'time',  // 模式是时间类型，支持 value, subcategory
 
             realtime: true,
 
