@@ -21,14 +21,13 @@ Công việc cần làm:
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
 =======  
-31/10/2021:  
 Đọc code của phần client, chỉnh sửa lại cấu trúc của project và ghép code phần client vào nhánh hai-dev  
 =======  
-02/11/2021:  
 Thêm hai column slug and type vào trong bảng chitiettheloai  
 Thêm class Redirect vào phần core, cho ra thông báo khi thêm danh mục bài viết thành công 
 + tốn mấy tiếng fix session_start();
 =======  
 category: danh mục cha
-subcategory: danh mục con
+subcategory: danh mục con  
+Những method có thể tái sử dụng được để trong core/Model
 
