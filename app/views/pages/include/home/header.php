@@ -22,9 +22,21 @@
                         <div class="login-search-area d-flex align-items-center">
                             <!-- Login -->
                             <div class="login d-flex">
-                                <a href="#">Đăng nhập</a>
-                                <a href="#">Đăng ký</a>
+                                <?php
+                                    if(isset($_SESSION["username"])){
+                                ?>
+                                    <a href="#"><?php echo 'name: '.$_SESSION["username"]?><a class="fa fa-user"></a></a>
+                                <?php
+                                    } else { 
+                                ?>
+                                    <a href="#" id="btn-sign_in">Đăng nhập </a>
+                                    <a href="#" id="btn-sign_up">Đăng ký</a>
+                                <?php
+                                    }
+                                ?>
+                                
                             </div>
+                            <i class="fa fa-user"></i>
                             <!-- Search Form -->
                             <div class="search-form">
                                 <form action="#" method="post">

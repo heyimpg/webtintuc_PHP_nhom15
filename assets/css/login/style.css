@@ -1,78 +1,78 @@
 /* Common */
-.modal { 
+.modal_fixed { 
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.modal .d-grid {
+.modal_fixed .d-grid {
     display: grid;
 }
 
-.modal .d-flex {
+.modal_fixed .d-flex {
     display: flex;
     display: -webkit-flex;
 }
 
-.modal .text-center {
+.modal_fixed .text-center {
     text-align: center;
 }
 
-.modal .text-left {
+.modal_fixed .text-left {
     text-align: left;
 }
 
-.modal .text-right {
+.modal_fixed .text-right {
     text-align: right;
 }
 
-.modal .p-relative {
+.modal_fixed .p-relative {
     position: relative;
 }
 
-.modal .p-absolute {
+.modal_fixed .p-absolute {
     position: absolute;
 }
 
-.modal .p-fixed {
+.modal_fixed .p-fixed {
     position: fixed;
 }
 
-.modal .p-sticky {
+.modal_fixed .p-sticky {
     position: sticky;
 }
 
-.modal button,
-.modal input,
-.modal select {
+.modal_fixed button,
+.modal_fixed input,
+.modal_fixed select {
     -webkit-appearance: none;
     outline: none;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.modal button,
-.modal .btn,
-.modal select {
+.modal_fixed button,
+.modal_fixed .btn,
+.modal_fixed select {
     cursor: pointer;
 }
 
-.modal p {
+.modal_fixed p {
     color: #666;
     font-size: 16px;
     line-height: 25px;
     opacity: .6;
     text-align: center;
 }
-.modal a {
+.modal_fixed a {
     text-decoration: none;
 }
 
-.modal img {
+.modal_fixed img {
     max-width: 100%;
 }
 
-.modal .btn,
-.modal button,
-.modal .actionbg,
-.modal input {
+.modal_fixed .btn,
+.modal_fixed button,
+.modal_fixed .actionbg,
+.modal_fixed input {
     border-radius: 36px;
     -webkit-border-radius: 36px;
     -moz-border-radius: 36px;
@@ -80,8 +80,8 @@
     -ms-border-radius: 36px;
 }
 
-.modal .btn:hover,
-.modal button:hover {
+.modal_fixed .btn:hover,
+.modal_fixed button:hover {
     transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
@@ -90,7 +90,7 @@
 }
 
 /*-- wrapper start --*/
-.modal .wrapper {
+.modal_fixed .wrapper {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -99,30 +99,30 @@
 }
 
 @media (min-width: 576px) {
-    .modal .wrapper {
+    .modal_fixed .wrapper {
         max-width: 540px;
     }
 }
 
 @media (min-width: 768px) {
-    .modal .wrapper {
+    .modal_fixed .wrapper {
         max-width: 720px;
     }
 }
 
 @media (min-width: 992px) {
-    .modal .wrapper {
+    .modal_fixed .wrapper {
         max-width: 960px;
     }
 }
 
 @media (min-width: 1200px) {
-    .modal .wrapper {
+    .modal_fixed .wrapper {
         max-width: 1140px;
     }
 }
 
-.modal .wrapper-full {
+.modal_fixed .wrapper-full {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -190,8 +190,8 @@
     text-align: center;
     margin-top: 16px;
 }
-.modal p.account,
-.modal p.account a {
+.modal_fixed p.account,
+.modal_fixed p.account a {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 0px;
@@ -199,10 +199,10 @@
     color: #333;
 }
 
-.modal p.account a{
+.modal_fixed p.account a{
     color:#0568C1;
 }
-.modal p.account a:hover {
+.modal_fixed p.account a:hover {
     text-decoration: underline;
 }
 .workinghny-form-grid h1 {
@@ -328,11 +328,11 @@
     opacity: 1;
 }
 
-.modal p.copy-footer-29 a {
+.modal_fixed p.copy-footer-29 a {
     color: #fff;
 }
 
-.modal p.copy-footer-29 a:hover {
+.modal_fixed p.copy-footer-29 a:hover {
     color:#fdc500;
     transition: 0.5s ease;
     -webkit-transition: 0.5s ease;

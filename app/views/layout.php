@@ -9,11 +9,12 @@
     <title>Trang đọc tin tức</title>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/login/overlay_model.css">
     <!-- img -->
     <link rel="shortcut icon" href="./assets/img/core-img/favicon.ico">
     <!-- font -->
     <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css" media="all">
+    <!-- jQuery-2.2.4 js -->
+    <script src="./assets/js/jquery/jquery-2.2.4.min.js"></script>
 </head>
 
 <body>
@@ -27,12 +28,11 @@
     <!-- Footer -->
     <?php require_once "./app/views/pages/include/home/footer.php"; ?>
     <!-- Login -->
-    <?php require_once "./app/views/pages/include/home/login.php"; ?>
+    <?php require_once "./app/views/pages/include/home/sign_in.php"; ?>
+    <?php require_once "./app/views/pages/include/home/sign_up.php"; ?>
 </body>
 
 <!-- JS -->
-<!-- jQuery-2.2.4 js -->
-<script src="./assets/js/jquery/jquery-2.2.4.min.js"></script>
 <!-- Popper js -->
 <script src="./assets/js/bootstrap/popper.min.js"></script>
 <!-- Bootstrap js -->
@@ -42,7 +42,9 @@
 <!-- Active js -->
 <script src="./assets/js/active.js"></script>
 <!-- Login js -->
-<script src="./assets/js/login.js"></script>
+<script src="./assets/js/declare_variable.js"></script>
+<script src="./assets/js/sign_in.js"></script>
+<script src="./assets/js/sign_up.js"></script>
 </body>
 
 </html>
