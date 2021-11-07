@@ -25,7 +25,7 @@
                                 <?php
                                     if(isset($_SESSION["username"])){
                                 ?>
-                                    <a href="#"><?php echo 'name: '.$_SESSION["username"]?><i class="fa fa-user"></i></a>
+                                    <a href="#"><?php echo 'name: '.$_SESSION["username"]?><a class="fa fa-user"></a></a>
                                 <?php
                                     } else { 
                                 ?>
