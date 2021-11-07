@@ -29,5 +29,9 @@ Thêm class Redirect vào phần core, cho ra thông báo khi thêm danh mục b
 =======  
 category: danh mục cha
 subcategory: danh mục con  
-Những method có thể tái sử dụng được để trong core/Model
+Những method có thể tái sử dụng được để trong core/Model  
+=======  
+slug: dùng để thêm vào phía sau url ví dụ: http://localhost/CNPM/webtintuc_PHP_nhom15/kinh-doanh
+type: chưa rõ dùng để làm gì
+
 

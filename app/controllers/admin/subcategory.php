@@ -50,8 +50,6 @@
             // ID_Theloai
             $this->subcategory_model->setupSecondTable($this->category_model->getTable(), "ID_TheLoai");
             $categories = $this->subcategory_model->getAllDatafromMultiTable("chitiettheloai.ID_TheLoai, TenTheLoai", null, null, null, 100);
-//            var_dump($categories);
-//            exit();
             $data = [
                 "page" => "$this->template/add",
                 "title" => "Thêm mới $this->title",
