@@ -5,6 +5,8 @@
         protected String $table = "";
         private const DEFAULT_LIMIT = 4;
         private const DEFAULT_STR = "*";
+        protected String $second_table;
+        protected String $foreign_key;
 
         public function getAllData($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
             $sql = "select $data from $this->table ";
@@ -190,6 +192,22 @@
 
         public function closeConnection() {
             $this->conn = NULL;
+        }
+
+        public function setupSecondTable($second_table, $foreign_key) {
+            $this->second_table = $second_table;
+            $this->foreign_key = $foreign_key;
+        }
+
+        public function getTable()
+        {
+            return $this->table;
+        }
+
+        public function setTable($table)
+        {
+            $this->table = $table;
+            return $this;
         }
     }
 

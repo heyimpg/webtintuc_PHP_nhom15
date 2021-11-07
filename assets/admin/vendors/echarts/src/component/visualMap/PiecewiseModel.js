@@ -46,7 +46,7 @@ define(function(require) {
                                         // {min, max, value, color, colorSaturation, colorAlpha, opacity,
                                         // symbol, symbolSize}, which customize the range or visual
                                         // coding of the certain piece. Besides, see "Order Rule".
-            categories: null,           // category names, like: ['some1', 'some2', 'some3'].
+            categories: null,           // subcategory names, like: ['some1', 'some2', 'some3'].
                                         // Attr min/max are ignored when categories set. See "Order Rule"
             splitNumber: 5,             // If set to 5, auto split five pieces equally.
                                         // If set to 0 and component type not set, component type will be

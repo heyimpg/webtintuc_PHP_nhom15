@@ -112,7 +112,7 @@ define(function(require, factory) {
         // Fix configuration
         each(axesMap.x, function (xAxis) {
             // onZero can not be enabled in these two situations
-            // 1. When any other axis is a category axis
+            // 1. When any other axis is a subcategory axis
             // 2. When any other axis not across 0 point
             if (ifAxisCanNotOnZero('y')) {
                 xAxis.onZero = false;

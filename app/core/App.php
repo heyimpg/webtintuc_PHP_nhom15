@@ -26,7 +26,7 @@
                                 $this->controller = $array[1];
                                 unset($array[1]);
                                 require_once "./app/controllers/admin/{$this->controller}.php";
-                                // http://localhost:8080/CNPM/webtintuc_PHP_nhom15/admin/category/getallcategory -> category is controller, getallcategory is action
+                                // http://localhost:8080/CNPM/webtintuc_PHP_nhom15/admin/category/getallcategory -> subcategory is controller, getallcategory is action
                                 if(isset($array[2])) {
                                     if(method_exists($this->controller, $array[2])) {
                                         $this->action = $array[2];

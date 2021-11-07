@@ -26,8 +26,8 @@ define(function(require) {
             zlevel: 0,
             z: 4,                   // Higher than normal component (z: 2).
             orient: null,           // Default auto by axisIndex. Possible value: 'horizontal', 'vertical'.
-            xAxisIndex: null,       // Default all horizontal category axis.
-            yAxisIndex: null,       // Default all vertical category axis.
+            xAxisIndex: null,       // Default all horizontal subcategory axis.
+            yAxisIndex: null,       // Default all vertical subcategory axis.
             angleAxisIndex: null,
             radiusAxisIndex: null,
             filterMode: 'filter',   // Possible values: 'filter' or 'empty'.
@@ -215,7 +215,7 @@ define(function(require) {
             }
 
             if (autoAxisIndex) {
-                // Find the first category axis as default. (consider polar)
+                // Find the first subcategory axis as default. (consider polar)
                 eachAxisDim(function (dimNames) {
                     if (!autoAxisIndex) {
                         return;

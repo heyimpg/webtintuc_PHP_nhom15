@@ -3,13 +3,13 @@
 module.exports = function(Chart) {
 
 	var helpers = Chart.helpers;
-	// Default config for a category scale
+	// Default config for a subcategory scale
 	var defaultConfig = {
 		position: "bottom"
 	};
 
 	var DatasetScale = Chart.Scale.extend({
-		// Implement this so that 
+		// Implement this so that
 		determineDataLimits: function() {
 			this.minIndex = 0;
 			this.maxIndex = this.chart.data.labels.length - 1;

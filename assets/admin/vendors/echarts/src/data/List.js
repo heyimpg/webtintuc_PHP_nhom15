@@ -260,7 +260,7 @@ define(function (require) {
             // Each data item is value
             // [1, 2]
             // 2
-            // Bar chart, line chart which uses category axis
+            // Bar chart, line chart which uses subcategory axis
             // only gives the 'y' value. 'x' value is the indices of cateogry
             // Use a tempValue to normalize the value to be a (x, y) value
 

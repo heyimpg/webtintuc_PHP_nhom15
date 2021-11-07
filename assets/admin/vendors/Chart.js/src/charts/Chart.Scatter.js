@@ -9,7 +9,7 @@ module.exports = function(Chart) {
 
 		scales: {
 			xAxes: [{
-				type: "linear", // scatter should not use a category axis
+				type: "linear", // scatter should not use a subcategory axis
 				position: "bottom",
 				id: "x-axis-1" // need an ID so datasets can reference the scale
 			}],

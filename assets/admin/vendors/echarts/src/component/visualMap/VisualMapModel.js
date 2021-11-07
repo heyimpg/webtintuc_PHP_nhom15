@@ -164,7 +164,7 @@ define(function(require) {
         /**
          * @example
          * this.formatValueText(someVal); // format single numeric value to text.
-         * this.formatValueText(someVal, true); // format single category value to text.
+         * this.formatValueText(someVal, true); // format single subcategory value to text.
          * this.formatValueText([min, max]); // format numeric min-max to text.
          * this.formatValueText([this.dataBound[0], max]); // using data lower bound.
          * this.formatValueText([min, this.dataBound[1]]); // using data upper bound.
@@ -216,7 +216,7 @@ define(function(require) {
                     return textValue[0] + ' - ' + textValue[1];
                 }
             }
-            else { // Format single value (includes category case).
+            else { // Format single value (includes subcategory case).
                 return textValue;
             }
 

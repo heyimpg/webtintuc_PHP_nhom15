@@ -2,14 +2,14 @@
 
     class admin extends Controller
     {
-        private PostModel $post_model;
+        private AdminPostModel $admin_post_model;
 
         public function __construct() {
-            $this->post_model = $this->model("PostModel");
+            $this->admin_post_model = $this->model("AdminPostModel");
         }
 
         public function index() {
-            $kq = $this->post_model->getAllData();
+            $kq = $this->admin_post_model->getAllData();
             $data = [
                 "page" => "admin/index",
                 "array" => $kq

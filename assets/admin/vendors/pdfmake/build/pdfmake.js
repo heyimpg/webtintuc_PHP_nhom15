@@ -3066,7 +3066,7 @@
 	   *
 	   * @static
 	   * @memberOf _
-	   * @category Utility
+	   * @subcategory Utility
 	   * @param {Object} [context=root] The context object.
 	   * @returns {Function} Returns a new `lodash` function.
 	   * @example
@@ -3264,7 +3264,7 @@
 	     *
 	     * @name _
 	     * @constructor
-	     * @category Chain
+	     * @subcategory Chain
 	     * @param {*} value The value to wrap in a `lodash` instance.
 	     * @returns {Object} Returns the new `lodash` wrapper instance.
 	     * @example
@@ -6855,7 +6855,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to process.
 	     * @param {number} [size=1] The length of each chunk.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -6891,7 +6891,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to compact.
 	     * @returns {Array} Returns the new array of filtered values.
 	     * @example
@@ -6921,7 +6921,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to inspect.
 	     * @param {...Array} [values] The arrays of values to exclude.
 	     * @returns {Array} Returns the new array of filtered values.
@@ -6941,7 +6941,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {number} [n=1] The number of elements to drop.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -6976,7 +6976,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {number} [n=1] The number of elements to drop.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -7025,7 +7025,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7080,7 +7080,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7125,7 +7125,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to fill.
 	     * @param {*} value The value to fill `array` with.
 	     * @param {number} [start=0] The start position.
@@ -7174,7 +7174,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to search.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7224,7 +7224,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to search.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7263,7 +7263,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias head
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @returns {*} Returns the first element of `array`.
 	     * @example
@@ -7284,7 +7284,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to flatten.
 	     * @param {boolean} [isDeep] Specify a deep flatten.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -7311,7 +7311,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to recursively flatten.
 	     * @returns {Array} Returns the new flattened array.
 	     * @example
@@ -7333,7 +7333,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to search.
 	     * @param {*} value The value to search for.
 	     * @param {boolean|number} [fromIndex=0] The index to search from or `true`
@@ -7375,7 +7375,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @returns {Array} Returns the slice of `array`.
 	     * @example
@@ -7394,7 +7394,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {...Array} [arrays] The arrays to inspect.
 	     * @returns {Array} Returns the new array of shared values.
 	     * @example
@@ -7443,7 +7443,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @returns {*} Returns the last element of `array`.
 	     * @example
@@ -7462,7 +7462,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to search.
 	     * @param {*} value The value to search for.
 	     * @param {boolean|number} [fromIndex=array.length-1] The index to search from
@@ -7517,7 +7517,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to modify.
 	     * @param {...*} [values] The values to remove.
 	     * @returns {Array} Returns `array`.
@@ -7560,7 +7560,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to modify.
 	     * @param {...(number|number[])} [indexes] The indexes of elements to remove,
 	     *  specified as individual indexes or arrays of indexes.
@@ -7604,7 +7604,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to modify.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7650,7 +7650,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias tail
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @returns {Array} Returns the slice of `array`.
 	     * @example
@@ -7670,7 +7670,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to slice.
 	     * @param {number} [start=0] The start position.
 	     * @param {number} [end=array.length] The end position.
@@ -7708,7 +7708,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The sorted array to inspect.
 	     * @param {*} value The value to evaluate.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
@@ -7745,7 +7745,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The sorted array to inspect.
 	     * @param {*} value The value to evaluate.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
@@ -7765,7 +7765,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {number} [n=1] The number of elements to take.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -7800,7 +7800,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {number} [n=1] The number of elements to take.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -7849,7 +7849,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7904,7 +7904,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to query.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -7948,7 +7948,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {...Array} [arrays] The arrays to inspect.
 	     * @returns {Array} Returns the new array of combined values.
 	     * @example
@@ -7984,7 +7984,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias unique
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to inspect.
 	     * @param {boolean} [isSorted] Specify the array is sorted.
 	     * @param {Function|Object|string} [iteratee] The function invoked per iteration.
@@ -8035,7 +8035,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array of grouped elements to process.
 	     * @returns {Array} Returns the new array of regrouped elements.
 	     * @example
@@ -8073,7 +8073,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array of grouped elements to process.
 	     * @param {Function} [iteratee] The function to combine regrouped values.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -8108,7 +8108,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} array The array to filter.
 	     * @param {...*} [values] The values to exclude.
 	     * @returns {Array} Returns the new array of filtered values.
@@ -8129,7 +8129,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {...Array} [arrays] The arrays to inspect.
 	     * @returns {Array} Returns the new array of values.
 	     * @example
@@ -8159,7 +8159,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {...Array} [arrays] The arrays to process.
 	     * @returns {Array} Returns the new array of grouped elements.
 	     * @example
@@ -8178,7 +8178,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias object
-	     * @category Array
+	     * @subcategory Array
 	     * @param {Array} props The property names.
 	     * @param {Array} [values=[]] The property values.
 	     * @returns {Object} Returns the new object.
@@ -8216,7 +8216,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Array
+	     * @subcategory Array
 	     * @param {...Array} [arrays] The arrays to process.
 	     * @param {Function} [iteratee] The function to combine grouped values.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -8249,7 +8249,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @param {*} value The value to wrap.
 	     * @returns {Object} Returns the new `lodash` wrapper instance.
 	     * @example
@@ -8283,7 +8283,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @param {*} value The value to provide to `interceptor`.
 	     * @param {Function} interceptor The function to invoke.
 	     * @param {*} [thisArg] The `this` binding of `interceptor`.
@@ -8308,7 +8308,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @param {*} value The value to provide to `interceptor`.
 	     * @param {Function} interceptor The function to invoke.
 	     * @param {*} [thisArg] The `this` binding of `interceptor`.
@@ -8333,7 +8333,7 @@
 	     *
 	     * @name chain
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @returns {Object} Returns the new `lodash` wrapper instance.
 	     * @example
 	     *
@@ -8362,7 +8362,7 @@
 	     *
 	     * @name commit
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @returns {Object} Returns the new `lodash` wrapper instance.
 	     * @example
 	     *
@@ -8392,7 +8392,7 @@
 	     *
 	     * @name concat
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @param {...*} [values] The values to concatenate.
 	     * @returns {Array} Returns the new concatenated array.
 	     * @example
@@ -8418,7 +8418,7 @@
 	     *
 	     * @name plant
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @returns {Object} Returns the new `lodash` wrapper instance.
 	     * @example
 	     *
@@ -8462,7 +8462,7 @@
 	     *
 	     * @name reverse
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @returns {Object} Returns the new reversed `lodash` wrapper instance.
 	     * @example
 	     *
@@ -8497,7 +8497,7 @@
 	     *
 	     * @name toString
 	     * @memberOf _
-	     * @category Chain
+	     * @subcategory Chain
 	     * @returns {string} Returns the coerced string value.
 	     * @example
 	     *
@@ -8514,7 +8514,7 @@
 	     * @name value
 	     * @memberOf _
 	     * @alias run, toJSON, valueOf
-	     * @category Chain
+	     * @subcategory Chain
 	     * @returns {*} Returns the resolved unwrapped value.
 	     * @example
 	     *
@@ -8534,7 +8534,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {...(number|number[]|string|string[])} [props] The property names
 	     *  or indexes of elements to pick, specified individually or in arrays.
@@ -8571,7 +8571,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -8615,7 +8615,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias all
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -8674,7 +8674,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias select
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -8729,7 +8729,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias detect
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to search.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -8768,7 +8768,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to search.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -8795,7 +8795,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to search.
 	     * @param {Object} source The object of property values to match.
 	     * @returns {*} Returns the matched element, else `undefined`.
@@ -8829,7 +8829,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias each
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -8855,7 +8855,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias eachRight
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -8889,7 +8889,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -8928,7 +8928,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias contains, include
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to search.
 	     * @param {*} target The value to search for.
 	     * @param {number} [fromIndex=0] The index to search from.
@@ -8984,7 +8984,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -9022,7 +9022,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Array|Function|string} path The path of the method to invoke or
 	     *  the function invoked per iteration.
@@ -9078,7 +9078,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias collect
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -9130,7 +9130,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -9179,7 +9179,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Array|string} path The path of the property to pluck.
 	     * @returns {Array} Returns the property values.
@@ -9219,7 +9219,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias foldl, inject
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [accumulator] The initial value.
@@ -9247,7 +9247,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias foldr
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [accumulator] The initial value.
@@ -9270,7 +9270,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -9313,7 +9313,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to sample.
 	     * @param {number} [n] The number of elements to sample.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -9355,7 +9355,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to shuffle.
 	     * @returns {Array} Returns the new shuffled array.
 	     * @example
@@ -9373,7 +9373,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to inspect.
 	     * @returns {number} Returns the size of `collection`.
 	     * @example
@@ -9412,7 +9412,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias any
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -9472,7 +9472,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -9529,7 +9529,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {...(Function|Function[]|Object|Object[]|string|string[])} iteratees
 	     *  The iteratees to sort by, specified as individual values or arrays of values.
@@ -9577,7 +9577,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function[]|Object[]|string[]} iteratees The iteratees to sort by.
 	     * @param {boolean[]} [orders] The sort orders of `iteratees`.
@@ -9624,7 +9624,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Collection
+	     * @subcategory Collection
 	     * @param {Array|Object|string} collection The collection to search.
 	     * @param {Object} source The object of property values to match.
 	     * @returns {Array} Returns the new filtered array.
@@ -9653,7 +9653,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Date
+	     * @subcategory Date
 	     * @example
 	     *
 	     * _.defer(function(stamp) {
@@ -9673,7 +9673,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {number} n The number of calls before `func` is invoked.
 	     * @param {Function} func The function to restrict.
 	     * @returns {Function} Returns the new restricted function.
@@ -9714,7 +9714,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to cap arguments for.
 	     * @param {number} [n=func.length] The arity cap.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -9739,7 +9739,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {number} n The number of calls at which `func` is no longer invoked.
 	     * @param {Function} func The function to restrict.
 	     * @returns {Function} Returns the new restricted function.
@@ -9783,7 +9783,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to bind.
 	     * @param {*} thisArg The `this` binding of `func`.
 	     * @param {...*} [partials] The arguments to be partially applied.
@@ -9824,7 +9824,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Object} object The object to bind and assign the bound methods to.
 	     * @param {...(string|string[])} [methodNames] The object method names to bind,
 	     *  specified as individual method names or arrays of method names.
@@ -9869,7 +9869,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Object} object The object the method belongs to.
 	     * @param {string} key The key of the method.
 	     * @param {...*} [partials] The arguments to be partially applied.
@@ -9922,7 +9922,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to curry.
 	     * @param {number} [arity=func.length] The arity of `func`.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -9961,7 +9961,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to curry.
 	     * @param {number} [arity=func.length] The arity of `func`.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -10007,7 +10007,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to debounce.
 	     * @param {number} [wait=0] The number of milliseconds to delay.
 	     * @param {Object} [options] The options object.
@@ -10166,7 +10166,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to defer.
 	     * @param {...*} [args] The arguments to invoke the function with.
 	     * @returns {number} Returns the timer id.
@@ -10187,7 +10187,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to delay.
 	     * @param {number} wait The number of milliseconds to delay invocation.
 	     * @param {...*} [args] The arguments to invoke the function with.
@@ -10210,7 +10210,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {...Function} [funcs] Functions to invoke.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -10232,7 +10232,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias backflow, compose
-	     * @category Function
+	     * @subcategory Function
 	     * @param {...Function} [funcs] Functions to invoke.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -10262,7 +10262,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to have its output memoized.
 	     * @param {Function} [resolver] The function to resolve the cache key.
 	     * @returns {Function} Returns the new memoizing function.
@@ -10324,7 +10324,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to wrap.
 	     * @param {...(Function|Function[])} [transforms] The functions to transform
 	     * arguments, specified as individual functions or arrays of functions.
@@ -10371,7 +10371,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} predicate The predicate to negate.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -10399,7 +10399,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to restrict.
 	     * @returns {Function} Returns the new restricted function.
 	     * @example
@@ -10426,7 +10426,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to partially apply arguments to.
 	     * @param {...*} [partials] The arguments to be partially applied.
 	     * @returns {Function} Returns the new partially applied function.
@@ -10459,7 +10459,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to partially apply arguments to.
 	     * @param {...*} [partials] The arguments to be partially applied.
 	     * @returns {Function} Returns the new partially applied function.
@@ -10488,7 +10488,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to rearrange arguments for.
 	     * @param {...(number|number[])} indexes The arranged argument indexes,
 	     *  specified as individual indexes or arrays of indexes.
@@ -10520,7 +10520,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to apply a rest parameter to.
 	     * @param {number} [start=func.length-1] The start position of the rest parameter.
 	     * @returns {Function} Returns the new function.
@@ -10571,7 +10571,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to spread arguments over.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -10620,7 +10620,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {Function} func The function to throttle.
 	     * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
 	     * @param {Object} [options] The options object.
@@ -10666,7 +10666,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Function
+	     * @subcategory Function
 	     * @param {*} value The value to wrap.
 	     * @param {Function} wrapper The wrapper function.
 	     * @returns {Function} Returns the new function.
@@ -10702,7 +10702,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to clone.
 	     * @param {boolean} [isDeep] Specify a deep clone.
 	     * @param {Function} [customizer] The function to customize cloning values.
@@ -10766,7 +10766,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to deep clone.
 	     * @param {Function} [customizer] The function to customize cloning values.
 	     * @param {*} [thisArg] The `this` binding of `customizer`.
@@ -10807,7 +10807,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to compare.
 	     * @param {*} other The other value to compare.
 	     * @returns {boolean} Returns `true` if `value` is greater than `other`, else `false`.
@@ -10831,7 +10831,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to compare.
 	     * @param {*} other The other value to compare.
 	     * @returns {boolean} Returns `true` if `value` is greater than or equal to `other`, else `false`.
@@ -10855,7 +10855,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -10876,7 +10876,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -10896,7 +10896,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -10916,7 +10916,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -10936,7 +10936,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is a DOM element, else `false`.
 	     * @example
@@ -10958,7 +10958,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {Array|Object|string} value The value to inspect.
 	     * @returns {boolean} Returns `true` if `value` is empty, else `false`.
 	     * @example
@@ -11005,7 +11005,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias eq
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to compare.
 	     * @param {*} other The other value to compare.
 	     * @param {Function} [customizer] The function to customize value comparisons.
@@ -11045,7 +11045,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is an error object, else `false`.
 	     * @example
@@ -11067,7 +11067,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is a finite number, else `false`.
 	     * @example
@@ -11096,7 +11096,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -11120,7 +11120,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is an object, else `false`.
 	     * @example
@@ -11155,7 +11155,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {Object} object The object to inspect.
 	     * @param {Object} source The object of property values to match.
 	     * @param {Function} [customizer] The function to customize value comparisons.
@@ -11193,7 +11193,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
 	     * @example
@@ -11221,7 +11221,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is a native function, else `false`.
 	     * @example
@@ -11247,7 +11247,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is `null`, else `false`.
 	     * @example
@@ -11270,7 +11270,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -11297,7 +11297,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
 	     * @example
@@ -11344,7 +11344,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -11364,7 +11364,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -11384,7 +11384,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
 	     * @example
@@ -11404,7 +11404,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to check.
 	     * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
 	     * @example
@@ -11424,7 +11424,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to compare.
 	     * @param {*} other The other value to compare.
 	     * @returns {boolean} Returns `true` if `value` is less than `other`, else `false`.
@@ -11448,7 +11448,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to compare.
 	     * @param {*} other The other value to compare.
 	     * @returns {boolean} Returns `true` if `value` is less than or equal to `other`, else `false`.
@@ -11472,7 +11472,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to convert.
 	     * @returns {Array} Returns the converted array.
 	     * @example
@@ -11499,7 +11499,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Lang
+	     * @subcategory Lang
 	     * @param {*} value The value to convert.
 	     * @returns {Object} Returns the converted plain object.
 	     * @example
@@ -11533,7 +11533,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The destination object.
 	     * @param {...Object} [sources] The source objects.
 	     * @param {Function} [customizer] The function to customize assigned values.
@@ -11585,7 +11585,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias extend
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The destination object.
 	     * @param {...Object} [sources] The source objects.
 	     * @param {Function} [customizer] The function to customize assigned values.
@@ -11617,7 +11617,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} prototype The object to inherit from.
 	     * @param {Object} [properties] The properties to assign to the object.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -11661,7 +11661,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The destination object.
 	     * @param {...Object} [sources] The source objects.
 	     * @returns {Object} Returns `object`.
@@ -11680,7 +11680,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The destination object.
 	     * @param {...Object} [sources] The source objects.
 	     * @returns {Object} Returns `object`.
@@ -11709,7 +11709,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to search.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -11759,7 +11759,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to search.
 	     * @param {Function|Object|string} [predicate=_.identity] The function invoked
 	     *  per iteration.
@@ -11800,7 +11800,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -11827,7 +11827,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -11856,7 +11856,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -11883,7 +11883,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -11911,7 +11911,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias methods
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to inspect.
 	     * @returns {Array} Returns the new array of property names.
 	     * @example
@@ -11929,7 +11929,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @param {Array|string} path The path of the property to get.
 	     * @param {*} [defaultValue] The value returned if the resolved value is `undefined`.
@@ -11957,7 +11957,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @param {Array|string} path The path to check.
 	     * @returns {boolean} Returns `true` if `path` is a direct property, else `false`.
@@ -11999,7 +11999,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to invert.
 	     * @param {boolean} [multiValue] Allow multiple values per key.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -12051,7 +12051,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @returns {Array} Returns the array of property names.
 	     * @example
@@ -12085,7 +12085,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @returns {Array} Returns the array of property names.
 	     * @example
@@ -12136,7 +12136,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -12170,7 +12170,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to iterate over.
 	     * @param {Function|Object|string} [iteratee=_.identity] The function invoked
 	     *  per iteration.
@@ -12200,7 +12200,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The source object.
 	     * @param {Function|...(string|string[])} [predicate] The function invoked per
 	     *  iteration or property names to omit, specified as individual property
@@ -12237,7 +12237,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @returns {Array} Returns the new array of key-value pairs.
 	     * @example
@@ -12269,7 +12269,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The source object.
 	     * @param {Function|...(string|string[])} [predicate] The function invoked per
 	     *  iteration or property names to pick, specified as individual property
@@ -12302,7 +12302,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @param {Array|string} path The path of the property to resolve.
 	     * @param {*} [defaultValue] The value returned if the resolved value is `undefined`.
@@ -12342,7 +12342,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to augment.
 	     * @param {Array|string} path The path of the property to set.
 	     * @param {*} value The value to set.
@@ -12395,7 +12395,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Array|Object} object The object to iterate over.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [accumulator] The custom accumulator value.
@@ -12443,7 +12443,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @returns {Array} Returns the array of property values.
 	     * @example
@@ -12473,7 +12473,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Object
+	     * @subcategory Object
 	     * @param {Object} object The object to query.
 	     * @returns {Array} Returns the array of property values.
 	     * @example
@@ -12500,7 +12500,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Number
+	     * @subcategory Number
 	     * @param {number} n The number to check.
 	     * @param {number} [start=0] The start of the range.
 	     * @param {number} end The end of the range.
@@ -12544,7 +12544,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Number
+	     * @subcategory Number
 	     * @param {number} [min=0] The minimum possible value.
 	     * @param {number} [max=1] The maximum possible value.
 	     * @param {boolean} [floating] Specify returning a floating-point number.
@@ -12605,7 +12605,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to convert.
 	     * @returns {string} Returns the camel cased string.
 	     * @example
@@ -12629,7 +12629,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to capitalize.
 	     * @returns {string} Returns the capitalized string.
 	     * @example
@@ -12648,7 +12648,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to deburr.
 	     * @returns {string} Returns the deburred string.
 	     * @example
@@ -12666,7 +12666,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to search.
 	     * @param {string} [target] The string to search for.
 	     * @param {number} [position=string.length] The position to search from.
@@ -12719,7 +12719,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to escape.
 	     * @returns {string} Returns the escaped string.
 	     * @example
@@ -12741,7 +12741,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to escape.
 	     * @returns {string} Returns the escaped string.
 	     * @example
@@ -12761,7 +12761,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to convert.
 	     * @returns {string} Returns the kebab cased string.
 	     * @example
@@ -12785,7 +12785,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to pad.
 	     * @param {number} [length=0] The padding length.
 	     * @param {string} [chars=' '] The string used as padding.
@@ -12823,7 +12823,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to pad.
 	     * @param {number} [length=0] The padding length.
 	     * @param {string} [chars=' '] The string used as padding.
@@ -12847,7 +12847,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to pad.
 	     * @param {number} [length=0] The padding length.
 	     * @param {string} [chars=' '] The string used as padding.
@@ -12875,7 +12875,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} string The string to convert.
 	     * @param {number} [radix] The radix to interpret `value` by.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -12906,7 +12906,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to repeat.
 	     * @param {number} [n=0] The number of times to repeat the string.
 	     * @returns {string} Returns the repeated string.
@@ -12946,7 +12946,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to convert.
 	     * @returns {string} Returns the snake cased string.
 	     * @example
@@ -12969,7 +12969,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to convert.
 	     * @returns {string} Returns the start cased string.
 	     * @example
@@ -12992,7 +12992,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to search.
 	     * @param {string} [target] The string to search for.
 	     * @param {number} [position=0] The position to search from.
@@ -13036,7 +13036,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The template string.
 	     * @param {Object} [options] The options object.
 	     * @param {RegExp} [options.escape] The HTML "escape" delimiter.
@@ -13224,7 +13224,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to trim.
 	     * @param {string} [chars=whitespace] The characters to trim.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -13258,7 +13258,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to trim.
 	     * @param {string} [chars=whitespace] The characters to trim.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -13288,7 +13288,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to trim.
 	     * @param {string} [chars=whitespace] The characters to trim.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -13320,7 +13320,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to truncate.
 	     * @param {Object|number} [options] The options object or maximum string length.
 	     * @param {number} [options.length=30] The maximum string length.
@@ -13415,7 +13415,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to unescape.
 	     * @returns {string} Returns the unescaped string.
 	     * @example
@@ -13435,7 +13435,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category String
+	     * @subcategory String
 	     * @param {string} [string=''] The string to inspect.
 	     * @param {RegExp|string} [pattern] The pattern to match words.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -13464,7 +13464,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Function} func The function to attempt.
 	     * @returns {*} Returns the `func` result or error object.
 	     * @example
@@ -13496,7 +13496,7 @@
 	     * @static
 	     * @memberOf _
 	     * @alias iteratee
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {*} [func=_.identity] The value to convert to a callback.
 	     * @param {*} [thisArg] The `this` binding of `func`.
 	     * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
@@ -13538,7 +13538,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {*} value The value to return from the new function.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -13560,7 +13560,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {*} value Any value.
 	     * @returns {*} Returns `value`.
 	     * @example
@@ -13586,7 +13586,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Object} source The object of property values to match.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -13613,7 +13613,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Array|string} path The path of the property to get.
 	     * @param {*} srcValue The value to match.
 	     * @returns {Function} Returns the new function.
@@ -13637,7 +13637,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Array|string} path The path of the method to invoke.
 	     * @param {...*} [args] The arguments to invoke the method with.
 	     * @returns {Function} Returns the new function.
@@ -13667,7 +13667,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Object} object The object to query.
 	     * @param {...*} [args] The arguments to invoke the method with.
 	     * @returns {Function} Returns the new function.
@@ -13698,7 +13698,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Function|Object} [object=lodash] The destination object.
 	     * @param {Object} source The object of functions to add.
 	     * @param {Object} [options] The options object.
@@ -13781,7 +13781,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @returns {Function} Returns the `lodash` function.
 	     * @example
 	     *
@@ -13798,7 +13798,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @example
 	     *
 	     * var object = { 'user': 'fred' };
@@ -13816,7 +13816,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Array|string} path The path of the property to get.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -13842,7 +13842,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {Object} object The object to query.
 	     * @returns {Function} Returns the new function.
 	     * @example
@@ -13870,7 +13870,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {number} [start=0] The start of the range.
 	     * @param {number} end The end of the range.
 	     * @param {number} [step=1] The value to increment or decrement by.
@@ -13928,7 +13928,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {number} n The number of times to invoke `iteratee`.
 	     * @param {Function} [iteratee=_.identity] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -13975,7 +13975,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Utility
+	     * @subcategory Utility
 	     * @param {string} [prefix] The value to prefix the ID with.
 	     * @returns {string} Returns the unique ID.
 	     * @example
@@ -13998,7 +13998,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {number} augend The first number to add.
 	     * @param {number} addend The second number to add.
 	     * @returns {number} Returns the sum.
@@ -14016,7 +14016,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {number} n The number to round up.
 	     * @param {number} [precision=0] The precision to round up to.
 	     * @returns {number} Returns the rounded up number.
@@ -14038,7 +14038,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {number} n The number to round down.
 	     * @param {number} [precision=0] The precision to round down to.
 	     * @returns {number} Returns the rounded down number.
@@ -14075,7 +14075,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -14124,7 +14124,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.
@@ -14158,7 +14158,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {number} n The number to round.
 	     * @param {number} [precision=0] The precision to round to.
 	     * @returns {number} Returns the rounded number.
@@ -14180,7 +14180,7 @@
 	     *
 	     * @static
 	     * @memberOf _
-	     * @category Math
+	     * @subcategory Math
 	     * @param {Array|Object|string} collection The collection to iterate over.
 	     * @param {Function|Object|string} [iteratee] The function invoked per iteration.
 	     * @param {*} [thisArg] The `this` binding of `iteratee`.

@@ -15,7 +15,7 @@ define(function (require) {
     /**
      * @param {Object} option
      * @param {string} [option.type] See visualHandlers.
-     * @param {string} [option.mappingMethod] 'linear' or 'piecewise' or 'category'
+     * @param {string} [option.mappingMethod] 'linear' or 'piecewise' or 'subcategory'
      * @param {Array.<number>=} [option.dataExtent] [minExtent, maxExtent],
      *                                              required when mappingMethod is 'linear'
      * @param {Array.<Object>=} [option.pieceList] [
@@ -26,16 +26,16 @@ define(function (require) {
      *                                            required when mappingMethod is 'piecewise'.
      *                                            Visual for only each piece can be specified.
      * @param {Array.<string|Object>=} [option.categories] ['cate1', 'cate2']
-     *                                            required when mappingMethod is 'category'.
+     *                                            required when mappingMethod is 'subcategory'.
      *                                            If no option.categories, it represents
      *                                            categories is [0, 1, 2, ...].
-     * @param {boolean} [option.loop=false] Whether loop mapping when mappingMethod is 'category'.
+     * @param {boolean} [option.loop=false] Whether loop mapping when mappingMethod is 'subcategory'.
      * @param {(Array|Object|*)} [option.visual]  Visual data.
-     *                                            when mappingMethod is 'category',
+     *                                            when mappingMethod is 'subcategory',
      *                                            visual data can be array or object
      *                                            (like: {cate1: '#222', none: '#fff'})
      *                                            or primary types (which represents
-     *                                            defualt category visual), otherwise visual
+     *                                            defualt subcategory visual), otherwise visual
      *                                            can be array or primary (which will be
      *                                            normalized to array).
      *

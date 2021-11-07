@@ -10,7 +10,7 @@ define(function (require) {
 
         /**
          * Axis type
-         *  - 'category'
+         *  - 'subcategory'
          *  - 'value'
          *  - 'time'
          *  - 'log'

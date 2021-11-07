@@ -2650,7 +2650,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports) {
 
-	
+
 
 	    /**
 	     * @param {Array.<Object>} colorStops
@@ -2681,7 +2681,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var formatUtil = __webpack_require__(6);
 	    var nubmerUtil = __webpack_require__(7);
@@ -3080,7 +3080,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var numberUtil = __webpack_require__(7);
@@ -3646,7 +3646,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -3854,7 +3854,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    var getLineStyle = __webpack_require__(11)(
 	        [
 	            ['lineWidth', 'width'],
@@ -3919,7 +3919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    module.exports = {
 	        getAreaStyle: __webpack_require__(11)(
 	            [
@@ -3938,7 +3938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var textContain = __webpack_require__(14);
 
@@ -3995,7 +3995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var textWidthCache = {};
 	    var textWidthCacheCounter = 0;
@@ -4417,7 +4417,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 16 */
 /***/ function(module, exports) {
 
-	
+
 	    var ArrayCtor = typeof Float32Array === 'undefined'
 	        ? Array
 	        : Float32Array;
@@ -4697,7 +4697,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 17 */
 /***/ function(module, exports) {
 
-	
+
 	    var ArrayCtor = typeof Float32Array === 'undefined'
 	        ? Array
 	        : Float32Array;
@@ -4861,7 +4861,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    module.exports = {
 	        getItemStyle: __webpack_require__(11)(
 	            [
@@ -5067,7 +5067,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var clazz = __webpack_require__(9);
@@ -5653,7 +5653,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 22 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = {
 	        getBoxLayoutParams: function () {
@@ -5673,7 +5673,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 23 */
 /***/ function(module, exports) {
 
-	
+
 	    var platform = '';
 	    // Navigator not exists in node
 	    if (typeof navigator !== 'undefined') {
@@ -6453,7 +6453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var Group = __webpack_require__(29);
 	    var componentUtil = __webpack_require__(20);
@@ -7095,7 +7095,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        module.exports = function () {
 	            return 'zr_' + (idStart++);
 	        };
-	    
+
 
 
 /***/ },
@@ -9484,7 +9484,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	        var config = __webpack_require__(40);
 
 	        /**
@@ -9511,18 +9511,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return function(mes) {
 	            document.getElementById('wrong-message').innerHTML =
 	                mes + ' ' + (new Date() - 0)
-	                + '<br/>' 
+	                + '<br/>'
 	                + document.getElementById('wrong-message').innerHTML;
 	        };
 	        */
-	    
+
 
 
 /***/ },
 /* 40 */
 /***/ function(module, exports) {
 
-	
+
 	    var dpr = 1;
 	    // If in browser environment
 	    if (typeof window !== 'undefined') {
@@ -9554,7 +9554,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var Group = __webpack_require__(29);
 	    var componentUtil = __webpack_require__(20);
@@ -10178,7 +10178,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var Path = __webpack_require__(44);
 	    var PathProxy = __webpack_require__(48);
@@ -13548,7 +13548,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 52 */
 /***/ function(module, exports) {
 
-	
+
 	    module.exports = {
 	        /**
 	         * 线段包含判断
@@ -13596,7 +13596,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var curve = __webpack_require__(49);
 
@@ -13643,7 +13643,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var curve = __webpack_require__(49);
 
@@ -13688,7 +13688,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var normalizeRadian = __webpack_require__(56).normalizeRadian;
 	    var PI2 = Math.PI * 2;
@@ -13754,7 +13754,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 56 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var PI2 = Math.PI * 2;
 	    module.exports = {
@@ -13772,7 +13772,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 57 */
 /***/ function(module, exports) {
 
-	
+
 	    module.exports = function windingLine(x0, y0, x1, y1, x, y) {
 	        if ((y > y0 && y > y1) || (y < y0 && y < y1)) {
 	            return 0;
@@ -13792,7 +13792,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var CMD = __webpack_require__(48).CMD;
 	    var vec2 = __webpack_require__(16);
@@ -14063,7 +14063,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 60 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = {
 	        buildPath: function (ctx, shape) {
@@ -14463,7 +14463,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	    module.exports = __webpack_require__(44).extend({
-	        
+
 	        type: 'circle',
 
 	        shape: {
@@ -14596,7 +14596,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var polyHelper = __webpack_require__(67);
 
 	    module.exports = __webpack_require__(44).extend({
-	        
+
 	        type: 'polygon',
 
 	        shape: {
@@ -14617,7 +14617,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var smoothSpline = __webpack_require__(68);
 	    var smoothBezier = __webpack_require__(69);
@@ -14855,7 +14855,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var polyHelper = __webpack_require__(67);
 
 	    module.exports = __webpack_require__(44).extend({
-	        
+
 	        type: 'polyline',
 
 	        shape: {
@@ -15140,7 +15140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * 圆弧
 	 * @module zrender/graphic/shape/Arc
 	 */
-	 
+
 
 	    module.exports = __webpack_require__(44).extend({
 
@@ -17137,7 +17137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *         errorrik (errorrik@gmail.com)
 	 *         pissang (https://www.github.com/pissang)
 	 */
-	 
+
 
 	    var config = __webpack_require__(40);
 	    var util = __webpack_require__(3);
@@ -18086,7 +18086,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var zrUtil = __webpack_require__(3);
@@ -18189,7 +18189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    var Gradient = __webpack_require__(4);
 	    module.exports = function (seriesType, styleType, ecModel) {
 	        function encodeColor(seriesModel) {
@@ -18340,7 +18340,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -18421,7 +18421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var echarts = __webpack_require__(1);
@@ -18594,7 +18594,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var value = getDataItemValue(itemOpt);
 	                var val = converDataValue(value && value[dimIndex], dimensions[dimIndex]);
 	                if (categoryDimIndex === dimIndex) {
-	                    // If given value is a category string
+	                    // If given value is a subcategory string
 	                    if (typeof val === 'string') {
 	                        // Lazy get categories
 	                        categories = categories || categoryAxisModel.getCategories();
@@ -18649,7 +18649,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                },
 	                {
 	                    name: 'y',
-	                    // If two category axes
+	                    // If two subcategory axes
 	                    type: getDimTypeByAxis(yAxisType),
 	                    stackable: isStackable(yAxisType)
 	                }
@@ -18730,14 +18730,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var nameList = [];
 
 	        if (result && result.categoryAxisModel) {
-	            // FIXME Two category axis
+	            // FIXME Two subcategory axis
 	            var categories = result.categoryAxisModel.getCategories();
 	            if (categories) {
 	                var dataLen = data.length;
 	                // Ordered data is given explicitly like
 	                // [[3, 0.2], [1, 0.3], [2, 0.15]]
 	                // or given scatter data,
-	                // pick the category
+	                // pick the subcategory
 	                if (zrUtil.isArray(data[0]) && data[0].length > 1) {
 	                    nameList = [];
 	                    for (var i = 0; i < dataLen; i++) {
@@ -19023,7 +19023,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // Each data item is value
 	            // [1, 2]
 	            // 2
-	            // Bar chart, line chart which uses category axis
+	            // Bar chart, line chart which uses subcategory axis
 	            // only gives the 'y' value. 'x' value is the indices of cateogry
 	            // Use a tempValue to normalize the value to be a (x, y) value
 
@@ -20293,7 +20293,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                });
 
 	                // In the case data zoom triggerred refreshing frequently
-	                // Data may not change if line has a category axis. So it should animate nothing
+	                // Data may not change if line has a subcategory axis. So it should animate nothing
 	                if (!isPointsSame(this._stackedOnPoints, stackedOnPoints)
 	                    || !isPointsSame(this._points, points)
 	                ) {
@@ -21318,7 +21318,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 102 */
 /***/ function(module, exports) {
 
-	
+
 
 	    // var arrayDiff = require('zrender/lib/core/arrayDiff');
 	    // 'zrender/core/arrayDiff' has been used before, but it did
@@ -21787,7 +21787,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 104 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = function (seriesType, defaultSymbolType, legendSymbol, ecModel, api) {
 
@@ -21836,7 +21836,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 105 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = function (seriesType, ecModel, api) {
 	        ecModel.eachSeriesByType(seriesType, function (seriesModel) {
@@ -21866,7 +21866,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 106 */
 /***/ function(module, exports) {
 
-	
+
 	    var samplers = {
 	        average: function (frame) {
 	            var sum = 0;
@@ -22097,7 +22097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // Fix configuration
 	        each(axesMap.x, function (xAxis) {
 	            // onZero can not be enabled in these two situations
-	            // 1. When any other axis is a category axis
+	            // 1. When any other axis is a subcategory axis
 	            // 2. When any other axis not across 0 point
 	            if (ifAxisCanNotOnZero('y')) {
 	                xAxis.onZero = false;
@@ -22407,7 +22407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var OrdinalScale = __webpack_require__(110);
 	    var IntervalScale = __webpack_require__(112);
@@ -23604,7 +23604,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var Axis = __webpack_require__(118);
@@ -23624,7 +23624,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        Axis.call(this, dim, scale, coordExtent);
 	        /**
 	         * Axis type
-	         *  - 'category'
+	         *  - 'subcategory'
 	         *  - 'value'
 	         *  - 'time'
 	         *  - 'log'
@@ -23687,7 +23687,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * If label is ignored.
-	         * Automatically used when axis is category and label can not be all shown
+	         * Automatically used when axis is subcategory and label can not be all shown
 	         * @param  {number}  idx
 	         * @return {boolean}
 	         */
@@ -23726,7 +23726,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var numberUtil = __webpack_require__(7);
 	    var linearMap = numberUtil.linearMap;
@@ -24127,7 +24127,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 
 	    function getAxisType(axisDim, option) {
-	        // Default axis with data is category axis
+	        // Default axis with data is subcategory axis
 	        return option.type || (option.data ? 'category' : 'value');
 	    }
 
@@ -24147,7 +24147,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var axisDefault = __webpack_require__(123);
 	    var zrUtil = __webpack_require__(3);
@@ -24210,7 +24210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -24345,7 +24345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var axisHelper = __webpack_require__(109);
@@ -24402,7 +24402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var graphic = __webpack_require__(42);
@@ -24681,7 +24681,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var graphic = __webpack_require__(42);
@@ -25149,7 +25149,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -25477,7 +25477,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    module.exports = {
 	        getBarItemStyle: __webpack_require__(11)(
 	            [
@@ -25513,7 +25513,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    function calBarWidthAndOffset(barSeries, api) {
-	        // Columns info on each category axis. Key is cartesian name
+	        // Columns info on each subcategory axis. Key is cartesian name
 	        var columnsMap = {};
 
 	        zrUtil.each(barSeries, function (seriesModel, idx) {
@@ -25722,7 +25722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var echarts = __webpack_require__(1);
@@ -25981,7 +25981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var zrUtil = __webpack_require__(3);
@@ -26348,7 +26348,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    var echarts = __webpack_require__(1);
 	    var zrUtil = __webpack_require__(3);
 	    module.exports = function (seriesType, actionInfos) {
@@ -26786,7 +26786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 141 */
 /***/ function(module, exports) {
 
-	
+
 	    module.exports = function (seriesType, ecModel) {
 	        var legendModels = ecModel.findComponents({
 	            mainType: 'legend'
@@ -26814,7 +26814,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var echarts = __webpack_require__(1);
@@ -26903,7 +26903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var SymbolDraw = __webpack_require__(99);
 	    var LargeSymbolDraw = __webpack_require__(145);
@@ -26950,7 +26950,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var symbolUtil = __webpack_require__(101);
@@ -27064,7 +27064,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var echarts = __webpack_require__(1);
@@ -27094,7 +27094,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(148);
 	    __webpack_require__(150);
@@ -27345,7 +27345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var Axis = __webpack_require__(118);
@@ -27355,7 +27355,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * Axis type
-	         *  - 'category'
+	         *  - 'subcategory'
 	         *  - 'value'
 	         *  - 'time'
 	         *  - 'log'
@@ -27385,7 +27385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 
 	    var axisDefault = __webpack_require__(123);
@@ -27514,7 +27514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var AxisBuilder = __webpack_require__(127);
 	    var zrUtil = __webpack_require__(3);
@@ -27765,7 +27765,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var zrUtil = __webpack_require__(3);
@@ -27989,7 +27989,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 154 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = function (ecModel, api) {
 	        ecModel.eachSeriesByType('radar', function (seriesModel) {
@@ -28063,7 +28063,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -28102,7 +28102,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var List = __webpack_require__(95);
 	    var SeriesModel = __webpack_require__(27);
@@ -28297,7 +28297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var Geo = __webpack_require__(159);
 
@@ -28519,7 +28519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var parseGeoJson = __webpack_require__(160);
 
@@ -29005,7 +29005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var windingLine = __webpack_require__(57);
 
@@ -29370,7 +29370,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -29400,7 +29400,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -29425,7 +29425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    // var zrUtil = require('zrender/lib/core/util');
 	    var graphic = __webpack_require__(42);
@@ -30088,7 +30088,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 170 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var ATTR = '\0_ec_interaction_mutex';
 
@@ -30118,7 +30118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var roamHelper = __webpack_require__(172);
@@ -30176,7 +30176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 172 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var roamHelper = {};
 
@@ -30241,7 +30241,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -30305,7 +30305,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 174 */
 /***/ function(module, exports) {
 
-	
+
 	    module.exports = function (ecModel) {
 	        ecModel.eachSeriesByType('map', function (seriesModel) {
 	            var colorList = seriesModel.get('color');
@@ -30327,7 +30327,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -30412,7 +30412,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var geoProps = [
@@ -30503,7 +30503,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -30520,7 +30520,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var SeriesModel = __webpack_require__(27);
 	    var Tree = __webpack_require__(179);
@@ -31489,7 +31489,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	 
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var graphic = __webpack_require__(42);
@@ -32366,7 +32366,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -32415,7 +32415,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
-	 
+
 
 	    var graphic = __webpack_require__(42);
 	    var layout = __webpack_require__(21);
@@ -32579,7 +32579,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	 
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -32735,7 +32735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var VisualMapping = __webpack_require__(187);
 	    var zrColor = __webpack_require__(38);
@@ -32977,7 +32977,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * @param {Object} option
 	     * @param {string} [option.type] See visualHandlers.
-	     * @param {string} [option.mappingMethod] 'linear' or 'piecewise' or 'category'
+	     * @param {string} [option.mappingMethod] 'linear' or 'piecewise' or 'subcategory'
 	     * @param {Array.<number>=} [option.dataExtent] [minExtent, maxExtent],
 	     *                                              required when mappingMethod is 'linear'
 	     * @param {Array.<Object>=} [option.pieceList] [
@@ -32988,16 +32988,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	     *                                            required when mappingMethod is 'piecewise'.
 	     *                                            Visual for only each piece can be specified.
 	     * @param {Array.<string|Object>=} [option.categories] ['cate1', 'cate2']
-	     *                                            required when mappingMethod is 'category'.
+	     *                                            required when mappingMethod is 'subcategory'.
 	     *                                            If no option.categories, it represents
 	     *                                            categories is [0, 1, 2, ...].
-	     * @param {boolean} [option.loop=false] Whether loop mapping when mappingMethod is 'category'.
+	     * @param {boolean} [option.loop=false] Whether loop mapping when mappingMethod is 'subcategory'.
 	     * @param {(Array|Object|*)} [option.visual]  Visual data.
-	     *                                            when mappingMethod is 'category',
+	     *                                            when mappingMethod is 'subcategory',
 	     *                                            visual data can be array or object
 	     *                                            (like: {cate1: '#222', none: '#fff'})
 	     *                                            or primary types (which represents
-	     *                                            defualt category visual), otherwise visual
+	     *                                            defualt subcategory visual), otherwise visual
 	     *                                            can be array or primary (which will be
 	     *                                            normalized to array).
 	     *
@@ -33533,7 +33533,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var numberUtil = __webpack_require__(7);
@@ -34088,7 +34088,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 	    var zrUtil = __webpack_require__(3);
@@ -34373,7 +34373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var List = __webpack_require__(95);
 	    var Graph = __webpack_require__(192);
@@ -34965,7 +34965,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 
 	    var SymbolDraw = __webpack_require__(99);
@@ -35639,7 +35639,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var curveTool = __webpack_require__(49);
 	    var vec2 = __webpack_require__(16);
@@ -35789,7 +35789,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 	    var roamHelper = __webpack_require__(172);
@@ -35829,7 +35829,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 199 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = function (ecModel) {
 	        var legendModels = ecModel.findComponents({
@@ -35869,7 +35869,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 200 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = function (ecModel) {
 	        ecModel.eachSeriesByType('graph', function (seriesModel) {
@@ -35889,7 +35889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                categoriesData.setItemVisual(idx, 'color', color);
 	            });
 
-	            // Assign category color to visual
+	            // Assign subcategory color to visual
 	            if (categoriesData.count()) {
 	                data.each(function (idx) {
 	                    var model = data.getItemModel(idx);
@@ -35915,7 +35915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 201 */
 /***/ function(module, exports) {
 
-	
+
 
 	    function normalize(a) {
 	        if (!(a instanceof Array)) {
@@ -35953,7 +35953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var simpleLayoutHelper = __webpack_require__(203);
 	    var simpleLayoutEdge = __webpack_require__(204);
@@ -35986,7 +35986,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var simpleLayoutEdge = __webpack_require__(204);
 
@@ -36010,7 +36010,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    var vec2 = __webpack_require__(16);
 	    module.exports = function (graph) {
 	        graph.eachEdge(function (edge) {
@@ -36033,7 +36033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    var circularLayoutHelper = __webpack_require__(206);
 	    module.exports = function (ecModel, api) {
 	        ecModel.eachSeriesByType('graph', function (seriesModel) {
@@ -36048,7 +36048,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    var vec2 = __webpack_require__(16);
 	    module.exports = function (seriesModel) {
 	        var coordSys = seriesModel.coordinateSystem;
@@ -36106,7 +36106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var forceHelper = __webpack_require__(208);
 	    var numberUtil = __webpack_require__(7);
@@ -36222,7 +36222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var vec2 = __webpack_require__(16);
 	    var scaleAndAdd = vec2.scaleAndAdd;
@@ -36364,7 +36364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    // FIXME Where to create the simple view coordinate system
 	    var View = __webpack_require__(163);
 	    var layout = __webpack_require__(21);
@@ -36445,7 +36445,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    __webpack_require__(211);
 	    __webpack_require__(212);
 
@@ -36454,7 +36454,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var List = __webpack_require__(95);
 	    var SeriesModel = __webpack_require__(27);
@@ -36581,7 +36581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var PointerPath = __webpack_require__(213);
 
@@ -36996,7 +36996,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    module.exports = __webpack_require__(44).extend({
 
@@ -37048,7 +37048,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var echarts = __webpack_require__(1);
@@ -37175,7 +37175,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var zrUtil = __webpack_require__(3);
@@ -37393,7 +37393,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var layout = __webpack_require__(21);
 	    var number = __webpack_require__(7);
@@ -37568,7 +37568,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -37585,7 +37585,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(220);
 	    __webpack_require__(223);
@@ -37954,7 +37954,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var Axis = __webpack_require__(118);
@@ -37973,7 +37973,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * Axis type
-	         *  - 'category'
+	         *  - 'subcategory'
 	         *  - 'value'
 	         *  - 'time'
 	         *  - 'log'
@@ -38009,7 +38009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var Component = __webpack_require__(19);
@@ -38114,7 +38114,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var ComponentModel = __webpack_require__(19);
 	    var zrUtil = __webpack_require__(3);
@@ -38239,7 +38239,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(220);
 	    __webpack_require__(226);
@@ -38251,7 +38251,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -38281,7 +38281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var AxisBuilder = __webpack_require__(127);
@@ -38801,7 +38801,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var modelUtil = __webpack_require__(5);
@@ -38860,7 +38860,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var List = __webpack_require__(95);
 	    var zrUtil = __webpack_require__(3);
@@ -38984,7 +38984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var zrUtil = __webpack_require__(3);
@@ -39189,7 +39189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 232 */
 /***/ function(module, exports) {
 
-	
+
 
 	    /**
 	     * @payload
@@ -39231,7 +39231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -39368,7 +39368,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var zrUtil = __webpack_require__(3);
@@ -39555,7 +39555,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var layout = __webpack_require__(21);
 	    var nest = __webpack_require__(237);
@@ -39917,7 +39917,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -40028,7 +40028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var VisualMapping = __webpack_require__(187);
 
@@ -40070,7 +40070,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -40188,7 +40188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        getInitialData: function (option, ecModel) {
 	            // When both types of xAxis and yAxis are 'value', layout is
 	            // needed to be specified by user. Otherwise, layout can be
-	            // judged by which axis is category.
+	            // judged by which axis is subcategory.
 
 	            var categories;
 
@@ -40579,7 +40579,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 244 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var borderColorQuery = ['itemStyle', 'normal', 'borderColor'];
 
@@ -40618,7 +40618,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var numberUtil = __webpack_require__(7);
@@ -40804,7 +40804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 
@@ -40978,7 +40978,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 
@@ -41001,7 +41001,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 250 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var positiveBorderColorQuery = ['itemStyle', 'normal', 'borderColor'];
 	    var negativeBorderColorQuery = ['itemStyle', 'normal', 'borderColor0'];
@@ -41046,7 +41046,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 251 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var CANDLE_MIN_WIDTH = 2;
 	    var CANDLE_MIN_NICE_WIDTH = 5;
@@ -41154,7 +41154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var echarts = __webpack_require__(1);
@@ -41242,7 +41242,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var SymbolDraw = __webpack_require__(99);
 	    var EffectSymbol = __webpack_require__(255);
@@ -41465,7 +41465,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(257);
 	    __webpack_require__(258);
@@ -41606,7 +41606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var LineDraw = __webpack_require__(194);
 	    var EffectLine = __webpack_require__(259);
@@ -41798,7 +41798,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 260 */
 /***/ function(module, exports) {
 
-	
+
 
 	    module.exports = function (ecModel) {
 	        ecModel.eachSeriesByType('lines', function (seriesModel) {
@@ -41835,7 +41835,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(262);
 	    __webpack_require__(263);
@@ -41845,7 +41845,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var SeriesModel = __webpack_require__(27);
 	    var createListFromArray = __webpack_require__(94);
@@ -41888,7 +41888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var graphic = __webpack_require__(42);
 	    var HeatmapLayer = __webpack_require__(264);
@@ -41981,7 +41981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var group = this.group;
 
 	            if (!(xAxis.type === 'category' && yAxis.type === 'category')) {
-	                throw new Error('Heatmap on cartesian must have two category axes');
+	                throw new Error('Heatmap on cartesian must have two subcategory axes');
 	            }
 	            if (!(xAxis.onBand && yAxis.onBand)) {
 	                throw new Error('Heatmap on cartesian must have two axes with boundaryGap true');
@@ -42549,7 +42549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var symbolCreator = __webpack_require__(101);
@@ -42784,7 +42784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    // List layout
 	    var layout = __webpack_require__(21);
 	    var formatUtil = __webpack_require__(6);
@@ -42854,7 +42854,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 270 */
 /***/ function(module, exports) {
 
-	
+
 	   module.exports = function (ecModel) {
 	        var legendModels = ecModel.findComponents({
 	            mainType: 'legend'
@@ -42919,7 +42919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(1).extendComponentModel({
 
@@ -43028,7 +43028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var TooltipContent = __webpack_require__(274);
 	    var graphic = __webpack_require__(42);
@@ -43561,7 +43561,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var lastHover = this._lastHover;
 	                if (axisPointerType === 'cross') {
 	                    // If hover data not changed
-	                    // Possible when two axes are all category
+	                    // Possible when two axes are all subcategory
 	                    if (dataEqual(lastHover.data, value)) {
 	                        contentNotChange = true;
 	                    }
@@ -44523,7 +44523,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        niceScaleExtent(angleAxis, angleAxis.model);
 	        niceScaleExtent(radiusAxis, radiusAxis.model);
 
-	        // Fix extent of category angle axis
+	        // Fix extent of subcategory angle axis
 	        if (angleAxis.type === 'category' && !angleAxis.onBand) {
 	            var extent = angleAxis.getExtent();
 	            var diff = 360 / angleAxis.scale.count();
@@ -44845,7 +44845,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * Axis type
-	         *  - 'category'
+	         *  - 'subcategory'
 	         *  - 'value'
 	         *  - 'time'
 	         *  - 'log'
@@ -44886,7 +44886,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * Axis type
-	         *  - 'category'
+	         *  - 'subcategory'
 	         *  - 'value'
 	         *  - 'time'
 	         *  - 'log'
@@ -45002,7 +45002,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    function getAxisType(axisDim, option) {
-	        // Default axis with data is category axis
+	        // Default axis with data is subcategory axis
 	        return option.type || (option.data ? 'category' : 'value');
 	    }
 
@@ -45256,7 +45256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(276);
 
@@ -45415,7 +45415,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(287);
 
@@ -45877,7 +45877,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(19).registerSubTypeDefaulter('dataZoom', function (option) {
 	        // Default 'slider' when no type specified.
@@ -45918,8 +45918,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            zlevel: 0,
 	            z: 4,                   // Higher than normal component (z: 2).
 	            orient: null,           // Default auto by axisIndex. Possible value: 'horizontal', 'vertical'.
-	            xAxisIndex: null,       // Default all horizontal category axis.
-	            yAxisIndex: null,       // Default all vertical category axis.
+	            xAxisIndex: null,       // Default all horizontal subcategory axis.
+	            yAxisIndex: null,       // Default all vertical subcategory axis.
 	            angleAxisIndex: null,
 	            radiusAxisIndex: null,
 	            filterMode: 'filter',   // Possible values: 'filter' or 'empty'.
@@ -46107,7 +46107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 
 	            if (autoAxisIndex) {
-	                // Find the first category axis as default. (consider polar)
+	                // Find the first subcategory axis as default. (consider polar)
 	                eachAxisDim(function (dimNames) {
 	                    if (!autoAxisIndex) {
 	                        return;
@@ -46619,7 +46619,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                if (boundPercent == null) {
 	                    boundPercent = percentExtent[idx];
 	                }
-	                // Use scale.parse to math round for category or time axis.
+	                // Use scale.parse to math round for subcategory or time axis.
 	                boundValue = scale.parse(numberUtil.linearMap(
 	                    boundPercent, percentExtent, dataExtent, true
 	                ));
@@ -46690,7 +46690,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var ComponentView = __webpack_require__(28);
 
@@ -46841,7 +46841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var graphic = __webpack_require__(42);
@@ -47546,7 +47546,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 297 */
 /***/ function(module, exports) {
 
-	
+
 
 	    var lib = {};
 
@@ -47746,7 +47746,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 298 */
 /***/ function(module, exports) {
 
-	
+
 
 	    /**
 	     * Calculate slider move result.
@@ -47827,7 +47827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var DataZoomView = __webpack_require__(294);
 	    var zrUtil = __webpack_require__(3);
@@ -48421,7 +48421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(19).registerSubTypeDefaulter('visualMap', function (option) {
 	        // Compatible with ec2, when splitNumber === 0, continuous visualMap will be used.
@@ -48844,7 +48844,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        /**
 	         * @example
 	         * this.formatValueText(someVal); // format single numeric value to text.
-	         * this.formatValueText(someVal, true); // format single category value to text.
+	         * this.formatValueText(someVal, true); // format single subcategory value to text.
 	         * this.formatValueText([min, max]); // format numeric min-max to text.
 	         * this.formatValueText([this.dataBound[0], max]); // using data lower bound.
 	         * this.formatValueText([min, this.dataBound[1]]); // using data upper bound.
@@ -48896,7 +48896,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    return textValue[0] + ' - ' + textValue[1];
 	                }
 	            }
-	            else { // Format single value (includes category case).
+	            else { // Format single value (includes subcategory case).
 	                return textValue;
 	            }
 
@@ -49298,7 +49298,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var VisualMapView = __webpack_require__(313);
 	    var graphic = __webpack_require__(42);
@@ -50022,7 +50022,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var echarts = __webpack_require__(1);
 	    var zrUtil = __webpack_require__(3);
@@ -50188,7 +50188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var layout = __webpack_require__(21);
 	    var zrUtil = __webpack_require__(3);
@@ -50329,7 +50329,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var VisualMapModel = __webpack_require__(310);
 	    var zrUtil = __webpack_require__(3);
@@ -50377,7 +50377,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                        // {min, max, value, color, colorSaturation, colorAlpha, opacity,
 	                                        // symbol, symbolSize}, which customize the range or visual
 	                                        // coding of the certain piece. Besides, see "Order Rule".
-	            categories: null,           // category names, like: ['some1', 'some2', 'some3'].
+	            categories: null,           // subcategory names, like: ['some1', 'some2', 'some3'].
 	                                        // Attr min/max are ignored when categories set. See "Order Rule"
 	            splitNumber: 5,             // If set to 5, auto split five pieces equally.
 	                                        // If set to 0 and component type not set, component type will be
@@ -50658,7 +50658,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var VisualMapView = __webpack_require__(313);
 	    var zrUtil = __webpack_require__(3);
@@ -50919,7 +50919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var modelUtil = __webpack_require__(5);
 	    var zrUtil = __webpack_require__(3);
@@ -51011,7 +51011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var SymbolDraw = __webpack_require__(99);
 	    var zrUtil = __webpack_require__(3);
@@ -51216,7 +51216,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var numberUtil = __webpack_require__(7);
@@ -51395,7 +51395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(324);
 	    __webpack_require__(325);
@@ -51410,7 +51410,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var modelUtil = __webpack_require__(5);
 	    var zrUtil = __webpack_require__(3);
@@ -51518,7 +51518,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var List = __webpack_require__(95);
@@ -52041,7 +52041,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(19).registerSubTypeDefaulter('timeline', function () {
 	        // Only slider now.
@@ -52239,7 +52239,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            z: 4,                       // 二级层叠
 	            show: true,
 
-	            axisType: 'time',  // 模式是时间类型，支持 value, category
+	            axisType: 'time',  // 模式是时间类型，支持 value, subcategory
 
 	            realtime: true,
 
@@ -53129,7 +53129,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var zrUtil = __webpack_require__(3);
 	    var Axis = __webpack_require__(118);
@@ -53151,7 +53151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * Axis type
-	         *  - 'category'
+	         *  - 'subcategory'
 	         *  - 'value'
 	         *  - 'time'
 	         *  - 'log'
@@ -53205,7 +53205,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        /**
 	         * If label is ignored.
-	         * Automatically used when axis is category and label can not be all shown
+	         * Automatically used when axis is subcategory and label can not be all shown
 	         * @public
 	         * @param  {number} idx
 	         * @return {boolean}
@@ -53230,7 +53230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    __webpack_require__(336);
 	    __webpack_require__(338);
@@ -53246,7 +53246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var featureManager = __webpack_require__(337);
 	    var zrUtil = __webpack_require__(3);
@@ -53678,7 +53678,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    var env = __webpack_require__(79);
 
@@ -53938,7 +53938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var ITEM_SPLITER = '\t';
 	    /**
 	     * Group series into two types
-	     *  1. on category axis, like line, bar
+	     *  1. on subcategory axis, like line, bar
 	     *  2. others, like scatter, pie
 	     * @param {module:echarts/model/Global} ecModel
 	     * @return {Object}
@@ -54910,7 +54910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	    module.exports = __webpack_require__(294).extend({
 
@@ -54968,7 +54968,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 	    __webpack_require__(350);
 	    __webpack_require__(78).registerPainter('vml', __webpack_require__(352));
 
@@ -56034,7 +56034,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+
 
 	if (!__webpack_require__(79).canvasSupported) {
 	    var urn = 'urn:schemas-microsoft-com:vml';

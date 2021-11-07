@@ -25,7 +25,7 @@ define(function(require) {
         getInitialData: function (option, ecModel) {
             // When both types of xAxis and yAxis are 'value', layout is
             // needed to be specified by user. Otherwise, layout can be
-            // judged by which axis is category.
+            // judged by which axis is subcategory.
 
             var categories;
 

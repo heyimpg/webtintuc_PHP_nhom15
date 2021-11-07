@@ -91,7 +91,7 @@ define(function (require) {
             var group = this.group;
 
             if (!(xAxis.type === 'category' && yAxis.type === 'category')) {
-                throw new Error('Heatmap on cartesian must have two category axes');
+                throw new Error('Heatmap on cartesian must have two subcategory axes');
             }
             if (!(xAxis.onBand && yAxis.onBand)) {
                 throw new Error('Heatmap on cartesian must have two axes with boundaryGap true');

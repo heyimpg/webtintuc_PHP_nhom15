@@ -11,7 +11,7 @@ define(function(require) {
     }
 
     function calBarWidthAndOffset(barSeries, api) {
-        // Columns info on each category axis. Key is cartesian name
+        // Columns info on each subcategory axis. Key is cartesian name
         var columnsMap = {};
 
         zrUtil.each(barSeries, function (seriesModel, idx) {

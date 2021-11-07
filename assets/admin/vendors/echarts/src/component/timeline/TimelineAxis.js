@@ -20,7 +20,7 @@ define(function (require) {
 
         /**
          * Axis type
-         *  - 'category'
+         *  - 'subcategory'
          *  - 'value'
          *  - 'time'
          *  - 'log'
@@ -74,7 +74,7 @@ define(function (require) {
 
         /**
          * If label is ignored.
-         * Automatically used when axis is category and label can not be all shown
+         * Automatically used when axis is subcategory and label can not be all shown
          * @public
          * @param  {number} idx
          * @return {boolean}

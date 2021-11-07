@@ -1,4 +1,4 @@
-// Test the category scale
+// Test the subcategory scale
 
 describe('Category scale tests', function() {
 	it('Should register the constructor with the scale service', function() {
