@@ -15,7 +15,7 @@
         function sign_up($userName, $passWord) {
             $query = "INSERT INTO login(username, password) VALUES(?,?)";
             $result = $this->conn->prepare($query);
-            $result->execute([$userName,$passWord]);
+            return $result->execute([$userName,$passWord]);
 
             return $result->rowCount();
         }

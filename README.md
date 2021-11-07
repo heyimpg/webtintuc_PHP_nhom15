@@ -19,6 +19,8 @@ Công việc đã làm:
 Công việc cần làm:
     + Xây dựng cấu trúc bên Admin (Định dạng lại cả cấu trúc thư mục như bên client)
     + Xây dựng trang login, register (be)
+    + Thêm phần phân trang cho trang danh mục
+    + Thêm phần tìm kiếm bài viết
     + Thêm phần comments các bài viết
 Vướng mắc:
     + Có dùng khóa ngoại k?

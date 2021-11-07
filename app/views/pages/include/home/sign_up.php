@@ -54,7 +54,7 @@
                 </div>
                 <div class="w3l_form align-self">
                     <div class="left_grid_info">
-                        <img src="./assets/img/core-img/avatar_login.png" alt="" class="img-fluid">
+                        <img src="./assets/img/core-img/avatar_register.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -62,3 +62,33 @@
         <!-- //form -->
     </div>
 </div>
+
+<script>
+    var sm = $("button[name=submitFormLogin-sign_up]");
+    sm.click(e => {
+        e.preventDefault();
+        const username = $("input[name=username-sign_up]")
+        const password = $("input[name=password-sign_up]")
+        const re_password = $("input[name=re_password-sign_up]")
+        const arr = [username.val(), password.val()]
+        $.ajax("<?= BASE_URL ?>".concat("login/sign_up/").concat(arr.toString()))
+            .fail(function(response) {
+                //do sth
+            }).done(function(response) {
+                const status = JSON.parse(response).statusCode
+                let message = ''
+                if (status == 200){
+                    username.val = ''
+                    password.val = ''
+                    re_password.val = ''
+                    message = 'Register success'
+                }
+                if (status == 400)
+                    message = 'Has occur error'
+                $("#message_formLogin-sign_up").html(response);
+                //do sth
+            }).always(function(response) {
+                //do sth
+            });
+    })
+</script>
