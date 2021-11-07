@@ -1,6 +1,6 @@
 <?php
 
-    class SubCategoryModel extends Model
+    class AdminSubCategoryModel extends Model
     {
         protected String $table = "chitiettheloai";
     }

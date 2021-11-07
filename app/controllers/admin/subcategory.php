@@ -1,16 +1,16 @@
 <?php
     class subcategory extends Controller
     {
-        private SubCategoryModel $subcategory_model;
-        private CategoryModel $category_model;
+        private AdminSubCategoryModel $subcategory_model;
+        private AdminCategoryModel $category_model;
         private String $template = "admin/subcategory";
         private String $title = "danh mục bài viết";
         private String $session = "session";
         private int $type = 1;
 
         public function __construct() {
-            $this->subcategory_model = $this->model("SubCategoryModel");
-            $this->category_model = $this->model("CategoryModel");
+            $this->subcategory_model = $this->model("AdminSubCategoryModel");
+            $this->category_model = $this->model("AdminCategoryModel");
         }
 
         public function index() {

@@ -1,11 +1,11 @@
 <?php
     class category extends Controller {
         private CategoryModel $categoryModel;
-        private AdminPostModel $postModel;
+        private PostModel $postModel;
 
         public function __construct() {
             $this->categoryModel = $this->model("CategoryModel");
-            $this->postModel = $this->model("AdminPostModel");
+            $this->postModel = $this->model("PostModel");
         }
 
         public function index($ID_CTTheLoai) {
@@ -16,7 +16,7 @@
             $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
             $this->postModel->closeConnection();
             $data = [
-                "page" => "home/subcategory",
+                "page" => "home/category",
                 "categories" => $categories,
                 "category_post" => $category_post,
                 "popular_post" => $popular_post
