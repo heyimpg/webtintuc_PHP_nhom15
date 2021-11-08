@@ -64,8 +64,8 @@
 </div>
 
 <script>
-    var sm = $("button[name=submitFormLogin-sign_up]");
-    sm.click(e => {
+    var btnSignOut = $("button[name=submitFormLogin-sign_up]");
+    btnSignOut.click(e => {
         e.preventDefault();
         const username = $("input[name=username-sign_up]")
         const password = $("input[name=password-sign_up]")

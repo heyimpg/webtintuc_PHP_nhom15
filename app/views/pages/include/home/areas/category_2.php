@@ -1,3 +1,4 @@
+<!-- Trang  danh mục-->
 <?php
 if (isset($data)) {
     foreach ($data['category_post'] as $key => $post) {

@@ -60,8 +60,8 @@
 
 
 <script>
-    var sm = $("button[name=submitFormLogin-sign_in]");
-    sm.click(e => {
+    var btnSignIn = $("button[name=submitFormLogin-sign_in]");
+    btnSignIn.click(e => {
         e.preventDefault();
         const username = $("input[name=username-sign_in]")
         const password = $("input[name=password-sign_in]")

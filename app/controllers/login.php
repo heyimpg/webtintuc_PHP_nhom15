@@ -13,7 +13,10 @@
             $result = $this->login->sign_in($username, $password);
             if ($result >= 1)
             {
-                session_start();
+                if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE)
+                {
+                    session_start();
+                }
                 $_SESSION["username"]=$username;
                 echo json_encode(array("statusCode"=>200));
             }
@@ -29,6 +32,10 @@
                 echo json_encode(array("statusCode"=>201));
             else
                 echo json_encode(array("statusCode"=>400));
+        }
+
+        public function logout() {
+            return session_unset();
         }
     }
 ?>

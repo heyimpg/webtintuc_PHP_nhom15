@@ -12,7 +12,7 @@
                     <div class="top-header-content d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="<?=BASE_URL?>">
+                            <a href="<?= BASE_URL ?>">
                                 <h3>Trang báo việt</h3>
                                 <p>Tin mới mỗi ngày</p>
                             </a>
@@ -23,20 +23,27 @@
                             <!-- Login -->
                             <div class="login d-flex">
                                 <?php
-                                    if(isset($_SESSION["username"])){
+                                if (isset($_SESSION["username"])) {
                                 ?>
-                                    <a href="#"><?php echo 'name: '.$_SESSION["username"]?><a class="fa fa-user"></a></a>
+                                    <a href="#" id="btn-logout"><?php echo $_SESSION["username"] ?>
+                                        <i class="fa fa-user"></i>
+                                        <!-- <i class="fa fa-user"></i>
+                                        <ul class="dropdown">
+                                            <li><a href="home">User</a></li>
+                                            <li><a href="catagories-post.html">Setting</a></li>
+                                            <li><a href="single-post.html">Logout</a></li>
+                                        </ul> -->
+                                    </a>
                                 <?php
-                                    } else { 
+                                } else {
                                 ?>
                                     <a href="#" id="btn-sign_in">Đăng nhập </a>
                                     <a href="#" id="btn-sign_up">Đăng ký</a>
                                 <?php
-                                    }
+                                }
                                 ?>
-                                
+
                             </div>
-                            <i class="fa fa-user"></i>
                             <!-- Search Form -->
                             <div class="search-form">
                                 <form action="#" method="post">
@@ -84,14 +91,14 @@
                                     </ul>
                                 </li>
                                 <?php
-                                    if(isset($data)) {
-                                        foreach ($data['categories'] as $category) {
+                                if (isset($data)) {
+                                    foreach ($data['categories'] as $category) {
 
                                 ?>
-                                <li><a href="<?= CATEGORY_URL.$category["ID_CTTheLoai"] ?>"><?php echo $category['TenCTTheLoai']; ?></a></li>
+                                        <li><a href="<?= CATEGORY_URL . $category["ID_CTTheLoai"] ?>"><?php echo $category['TenCTTheLoai']; ?></a></li>
                                 <?php
-                                        }
                                     }
+                                }
                                 ?>
                             </ul>
                         </div>
@@ -103,3 +110,18 @@
     </div>
 </header>
 <!-- ##### Header Area End ##### -->
+<script>
+    // Logout
+var btnLogout = $("#btn-logout");
+btnLogout.click(e => {
+            $.ajax("<?= BASE_URL ?>".concat("login/logout/"))
+                .fail(function(response) {
+                    //do sth
+                }).done(function(response) {
+                    window.location.replace("<?= BASE_URL ?>");
+                    //do sth
+                }).always(function(response) {
+                    //do sth
+                });
+        })
+</script>

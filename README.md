@@ -18,9 +18,10 @@ Công việc đã làm:
     + Xây dựng trang login, register (fe)
     + Thêm xử logic show/hide login, register (fe)
     + Thêm xử lý login - be (1/3)
+    + Thêm xử lý signIn - be (2/3)
 Công việc cần làm:  
     + Xây dựng cấu trúc bên Admin (Định dạng lại cả cấu trúc thư mục như bên client)
-    + Xây dựng trang login, register (be)
+    + Hoàn thiện tính năng login, register (be)
     + Thêm phần phân trang cho trang danh mục
     + Thêm phần tìm kiếm bài viết
     + Thêm phần comments các bài viết 
