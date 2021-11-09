@@ -12,7 +12,7 @@ function hideModal_signUp(){
 // btnClose.addEventListener("click", hideModal_signUp);
 
 //event show Modal
-btnShowLogin_signUp.addEventListener("click", showModal_signUp);
+btnShowLogin_signUp.forEach(btn=>btn.addEventListener("click", showModal_signUp));
 
 //for event click outside of modal
 modal_signUp.addEventListener("click", hideModal_signUp);

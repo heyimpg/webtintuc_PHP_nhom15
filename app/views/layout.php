@@ -9,6 +9,7 @@
     <title>Trang đọc tin tức</title>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/custom/style_general.css">
     <!-- img -->
     <link rel="shortcut icon" href="./assets/img/core-img/favicon.ico">
     <!-- font -->

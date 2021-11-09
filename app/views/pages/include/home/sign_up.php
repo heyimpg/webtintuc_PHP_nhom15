@@ -2,37 +2,43 @@
 <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/css/login/style.css" type="text/css" media="all" />
 <style>
-    .modal-sign_up {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        padding-top: 80px;
-    }
+.modal-sign_up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding-top: 80px;
+}
 
-    .modal-sign_up.open {
-        display: flex;
-    }
+.modal-sign_up.open {
+    display: flex;
+}
 
-    .modal__container-sign_up {
-        min-height: 200px;
-        width: 900px;
-        max-width: calc(100% - 50px);
-        max-height: calc(100% - 50px);
-        background-color: #fff;
-        animation: fadeInModal ease 0.5s;
-    }
+.modal__container-sign_up {
+    min-height: 200px;
+    width: 900px;
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 50px);
+    background-color: #fff;
+    animation: fadeInModal ease 0.5s;
+}
 
-    .content-wthree,
-    .w3l_form {
-        padding: 20px;
-    }
+.content-wthree,
+.w3l_form {
+    padding: 20px;
+}
+
+/* Message */
+#message_formLogin-sign_up 
+{
+    opacity: 1;
+}
 </style>
 <!-- Overlay -->
 <div class="modal-sign_up modal_fixed">
@@ -50,7 +56,7 @@
                         <button class="btn" name="submitFormLogin-sign_up" type="submit">Đăng ký</button>
                     </form>
 
-                    <p class="account">Quay lại <a href="#signup">Đăng nhập</a></p>
+                    <p class="account">Quay lại <a href="#" class="btn-sign_in">Đăng nhập</a></p>
                 </div>
                 <div class="w3l_form align-self">
                     <div class="left_grid_info">
@@ -77,15 +83,16 @@
             }).done(function(response) {
                 const status = JSON.parse(response).statusCode
                 let message = ''
-                if (status == 200){
-                    username.val = ''
-                    password.val = ''
-                    re_password.val = ''
-                    message = 'Register success'
+                if (status == 201){
+                    username.val('')
+                    password.val('')
+                    re_password.val('')
+                    message = "<p class='text-success'>Đăng ký thành công<p/>"
                 }
                 if (status == 400)
-                    message = 'Has occur error'
-                $("#message_formLogin-sign_up").html(response);
+                    message = "<p class='text-danger'>Đã có lỗi xảy ra<p/>"
+                $("#message_formLogin-sign_up").html(message);
+                // $("#message_formLogin-sign_up").html(response);
                 //do sth
             }).always(function(response) {
                 //do sth

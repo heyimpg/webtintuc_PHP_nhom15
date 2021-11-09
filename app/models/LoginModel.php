@@ -5,18 +5,24 @@
         protected String $table = "login";
         
         function sign_in($userName, $passWord) {
-            $query = "SELECT * FROM login WHERE username = ? and password = ?";
-            $result = $this->conn->prepare($query);
-            $result->execute([$userName,$passWord]);
-
-            return $result->rowCount();
+            $query_account = "SELECT * FROM login";
+            $result = $this->conn->prepare($query_account);
+            $result->execute();
+            $accounts = $result->fetchAll(PDO::FETCH_ASSOC);
+            foreach($accounts as $account) {
+                if($account['Username'] == $userName && password_verify($passWord, $account['Password'])) {
+                    return 1;
+                }
+            }
+            return 0;
         }
 
         function sign_up($userName, $passWord) {
+            $password_encode = password_hash($passWord, PASSWORD_DEFAULT); 
             $query = "INSERT INTO login(username, password) VALUES(?,?)";
             $result = $this->conn->prepare($query);
-            return $result->execute([$userName,$passWord]);
-
+            $result->execute([$userName,$password_encode]);
+            // echo $result->rowCount();
             return $result->rowCount();
         }
     }

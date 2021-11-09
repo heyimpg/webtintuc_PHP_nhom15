@@ -25,20 +25,26 @@
                                 <?php
                                 if (isset($_SESSION["username"])) {
                                 ?>
-                                    <a href="#" id="btn-logout"><?php echo $_SESSION["username"] ?>
-                                        <i class="fa fa-user"></i>
-                                        <!-- <i class="fa fa-user"></i>
-                                        <ul class="dropdown">
-                                            <li><a href="home">User</a></li>
-                                            <li><a href="catagories-post.html">Setting</a></li>
-                                            <li><a href="single-post.html">Logout</a></li>
-                                        </ul> -->
-                                    </a>
+                                    <div class="show">
+                                        <span href="#" class="name_user"><?php echo "Xin chào ".$_SESSION["username"]?>
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <a id="btn-logout">Đăng xuất</a>
+                                    </div class="hide">
+                                    <div class="hide">
+                                        <a href="#" class="btn-sign_in">Đăng nhập </a>
+                                        <a href="#" class="btn-sign_up">Đăng ký</a>
+                                    </div>
                                 <?php
                                 } else {
                                 ?>
-                                    <a href="#" id="btn-sign_in">Đăng nhập </a>
-                                    <a href="#" id="btn-sign_up">Đăng ký</a>
+                                    <div class="hide">
+                                        <a href="#" id="btn-logout">Account</a>
+                                    </div class="none">
+                                    <div class="show">
+                                        <a href="#" class="btn-sign_in">Đăng nhập </a>
+                                        <a href="#" class="btn-sign_up">Đăng ký</a>
+                                    </div>
                                 <?php
                                 }
                                 ?>
@@ -112,8 +118,10 @@
 <!-- ##### Header Area End ##### -->
 <script>
     // Logout
-var btnLogout = $("#btn-logout");
-btnLogout.click(e => {
+    var btnLogout = $("#btn-logout");
+    btnLogout.click(e => {
+        const result = confirm('Bạn có chắc muốn thoát tài khoản?');
+        if (result) {
             $.ajax("<?= BASE_URL ?>".concat("login/logout/"))
                 .fail(function(response) {
                     //do sth
@@ -123,5 +131,6 @@ btnLogout.click(e => {
                 }).always(function(response) {
                     //do sth
                 });
-        })
+        }
+    })
 </script>
