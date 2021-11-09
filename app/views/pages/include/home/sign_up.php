@@ -50,9 +50,9 @@
                     <p id="message_formLogin-sign_up"></p>
                     <h2>Đăng ký</h2>
                     <form action="" method="post">
-                        <input type="text" class="text" name="username-sign_up" placeholder="Tài khoản" required="" autofocus>
-                        <input type="password" class="password" name="password-sign_up" placeholder="Mật khẩu" required="" autofocus>
-                        <input type="password" class="password" name="re_password-sign_up" placeholder="Nhập lại mật khẩu" required="" autofocus>
+                        <input type="text" class="text" name="username-sign_up" placeholder="Tài khoản" required autofocus onfocus="clearMessageSignUp()">
+                        <input type="password" class="password" name="password-sign_up" placeholder="Mật khẩu" required autofocus onfocus="clearMessageSignUp()">
+                        <input type="password" class="password" name="re_password-sign_up" placeholder="Nhập lại mật khẩu" required autofocus onfocus="clearMessageSignUp()">
                         <button class="btn" name="submitFormLogin-sign_up" type="submit">Đăng ký</button>
                     </form>
 
@@ -88,14 +88,20 @@
                     password.val('')
                     re_password.val('')
                     message = "<p class='text-success'>Đăng ký thành công<p/>"
+                } else if (status == 406)
+                {
+                    message = "<p class='text-danger'>Tên tài khoản đã tồn tại<p/>"  
+                } else {
+                    message = "<p class='text-danger'>Đã có lỗi xảy ra, vui lòng thử lại sau<p/>"
                 }
-                if (status == 400)
-                    message = "<p class='text-danger'>Đã có lỗi xảy ra<p/>"
                 $("#message_formLogin-sign_up").html(message);
                 // $("#message_formLogin-sign_up").html(response);
                 //do sth
             }).always(function(response) {
                 //do sth
             });
-    })
+    });
+    function clearMessageSignUp() {
+        $("#message_formLogin-sign_up").html('');
+    }
 </script>

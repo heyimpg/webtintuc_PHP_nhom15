@@ -18,11 +18,19 @@
         }
 
         function sign_up($userName, $passWord) {
+            $query_account = "SELECT * FROM login";
+            $result = $this->conn->prepare($query_account);
+            $result->execute();
+            $accounts = $result->fetchAll(PDO::FETCH_ASSOC);
+            foreach($accounts as $account) {
+                if($account['Username'] == $userName) {
+                    return -1;
+                }
+            }
             $password_encode = password_hash($passWord, PASSWORD_DEFAULT); 
             $query = "INSERT INTO login(username, password) VALUES(?,?)";
             $result = $this->conn->prepare($query);
             $result->execute([$userName,$password_encode]);
-            // echo $result->rowCount();
             return $result->rowCount();
         }
     }

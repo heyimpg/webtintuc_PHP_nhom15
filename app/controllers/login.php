@@ -28,8 +28,11 @@
             $username = $data_array[0];
             $password = $data_array[1];
             $result = $this->login->sign_up($username, $password);
+            
             if ($result >= 1)
                 echo json_encode(array("statusCode"=>201));
+            else if ($result == -1)
+                echo json_encode(array("statusCode"=>406));
             else
                 echo json_encode(array("statusCode"=>400));
         }

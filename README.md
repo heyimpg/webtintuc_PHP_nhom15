@@ -20,8 +20,9 @@ Công việc đã làm:
     + Thêm xử lý login - be (1/3)
     + Thêm xử lý signIn - be (2/3)
     + Thêm xử lý logout
-    + Thêm xử lý signIn - be (80%)
+    + Thêm xử lý signIn - be (100%)
     + Thêm mã hóa mật khẩu cho account
+    + Thêm phần xử lý đăng ký trùng tên tài khoản
 Công việc cần làm:  
     + Thêm xử validate fe cho register
     + Thêm trang xem thông tin user, đổi password

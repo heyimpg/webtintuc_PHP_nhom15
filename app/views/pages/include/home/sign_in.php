@@ -46,8 +46,8 @@
                     <p id="message_formLogin-sign_in"></p>
                     <h2>Đăng nhập</h2>
                     <form action="" method="post">
-                        <input type="text" class="text" name="username-sign_in" placeholder="Tài khoản" required="" autofocus>
-                        <input type="password" class="password" name="password-sign_in" placeholder="Mật khẩu" required="" autofocus>
+                        <input type="text" class="text" name="username-sign_in" placeholder="Tài khoản" required="" autofocus onfocus="clearMessageSignIn()">
+                        <input type="password" class="password" name="password-sign_in" placeholder="Mật khẩu" required="" autofocus maxlength="20" onfocus="clearMessageSignIn()">
                         <button class="btn" name="submitFormLogin-sign_in" type="submit">Đăng nhập</button>
                     </form>
 
@@ -90,5 +90,8 @@
             }).always(function(response) {
                 //do sth
             });
-    })
+    });
+    function clearMessageSignIn() {
+        $("#message_formLogin-sign_in").html('');
+    }
 </script>
