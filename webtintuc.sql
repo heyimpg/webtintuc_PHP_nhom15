@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2021 at 06:05 PM
+-- Generation Time: Nov 10, 2021 at 12:49 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -78,10 +78,10 @@ CREATE TABLE `chitiettheloai` (
   `ID_CTTheLoai` int(11) NOT NULL,
   `TenCTTheLoai` varchar(50) NOT NULL,
   `ID_TheLoai` int(11) NOT NULL,
-  `Publish` int(11) NOT NULL,
-  `NgayTao` date NOT NULL,
-  `NgayCapNhat` date NOT NULL,
-  `Slug` varchar(255) NOT NULL,
+  `HienThiCon` int(2) NOT NULL,
+  `NgayTao` datetime NOT NULL,
+  `NgayCapNhat` datetime NOT NULL,
+  `URL` varchar(255) NOT NULL,
   `Type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -89,15 +89,15 @@ CREATE TABLE `chitiettheloai` (
 -- Dumping data for table `chitiettheloai`
 --
 
-INSERT INTO `chitiettheloai` (`ID_CTTheLoai`, `TenCTTheLoai`, `ID_TheLoai`, `Publish`, `NgayTao`, `NgayCapNhat`, `Slug`, `Type`) VALUES
-(1, 'Văn hoá', 11, 1, '2021-10-11', '2021-10-20', '', 0),
-(2, 'Giải trí', 22, 1, '2021-10-18', '2021-10-20', '', 0),
-(3, 'Khoa học', 33, 0, '2021-10-10', '2021-10-20', '', 0),
-(4, 'Thể thao', 44, 0, '2021-10-17', '2021-10-20', '', 0),
-(5, 'Kinh doanh', 55, 1, '2021-10-10', '2021-10-20', '', 0),
-(6, 'Chính trị', 66, 1, '2021-10-20', '2021-10-20', '', 0),
-(7, 'Thời sự', 77, 1, '2021-10-31', '2021-10-31', '', 0),
-(8, 'Thế giới', 88, 1, '2021-10-31', '2021-10-31', '', 0);
+INSERT INTO `chitiettheloai` (`ID_CTTheLoai`, `TenCTTheLoai`, `ID_TheLoai`, `HienThiCon`, `NgayTao`, `NgayCapNhat`, `URL`, `Type`) VALUES
+(1, 'Văn hoá', 11, 1, '2021-10-11 00:00:00', '2021-10-20 00:00:00', 'Van-hoa', 0),
+(2, 'Nhạc', 22, 1, '2021-10-18 00:00:00', '2021-10-20 00:00:00', 'Nhac', 0),
+(3, 'Phát minh', 33, 1, '2021-10-10 00:00:00', '2021-10-20 00:00:00', 'Khoa-hoc', 0),
+(4, 'Bóng đá', 44, 1, '2021-10-17 00:00:00', '2021-10-20 00:00:00', 'Bong-da', 0),
+(5, 'Bất động sản', 55, 0, '2021-10-10 00:00:00', '2021-10-20 00:00:00', 'Bat-dong-san', 0),
+(6, 'Hồ sơ phá án', 66, 0, '2021-10-20 00:00:00', '2021-10-20 00:00:00', 'Ho-so-pha-an', 0),
+(7, 'Dân sinh', 77, 0, '2021-10-31 00:00:00', '2021-10-31 00:00:00', 'Dan-sinh', 0),
+(8, 'Người Việt 5 châu', 88, 0, '2021-10-31 00:00:00', '2021-10-31 00:00:00', 'Nguoi-viet-5-chau', 0);
 
 -- --------------------------------------------------------
 
@@ -130,22 +130,24 @@ INSERT INTO `loaitin` (`ID_LoaiTin`, `TenLoaiTin`, `public`) VALUES
 
 CREATE TABLE `theloai` (
   `ID_TheLoai` int(11) NOT NULL,
-  `TenTheLoai` varchar(50) NOT NULL
+  `TenTheLoai` varchar(50) NOT NULL,
+  `HienThiCha` int(2) NOT NULL,
+  `NgayKhoiTao` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `theloai`
 --
 
-INSERT INTO `theloai` (`ID_TheLoai`, `TenTheLoai`) VALUES
-(11, 'VH'),
-(22, 'GT'),
-(33, 'KH'),
-(44, 'TT'),
-(55, 'KD'),
-(66, 'CT'),
-(77, 'TS'),
-(88, 'TG');
+INSERT INTO `theloai` (`ID_TheLoai`, `TenTheLoai`, `HienThiCha`, `NgayKhoiTao`) VALUES
+(11, 'Góc nhìn', 0, '2021-11-10 00:00:00'),
+(22, 'Giải trí', 0, '2021-11-10 00:00:00'),
+(33, 'Khoa học', 0, '2021-11-09 00:00:00'),
+(44, 'Thể thao', 0, '2021-11-09 00:00:00'),
+(55, 'Kinh doanh', 0, '2021-11-08 00:00:00'),
+(66, 'Pháp luật', 0, '2021-11-08 00:00:00'),
+(77, 'Thời sự', 0, '2021-11-08 00:00:00'),
+(88, 'Thế giới', 0, '2021-11-08 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -190,7 +192,7 @@ ALTER TABLE `baiviet`
 -- AUTO_INCREMENT for table `chitiettheloai`
 --
 ALTER TABLE `chitiettheloai`
-  MODIFY `ID_CTTheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `ID_CTTheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `loaitin`
@@ -202,7 +204,7 @@ ALTER TABLE `loaitin`
 -- AUTO_INCREMENT for table `theloai`
 --
 ALTER TABLE `theloai`
-  MODIFY `ID_TheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2425;
+  MODIFY `ID_TheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2431;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

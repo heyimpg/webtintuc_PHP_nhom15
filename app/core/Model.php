@@ -63,7 +63,6 @@
                 $query = $this->conn->prepare($sql);
                 $query->execute();
             }
-            
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
@@ -93,6 +92,9 @@
                 $sql .= " limit $limit";
             }
             return $sql;
+            // $query = $this->conn->prepare($sql);
+            // $query->execute();
+            // return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
         public function addData($data = NULL) {
@@ -208,6 +210,12 @@
         {
             $this->table = $table;
             return $this;
+        }
+
+        public function executeQuery($sql) {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            return $query->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 

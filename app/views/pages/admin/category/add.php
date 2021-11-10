@@ -11,28 +11,28 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="name">Tên danh mục con *</label>
+                        <label for="name">Tên danh mục*</label>
                         <input type="text" onkeyup="removeAccents(this)" class="form-control" name="data_post[TenCTTheLoai]" id="name">
-                        <input hidden type="text" name="data_post[Slug]" id="slug">
+                        <input hidden type="text" name="data_post[URL]" id="slug">
                     </div>
                     <div class="form-group">
                         <label for="parent_category">Danh mục cha</label>
                         <select name="data_post[ID_TheLoai]" class="form-control" id="parent_category">
-                            <option value="" selected disabled hidden>Chọn danh mục cha</option>
+                            <option value="0" selected disabled hidden>Chọn danh mục cha</option>
                             <?php
                                 if(isset($data["categories"]) && $data["categories"] != null) {
                                     foreach ($data["categories"] as $key => $value) {
                             ?>
-                                        <option value="<?=$value["ID_TheLoai"]?>"><?= $value["TenTheLoai"] ?></option>
+                                        <option value="<?= $value["ID_Theloai"] ?>"><?= $value["TenTheLoai"] ?></option>
                             <?php
                                     }
                                 }
                             ?>
                         </select>
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="publish">Hiển thị</label>
-                        <input type="checkbox" checked name="data_post[Publish]" id="publish">
+                        <input type="checkbox" checked name="data_post[HienThi]" id="publish">
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary" name="submit">Thêm mới</button>

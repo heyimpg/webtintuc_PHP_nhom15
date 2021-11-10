@@ -20,7 +20,7 @@
                     <tr class="headings">
                         <th><input type="checkbox" id="check-all" class="flat"></th>
                         <th class="column-title">Tên danh mục </th>
-                        <th class="column-title">Publish</th>
+                        <th class="column-title">Hiển thị</th>
                         <th class="column-title">Ngày Tạo </th>
                         <th class="column-title no-link last"><span class="nobr">Action</span></th>
                         <th class="bulk-actions" colspan="7">
@@ -31,22 +31,34 @@
                 <tbody>
                     <?php
                         if (isset($data)) {
-                            foreach ($data["subcategories"] as $subcategory) {
+                            foreach ($data["categories"] as $category) {
                     ?>
-                        <tr class="even pointer">
+                        <tr class="pointer">
                             <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
-                            <td class="align-middle"><?= $subcategory["TenCTTheLoai"] ?></td>
-    <!--                        <td class="align-middle">--><?//= $subcategory["Publish"] ?><!--</td>-->
-                            <th>
-                                <input type="checkbox" class="flat" <?php if($subcategory["Publish"]== 1) {echo "checked";}?>/>
-                            </th>
-                            <td class="align-middle"><?= $subcategory["NgayTao"] ?></td>
+                            <td class="align-middle"><?= $category["TenTheLoai"] ?></td>
+                            <td>
+                                <input type="checkbox" class="flat" <?php if($category["HienThiCha"] == 1) {echo "checked";}?>/>
+                            </td>
+                            <td class="align-middle"><?= $category["NgayKhoiTao"] ?></td>
                             <td class=" last">
                                 <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
                                 <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
-                        <?php } ?>
+                        <?php if(isset($category["TenCTTheLoai"])) { ?>
+                        <tr class="even pointer">
+                            <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
+                            <td class="align-middle">----- <?= $category["TenCTTheLoai"] ?></td>
+                            <td>
+                                <input type="checkbox" class="flat" <?php if($category["HienThiCon"] == 1) {echo "checked";}?>/>
+                            </td>
+                            <td class="align-middle"><?= $category["NgayTao"] ?></td>
+                            <td class=" last">
+                                <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
+                                <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>
+                            </td>
+                        </tr>
+                        <?php } } ?>
                     <?php } ?>
                 </tbody>
             </table>
