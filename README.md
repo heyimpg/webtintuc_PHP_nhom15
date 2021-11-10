@@ -15,20 +15,22 @@ Công việc đã làm:
     + Xây dựng trang chi tiết  
     + Join bảng để fill dữ liệu nốt những trường cần tới
     + Xây dựng trang danh mục (xem danh sách các bài viết thuộc một danh mục nào đó)  
-    + Xây dựng trang login, register (fe)
-    + Thêm xử logic show/hide login, register (fe)
-    + Thêm xử lý login - be (1/3)
-    + Thêm xử lý signIn - be (2/3)
-    + Thêm xử lý logout
-    + Thêm xử lý signIn - be (100%)
-    + Thêm mã hóa mật khẩu cho account
-    + Thêm phần xử lý đăng ký trùng tên tài khoản
+    + Login Form
+        + Xây dựng trang login, register (fe)
+        + Thêm xử logic show/hide login, register (fe)
+        + Thêm xử lý login - be (1/3)
+        + Thêm xử lý signIn - be (2/3)
+        + Thêm xử lý logout
+        + Thêm xử lý signIn - be (100%)
+        + Thêm mã hóa mật khẩu cho account
+        + Thêm phần xử lý đăng ký trùng tên tài khoản
+        + Thêm xử validate fe cho register
+        + Done!
 Công việc cần làm:  
-    + Thêm xử validate fe cho register
-    + Thêm trang xem thông tin user, đổi password
     + Thêm phần phân trang cho trang danh mục
     + Thêm phần tìm kiếm bài viết
     + Thêm phần comments các bài viết 
+    + Thêm trang xem thông tin user, đổi password
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
 -----------HAI------------

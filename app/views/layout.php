@@ -46,6 +46,7 @@
 <script src="./assets/js/declare_variable.js"></script>
 <script src="./assets/js/sign_in.js"></script>
 <script src="./assets/js/sign_up.js"></script>
+<script src="./assets/js/validateLoginForm.js"></script>
 </body>
 
 </html>

@@ -49,10 +49,10 @@
                 <div class="content-wthree">
                     <p id="message_formLogin-sign_up"></p>
                     <h2>Đăng ký</h2>
-                    <form action="" method="post">
-                        <input type="text" class="text" name="username-sign_up" placeholder="Tài khoản" required autofocus onfocus="clearMessageSignUp()">
-                        <input type="password" class="password" name="password-sign_up" placeholder="Mật khẩu" required autofocus onfocus="clearMessageSignUp()">
-                        <input type="password" class="password" name="re_password-sign_up" placeholder="Nhập lại mật khẩu" required autofocus onfocus="clearMessageSignUp()">
+                    <form action="" method="post" id="form_signUp">
+                        <input type="text" class="text" name="username-sign_up" placeholder="Tài khoản" required onfocus="clearMessageSignUp()">
+                        <input type="password" class="password" name="password-sign_up" placeholder="Mật khẩu" required onfocus="clearMessageSignUp()" pattern="\w{6,20}" title="Độ dài yêu cầu từ 6-20 ký tự">
+                        <input type="password" class="password" name="re_password-sign_up" placeholder="Nhập lại mật khẩu" required onfocus="clearMessageSignUp()" pattern="\w{6,20}" title="Độ dài yêu cầu từ 6-20 ký tự">
                         <button class="btn" name="submitFormLogin-sign_up" type="submit">Đăng ký</button>
                     </form>
 
@@ -70,37 +70,35 @@
 </div>
 
 <script>
-    var btnSignOut = $("button[name=submitFormLogin-sign_up]");
-    btnSignOut.click(e => {
-        e.preventDefault();
+    function signOutProcess() {
         const username = $("input[name=username-sign_up]")
         const password = $("input[name=password-sign_up]")
         const re_password = $("input[name=re_password-sign_up]")
-        const arr = [username.val(), password.val()]
+        const arr = [username.val(), password.val(), re_password.val()]
         $.ajax("<?= BASE_URL ?>".concat("login/sign_up/").concat(arr.toString()))
             .fail(function(response) {
                 //do sth
             }).done(function(response) {
                 const status = JSON.parse(response).statusCode
                 let message = ''
-                if (status == 201){
+                if (status == 201) {
                     username.val('')
                     password.val('')
                     re_password.val('')
                     message = "<p class='text-success'>Đăng ký thành công<p/>"
-                } else if (status == 406)
-                {
+                } else if (status == 406) {
+                    message = "<p class='text-warning'>Mật khẩu nhập lại không khớp<p/>"  
+                } else if (status == 409) {
                     message = "<p class='text-danger'>Tên tài khoản đã tồn tại<p/>"  
-                } else {
+                }
+                else {
                     message = "<p class='text-danger'>Đã có lỗi xảy ra, vui lòng thử lại sau<p/>"
                 }
                 $("#message_formLogin-sign_up").html(message);
-                // $("#message_formLogin-sign_up").html(response);
-                //do sth
             }).always(function(response) {
                 //do sth
             });
-    });
+    }
     function clearMessageSignUp() {
         $("#message_formLogin-sign_up").html('');
     }

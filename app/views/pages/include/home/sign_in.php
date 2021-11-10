@@ -45,9 +45,9 @@
                 <div class="content-wthree">
                     <p id="message_formLogin-sign_in"></p>
                     <h2>Đăng nhập</h2>
-                    <form action="" method="post">
-                        <input type="text" class="text" name="username-sign_in" placeholder="Tài khoản" required="" autofocus onfocus="clearMessageSignIn()">
-                        <input type="password" class="password" name="password-sign_in" placeholder="Mật khẩu" required="" autofocus maxlength="20" onfocus="clearMessageSignIn()">
+                    <form action="" method="post" id="form_signIn">
+                        <input type="text" class="text" name="username-sign_in" placeholder="Tài khoản" required onfocus="clearMessageSignIn()">
+                        <input type="password" class="password" name="password-sign_in" placeholder="Mật khẩu" required maxlength="20" onfocus="clearMessageSignIn()">
                         <button class="btn" name="submitFormLogin-sign_in" type="submit">Đăng nhập</button>
                     </form>
 
@@ -66,9 +66,7 @@
 
 
 <script>
-    var btnSignIn = $("button[name=submitFormLogin-sign_in]");
-    btnSignIn.click(e => {
-        e.preventDefault();
+    function signInProcess() {
         const username = $("input[name=username-sign_in]")
         const password = $("input[name=password-sign_in]")
         const arr = [username.val(), password.val()]
@@ -90,7 +88,7 @@
             }).always(function(response) {
                 //do sth
             });
-    });
+    }
     function clearMessageSignIn() {
         $("#message_formLogin-sign_in").html('');
     }

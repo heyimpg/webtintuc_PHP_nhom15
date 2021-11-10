@@ -27,13 +27,20 @@
             $data_array = explode(",", $data_recv); 
             $username = $data_array[0];
             $password = $data_array[1];
+            $re_password = $data_array[2];
+            //Mk không khớp nhau
+            if ($password != $re_password)
+            {
+                echo json_encode(array("statusCode"=>406));
+                return;
+            }
             $result = $this->login->sign_up($username, $password);
             
-            if ($result >= 1)
+            if ($result >= 1)   //Thành công
                 echo json_encode(array("statusCode"=>201));
-            else if ($result == -1)
-                echo json_encode(array("statusCode"=>406));
-            else
+            elseif ($result == -1)  //Trùng tài khoản
+                echo json_encode(array("statusCode"=>409));
+            else    //Lỗi phát sinh
                 echo json_encode(array("statusCode"=>400));
         }
 
