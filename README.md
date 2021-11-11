@@ -26,6 +26,7 @@ Công việc đã làm:
         + Thêm phần xử lý đăng ký trùng tên tài khoản
         + Thêm xử validate fe cho register
         + Done!
+    + Chỉnh sửa lại câu query select *, review lại 1 số page thiếu link
 Công việc cần làm:  
     + Thêm phần phân trang cho trang danh mục
     + Thêm phần tìm kiếm bài viết
