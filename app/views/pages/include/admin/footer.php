@@ -1,8 +1,6 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="assets/admin/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="assets/admin/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
@@ -41,6 +39,8 @@
 
     <!-- Custom Theme Scripts -->
     <script src="assets/admin/build/js/custom.min.js"></script>
-
+    <!-- Sweet Alert -->
+    <script src="assets/admin/js/sweetalert2.all.min.js"></script>
+    <script src="assets/admin/js/custom.js"></script>
   </body>
 </html>

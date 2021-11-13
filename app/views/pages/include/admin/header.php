@@ -27,4 +27,7 @@
 
     <!-- Custom Theme Style -->
     <link href="assets/admin/build/css/custom.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="assets/admin/vendors/jquery/dist/jquery.min.js"></script>
   </head>

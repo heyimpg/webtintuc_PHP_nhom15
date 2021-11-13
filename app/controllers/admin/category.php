@@ -14,8 +14,7 @@
         }
 
         public function index() {
-            $categoriesQuery = $this->category_model->queryGetData("select theloai.TenTheLoai, chitiettheloai.TenCTTheLoai, chitiettheloai.NgayTao, theloai.NgayKhoiTao, theloai.HienThiCha, chitiettheloai.HienThiCon from chitiettheloai right join theloai on chitiettheloai.ID_TheLoai = theloai.ID_TheLoai", null, null, true, 100);
-            $categories = $this->category_model->executeQuery($categoriesQuery);
+            $categories = $this->category_model->executeIndexQuery();
             $data = [
                 "page" => "$this->template/index",
                 "title" => "Danh sách $this->title",
@@ -51,10 +50,7 @@
                 }
             }
             // ID_Theloai
-            // $this->subcategory_model->setupSecondTable($this->category_model->getTable(), "ID_TheLoai");
-            // $categories = $this->subcategory_model->getAllDatafromMultiTable("chitiettheloai.ID_TheLoai, TenTheLoai", null, null, true, 100);
-            $categoriesQuery = $this->category_model->queryGetData("select theloai.TenTheLoai, theloai.ID_Theloai from chitiettheloai right join theloai on chitiettheloai.ID_TheLoai = theloai.ID_TheLoai", null, null, true, 100);
-            $categories = $this->category_model->executeQuery($categoriesQuery);
+            $categories = $this->category_model->executeAddQuery();
             $data = [
                 "page" => "$this->template/add",
                 "title" => "Thêm mới $this->title",
@@ -62,6 +58,12 @@
                 "categories" => $categories
             ];
             $this->view("adminlayout", $data);
+        }
+
+        public function delete() {
+            $id = $_POST['id'];
+            echo $id;
+            exit();
         }
     }
 

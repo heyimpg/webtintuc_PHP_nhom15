@@ -42,7 +42,7 @@
                             <td class="align-middle"><?= $category["NgayKhoiTao"] ?></td>
                             <td class=" last">
                                 <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
-                                <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>
+                                <a id="del<?= $category['ID_Theloai'] ?>" href="javascript:void(0)" onclick="del(<?= $category['ID_Theloai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                         <?php if(isset($category["TenCTTheLoai"])) { ?>
@@ -55,7 +55,7 @@
                             <td class="align-middle"><?= $category["NgayTao"] ?></td>
                             <td class=" last">
                                 <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
-                                <a href="<?= $data["template"]?>" class="btn btn-danger">Xóa</a>
+                                <a id="del<?= $category['ID_CTTheLoai'] ?>" href="javascript:void(0)" onclick="del(<?= $category['ID_CTTheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                         <?php } } ?>
