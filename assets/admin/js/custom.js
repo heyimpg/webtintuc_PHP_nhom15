@@ -1,5 +1,5 @@
-function del(id) {
-    let control = $("#del" + id).attr("data-control");
+function del(elementID, id) {
+    let control = $("#" + elementID).attr("data-control");
     Swal.fire({
         title: 'Bạn có chắc chắn muốn xóa?',
         text: "Bạn sẽ không thể hoàn tác!",
@@ -7,20 +7,23 @@ function del(id) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Có, hãy xóa đi!',
+        confirmButtonText: 'Đồng ý',
         cancelButtonText: 'Hủy bỏ'
     }).then((result) => {
         if (result.isConfirmed) {
-            // Swal.fire(
-            //     'Đã xóa!',
-            //     'Xóa thành công danh mục.',
-            //     'success')
             $.ajax({
                 url: control + "/delete",
                 method: "post",
-                data: { id: id },
+                data: { id: id, elementID: elementID },
+                dataType: 'json',
                 success: function (response) {
-                    
+                    if (response.result === true) {
+                        Swal.fire(
+                            'Đã xóa!',
+                            'Xóa thành công danh mục.',
+                            'success');
+                        $('.even' + id).remove();
+                    }
                 }
             });
         }

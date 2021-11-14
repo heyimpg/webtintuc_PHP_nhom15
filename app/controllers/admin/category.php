@@ -62,8 +62,20 @@
 
         public function delete() {
             $id = $_POST['id'];
-            echo $id;
-            exit();
+            $elementID = $_POST['elementID'];
+            if(strpos($elementID, 'del_tl_') !== false) {
+                $result = $this->category_model->deleteData(['ID_Theloai' => $id]);
+            }
+            else {
+                $result = $this->subcategory_model->deleteData(['ID_CTTheLoai' => $id]);
+            }
+            $return = json_decode($result, true);
+            if($return['type'] == "success") {
+                echo json_encode([
+                    'result' => true,
+                    'message' => $return['message']
+                ]);
+            }
         }
     }
 

@@ -33,7 +33,7 @@
                         if (isset($data)) {
                             foreach ($data["categories"] as $category) {
                     ?>
-                        <tr class="pointer">
+                        <tr class="even<?= $category['ID_Theloai'] ?> pointer">
                             <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
                             <td class="align-middle"><?= $category["TenTheLoai"] ?></td>
                             <td>
@@ -41,12 +41,12 @@
                             </td>
                             <td class="align-middle"><?= $category["NgayKhoiTao"] ?></td>
                             <td class=" last">
-                                <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
-                                <a id="del<?= $category['ID_Theloai'] ?>" href="javascript:void(0)" onclick="del(<?= $category['ID_Theloai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
+                                <a href="javascript:void(0)" class="btn btn-success">Sửa</a>
+                                <a id="del_tl_<?= $category['ID_Theloai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_Theloai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                         <?php if(isset($category["TenCTTheLoai"])) { ?>
-                        <tr class="even pointer">
+                        <tr class="even<?= $category['ID_CTTheLoai'] ?> pointer">
                             <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
                             <td class="align-middle">----- <?= $category["TenCTTheLoai"] ?></td>
                             <td>
@@ -54,8 +54,8 @@
                             </td>
                             <td class="align-middle"><?= $category["NgayTao"] ?></td>
                             <td class=" last">
-                                <a href="<?= $data["template"]?>" class="btn btn-success">Sửa</a>
-                                <a id="del<?= $category['ID_CTTheLoai'] ?>" href="javascript:void(0)" onclick="del(<?= $category['ID_CTTheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
+                                <a href="javascript:void(0)" class="btn btn-success">Sửa</a>
+                                <a id="del_cttl_<?= $category['ID_CTTheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_CTTheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                         <?php } } ?>
