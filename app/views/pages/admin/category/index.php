@@ -33,31 +33,37 @@
                         if (isset($data)) {
                             foreach ($data["categories"] as $category) {
                     ?>
-                        <tr class="even<?= $category['ID_Theloai'] ?> pointer">
-                            <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
-                            <td class="align-middle"><?= $category["TenTheLoai"] ?></td>
-                            <td>
-                                <input type="checkbox" class="flat" <?php if($category["HienThiCha"] == 1) {echo "checked";}?>/>
-                            </td>
-                            <td class="align-middle"><?= $category["NgayKhoiTao"] ?></td>
-                            <td class=" last">
-                                <a href="javascript:void(0)" class="btn btn-success">Sửa</a>
-                                <a id="del_tl_<?= $category['ID_Theloai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_Theloai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
-                            </td>
-                        </tr>
+                        <?php if($category['ID_TheLoai'] != null) { ?>
+                            <tr class="even<?= $category['ID_TheLoai'] ?> pointer">
+                                <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
+                                <td class="align-middle"><?= $category["TenTheLoai"] ?></td>
+                                <td>
+                                    <input type="checkbox" class="flat" <?php if($category["HienThiCha"] == 1) {echo "checked";}?>/>
+                                </td>
+                                <td class="align-middle"><?= $category["NgayKhoiTao"] ?></td>
+                                <td class=" last">
+                                    <a href="<?= BASE_URL.$data['template']."/edit/".$category['ID_CTTheLoai']?>" class="btn btn-success">Sửa</a>
+                                    <a id="del_tl_<?= $category['ID_TheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_TheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
+                                </td>
+                            </tr>
+                        <?php } ?>
                         <?php if(isset($category["TenCTTheLoai"])) { ?>
-                        <tr class="even<?= $category['ID_CTTheLoai'] ?> pointer">
-                            <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
-                            <td class="align-middle">----- <?= $category["TenCTTheLoai"] ?></td>
-                            <td>
-                                <input type="checkbox" class="flat" <?php if($category["HienThiCon"] == 1) {echo "checked";}?>/>
-                            </td>
-                            <td class="align-middle"><?= $category["NgayTao"] ?></td>
-                            <td class=" last">
-                                <a href="javascript:void(0)" class="btn btn-success">Sửa</a>
-                                <a id="del_cttl_<?= $category['ID_CTTheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_CTTheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
-                            </td>
-                        </tr>
+                            <tr class="even<?= $category['ID_CTTheLoai'] ?> pointer">
+                                <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
+                                <?php if($category['ID_TheLoai'] != null) { ?>
+                                    <td class="align-middle">----- <?= $category["TenCTTheLoai"] ?></td>
+                                <?php } else {?>
+                                    <td class="align-middle"><?= $category["TenCTTheLoai"] ?></td>
+                                <?php } ?>
+                                <td>
+                                    <input type="checkbox" class="flat" <?php if($category["HienThiCon"] == 1) {echo "checked";}?>/>
+                                </td>
+                                <td class="align-middle"><?= $category["NgayTao"] ?></td>
+                                <td class=" last">
+                                    <a href="<?= BASE_URL.$data['template']."/edit/".$category['ID_CTTheLoai']?>" class="btn btn-success">Sửa</a>
+                                    <a id="del_cttl_<?= $category['ID_CTTheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_CTTheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
+                                </td>
+                            </tr>
                         <?php } } ?>
                     <?php } ?>
                 </tbody>

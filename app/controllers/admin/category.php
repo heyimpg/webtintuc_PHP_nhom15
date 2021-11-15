@@ -49,7 +49,7 @@
                     $redirect->setFlash("flash", "Thêm thành công danh mục bài viết");
                 }
             }
-            // ID_Theloai
+            // ID_TheLoai
             $categories = $this->category_model->executeAddQuery();
             $data = [
                 "page" => "$this->template/add",
@@ -64,13 +64,14 @@
             $id = $_POST['id'];
             $elementID = $_POST['elementID'];
             if(strpos($elementID, 'del_tl_') !== false) {
-                $result = $this->category_model->deleteData(['ID_Theloai' => $id]);
+                $result = $this->category_model->deleteData(['ID_TheLoai' => $id]);
             }
             else {
                 $result = $this->subcategory_model->deleteData(['ID_CTTheLoai' => $id]);
             }
             $return = json_decode($result, true);
             if($return['type'] == "success") {
+                $this->subcategory_model->updateData(['ID_TheLoai' => 0], ['ID_TheLoai' => $id]);
                 echo json_encode([
                     'result' => true,
                     'message' => $return['message']
