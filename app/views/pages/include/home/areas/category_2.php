@@ -1,7 +1,7 @@
 <!-- Trang  danh mục-->
 <?php
 if (isset($data)) {
-    foreach ($data['category_post_2'] as $key => $post) {
+        foreach ($data['category_post_2'] as $key => $post) {
 ?>
         <!-- Single Featured Post -->
         <div class="single-blog-post featured-post mb-30">

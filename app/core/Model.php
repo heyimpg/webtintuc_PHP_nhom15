@@ -52,9 +52,9 @@
             return $query->fetchAll(PDO::FETCH_ASSOC)[0];
         }
 
-        public function getAllDatafromMultiTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
+        public function getAllDatafromMultiTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
             $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
-            $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);
+            $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit, $offset);
             if ($where != NULL) {
                 $values = array_values($where);
                 $query = $this->conn->prepare($sql);
@@ -67,7 +67,7 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
+        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
             if ($where != NULL) {
                 $fields = array_keys($where);
                 $isFields = true;
@@ -84,13 +84,16 @@
                     $sql .=" order by ";
                     $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
                 }
-                $sql .= " limit $limit";
             }else {
                 if($sort != NULL) {
                     $sql .=' order by ';
                     $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
                 }
-                $sql .= " limit $limit";
+            }
+
+            $sql .= " limit $limit ";
+            if(!is_null($offset)) {
+                $sql .= "offset $offset";
             }
             return $sql;
         }

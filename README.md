@@ -27,8 +27,8 @@ Công việc đã làm:
         + Thêm xử validate fe cho register
         + Done!
     + Chỉnh sửa lại câu query select *, review lại 1 số page thiếu link
-Công việc cần làm:  
     + Thêm phần phân trang cho trang danh mục
+Công việc cần làm:  
     + Thêm phần tìm kiếm bài viết
     + Thêm phần comments các bài viết 
     + Thêm trang xem thông tin user, đổi password
