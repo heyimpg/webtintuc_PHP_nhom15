@@ -11,7 +11,7 @@
             <div class="col-12 col-lg-4">
                 <!-- Popular News -->
                 <div class="section-heading">
-                    <h6>Tin phổ biến</h6>
+                    <h6>Tin đáng chú ý</h6>
                 </div>
                 <?php require_once "./app/views/pages/include/home/areas/popular.php"; ?>
                 <!-- Newsletter Widget -->

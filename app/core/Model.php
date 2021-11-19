@@ -98,6 +98,17 @@
             return $sql;
         }
 
+        public function searchPost($data =  self::DEFAULT_STR, $search_value) {
+            $sql = "select $data " 
+            ."from $this->table inner join $this->second_table "
+            ."on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key "
+            ."where TieuDe like CONCAT('%',?,'%')";
+
+            $query = $this->conn->prepare($sql);
+            $query->execute([$search_value]);
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+
         public function addData($data = NULL) {
             $fields = array_keys($data);
             $fields_list = implode(",", $fields);

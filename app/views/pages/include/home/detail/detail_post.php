@@ -166,23 +166,14 @@
                         </div>
 
                         <div class="post-a-comment-area section-padding-80-0">
-                            <h4>Leave a comment</h4>
+                            <h4>Bình luận</h4>
                             
                             <!-- Reply Form -->
                             <div class="contact-form-area">
                                 <form action="#" method="post">
                                     <div class="row">
-                                        <div class="col-12 col-lg-6">
-                                            <input type="text" class="form-control" id="name" placeholder="Name*">
-                                        </div>
-                                        <div class="col-12 col-lg-6">
-                                            <input type="email" class="form-control" id="email" placeholder="Email*">
-                                        </div>
                                         <div class="col-12">
-                                            <input type="text" class="form-control" id="subject" placeholder="Website">
-                                        </div>
-                                        <div class="col-12">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Nhập nội dung"></textarea>
                                         </div>
                                         <div class="col-12 text-center">
                                             <button class="btn newspaper-btn mt-30 w-100" type="submit">Submit Comment</button>
@@ -204,64 +195,9 @@
                         <?php require_once "./app/views/pages/include/home/areas/popular.php"; ?>
 
                         <!-- Newsletter Widget -->
-                        <div class="newsletter-widget mb-50">
-                            <h4>Newsletter</h4>
-                            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                            <form action="#" method="post">
-                                <input type="text" name="text" placeholder="Name">
-                                <input type="email" name="email" placeholder="Email">
-                                <button type="submit" class="btn w-100">Subscribe</button>
-                            </form>
-                        </div>
+                        <?php require_once "./app/views/pages/include/home/areas/news_letter.php"; ?>
 
-                        <!-- Latest Comments Widget -->
-                        <div class="latest-comments-widget">
-                            <h3>Latest Comments</h3>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/29.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/30.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/31.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/32.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

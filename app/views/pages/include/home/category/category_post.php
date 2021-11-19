@@ -11,7 +11,7 @@
                     <nav aria-label="Page navigation example">
                         <ul class="pagination mt-50">
                             <?php
-                            if (isset($data)) {
+                            if (isset($data) && isset($data['pagination'])) {
                                 if ($data['pagination']['currentPage'] > 3) { ?>
                                     <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_CTTheLoai'] ?>&page=1">Đầu</a></li>
                                 <?php }

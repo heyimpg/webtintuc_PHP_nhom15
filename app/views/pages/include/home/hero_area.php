@@ -34,7 +34,8 @@
             <!-- Hero Add -->
             <div class="col-12 col-lg-4">
                 <div class="hero-add">
-                    <a href="#"><img src="./assets/img/bg-img/hero-add.gif" alt=""></a>
+                    <!-- <a href="#"><img src="./assets/img/bg-img/hero-add.gif" alt=""></a> -->
+                    <a href="#"><img src="./assets/img/core-img/newspaper.jpg" alt="" style="height: 130px; width: 400px;"></a>
                 </div>
             </div>
         </div>

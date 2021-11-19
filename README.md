@@ -28,8 +28,9 @@ Công việc đã làm:
         + Done!
     + Chỉnh sửa lại câu query select *, review lại 1 số page thiếu link
     + Thêm phần phân trang cho trang danh mục
+    + Thêm phần tìm kiếm bài viết (1/2 - chưa làm phân trang cho tìm kiếm)
 Công việc cần làm:  
-    + Thêm phần tìm kiếm bài viết
+    + Thêm phần tìm kiếm bài viết (hoàn thiện nốt phân trang)
     + Thêm phần comments các bài viết 
     + Thêm trang xem thông tin user, đổi password
 Vướng mắc:  
@@ -50,3 +51,12 @@ Công việc cần làm:
 Những method có thể tái sử dụng được để trong core/Model  
 slug: dùng để thêm vào phía sau url ví dụ: http://localhost/CNPM/webtintuc_PHP_nhom15/kinh-doanh
 type: chưa rõ dùng để làm gì
+
+Thầy góp ý:
+    Làm đầy đủ:
+        phần navigation
+        các phần chưa được convert sang tiếng việt
+        Thêm chút cho phần chi tiết bài viết
+    Phần chức năng thêm:
+        Liên kết với bảng login -> show ra tên tác giả
+        Thêm phần comments, likes
