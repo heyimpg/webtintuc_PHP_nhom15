@@ -10,11 +10,7 @@
 
         public function index() {
             $kq = $this->admin_post_model->getAllData();
-            $data = [
-                "page" => "admin/index",
-                "array" => $kq
-            ];
-            $this->view("adminlayout", $data);
+            $this->view("pages/admin/index");
         }
     }
 ?>
