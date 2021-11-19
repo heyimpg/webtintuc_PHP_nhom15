@@ -8,15 +8,15 @@ class category extends Controller
         $this->postModel = $this->model("PostModel");
     }
 
-    public function index($ID_CTTheLoai)
+    public function index($ID_TheLoai)
     {
-        $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+        $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
         //Category
         $page_size = 4;
         $current_page = !empty($_GET["page"]) ? $_GET["page"] : 1;
         $offset = ($current_page - 1) * $page_size;
         $allRecord = $this->postModel->getAllDatafromMultiTable(
-            "*", [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
+            "*", [$this->postModel->getTable() . ".ID_TheLoai" => $ID_TheLoai],
             null,
             null,
             9999
@@ -25,8 +25,8 @@ class category extends Controller
         $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
 
         $category_post_2 = $this->postModel->getAllDatafromMultiTable(
-            $this->postModel->getTable() . ".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu",
-            [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
+            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu",
+            [$this->postModel->getTable() . ".ID_TheLoai" => $ID_TheLoai],
             null,
             null,
             $page_size,
@@ -47,7 +47,7 @@ class category extends Controller
             "category_post_2" => $category_post_2,
             "popular_post" => $popular_post,
             "pagination" => $pagination,
-            "ID_CTTheLoai" => $ID_CTTheLoai
+            "ID_TheLoai" => $ID_TheLoai
         ];
         $this->view("layout", $data);
     }
@@ -55,9 +55,9 @@ class category extends Controller
     public function searchPost() {
         if(isset($_POST['submit_search'])) {
             $search_value = $_POST['search'];
-            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             $category_post_2 = $this->postModel->searchPost(
-                $this->postModel->getTable() . ".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu",
+                $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu",
                 $search_value
             );
             //Popular post

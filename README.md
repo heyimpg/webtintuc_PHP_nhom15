@@ -29,6 +29,7 @@ Công việc đã làm:
     + Chỉnh sửa lại câu query select *, review lại 1 số page thiếu link
     + Thêm phần phân trang cho trang danh mục
     + Thêm phần tìm kiếm bài viết (1/2 - chưa làm phân trang cho tìm kiếm)
+    + Thanh navigation (1/5) - chuyển đổi query sang bảng thể loại thay vì chi tiết thể loại
 Công việc cần làm:  
     + Thêm phần tìm kiếm bài viết (hoàn thiện nốt phân trang)
     + Thêm phần comments các bài viết 

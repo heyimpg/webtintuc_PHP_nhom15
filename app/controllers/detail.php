@@ -7,15 +7,15 @@
         }
 
         public function index($ID_BaiViet) {
-            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             //Detail
             $detail_post = $this->postModel->getDatafromMultiTable(
-                $this->postModel->getTable().".ID_CTTheLoai, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu, NoiDung",
+                $this->postModel->getTable().".ID_TheLoai, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung",
                 ["ID_BaiViet"=>$ID_BaiViet]
             );
             $category_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, NgayDang",
-                [$this->postModel->getTable().".ID_CTTheLoai"=>2]
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, NgayDang",
+                [$this->postModel->getTable().".ID_TheLoai"=>2]
             );
             $popular_post = $this->postModel->getAllData(
                 "ID_BaiViet, TieuDe, NgayDang",

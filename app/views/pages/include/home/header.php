@@ -97,7 +97,7 @@
                                     foreach ($categories as $category) {
 
                                 ?>
-                                        <li><a href="<?= CATEGORY_URL . $category["ID_CTTheLoai"] ?>"><?php echo $category['TenCTTheLoai']; ?></a></li>
+                                        <li><a href="<?= CATEGORY_URL . $category["ID_TheLoai"] ?>"><?php echo $category['TenTheLoai']; ?></a></li>
                                 <?php
                                     }
                                 }

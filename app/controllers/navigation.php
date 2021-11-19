@@ -10,7 +10,7 @@ class navigation extends Controller
 
     public function index()
     {
-        $navigation = $this->categoryModel->getAllData("ID_CTTheLoai, TenCTTheLoai", NULL, NULL, true, 10);
+        $navigation = $this->categoryModel->getAllData("ID_TheLoai, TenTheLoai", NULL, NULL, true, 10);
         return $navigation;
     }
 

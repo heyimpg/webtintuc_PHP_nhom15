@@ -7,19 +7,19 @@
         }
 
         public function index() {
-            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             //Featured
             $featured_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu",
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu",
                 ["ID_LoaiTin"=>1]
             );
             $category_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, NgayDang",
-                [$this->postModel->getTable().".ID_CTTheLoai"=>2]
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, NgayDang",
+                [$this->postModel->getTable().".ID_TheLoai"=>2]
             );
             //Latest
             $latest_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, GioiThieu",
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu",
                 NULL, "NgayDang",false
             );
             $popular_post = $this->postModel->getAllData(

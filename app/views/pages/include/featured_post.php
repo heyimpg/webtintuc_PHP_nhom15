@@ -16,7 +16,7 @@
                                         src="./assets/img/bg-img/<?=$first_post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory"><?= $first_post['TenCTTheLoai'] ?></a>
+                                <a href="<?= CATEGORY_URL.$first_post["ID_TheLoai"] ?>" class="post-catagory"><?= $first_post['TenTheLoai'] ?></a>
                                 <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>" class="post-title">
                                     <h6><?= $first_post['TieuDe'] ?></h6>
                                 </a>
@@ -50,7 +50,7 @@
                                         src="./assets/img/bg-img/<?=$post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
+                                <a href="<?= CATEGORY_URL.$post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
                                 <div class="post-meta">
                                     <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                         <h6><?=$post['GioiThieu']?>...</h6>
@@ -82,7 +82,7 @@
                                 src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                     </div>
                     <div class="post-data">
-                        <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
+                        <a href="#" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
                         <div class="post-meta">
                             <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                 <h6><?=$post['TieuDe']?></h6>

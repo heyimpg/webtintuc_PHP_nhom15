@@ -13,21 +13,21 @@
                             <?php
                             if (isset($data) && isset($data['pagination'])) {
                                 if ($data['pagination']['currentPage'] > 3) { ?>
-                                    <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_CTTheLoai'] ?>&page=1">Đầu</a></li>
+                                    <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_TheLoai'] ?>&page=1">Đầu</a></li>
                                 <?php }
                                 for ($index = 1; $index <= $data['pagination']['totalPage']; $index++) {
                                 ?>
                                     <?php if ($index != $data['pagination']['currentPage']) {
                                         if ($index > $data['pagination']['currentPage'] - 3 && $index < $data['pagination']['currentPage'] + 3) {
                                     ?>
-                                            <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_CTTheLoai'] ?>&page=<?= $index ?>"><?= $index ?></a></li>
+                                            <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_TheLoai'] ?>&page=<?= $index ?>"><?= $index ?></a></li>
                                         <?php }
                                     } else { ?>
-                                        <li class="page-item active"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_CTTheLoai'] ?>&page=<?= $index ?>"><?= $index ?></a></li>
+                                        <li class="page-item active"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_TheLoai'] ?>&page=<?= $index ?>"><?= $index ?></a></li>
                                     <?php } ?>
                                 <?php }
                                 if ($data['pagination']['currentPage'] < $data['pagination']['totalPage'] - 3) { ?>
-                                    <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_CTTheLoai'] ?>&page=<?= $data['pagination']['totalPage'] ?>">Cuối</a></li>
+                                    <li class="page-item"><a class="page-link" href="<?php echo CATEGORY_URL . $data['ID_TheLoai'] ?>&page=<?= $data['pagination']['totalPage'] ?>">Cuối</a></li>
                             <?php }
                             } ?>
                         </ul>
