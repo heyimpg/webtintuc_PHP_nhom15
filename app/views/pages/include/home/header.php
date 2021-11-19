@@ -1,3 +1,8 @@
+<?php 
+    require_once "./app/controllers/navigation.php";
+    $navigation = new navigation();
+    $categories = $navigation->index();
+?>
 <!-- Css -->
 <link rel="stylesheet" href="./assets/css/custom/header_style.css">
 
@@ -85,20 +90,11 @@
                                         <li><a href="single-post.html">Single Articles</a></li>
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="#">Dropdown</a>
-                                            <ul class="dropdown">
-                                                <li><a href="home">Home</a></li>
-                                                <li><a href="catagories-post.html">Catagories</a></li>
-                                                <li><a href="single-post.html">Single Articles</a></li>
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </li>
                                 <?php
-                                if (isset($data)) {
-                                    foreach ($data['categories'] as $category) {
+                                if (isset($categories)) {
+                                    foreach ($categories as $category) {
 
                                 ?>
                                         <li><a href="<?= CATEGORY_URL . $category["ID_CTTheLoai"] ?>"><?php echo $category['TenCTTheLoai']; ?></a></li>

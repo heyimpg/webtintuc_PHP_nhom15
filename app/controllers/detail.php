@@ -1,15 +1,12 @@
 <?php
     class detail extends Controller {
-        private CategoryModel $categoryModel;
         private AdminPostModel $postModel;
 
         public function __construct() {
-            $this->categoryModel = $this->model("CategoryModel");
             $this->postModel = $this->model("AdminPostModel");
         }
 
         public function index($ID_BaiViet) {
-            $categories = $this->categoryModel->getAllData("ID_CTTheLoai, TenCTTheLoai", NULL, NULL, true, 10);
             $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
             //Detail
             $detail_post = $this->postModel->getDatafromMultiTable(
@@ -26,7 +23,6 @@
             $this->postModel->closeConnection();
             $data = [
                 "page" => "home/detail",
-                "categories" => $categories,
                 "detail_post" => $detail_post,
                 "category_post" => $category_post,
                 "popular_post" => $popular_post

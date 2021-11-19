@@ -1,15 +1,12 @@
 <?php
     class home extends Controller {
-        private CategoryModel $categoryModel;
         private PostModel $postModel;
 
         public function __construct() {
-            $this->categoryModel = $this->model("CategoryModel");
             $this->postModel = $this->model("PostModel");
         }
 
         public function index() {
-            $categories = $this->categoryModel->getAllData("ID_CTTheLoai, TenCTTheLoai", NULL, NULL, true, 10);
             $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
             //Featured
             $featured_post = $this->postModel->getAllDatafromMultiTable(
@@ -41,7 +38,6 @@
             $this->postModel->closeConnection();
             $data = [
                 "page" => "home/index",
-                "categories" => $categories,
                 "featured_post" => $featured_post,
                 "category_post" => $category_post,
                 "latest_post" => $latest_post,
