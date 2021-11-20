@@ -12,5 +12,19 @@
             $kq = $this->admin_post_model->getAllData();
             $this->view("pages/admin/index");
         }
+
+        public function signin() {
+            if(isset($_POST["submit"])) {
+                var_dump($_POST);
+                exit();
+            }
+        }
+
+        public function signup() {
+            if(isset($_POST["submit"])) {
+                var_dump($_POST);
+                exit();
+            }
+        }
     }
 ?>

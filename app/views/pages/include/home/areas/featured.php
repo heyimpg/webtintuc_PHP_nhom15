@@ -10,7 +10,7 @@
                     <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $first_post['AnhDaiDien'] ?>" alt=""></a>
                 </div>
                 <div class="post-data">
-                    <a href="<?= CATEGORY_URL.$first_post["ID_CTTheLoai"] ?>" class="post-catagory"><?= $first_post['TenCTTheLoai'] ?></a>
+                    <a href="<?= CATEGORY_URL.$first_post["ID_TheLoai"] ?>" class="post-catagory"><?= $first_post['TenTheLoai'] ?></a>
                     <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>" class="post-title">
                         <h6><?= $first_post['TieuDe'] ?></h6>
                     </a>
@@ -40,7 +40,7 @@
                             <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post['AnhDaiDien'] ?>" alt=""></a>
                         </div>
                         <div class="post-data">
-                            <a href="<?= CATEGORY_URL.$post["ID_CTTheLoai"] ?>" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
+                            <a href="<?= CATEGORY_URL.$post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
                             <div class="post-meta">
                                 <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                     <h6><?= $post['GioiThieu'] ?>...</h6>

@@ -10,10 +10,10 @@
 
         public function index($ID_BaiViet) {
             $categories = $this->categoryModel->getAllData();
-            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             //Detail
             $detail_post = $this->postModel->getDatafromMultiTable("*",["ID_BaiViet"=>$ID_BaiViet]);
-            $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_CTTheLoai"=>2]);
+            $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_TheLoai"=>2]);
             $popular_post = $this->postModel->getAllData("*",["ID_LoaiTin"=>2],"NgayDang", false);
             $this->postModel->closeConnection();
             $data = [

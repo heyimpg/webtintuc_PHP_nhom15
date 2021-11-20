@@ -31,16 +31,16 @@
         <div class="login_wrapper">
             <div class="animate form login_form">
                 <section class="login_content">
-                    <form>
+                    <form method="post" action="<?= BASE_URL."admin/admin/signin"?>">
                         <h1>Đăng nhập</h1>
                         <div>
-                            <input type="text" class="form-control" placeholder="Username" required="" />
+                            <input type="text" name="UserName" class="form-control" placeholder="Tên đăng nhập" required="" />
                         </div>
                         <div>
-                            <input type="password" class="form-control" placeholder="Password" required="" />
+                            <input type="password" name="Password" class="form-control" placeholder="Mật khẩu" required="" />
                         </div>
                         <div>
-                            <a class="btn btn-default submit" href="javascript:void(0)">Đăng nhập</a>
+                            <a class="btn btn-default submit" href="javascript:void(0)"><button type="submit" name="submit">Đăng nhập</button></a>
                             <a class="reset_pass" href="javascript:void(0)">Quên mật khẩu?</a>
                         </div>
 
@@ -60,19 +60,24 @@
 
             <div id="register" class="animate form registration_form">
                 <section class="login_content">
-                    <form>
+                    <form method="post" action="<?= BASE_URL."admin/admin/signup"?>">
                         <h1>Tạo tài khoản mới</h1>
                         <div>
-                            <input type="text" class="form-control" placeholder="Tên tài khoản" required="" />
+                            <input type="text" name="UserName" class="form-control" placeholder="Tên tài khoản" required="" />
                         </div>
                         <div>
-                            <input type="email" class="form-control" placeholder="Địa chỉ Email" required="" />
+                            <input type="email" name="UserEmail" class="form-control" placeholder="Địa chỉ Email" required="" />
                         </div>
                         <div>
-                            <input type="password" class="form-control" placeholder="Mật khẩu" required="" />
+                            <input type="password" name="Password" class="form-control" placeholder="Mật khẩu" required="" />
                         </div>
                         <div>
-                            <a class="btn btn-default submit" href="<?= BASE_URL."admin/#signin"?>">Đăng kí</a>
+                            <input type="password" name="RepeatPass" class="form-control" placeholder="Nhập lại mật khẩu" required="" />
+                        </div>
+                        <div>
+                            <a class="btn btn-default submit" href="javascript:void(0)">
+                                <button type="submit" name="submit">Đăng kí</button>
+                            </a>
                         </div>
 
                         <div class="clearfix"></div>

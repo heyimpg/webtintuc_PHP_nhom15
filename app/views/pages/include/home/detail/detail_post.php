@@ -14,7 +14,7 @@
                                 <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
+                                <a href="#" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
                                 <a href="#" class="post-title">
                                     <h6><?=$post["TieuDe"]?></h6>
                                 </a>
@@ -35,8 +35,8 @@
 
                                         <!-- Post Like & Post Comment -->
                                         <div class="d-flex align-items-center post-like--comments">
-                                            <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                                            <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
+                                            <a href="#" class="post-like"><img src="assets/img/core-img/like.png" alt=""> <span>392</span></a>
+                                            <a href="#" class="post-comment"><img src="assets/img/core-img/chat.png" alt=""> <span>10</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                         <!-- About Author -->
                         <div class="blog-post-author d-flex">
                             <div class="author-thumbnail">
-                                <img src="img/bg-img/32.jpg" alt="">
+                                <img src="assets/img/bg-img/32.jpg" alt="">
                             </div>
                             <div class="author-info">
                                 <a href="#" class="author-name">James Smith, <span>The Author</span></a>
@@ -72,7 +72,7 @@
                             <div class="col-12 col-md-6">
                                 <div class="single-blog-post style-3 mb-80">
                                     <div class="post-thumb">
-                                        <a href="#"><img src="img/bg-img/12.jpg" alt=""></a>
+                                        <a href="#"><img src="assets/img/bg-img/12.jpg" alt=""></a>
                                     </div>
                                     <div class="post-data">
                                         <a href="#" class="post-catagory">Finance</a>
@@ -80,8 +80,8 @@
                                             <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
                                         </a>
                                         <div class="post-meta d-flex align-items-center">
-                                            <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                                            <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
+                                            <a href="#" class="post-like"><img src="assets/img/core-img/like.png" alt=""> <span>392</span></a>
+                                            <a href="#" class="post-comment"><img src="assets/img/core-img/chat.png" alt=""> <span>10</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                             <div class="col-12 col-md-6">
                                 <div class="single-blog-post style-3 mb-80">
                                     <div class="post-thumb">
-                                        <a href="#"><img src="img/bg-img/13.jpg" alt=""></a>
+                                        <a href="#"><img src="assets/img/bg-img/13.jpg" alt=""></a>
                                     </div>
                                     <div class="post-data">
                                         <a href="#" class="post-catagory">Finance</a>
@@ -99,8 +99,8 @@
                                             <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
                                         </a>
                                         <div class="post-meta d-flex align-items-center">
-                                            <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>
-                                            <a href="#" class="post-comment"><img src="img/core-img/chat.png" alt=""> <span>10</span></a>
+                                            <a href="#" class="post-like"><img src="assets/img/core-img/like.png" alt=""> <span>392</span></a>
+                                            <a href="#" class="post-comment"><img src="assets/img/core-img/chat.png" alt=""> <span>10</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                     <div class="comment-content d-flex">
                                         <!-- Comment Author -->
                                         <div class="comment-author">
-                                            <img src="img/bg-img/30.jpg" alt="author">
+                                            <img src="assets/img/bg-img/30.jpg" alt="author">
                                         </div>
                                         <!-- Comment Meta -->
                                         <div class="comment-meta">
@@ -133,7 +133,7 @@
                                             <div class="comment-content d-flex">
                                                 <!-- Comment Author -->
                                                 <div class="comment-author">
-                                                    <img src="img/bg-img/31.jpg" alt="author">
+                                                    <img src="assets/img/bg-img/31.jpg" alt="author">
                                                 </div>
                                                 <!-- Comment Meta -->
                                                 <div class="comment-meta">
@@ -152,7 +152,7 @@
                                     <div class="comment-content d-flex">
                                         <!-- Comment Author -->
                                         <div class="comment-author">
-                                            <img src="img/bg-img/32.jpg" alt="author">
+                                            <img src="assets/img/bg-img/32.jpg" alt="author">
                                         </div>
                                         <!-- Comment Meta -->
                                         <div class="comment-meta">
@@ -221,7 +221,7 @@
                             <!-- Single Comments -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/29.jpg" alt="">
+                                    <img src="assets/img/bg-img/29.jpg" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
@@ -232,7 +232,7 @@
                             <!-- Single Comments -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/30.jpg" alt="">
+                                    <img src="assets/img/bg-img/30.jpg" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
@@ -243,7 +243,7 @@
                             <!-- Single Comments -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/31.jpg" alt="">
+                                    <img src="assets/img/bg-img/31.jpg" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
@@ -254,7 +254,7 @@
                             <!-- Single Comments -->
                             <div class="single-comments d-flex">
                                 <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/32.jpg" alt="">
+                                    <img src="assets/img/bg-img/32.jpg" alt="">
                                 </div>
                                 <div class="comments-text">
                                     <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>

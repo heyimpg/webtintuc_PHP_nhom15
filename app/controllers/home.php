@@ -10,10 +10,10 @@
 
         public function index() {
             $categories = $this->CategoryModel->getAllData();
-            $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+            $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             //Featured
             $featured_post = $this->postModel->getAllDatafromMultiTable("*",["ID_LoaiTin"=>1]);
-            $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_CTTheLoai"=>2]);
+            $category_post = $this->postModel->getAllDatafromMultiTable("*",[$this->postModel->getTable().".ID_TheLoai"=>2]);
             //Latest
             $latest_post = $this->postModel->getAllDatafromMultiTable("*",NULL, "NgayDang",false);
             // $latest_post = $this->postModel->getAllData("*",NULL, "NgayDang",false);
