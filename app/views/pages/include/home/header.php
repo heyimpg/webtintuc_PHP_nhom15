@@ -1,7 +1,9 @@
 <?php 
     require_once "./app/controllers/navigation.php";
     $navigation = new navigation();
-    $categories = $navigation->index();
+    $menu = $navigation->getMenu();
+    $sub_menu = $navigation->getSubMenu();
+    // var_dump($sub_menu);
 ?>
 <!-- Css -->
 <link rel="stylesheet" href="./assets/css/custom/header_style.css">
@@ -78,26 +80,44 @@
 
                     <!-- Menu -->
                     <div class="classy-menu">
-
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
                                 <li class="active"><a href="home">Trang chủ</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="home">Home</a></li>
-                                        <li><a href="catagories-post.html">Catagories</a></li>
-                                        <li><a href="single-post.html">Single Articles</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </li>
                                 <?php
-                                if (isset($categories)) {
-                                    foreach ($categories as $category) {
-
+                                if (isset($menu)) {
+                                    foreach ($menu as $category) {
                                 ?>
-                                        <li><a href="<?= CATEGORY_URL . $category["ID_TheLoai"] ?>"><?php echo $category['TenTheLoai']; ?></a></li>
+                                    <li>
+                                        <a href="<?= CATEGORY_URL . $category["ID_TheLoai"] ?>">
+                                            <?php echo $category['TenTheLoai']; ?>
+                                        </a>
+                                            <?php
+                                                $arr_sub_category = array();
+                                                foreach ($sub_menu as $sub_category)
+                                                {
+                                                    if ($sub_category["ID_TheLoai"] == $category["ID_TheLoai"])
+                                                    {
+                                                        array_push($arr_sub_category, $sub_category);
+                                                    }
+                                                }
+                                                if(count($arr_sub_category)) {
+                                                    ?>
+                                                    <ul class="dropdown">
+                                                        <?php
+                                                            foreach ($arr_sub_category as $sub_category) {
+                                                                ?>
+                                                                    <li><a href="<?= CATEGORY_URL .'subCategory/'. $sub_category["ID_CTTheLoai"] ?>"><?php echo $sub_category['TenCTTheLoai']; ?></a></li>
+                                                                <?php
+                                                            }
+                                                        ?>
+                                                    </ul>
+                                                    <?php
+                                                }
+                                                unset($arr_sub_category);
+                                            ?>
+                                        
+                                    </li>
                                 <?php
                                     }
                                 }

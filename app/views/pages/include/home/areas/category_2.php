@@ -1,6 +1,7 @@
 <!-- Trang  danh mục-->
 <?php
-if (isset($data)) {
+        $ID_TheLoai = $data['isCategory'] ? 'ID_TheLoai' : 'ID_CTTheLoai';
+        $TenCTTheLoai = $data['isCategory'] ? 'TenTheLoai' : 'TenCTTheLoai';
         foreach ($data['category_post_2'] as $key => $post) {
 ?>
         <!-- Single Featured Post -->
@@ -9,7 +10,7 @@ if (isset($data)) {
                 <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
             </div>
             <div class="post-data">
-                <a href="<?= CATEGORY_URL.$post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
+                <a href="<?= $URL.$post[$ID_TheLoai] ?>" class="post-catagory"><?= $post[$TenCTTheLoai] ?></a>
                 <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                     <h6><?= $post["TieuDe"] ?></h6>
                 </a>
@@ -24,5 +25,4 @@ if (isset($data)) {
                 </div>
             </div>
         </div>
-<?php }
-} ?>
+<?php } ?>

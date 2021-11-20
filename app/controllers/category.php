@@ -40,14 +40,59 @@ class category extends Controller
             "NgayDang",
             false
         );
-        
+
         $this->postModel->closeConnection();
         $data = [
+            "isCategory" => true,
             "page" => "home/category",
             "category_post_2" => $category_post_2,
             "popular_post" => $popular_post,
             "pagination" => $pagination,
             "ID_TheLoai" => $ID_TheLoai
+        ];
+        $this->view("layout", $data);
+    }
+
+    public function subCategory($ID_CTTheLoai) {
+        $this->postModel->setupSecondTable("chitiettheloai", "ID_CTTheLoai");
+        //Category
+        $page_size = 4;
+        $current_page = !empty($_GET["page"]) ? $_GET["page"] : 1;
+        $offset = ($current_page - 1) * $page_size;
+        $allRecord = $this->postModel->getAllDatafromMultiTable(
+            "*", [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
+            null,
+            null,
+            9999
+        );
+        $totalPage = ceil(sizeof($allRecord) / $page_size);
+        $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
+
+        $category_post_2 = $this->postModel->getAllDatafromMultiTable(
+            $this->postModel->getTable() . ".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu",
+            [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
+            null,
+            null,
+            $page_size,
+            $offset
+        );
+
+        //Popular post
+        $popular_post = $this->postModel->getAllData(
+            "ID_BaiViet, TieuDe, NgayDang",
+            ["ID_LoaiTin" => 2],
+            "NgayDang",
+            false
+        );
+
+        $this->postModel->closeConnection();
+        $data = [
+            "isCategory" => false,
+            "page" => "home/category",
+            "category_post_2" => $category_post_2,
+            "popular_post" => $popular_post,
+            "pagination" => $pagination,
+            "ID_TheLoai" => $ID_CTTheLoai
         ];
         $this->view("layout", $data);
     }
@@ -67,9 +112,10 @@ class category extends Controller
                 "NgayDang",
                 false
             );
-
+            
             $this->postModel->closeConnection();
             $data = [
+                "isCategory" => true,
                 "page" => "home/category",
                 "category_post_2" => $category_post_2,
                 "popular_post" => $popular_post,
