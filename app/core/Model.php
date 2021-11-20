@@ -34,7 +34,7 @@
                 $query->execute();
             }
 
-            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
+            return $query->fetch(PDO::FETCH_ASSOC);
         }
 
         public function getDatafromMultiTable($data = self::DEFAULT_STR, $where = null) {
