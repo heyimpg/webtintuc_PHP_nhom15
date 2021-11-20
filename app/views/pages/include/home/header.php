@@ -55,13 +55,12 @@
                                 <?php
                                 }
                                 ?>
-
                             </div>
                             <!-- Search Form -->
                             <div class="search-form">
                                 <form action="<?=CATEGORY_URL."searchPost"?>" method="post">
                                     <input type="search" name="search" class="form-control" placeholder="Tìm kiếm">
-                                    <button type="submit" name="submit_search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
                             </div>
                         </div>

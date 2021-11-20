@@ -31,10 +31,12 @@ Công việc đã làm:
     + Thêm phần tìm kiếm bài viết (1/2 - chưa làm phân trang cho tìm kiếm)
     + Thanh navigation (1/5) - chuyển đổi query sang bảng thể loại thay vì chi tiết thể loại
     + Thanh navigation (4/5)
-Công việc cần làm:  
     + Thêm phần tìm kiếm bài viết (hoàn thiện nốt phân trang)
+Công việc cần làm:  
     + Thêm phần comments các bài viết 
     + Thêm trang xem thông tin user, đổi password
+    + Làm 1 cách chính xác phần navigation (5/5)
+    + Xử lý trang 404
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
 -----------HAI------------

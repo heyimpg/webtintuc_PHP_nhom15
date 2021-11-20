@@ -106,11 +106,16 @@
             return $sql;
         }
 
-        public function searchPost($data =  self::DEFAULT_STR, $search_value) {
+        public function searchPost($data =  self::DEFAULT_STR, $search_value, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
             $sql = "select $data " 
             ."from $this->table inner join $this->second_table "
             ."on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key "
             ."where TieuDe like CONCAT('%',?,'%')";
+            
+            $sql .= " limit $limit ";
+            if(!is_null($offset)) {
+                $sql .= "offset $offset";
+            }
 
             $query = $this->conn->prepare($sql);
             $query->execute([$search_value]);

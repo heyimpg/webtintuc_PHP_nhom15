@@ -1,6 +1,11 @@
    <?php
     if (isset($data)) {
         $URL = $data['isCategory'] ? CATEGORY_URL : CATEGORY_URL . 'subCategory/';
+        $PARAM_URL = isset($data['ID_TheLoai'])? $data['ID_TheLoai'] : '';
+        if(isset($data['search_value'])) {
+            $PARAM_URL = "&search=".$data['search_value'];
+            $URL = CATEGORY_URL . 'searchPost/';
+        }
     ?>
 
        <!-- ##### Blog Area Start ##### -->
@@ -18,21 +23,21 @@
                                <?php
                                if(isset($data['pagination'])) {
                                 if ($data['pagination']['currentPage'] > 3) { ?>
-                                   <li class="page-item"><a class="page-link" href="<?php echo $URL . $data['ID_TheLoai'] ?>&page=1">Đầu</a></li>
+                                   <li class="page-item"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=1">Đầu</a></li>
                                <?php }
                                 for ($index = 1; $index <= $data['pagination']['totalPage']; $index++) {
                                 ?>
                                    <?php if ($index != $data['pagination']['currentPage']) {
                                         if ($index > $data['pagination']['currentPage'] - 3 && $index < $data['pagination']['currentPage'] + 3) {
                                     ?>
-                                           <li class="page-item"><a class="page-link" href="<?php echo $URL . $data['ID_TheLoai'] ?>&page=<?= $index ?>"><?= $index ?></a></li>
+                                           <li class="page-item"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=<?= $index ?>"><?= $index ?></a></li>
                                        <?php }
                                     } else { ?>
-                                       <li class="page-item active"><a class="page-link" href="<?php echo $URL . $data['ID_TheLoai'] ?>&page=<?= $index ?>"><?= $index ?></a></li>
+                                       <li class="page-item active"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=<?= $index ?>"><?= $index ?></a></li>
                                    <?php } ?>
                                <?php }
                                 if ($data['pagination']['currentPage'] < $data['pagination']['totalPage'] - 3) { ?>
-                                   <li class="page-item"><a class="page-link" href="<?php echo $URL . $data['ID_TheLoai'] ?>&page=<?= $data['pagination']['totalPage'] ?>">Cuối</a></li>
+                                   <li class="page-item"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=<?= $data['pagination']['totalPage'] ?>">Cuối</a></li>
                                <?php }} ?>
                            </ul>
                        </nav>
