@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= BASE_URL?>">
-    <title>Đăng nhập </title>
+    <title>Hệ thống Trang quản trị viên</title>
     <link rel="shortcut icon" href="assets/admin/build/images/favicon.ico"/>
     <!-- Bootstrap -->
     <link href="assets/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,11 +33,12 @@
                 <section class="login_content">
                     <form method="post" action="<?= BASE_URL."admin/admin/signin"?>">
                         <h1>Đăng nhập</h1>
+                        <div hidden><input type="text" name="type" value="dang-nhap"></div>
                         <div>
-                            <input type="text" name="UserName" class="form-control" placeholder="Tên đăng nhập" required="" />
+                            <input type="text" name="TenTaiKhoan" class="form-control" placeholder="Tên đăng nhập" required="" />
                         </div>
                         <div>
-                            <input type="password" name="Password" class="form-control" placeholder="Mật khẩu" required="" />
+                            <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu" required="" />
                         </div>
                         <div>
                             <a class="btn btn-default submit" href="javascript:void(0)"><button type="submit" name="submit">Đăng nhập</button></a>
@@ -62,21 +63,29 @@
                 <section class="login_content">
                     <form method="post" action="<?= BASE_URL."admin/admin/signup"?>">
                         <h1>Tạo tài khoản mới</h1>
-                        <div>
-                            <input type="text" name="UserName" class="form-control" placeholder="Tên tài khoản" required="" />
+                        <?php
+                            if(isset($data["signup_alert"])) {
+                                echo $data["signup_alert"];
+                            }
+                        ?>
+                        <div hidden>
+                            <input type="text" name="type" value="dang-ki">
                         </div>
                         <div>
-                            <input type="email" name="UserEmail" class="form-control" placeholder="Địa chỉ Email" required="" />
+                            <input type="text" name="TenTaiKhoan" class="form-control" placeholder="Tên tài khoản"/>
                         </div>
                         <div>
-                            <input type="password" name="Password" class="form-control" placeholder="Mật khẩu" required="" />
+                            <input type="email" name="Email" class="form-control" placeholder="Địa chỉ Email"/>
                         </div>
                         <div>
-                            <input type="password" name="RepeatPass" class="form-control" placeholder="Nhập lại mật khẩu" required="" />
+                            <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu"/>
+                        </div>
+                        <div>
+                            <input type="password" name="XacNhanMatKhau" class="form-control" placeholder="Nhập lại mật khẩu"/>
                         </div>
                         <div>
                             <a class="btn btn-default submit" href="javascript:void(0)">
-                                <button type="submit" name="submit">Đăng kí</button>
+                                <button type="submit" name="submit" value="submit">Đăng kí</button>
                             </a>
                         </div>
 
