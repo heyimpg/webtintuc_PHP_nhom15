@@ -31,7 +31,7 @@
                 }
                 else if(empty($message) && !empty($_SESSION[$name])) {
                     $class = !empty($_SESSION[$name."_class"]) ? $_SESSION[$name."_class"] : $class;
-                    return "<div class='".$class."'>".$_SESSION[$name]."</div>";
+                    echo "<div class='".$class."'>".$_SESSION[$name]."</div>";
                     unset($_SESSION[$name]);
                     unset($_SESSION[$name."_class"]);
                 }

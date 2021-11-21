@@ -54,8 +54,8 @@
 
             if(isset($array[1])) {
                 if(method_exists($this->controller, $array[1])) {
-                   $this->action = $array[1];
-                   unset($array[1]);
+                    $this->action = $array[1];
+                    unset($array[1]);
                 }
             }
             $this->params = $array ? array_values($array):[];

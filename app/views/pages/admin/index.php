@@ -1,3 +1,4 @@
+<?php $redirect = new Redirect(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,12 +34,15 @@
                 <section class="login_content">
                     <form method="post" action="<?= BASE_URL."admin/admin/signin"?>">
                         <h1>Đăng nhập</h1>
+                        <?php 
+                            $redirect->flash("dang-nhap"); 
+                        ?>
                         <div hidden><input type="text" name="type" value="dang-nhap"></div>
                         <div>
-                            <input type="text" name="TenTaiKhoan" class="form-control" placeholder="Tên đăng nhập" required="" />
+                            <input type="text" name="TenTaiKhoan_DN" class="form-control" placeholder="Tên đăng nhập" required="" />
                         </div>
                         <div>
-                            <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu" required="" />
+                            <input type="password" name="MatKhau_DN" class="form-control" placeholder="Mật khẩu" required="" />
                         </div>
                         <div>
                             <a class="btn btn-default submit" href="javascript:void(0)"><button type="submit" name="submit">Đăng nhập</button></a>
@@ -49,7 +53,7 @@
 
                         <div class="separator">
                             <p class="change_link">Bạn là thành viên mới?
-                                <a href="<?= BASE_URL."admin/#signup" ?>" class="to_register"> Tạo tài khoản</a>
+                                <a href="<?= BASE_URL."admin/#signup"?>" class="to_register"> Tạo tài khoản</a>
                             </p>
 
                             <div class="clearfix"></div>
@@ -63,25 +67,20 @@
                 <section class="login_content">
                     <form method="post" action="<?= BASE_URL."admin/admin/signup"?>">
                         <h1>Tạo tài khoản mới</h1>
-                        <?php
-                            if(isset($data["signup_alert"])) {
-                                echo $data["signup_alert"];
-                            }
+                        <?php 
+                            $redirect->flash("dang-ki"); 
                         ?>
                         <div hidden>
                             <input type="text" name="type" value="dang-ki">
                         </div>
                         <div>
-                            <input type="text" name="TenTaiKhoan" class="form-control" placeholder="Tên tài khoản"/>
+                            <input type="text" name="TenTaiKhoan_DK" class="form-control" placeholder="Tên tài khoản" required=""/>
                         </div>
                         <div>
-                            <input type="email" name="Email" class="form-control" placeholder="Địa chỉ Email"/>
+                            <input type="password" name="MatKhau_DK" class="form-control" placeholder="Mật khẩu" required=""/>
                         </div>
                         <div>
-                            <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu"/>
-                        </div>
-                        <div>
-                            <input type="password" name="XacNhanMatKhau" class="form-control" placeholder="Nhập lại mật khẩu"/>
+                            <input type="password" name="XacNhanMatKhau_DK" class="form-control" placeholder="Nhập lại mật khẩu" required=""/>
                         </div>
                         <div>
                             <a class="btn btn-default submit" href="javascript:void(0)">
