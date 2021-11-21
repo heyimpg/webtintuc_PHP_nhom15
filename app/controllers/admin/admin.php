@@ -93,12 +93,12 @@
             $this->redirect->redirect(BASE_URL."admin/category/index");
         }
     
-        public function logout(){
+        public function signout(){
             unset($_SESSION['ID_TaiKhoan']);
             unset($_SESSION['TenTaiKhoan']);
             unset($_SESSION['MatKhau']);
             session_destroy();
-            $this->redirect->redirect(BASE_URL."admin/category/index");
+            $this->redirect->redirect(BASE_URL."admin/#signin");
         }
     }
 ?>

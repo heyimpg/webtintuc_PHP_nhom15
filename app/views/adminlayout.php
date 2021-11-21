@@ -18,7 +18,14 @@
               </div>
               <div class="profile_info">
                 <span>Xin chào,</span>
-                <h2>John Doe</h2>
+                <h2>
+                  <?php if(isset($_SESSION["ID_TaiKhoan"])) {
+                      echo explode(" ", $_SESSION["TenTaiKhoan"])[0];
+                    } else {
+                      echo "Quản trị viên";
+                    }
+                  ?>
+                </h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
