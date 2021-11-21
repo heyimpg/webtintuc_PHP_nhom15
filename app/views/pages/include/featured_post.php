@@ -25,10 +25,8 @@
                                     <p class="post-excerp"><?=$first_post['GioiThieu']?>...</p>
                                     <!-- Post Like & Post Comment -->
                                     <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt="">
-                                            <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png"
-                                                alt=""> <span>10</span></a>
+                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""><span>392</span></a>
+                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span>10</span></a>
                                     </div>
                                 </div>
                             </div>

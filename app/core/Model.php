@@ -5,8 +5,8 @@
         protected String $table = "";
         private const DEFAULT_LIMIT = 4;
         private const DEFAULT_STR = "*";
-        protected String $second_table;
-        protected String $foreign_key;
+        protected String $second_table = "";
+        protected String $foreign_key = "";
 
         public function getAllData($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
             $sql = "select $data from $this->table ";
