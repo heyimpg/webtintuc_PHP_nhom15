@@ -1,4 +1,4 @@
-<?php $redirect = new Redirect();?>
+<?php $redirect = new Redirect(); ?>
 <div class="">
     <div class="page-title">
         <div class="title_left">

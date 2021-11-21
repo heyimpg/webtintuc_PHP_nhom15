@@ -90,6 +90,7 @@
             $_SESSION['ID_TaiKhoan'] = $user->ID_TaiKhoan;
             $_SESSION['TenTaiKhoan'] = $user->TenTaiKhoan;
             $_SESSION['MatKhau'] = $user->MatKhau;
+            $_SESSION["loggedIn"] = true;
             $this->redirect->redirect(BASE_URL."admin/category/index");
         }
     

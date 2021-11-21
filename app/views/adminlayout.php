@@ -1,6 +1,8 @@
-<?php require_once "app/views/pages/include/admin/header.php"; ?>
-
-  <body class="nav-md">
+<?php
+  if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
+      require_once "app/views/pages/include/admin/header.php"; 
+?>
+<body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -58,12 +60,20 @@
         <!-- top navigation -->
         <?php require_once "app/views/pages/include/admin/topnav.php";?>
         <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
           <?php if(isset($data)) { require_once "app/views/pages/{$data["page"]}.php"; }?>
         </div>
         <!-- /page content -->
+        <?php require_once "app/views/pages/include/admin/footer.php"; ?>
+<?php
+  } 
+  else {
+    echo "Không có quyền truy cập";
+  }
+?>
 
-<?php require_once "app/views/pages/include/admin/footer.php"; ?>
+        
+
+
 

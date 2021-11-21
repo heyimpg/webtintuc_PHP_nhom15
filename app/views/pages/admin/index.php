@@ -1,4 +1,6 @@
-<?php $redirect = new Redirect(); ?>
+<?php
+    $redirect = new Redirect(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
