@@ -17,7 +17,7 @@ class detail extends Controller
         $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
         //Detail
         $detail_post = $this->postModel->getDatafromMultiTable(
-            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan",
+            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan, SoLuotThich",
             ["ID_BaiViet" => $ID_BaiViet]
         );
         $category_post = $this->postModel->getAllDatafromMultiTable(
@@ -35,7 +35,7 @@ class detail extends Controller
             $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe",
             [$this->postModel->getTable() . ".ID_TheLoai" => $detail_post['ID_TheLoai']]
         );
-            //get author - ppsot detail 
+            //get author - post detail 
         $this->postModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
         $author = $this->postModel->getDatafromMultiTable(
             "TaiKhoan",

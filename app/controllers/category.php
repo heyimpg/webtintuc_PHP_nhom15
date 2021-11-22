@@ -70,7 +70,7 @@ class category extends Controller
         $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
 
         $category_post_2 = $this->postModel->getAllDatafromMultiTable(
-            $this->postModel->getTable() . ".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu",
+            $this->postModel->getTable() . ".ID_CTTheLoai, ID_BaiViet, AnhDaiDien, TenCTTheLoai, TieuDe, GioiThieu, SoLuotThich",
             [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
             null,
             null,
@@ -85,6 +85,18 @@ class category extends Controller
             "NgayDang",
             false
         );
+
+        //get Comment for per post
+            //featured_post
+        $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
+        for ($i=0 ; $i < count($category_post_2); $i++) {
+            $comment = $this->postModel->getAllDatafromMultiTable(
+                "ID_BinhLuan",
+                [$this->postModel->getTable().".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
+                null, null, null
+            );
+            $category_post_2[$i]['SoBinhLuan'] = $comment;
+        }
 
         $this->postModel->closeConnection();
         $data = [
@@ -112,7 +124,7 @@ class category extends Controller
             $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
 
             $category_post_2 = $this->postModel->searchPost(
-                $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu",
+                $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, SoLuotThich",
                 $search_value, 
                 $page_size,
                 $offset
@@ -124,6 +136,18 @@ class category extends Controller
                 "NgayDang",
                 false
             );
+
+            //get Comment for per post
+                //featured_post
+            $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
+            for ($i=0 ; $i < count($category_post_2); $i++) {
+                $comment = $this->postModel->getAllDatafromMultiTable(
+                    "ID_BinhLuan",
+                    [$this->postModel->getTable().".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
+                    null, null, null
+                );
+                $category_post_2[$i]['SoBinhLuan'] = $comment;
+            }
 
             $this->postModel->closeConnection();
             $data = [

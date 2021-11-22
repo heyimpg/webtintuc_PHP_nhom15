@@ -36,9 +36,10 @@ Công việc đã làm:
     + Thêm phần comments các bài viết 
     + Nếu chủ bài viết comment (thêm chút css)
     + Thêm ngày giờ cho comment
+    + Show like, comment của các bài viết khác ra
+
 Công việc cần làm:  
     + Phần like bài viết
-    + Show like, comment của các bài viết khác ra
     + Phân trang cho việc comment (ajax)
     + Làm event nút like nè (ajax)
 

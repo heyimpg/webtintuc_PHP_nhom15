@@ -10,16 +10,18 @@
             $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             //Featured
             $featured_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu",
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, SoLuotThich",
                 ["ID_LoaiTin"=>1]
             );
+
+            $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
             $category_post = $this->postModel->getAllDatafromMultiTable(
                 $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, NgayDang",
                 [$this->postModel->getTable().".ID_TheLoai"=>2]
             );
             //Latest
             $latest_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu",
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu, SoLuotThich",
                 NULL, "NgayDang",false
             );
             $popular_post = $this->postModel->getAllData(
@@ -35,6 +37,28 @@
                 "ID_BaiViet, AnhDaiDien, GioiThieu, NgayDang",["ID_LoaiTin"=>4],
                 "NgayDang", false
             );
+
+            //get Comment for per post
+                //featured_post
+            $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
+            for ($i=0 ; $i < count($featured_post); $i++) {
+                $comment = $this->postModel->getAllDatafromMultiTable(
+                    "ID_BinhLuan",
+                    [$this->postModel->getTable().".ID_BaiViet" => $featured_post[$i]['ID_BaiViet']],
+                    null, null, null
+                );
+                $featured_post[$i]['SoBinhLuan'] = $comment;
+            }
+                //latest_post
+            for ($i=0 ; $i < count($latest_post); $i++) {
+                $comment = $this->postModel->getAllDatafromMultiTable(
+                    "ID_BinhLuan",
+                    [$this->postModel->getTable().".ID_BaiViet" => $latest_post[$i]['ID_BaiViet']],
+                    null, null, null
+                );
+                $latest_post[$i]['SoBinhLuan'] = $comment;
+            }
+
             $this->postModel->closeConnection();
             $data = [
                 "page" => "home/index",

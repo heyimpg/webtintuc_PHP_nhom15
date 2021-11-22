@@ -27,9 +27,9 @@
                                     <p class="post-author" >Tác giả: <a href="#"><?= $post["author"] ?></a></p>
                                     <p><?=$post["GioiThieu"]?></p>
                                     <p><?=$post["NoiDung"]?></p>
-                                    <div class="newspaper-post-like d-flex align-items-center justify-content-end">
+                                    <div id="like_comment_field" class="newspaper-post-like d-flex align-items-center justify-content-end" style="padding-top: 100px">
                                         <!-- Post Like & Post Comment -->
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""><span>392</span></a>
+                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""><span><?=$data['detail_post']['SoLuotThich']?></span></a>
                                         <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#comment_field" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span><?=count($data['comments'])?></span></a>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                             <h6>Liên quan</h6>
                         </div>
 
-                        <div class="row">
+                        <div class="row" style="border-bottom: 1px solid #d0d5d8;">
                             <!-- Single Post -->
                             <?php
                                 foreach ($data['relative_post'] as $post) {
@@ -78,7 +78,7 @@
                         </div>
 
                         <!-- Comment Area Start -->
-                        <div class="comment_area clearfix" id="comment_field">
+                        <div class="comment_area clearfix" id="comment_field" style="padding-top: 100px">
                             <h5 class="title"><?=count($data['comments'])?> bình luận</h5>
 
                             <ol>
@@ -146,7 +146,7 @@
                         </div>
                         <?php } else { ?>
                             <div class="post-a-comment-area section-padding-80-0">
-                                <h6><a href="#" class="btn-sign_in">Đăng nhập ngay </a> để có thể bình luận bài viết này</h6>
+                                <h6><a href="#" class="btn-sign_in" style="color: red; font-size: 1rem;">Đăng nhập ngay </a> để có thể thích, bình luận bài viết này</h6>
                             </div>
                             <?php } ?>
                     </div>
