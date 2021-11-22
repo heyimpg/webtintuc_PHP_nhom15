@@ -33,19 +33,19 @@ Công việc đã làm:
     + Thanh navigation (4/5)
     + Thêm phần tìm kiếm bài viết (hoàn thiện nốt phân trang)
     + Load hết bình luận của bài viết đó ra - Nay hơi phế, mãi tối mới làm 1 xíu
-Công việc cần làm:  
     + Thêm phần comments các bài viết 
-    + Thêm ngày giờ cho comment
     + Nếu chủ bài viết comment (thêm chút css)
+    + Thêm ngày giờ cho comment
+Công việc cần làm:  
     + Phần like bài viết
     + Show like, comment của các bài viết khác ra
     + Phân trang cho việc comment (ajax)
     + Làm event nút like nè (ajax)
 
-
     + Thêm trang xem thông tin user, đổi password
     + Làm 1 cách chính xác phần navigation (5/5)
     + Xử lý trang 404
+    + Liên hệ hợp tác: API gmail
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
 -----------HAI------------

@@ -1,3 +1,8 @@
+<?php date_default_timezone_set('Asia/Ho_Chi_Minh');?>
+
+<!-- Css -->
+<link rel="stylesheet" href="./assets/css/custom/detail_style.css">
+
 <div class="blog-area section-padding-0-80">
         <div class="container">
             <div class="row">
@@ -19,13 +24,13 @@
                                     <h6><?=$post["TieuDe"]?></h6>
                                 </a>
                                 <div class="post-meta">
-                                    <p class="post-author" >Tác giả: <a href="#" style="text-transform: uppercase;"><?= $post["author"] ?></a></p>
+                                    <p class="post-author" >Tác giả: <a href="#"><?= $post["author"] ?></a></p>
                                     <p><?=$post["GioiThieu"]?></p>
                                     <p><?=$post["NoiDung"]?></p>
                                     <div class="newspaper-post-like d-flex align-items-center justify-content-end">
                                         <!-- Post Like & Post Comment -->
                                         <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt=""><span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span><?=count($data['comment'])?></span></a>
+                                        <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#comment_field" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span><?=count($data['comments'])?></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -73,13 +78,13 @@
                         </div>
 
                         <!-- Comment Area Start -->
-                        <div class="comment_area clearfix">
-                            <h5 class="title"><?=count($data['comment'])?> bình luận</h5>
+                        <div class="comment_area clearfix" id="comment_field">
+                            <h5 class="title"><?=count($data['comments'])?> bình luận</h5>
 
                             <ol>
                                 <!-- Single Comment Area -->
                                 <?php
-                                    foreach ($data['comment'] as $comment) {
+                                    foreach ($data['comments'] as $comment) {
                                 ?>
                                 <li class="single_comment_area">
                                     <!-- Comment Content -->
@@ -90,8 +95,26 @@
                                         </div>
                                         <!-- Comment Meta -->
                                         <div class="comment-meta">
-                                            <a href="#" class="post-author"><?=$comment['TaiKhoan']?></a>
-                                            <a href="#" class="post-date">April 15, 2018</a>
+                                            <a href="#" class="post-author"><?php 
+                                                $user_comment = $comment['TaiKhoan'];
+                                                if($data["detail_post"]['author'] == $comment['TaiKhoan'])
+                                                    $user_comment .= " <i>(Tác giả)</i>";
+                                                echo $user_comment;
+                                            ?></a>
+                                            <i class="post-date">
+                                                <?php
+                                                    $duration_time_comment = time()- strtotime($comment['ThoiGianBinhLuan']);
+                                                    if ($duration_time_comment < 60) {
+                                                        echo "vừa xong";
+                                                    } elseif ($duration_time_comment >= 60 & $duration_time_comment < 60*60) {
+                                                        echo floor($duration_time_comment/60)." phút trước";
+                                                    } elseif ($duration_time_comment >= 60*60 & $duration_time_comment < 60*60*24) {
+                                                        echo floor($duration_time_comment/(60*60))." giờ trước";
+                                                    } else {
+                                                        echo floor($duration_time_comment/(60*60*24))." ngày trước";
+                                                    }
+                                                ?>
+                                            </i>
                                             <p><?=$comment['NoiDung']?></p>
                                         </div>
                                     </div>
@@ -102,23 +125,30 @@
                             </ol>
                         </div>
 
+                        <?php
+                                if (isset($_SESSION["username"])) {
+                        ?>
                         <div class="post-a-comment-area section-padding-80-0">
                             <h4>Bình luận</h4>
-                            
                             <!-- Reply Form -->
                             <div class="contact-form-area">
-                                <form action="#" method="post">
+                                <form action="<?= DETAIL_URL.$data['detail_post']['ID_BaiViet'] ?>" method="post">
                                     <div class="row">
                                         <div class="col-12">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Nhập nội dung"></textarea>
+                                            <textarea name="content" class="form-control" id="message" cols="10" rows="10" placeholder="Nhập nội dung" style="font-size: 15px; resize: none;" required></textarea>
                                         </div>
                                         <div class="col-12 text-center">
-                                            <button class="btn newspaper-btn mt-30 w-100" type="submit">Gửi đi</button>
+                                            <button class="btn newspaper-btn mt-30 w-100" name="submit_comment" type="submit">Gửi đi</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
+                        <?php } else { ?>
+                            <div class="post-a-comment-area section-padding-80-0">
+                                <h6><a href="#" class="btn-sign_in">Đăng nhập ngay </a> để có thể bình luận bài viết này</h6>
+                            </div>
+                            <?php } ?>
                     </div>
                 </div>
 

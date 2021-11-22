@@ -19,9 +19,7 @@ class category extends Controller
         $allRecord = $this->postModel->getAllDatafromMultiTable(
             "*",
             [$this->postModel->getTable() . ".ID_TheLoai" => $ID_TheLoai],
-            null,
-            null,
-            9999
+            null, null, null
         );
         $totalPage = ceil(sizeof($allRecord) / $page_size);
         $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
@@ -66,9 +64,7 @@ class category extends Controller
         $allRecord = $this->postModel->getAllDatafromMultiTable(
             "*",
             [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
-            null,
-            null,
-            9999
+            null, null, null
         );
         $totalPage = ceil(sizeof($allRecord) / $page_size);
         $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
@@ -111,7 +107,7 @@ class category extends Controller
             $page_size = 2;
             $current_page = !empty($_GET["page"]) ? $_GET["page"] : 1;
             $offset = ($current_page - 1) * $page_size;
-            $allRecord = $this->postModel->searchPost( "*", $search_value, 9999 );
+            $allRecord = $this->postModel->searchPost( "*", $search_value, null );
             $totalPage = ceil(sizeof($allRecord) / $page_size);
             $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
 
@@ -141,7 +137,7 @@ class category extends Controller
 
             $this->view("layout", $data);
         } else {
-            // header("location:".BASE_URL);
+            header("location:".BASE_URL);
         }
     }
 }

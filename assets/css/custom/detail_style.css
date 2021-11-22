@@ -1,0 +1,17 @@
+.post-author a{ 
+    text-transform: uppercase;
+}
+
+//Login now
+.post-a-comment-area a {
+    color: red;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+//Like-comment animation
+.newspaper-post-like .post-like:hover,
+.newspaper-post-like .post-comment:hover {
+    color: red;
+}

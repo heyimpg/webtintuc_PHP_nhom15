@@ -3,11 +3,13 @@ class detail extends Controller
 {
     private PostModel $postModel;
     private CommentModel $commentModel;
+    private AccountModel $accountModel;
 
     public function __construct()
     {
         $this->postModel = $this->model("PostModel");
         $this->commentModel = $this->model("CommentModel");
+        $this->accountModel = $this->model("AccountModel");
     }
 
     public function index($ID_BaiViet)
@@ -15,7 +17,7 @@ class detail extends Controller
         $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
         //Detail
         $detail_post = $this->postModel->getDatafromMultiTable(
-            $this->postModel->getTable() . ".ID_TheLoai, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan",
+            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan",
             ["ID_BaiViet" => $ID_BaiViet]
         );
         $category_post = $this->postModel->getAllDatafromMultiTable(
@@ -40,12 +42,23 @@ class detail extends Controller
             [$this->postModel->getTable() . ".ID_TaiKhoan" => $detail_post['ID_TaiKhoan']]
         );
         $detail_post['author'] = $author['TaiKhoan'];
-        
-        //Comment
+        //add new comment
+        if(isset($_POST['submit_comment'])) {
+            $content = $_POST['content'];
+            $username = $_SESSION['username'];
+            $account =  $this->accountModel->getData("ID_TaiKhoan", ["TaiKhoan"=>$username]);
+            $this->commentModel->addData([
+                "NoiDung"=>$content, 
+                "ID_BaiViet"=>$ID_BaiViet, 
+                "ID_TaiKhoan"=>$account["ID_TaiKhoan"] 
+            ]);
+        }
+        //getAll Comment
         $this->commentModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
-        $comment = $this->commentModel->getAllDatafromMultiTable(
-            "NoiDung, TaiKhoan",
-            ["ID_BaiViet" => $ID_BaiViet]
+        $comments = $this->commentModel->getAllDatafromMultiTable(
+            "NoiDung, ThoiGianBinhLuan, TaiKhoan",
+            ["ID_BaiViet" => $ID_BaiViet],
+            null, null, null
         );
 
         $this->postModel->closeConnection();
@@ -55,7 +68,7 @@ class detail extends Controller
             "category_post" => $category_post,
             "popular_post" => $popular_post,
             "relative_post" => $relative_post,
-            "comment" => $comment
+            "comments" => $comments
         ];
         $this->view("layout", $data);
     }
