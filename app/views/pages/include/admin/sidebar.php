@@ -21,7 +21,7 @@
       </li>
       <li><a><i class="fa fa-table"></i> Bài viết <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="admin/category/index">Danh sách bài viết</a></li>
+          <li><a href="admin/post/index">Danh sách bài viết</a></li>
           <li><a href="admin/category/index">Chỉnh sửa</a></li>
         </ul>
       </li>

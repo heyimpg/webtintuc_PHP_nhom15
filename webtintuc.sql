@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2021 at 06:05 AM
+-- Generation Time: Nov 22, 2021 at 02:57 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -43,7 +43,7 @@ CREATE TABLE `baiviet` (
 --
 
 INSERT INTO `baiviet` (`ID_BaiViet`, `TieuDe`, `NgayDang`, `GioiThieu`, `AnhDaiDien`, `NoiDung`, `ID_TheLoai`, `ID_LoaiTin`) VALUES
-(101, 'Khi \'Vị\' không còn là \'vị Việt\'', '2021-09-25', 'Việc từ bỏ quyền tác giả của đạo diễn, từ bỏ quyền sở hữu của nhà sản xuất phim Vị cho thấy một số', '110_1.jpg', 'Ngậm ngùi đổi “quốc tịch”\r\nVị, theo cách nào đó, đã không còn là của Lê Bảo và Đồng Thị Phương Thảo. Theo thông tin từ nhà sản xuất Phương Thảo, cả hai đã ký văn bản từ chối quyền của mình với bộ phim này. Cụ thể, Lê Bảo từ chối quyền tác giả, còn Phương Thảo từ chối quyền sở hữu với tác phẩm.\r\n\r\n“Chúng tôi phải ký một văn bản với các công ty đồng sản xuất ở Pháp, Singapore, Đức và Thái Lan. Chúng tôi phải từ bỏ vì đó là hy vọng duy nhất của chúng tôi. Khi phim không còn “quốc tịch” Việt Nam, không liên quan đến chúng tôi ở Việt Nam nữa thì nó còn cơ hội sống, cơ hội đi. Đó là cách duy nhất chúng tôi có thể nghĩ đến. Tôi cũng không biết điều đó ở Việt Nam có được chấp nhận không”, nhà sản xuất Phương Thảo chia sẻ.\r\n\r\nSau khi văn bản này được ký, công ty tại Singapore của nhà đồng sản xuất Lai Weijie hiện là công ty giữ nhiều quyền nhất với phim Vị. Như vậy, Vị đã không còn “quốc tịch” Việt Nam mà mang “quốc tịch” Singapore.\r\n\r\nTrước đó, Vị đã không được hội đồng duyệt phim quốc gia của Việt Nam cấp phép phổ biến, khiến phim không được chiếu trong nước và cũng không được mang đi nước ngoài với tư cách là một phim Việt Nam. Dù rất buồn, nhà sản xuất Phương Thảo cho biết cô cùng đoàn phim vẫn mong muốn tác phẩm điện ảnh này có cơ hội được hội đồng duyệt phim xem xét lại, để có thể đến với các liên hoan phim (LHP) với danh nghĩa là phim Việt Nam.\r\n\r\nLuật sư Phạm Duy Khương chuyên về lĩnh vực sở hữu trí tuệ cho rằng việc từ bỏ quyền sở hữu với tác phẩm của nhà sản xuất không có vấn đề gì về pháp lý. Tuy nhiên, việc từ bỏ quyền nhân thân của đạo diễn phức tạp hơn nhiều. Ông Khương cho biết hiện tại ở Việt Nam tuy luật không cấm, song không có quy định cụ thể về việc từ bỏ quyền nhân thân. Vì thế, việc từ bỏ quyền tác giả này sẽ khó thực hiện. Tuy nhiên, nếu việc từ bỏ được thực hiện theo pháp luật Singapore thì có thể.\r\nGiám tuyển nghệ thuật Nguyễn Anh Tuấn (chủ của Heritage Space) đánh giá việc Vị không còn mang “quốc tịch” Việt Nam là một điều đáng buồn. Ông cũng nhận định đây là cách “giữ an toàn” khi kiểm định nghệ thuật phải đối mặt với những nội dung “khó hiểu”, “nhạy cảm” mà chưa có thang bậc pháp lý nào quy định rõ ràng.\r\nÔng Vi Kiến Thành, Cục trưởng Cục Điện ảnh (Bộ VH-TT-DL), chiều 27.9 cho biết Cục Điện ảnh đã có buổi làm việc với nhà sản xuất Đồng Thị Phương Thảo và yêu cầu nhà sản xuất có văn bản về vụ việc này.\r\nCần có cơ chế khác cho duyệt phim\r\nLý do để Vị không được cấp phép là cảnh khỏa thân trực diện kéo dài. Điều này đã được mổ xẻ trong cuộc tọa đàm trực tuyến Ai góp ý giơ tay lên về dự thảo luật Điện ảnh sửa đổi, diễn ra chiều 26.9. Thành viên của hội đồng duyệt phim, đạo diễn Nguyễn Hoàng Điệp cho rằng với bà, cảnh khỏa thân đó không kéo dài, nó hợp lý, tuy nhiên với thành viên khác của hội đồng thì không. Thêm vào đó, quy định hiện tại về phân loại phim chỉ có cao nhất là C18 (cấm khán giả dưới 18 tuổi) và nó cũng không áp dụng được với trường hợp của Vị. “Khi chúng ta không thể phân loại cho họ nữa thì họ bị cấm”, bà Điệp nói.\r\n\r\nBà Điệp cũng nuối tiếc, nếu luật Điện ảnh hiện hành khác đi thì câu chuyện cũng có thể khác. Có thể có thêm những phân loại tuổi khác nhau cho phim; hoặc cần có quy định rõ ràng cảnh khỏa thân được kéo dài đến đâu. Quy định này thậm chí còn giúp người làm phim có thể sáng tạo dễ dàng hơn. Đạo diễn Trần Anh Hùng lấy ví dụ về nụ hôn dài nhất trong phim của Alfred Hitchcock. Luật điện ảnh Mỹ thời điểm đó quy định mỗi nụ hôn trên phim không dài quá 3 giây, đạo diễn đã cho nhân vật chạm môi nhau 3 giây lại rời môi rồi chạm lại, cứ thế nụ hôn kéo dài đến hơn 2 phút.\r\nChuyên gia pháp lý Fushihara Hirota cũng cho rằng việc sửa đổi luật Điện ảnh cần tập trung vào phân loại phim trước. Theo đó, nên tập trung xây dựng bộ tiêu chí thay cho điều cấm. Những tiêu chí này được bổ sung liên tục. Cũng theo ông Hirota, hội đồng duyệt chỉ có thể phân loại phim chứ không phải để cấm.\r\n\r\nNhững kiến nghị để có một cơ chế khác cho duyệt phim đi LHP nước ngoài của các nhà làm phim này gợi lại ý kiến cách đây vài ngày của ông Nguyễn Đắc Vinh, Chủ nhiệm Ủy ban Văn hóa - Giáo dục của Quốc hội, trong phiên họp xem xét thẩm tra dự án luật Điện ảnh sửa đổi hôm 24.9. Theo đó, trong báo cáo thẩm tra dự án luật Điện ảnh sửa đổi, ông Vinh yêu cầu “nghiên cứu, có cơ chế cấp phép đặc thù đối với phim Việt Nam tham gia LHP, giải thưởng, cuộc thi phim, chương trình phim, tuần phim tại nước ngoài”.', 2, 1),
+(101, 'Khi \'Vị\' không còn là \'vị Việt\'', '2021-09-25', 'Việc từ bỏ quyền tác giả của đạo diễn, từ bỏ quyền sở hữu của nhà sản xuất phim Vị cho thấy một số', '101_1.jpg', 'Ngậm ngùi đổi “quốc tịch”\r\nVị, theo cách nào đó, đã không còn là của Lê Bảo và Đồng Thị Phương Thảo. Theo thông tin từ nhà sản xuất Phương Thảo, cả hai đã ký văn bản từ chối quyền của mình với bộ phim này. Cụ thể, Lê Bảo từ chối quyền tác giả, còn Phương Thảo từ chối quyền sở hữu với tác phẩm.\r\n\r\n“Chúng tôi phải ký một văn bản với các công ty đồng sản xuất ở Pháp, Singapore, Đức và Thái Lan. Chúng tôi phải từ bỏ vì đó là hy vọng duy nhất của chúng tôi. Khi phim không còn “quốc tịch” Việt Nam, không liên quan đến chúng tôi ở Việt Nam nữa thì nó còn cơ hội sống, cơ hội đi. Đó là cách duy nhất chúng tôi có thể nghĩ đến. Tôi cũng không biết điều đó ở Việt Nam có được chấp nhận không”, nhà sản xuất Phương Thảo chia sẻ.\r\n\r\nSau khi văn bản này được ký, công ty tại Singapore của nhà đồng sản xuất Lai Weijie hiện là công ty giữ nhiều quyền nhất với phim Vị. Như vậy, Vị đã không còn “quốc tịch” Việt Nam mà mang “quốc tịch” Singapore.\r\n\r\nTrước đó, Vị đã không được hội đồng duyệt phim quốc gia của Việt Nam cấp phép phổ biến, khiến phim không được chiếu trong nước và cũng không được mang đi nước ngoài với tư cách là một phim Việt Nam. Dù rất buồn, nhà sản xuất Phương Thảo cho biết cô cùng đoàn phim vẫn mong muốn tác phẩm điện ảnh này có cơ hội được hội đồng duyệt phim xem xét lại, để có thể đến với các liên hoan phim (LHP) với danh nghĩa là phim Việt Nam.\r\n\r\nLuật sư Phạm Duy Khương chuyên về lĩnh vực sở hữu trí tuệ cho rằng việc từ bỏ quyền sở hữu với tác phẩm của nhà sản xuất không có vấn đề gì về pháp lý. Tuy nhiên, việc từ bỏ quyền nhân thân của đạo diễn phức tạp hơn nhiều. Ông Khương cho biết hiện tại ở Việt Nam tuy luật không cấm, song không có quy định cụ thể về việc từ bỏ quyền nhân thân. Vì thế, việc từ bỏ quyền tác giả này sẽ khó thực hiện. Tuy nhiên, nếu việc từ bỏ được thực hiện theo pháp luật Singapore thì có thể.\r\nGiám tuyển nghệ thuật Nguyễn Anh Tuấn (chủ của Heritage Space) đánh giá việc Vị không còn mang “quốc tịch” Việt Nam là một điều đáng buồn. Ông cũng nhận định đây là cách “giữ an toàn” khi kiểm định nghệ thuật phải đối mặt với những nội dung “khó hiểu”, “nhạy cảm” mà chưa có thang bậc pháp lý nào quy định rõ ràng.\r\nÔng Vi Kiến Thành, Cục trưởng Cục Điện ảnh (Bộ VH-TT-DL), chiều 27.9 cho biết Cục Điện ảnh đã có buổi làm việc với nhà sản xuất Đồng Thị Phương Thảo và yêu cầu nhà sản xuất có văn bản về vụ việc này.\r\nCần có cơ chế khác cho duyệt phim\r\nLý do để Vị không được cấp phép là cảnh khỏa thân trực diện kéo dài. Điều này đã được mổ xẻ trong cuộc tọa đàm trực tuyến Ai góp ý giơ tay lên về dự thảo luật Điện ảnh sửa đổi, diễn ra chiều 26.9. Thành viên của hội đồng duyệt phim, đạo diễn Nguyễn Hoàng Điệp cho rằng với bà, cảnh khỏa thân đó không kéo dài, nó hợp lý, tuy nhiên với thành viên khác của hội đồng thì không. Thêm vào đó, quy định hiện tại về phân loại phim chỉ có cao nhất là C18 (cấm khán giả dưới 18 tuổi) và nó cũng không áp dụng được với trường hợp của Vị. “Khi chúng ta không thể phân loại cho họ nữa thì họ bị cấm”, bà Điệp nói.\r\n\r\nBà Điệp cũng nuối tiếc, nếu luật Điện ảnh hiện hành khác đi thì câu chuyện cũng có thể khác. Có thể có thêm những phân loại tuổi khác nhau cho phim; hoặc cần có quy định rõ ràng cảnh khỏa thân được kéo dài đến đâu. Quy định này thậm chí còn giúp người làm phim có thể sáng tạo dễ dàng hơn. Đạo diễn Trần Anh Hùng lấy ví dụ về nụ hôn dài nhất trong phim của Alfred Hitchcock. Luật điện ảnh Mỹ thời điểm đó quy định mỗi nụ hôn trên phim không dài quá 3 giây, đạo diễn đã cho nhân vật chạm môi nhau 3 giây lại rời môi rồi chạm lại, cứ thế nụ hôn kéo dài đến hơn 2 phút.\r\nChuyên gia pháp lý Fushihara Hirota cũng cho rằng việc sửa đổi luật Điện ảnh cần tập trung vào phân loại phim trước. Theo đó, nên tập trung xây dựng bộ tiêu chí thay cho điều cấm. Những tiêu chí này được bổ sung liên tục. Cũng theo ông Hirota, hội đồng duyệt chỉ có thể phân loại phim chứ không phải để cấm.\r\n\r\nNhững kiến nghị để có một cơ chế khác cho duyệt phim đi LHP nước ngoài của các nhà làm phim này gợi lại ý kiến cách đây vài ngày của ông Nguyễn Đắc Vinh, Chủ nhiệm Ủy ban Văn hóa - Giáo dục của Quốc hội, trong phiên họp xem xét thẩm tra dự án luật Điện ảnh sửa đổi hôm 24.9. Theo đó, trong báo cáo thẩm tra dự án luật Điện ảnh sửa đổi, ông Vinh yêu cầu “nghiên cứu, có cơ chế cấp phép đặc thù đối với phim Việt Nam tham gia LHP, giải thưởng, cuộc thi phim, chương trình phim, tuần phim tại nước ngoài”.', 2, 1),
 (102, 'Lý Nhã Kỳ đáp trả khi bị nói đăng ảnh gợi cảm để \'', '2021-09-17', 'Với những bình luận kém duyên và thiếu văn minh, Lý Nhã Kỳ sẵn sàng lên tiếng đáp trả cũng như mong ', '102_1.jpg', 'Trong thời gian giãn cách, Lý Nhã Kỳ chăm chỉ chia sẻ cuộc sống hằng ngày của bản thân trên mạng xã hội. Nữ diễn viên cũng nhận được nhiều lời khen về nhan sắc ngày càng trẻ trung và vóc dáng quyến rũ. Tuy nhiên, cô vẫn không tránh khỏi việc bị một số antifan mỉa mai bằng các câu từ kém duyên.\r\n\r\nMới đây, một số tài khoản bình luận rằng việc Lý Nhã Kỳ đăng ảnh gợi cảm chỉ nhằm mục đích \"cua trai\". Thay vì phớt lờ, nữ diễn viên Gió nghịch mùa quyết định đáp trả. \"Từ \'cua trai\' không dành cho cuộc đời tôi và trong hạnh phúc của tôi. Tôi biết giá trị của mình và mỗi ngày tôi đang làm cho giá trị mình cao hơn, ý nghĩa hơn bằng sự cố gắng, nỗ lực tạo thêm nhiều thành tựu trong sự nghiệp và đóng góp nhiều hơn cho cộng đồng. Từ nhỏ đến hiện tại tôi chưa phải cua trai vì nó luôn là ở phía ngược lại. Bên cạnh đó tôi nghĩ rằng mây tầng nào sẽ gặp mây tầng đó và tầng mây của tôi không phải cứ đẹp trai thôi là được, mà phải có những phẩm chất của một quý ông\", cô nói.\r\n\r\nMặc dù đã quen với \"sóng gió\" dư luận nhưng Cựu đại sứ Du lịch Việt Nam cũng nhiều lần bất bình với những lời lẽ khiếm nhã của dân mạng. Nữ diễn viên cho biết bản thân thường nhận những bình luận tiêu cực, cho rằng chuyện cô bày tiệc, ăn uống trên mạng xã hội là vô cảm với cộng đồng. Đáp lại, Lý Nhã Kỳ nói: “Thực tế, tôi đã đóng góp rất nhiều trong những năm qua và vẫn đang đóng góp cho cộng đồng. Tôi hiểu rằng xã hội nào cũng luôn có một số ít người không làm từ thiện nhưng luôn dạy người khác phải làm từ thiện. Tôi muốn nói rằng họ đã chọn nhầm người để công kích”.\r\nĐồng thời, Lý Nhã Kỳ cho biết cô không ngần ngại lên tiếng để bảo vệ bản thân trước sự phán xét của “anh hùng bàn phím”. Lãnh sự danh dự của Romania nói: “Tôi tôn trọng ý kiến đa chiều của mọi người. Tuy nhiên, bạn không có quyền vào trang cá nhân của người khác để nhục mạ, chửi bới họ bằng những lời lẽ cay nghiệt nhất. Không việc gì phải chịu đựng người khác chửi rủa, lăng mạ mình cả. Nếu góp ý thật lòng thì mọi người sẽ sử dụng câu từ văn minh mang tính xây dựng để nói. Vì chúng ta cần ứng xử có văn hóa trong một xã hội văn minh và ai cũng cần được tôn trọng, bình đẳng như nhau”.', 2, 2),
 (103, 'Phát hiện trang sức cổ xưa nhất thế giới', '2021-09-11', 'MOROCCO - Các nhà khoa học tìm thấy hàng chục mảnh vỏ ốc đục lỗ có niên đại 142.000 - 150.000 năm, n', '103_1.jpg', 'Con người đã đeo vòng cổ, vòng tay, khuyên tai và các loại trang sức khác từ thời xa xưa. Tuy nhiên, việc phát hiện hàng chục hạt trang sức làm từ vỏ ốc biển trong hang Bizmoune, miền tây Morocco, cho thấy tập tục này xuất hiện sớm hơn nhiều so với những gì các nhà khoa học từng nghĩ. Nghiên cứu mới xuất bản trên tạp chí Science Advances hôm 22/9.\r\n\r\nNhà nhân chủng học Steven Kuhn tại Đại học Arizona phối hợp với các nhà nghiên cứu từ Viện Di sản và Khoa học Khảo cổ Quốc gia Morocco tiến hành các chuyến khai quật từ năm 2014 - 2018 tại hang Bizmoune và tìm thấy tổng cộng 33 hạt trang sức làm từ vỏ ốc biển. Chúng có niên đại 142.000 - 150.000 năm, là trang sức cổ xưa nhất từng được phát hiện trên thế giới.\r\n\r\nCác mảnh vỏ ốc rộng khoảng hơn 1 cm với lỗ tròn đục ở giữa. Chúng có dấu vết bị mòn bên trong, nghĩa là có thể từng xâu vào vòng cổ hoặc vòng tay và được sử dụng thường xuyên. \"Các hạt trang sức có thể là một cách để người xưa thể hiện danh tính của mình qua trang phục. Chúng cho thấy điều này đã xuất hiện từ hàng trăm nghìn năm trước, và con người quan tâm đến việc giao tiếp với những nhóm lớn hơn là chỉ gia đình và bạn bè thân cận\", Kuhn cho biết.\r\n\r\n33 hạt trang sức trong hang Bizmoune cũng giống với nhiều hạt khác được tìm thấy tại châu Phi, nhưng những mẫu vật trước đó có niên đại không quá 130.000 năm. Toàn bộ số hạt ở Bắc Phi đều thuộc nền văn hóa Aterian. Những di chỉ sớm nhất của nền văn hóa này tồn tại từ 150.000 năm trước và muộn nhất là 20.000 năm trước.\r\n\r\nTrang sức hạt mà người Aterian chế tạo và sử dụng có khả năng là một hình thức giao tiếp không lời, theo Kuhn. Các nhà nhân chủng học không chắc chắn về thời điểm ngôn ngữ xuất hiện, nên có thể người Aterian hoàn toàn dựa vào các phương pháp không lời để chia sẻ thông tin.\r\n\r\nKuhn tin rằng thông điệp hoặc ý nghĩa của hạt trang sức rất quan trọng và trường tồn với thời gian, vì người Aterian lựa chọn tạo ra những vật trang trí có thể tồn tại lâu dài để truyền tải thông điệp đó. Trong khi đó, người tiền sử thường tô điểm cho khuôn mặt và cơ thể bằng than hoặc thổ hoàng cho các mục đích nghi lễ hoặc giao tiếp, nhưng chúng chỉ mang tính tạm thời.\r\n\r\nKuhn cùng đồng nghiệp không rõ chính xác người Aterian muốn truyền tải điều gì với trang sức của mình. Giả thuyết thứ nhất là hạt trang sức đóng vai trò giống như thẻ tên hoặc huy hiệu nhận dạng. Những cá nhân, gia đình, thị tộc hoặc làng xóm khác nhau có thể muốn trở nên dễ phân biệt, nhất là khi số lượng dân cư trong vùng tăng lên cùng với sự phát triển của thời kỳ Đồ Đá.\r\n\r\nGiả thuyết thứ hai, trang sức hạt là một biểu tượng cho địa vị. Tùy thuộc vào thiết kế, các hạt vỏ ốc có thể giúp người có quyền lực về chính trị, xã hội, văn hóa, kinh tế, tâm linh hoặc y học trở nên khác biệt. Một khả năng khác là người Aterian đeo trang sức với cùng lý do như đa số mọi người ngày nay, đó là họ thích kiểu dáng của chúng và tin rằng chúng sẽ tôn lên vẻ ngoài của mình.\r\n\r\nThu Thảo (Theo Ancient Origins)', 3, 3),
 (104, 'Tây Ban Nha thua đau ở futsal World Cup', '2021-09-27', 'LITHUANIA - Dẫn trước hai bàn nhưng đội tuyển futsal số một thế giới thua ngược Bồ Đào Nha 2-4 và bị', '104_1.jpg', 'Anh1\r\nHai đội tuyển thuộc bán đảo Iberia đều là những cường quốc futsal. Trong khi Tây Ban Nha đứng số một, Bồ Đào Nha đang xếp số sáu. Giữa họ cũng có nhiều ân oán. Tây Ban Nha thắng năm trong sáu cuộc đối đầu gần đây, nhưng Bồ Đào Nha từng vượt qua đối thủ láng giếng ở chung kết Euro 2018.\r\n\r\nĐã quá hiểu nhau nên thế trận hai đội tạo ra khá cân bằng. Tây Ban Nha có cơ hội mở tỷ số ngay những giây đầu tiên nhưng Aldofo Fernandez đệm bóng ra ngoài trước khung thành trống. Cuối hiệp một, họ được hưởng phạt đền 10 mét nhưng không tận dụng thành công. Bồ Đào Nha cầm bóng nhiều hơn, tạo nhiều sóng gió về khung thành đối thủ nhưng đều thất bại ở những pha kết thúc.\r\n\r\n18\r\nThể thaoBóng đáCác giải khácThứ ba, 28/9/2021, 06:34 (GMT+7)\r\nTây Ban Nha thua đau ở futsal World Cup\r\nLITHUANIADẫn trước hai bàn nhưng đội tuyển futsal số một thế giới thua ngược Bồ Đào Nha 2-4 và bị loại khỏi tứ kết futsal World Cup 2021 tối 27/9.\r\n\r\nTây Ban Nha (áo đỏ) dẫn đối thủ 2-0 nhưng lại đánh mất lợi thế và thua ngược. Ảnh: FIFA\r\n\r\nBồ Đào Nha thi đấu kiên cường, để khiến Tây Ban Nha (áo đỏ) nhận trái đắng trong trận tứ kết thứ ba của FIFA futsal World Cup 2021. Ảnh: FIFA\r\n\r\nHai đội tuyển thuộc bán đảo Iberia đều là những cường quốc futsal. Trong khi Tây Ban Nha đứng số một, Bồ Đào Nha đang xếp số sáu. Giữa họ cũng có nhiều ân oán. Tây Ban Nha thắng năm trong sáu cuộc đối đầu gần đây, nhưng Bồ Đào Nha từng vượt qua đối thủ láng giếng ở chung kết Euro 2018.\r\n\r\nĐã quá hiểu nhau nên thế trận hai đội tạo ra khá cân bằng. Tây Ban Nha có cơ hội mở tỷ số ngay những giây đầu tiên nhưng Aldofo Fernandez đệm bóng ra ngoài trước khung thành trống. Cuối hiệp một, họ được hưởng phạt đền 10 mét nhưng không tận dụng thành công. Bồ Đào Nha cầm bóng nhiều hơn, tạo nhiều sóng gió về khung thành đối thủ nhưng đều thất bại ở những pha kết thúc.\r\n\r\nĐầu hiệp hai, Tây Ban Nha vượt lên. Aldofo Fernandez lốp bóng qua đầu thủ thành Bebe để mở tỷ số phút 22. Hai phút sau, từ quả đá phạt chếch khung thành, Adri Martinez sút căng, nhân đôi cách biệt cho đội bóng xứ đấu bò.\r\n\r\nBị đẩy vào thế đường cùng, Bồ Đào Nha vùng lên mạnh mẽ, khiến hàng thủ Tây Ban Nha bộc lộ những sai sót. Phút 31, thủ môn Jesus Herrero bắt không dính để bóng bay vào lưới từ cú sút của Andre, rút ngắn tỷ số xuống 1-2. Phút 36, cầu thủ Tây Ban Nha không kèm người, để Bồ Đào Nha thoải mái phối hợp đá biên trước khi Zicky ghi bàn gỡ hoà 2-2.\r\n\r\nHai đội phải bước vào hai hiệp phụ (mỗi hiệp năm phút). Tây Ban Nha một lần nữa phạm sai lầm, khi fixo Jose Raya phá bóng phản lưới nhà ở phút 43. Sang hiệp phụ thứ hai, Tây Ban Nha phải chơi power-play. Nhưng không những không có bàn gỡ mà còn thua thêm ở phút 48 từ cú sút vào lưới trống của Pany.\r\nAnh2\r\n\r\nTrận tứ kết sau đó có kết cục tương tự. Iran dẫn hai bàn ngay trong hiệp một, nhờ công Moslem Oladghobad và Ahmad Esmaeilpour. Nhưng sang hiệp hai, Kazakhstan quân bình được tỷ số 2-2 từ các pha làm bàn của Tursagulov và Arnold Knaub.\r\n\r\nKhi trận đấu còn hơn một phút, Kazakhstan phối hợp đá phạt góc để Taynan đệm bóng vào góc gần, ấn định chiến thắng 3-2 để giành quyền vào bán kết gặp Bồ Đào Nha.\r\nĐức Đồng', 4, 7),
@@ -91,13 +91,14 @@ CREATE TABLE `chitiettheloai` (
 
 INSERT INTO `chitiettheloai` (`ID_CTTheLoai`, `TenCTTheLoai`, `ID_TheLoai`, `HienThiCon`, `NgayTao`, `NgayCapNhat`, `URL`, `Type`) VALUES
 (1, 'Văn hoá', 1, 1, '2021-10-11 00:00:00', '2021-10-20 00:00:00', 'Van-hoa', 0),
-(2, 'Nhạc', 2, 1, '2021-10-18 00:00:00', '2021-10-20 00:00:00', 'Nhac', 0),
+(2, 'Nhạc', 1, 1, '2021-10-18 00:00:00', '2021-10-20 00:00:00', 'Nhac', 0),
 (3, 'Phát minh', 3, 1, '2021-10-10 00:00:00', '2021-10-20 00:00:00', 'Khoa-hoc', 0),
 (4, 'Bóng đá', 4, 1, '2021-10-17 00:00:00', '2021-10-20 00:00:00', 'Bong-da', 0),
 (5, 'Bất động sản', 5, 0, '2021-10-10 00:00:00', '2021-10-20 00:00:00', 'Bat-dong-san', 0),
 (6, 'Hồ sơ phá án', 6, 0, '2021-10-20 00:00:00', '2021-10-20 00:00:00', 'Ho-so-pha-an', 0),
 (7, 'Dân sinh', 7, 0, '2021-10-31 00:00:00', '2021-10-31 00:00:00', 'Dan-sinh', 0),
-(8, 'Người Việt 5 châu', 8, 0, '2021-10-31 00:00:00', '2021-10-31 00:00:00', 'Nguoi-viet-5-chau', 0);
+(8, 'Người Việt 5 châu', 8, 0, '2021-10-31 00:00:00', '2021-10-31 00:00:00', 'Nguoi-viet-5-chau', 0),
+(58, 'Quảng cáo con', 2431, 0, '2021-11-11 16:32:18', '0000-00-00 00:00:00', 'Quang-cao-con', 1);
 
 -- --------------------------------------------------------
 
@@ -125,6 +126,25 @@ INSERT INTO `loaitin` (`ID_LoaiTin`, `TenLoaiTin`, `public`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `taikhoan`
+--
+
+CREATE TABLE `taikhoan` (
+  `ID_TaiKhoan` int(11) NOT NULL,
+  `TenTaiKhoan` varchar(20) NOT NULL,
+  `MatKhau` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `taikhoan`
+--
+
+INSERT INTO `taikhoan` (`ID_TaiKhoan`, `TenTaiKhoan`, `MatKhau`) VALUES
+(2, 'admin', '$2y$10$ZZoDECpolyrEjuea6uzOBOy4AjskGKTGOMDcDGDpsNJxUO5ymykSi');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `theloai`
 --
 
@@ -147,20 +167,8 @@ INSERT INTO `theloai` (`ID_TheLoai`, `TenTheLoai`, `HienThiCha`, `NgayKhoiTao`) 
 (5, 'Kinh doanh', 0, '2021-11-08 00:00:00'),
 (6, 'Pháp luật', 0, '2021-11-08 00:00:00'),
 (7, 'Thời sự', 0, '2021-11-08 00:00:00'),
-(8, 'Thế giới', 0, '2021-11-08 00:00:00');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `UserID` int(11) NOT NULL,
-  `UserName` varchar(120) NOT NULL,
-  `UserEmail` varchar(120) NOT NULL,
-  `Password` varchar(120) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(8, 'Thế giới', 0, '2021-11-08 00:00:00'),
+(2431, 'Quảng cáo', 0, '2021-11-11 16:31:46');
 
 --
 -- Indexes for dumped tables
@@ -186,16 +194,16 @@ ALTER TABLE `loaitin`
   ADD KEY `ID_LoaiTin` (`ID_LoaiTin`);
 
 --
+-- Indexes for table `taikhoan`
+--
+ALTER TABLE `taikhoan`
+  ADD PRIMARY KEY (`ID_TaiKhoan`);
+
+--
 -- Indexes for table `theloai`
 --
 ALTER TABLE `theloai`
   ADD PRIMARY KEY (`ID_TheLoai`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`UserID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -211,7 +219,7 @@ ALTER TABLE `baiviet`
 -- AUTO_INCREMENT for table `chitiettheloai`
 --
 ALTER TABLE `chitiettheloai`
-  MODIFY `ID_CTTheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `ID_CTTheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `loaitin`
@@ -220,16 +228,16 @@ ALTER TABLE `loaitin`
   MODIFY `ID_LoaiTin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `taikhoan`
+--
+ALTER TABLE `taikhoan`
+  MODIFY `ID_TaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `theloai`
 --
 ALTER TABLE `theloai`
-  MODIFY `ID_TheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2447;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_TheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2432;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
