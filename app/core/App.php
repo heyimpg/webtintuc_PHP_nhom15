@@ -15,12 +15,16 @@
                         unset($array[0]);
                         require_once "./app/controllers/{$this->controller}.php";
                     }
+                    else {
+                        require_once "./app/views/pages/include/error/page_404.php";
+                        exit();
+                    }
                 }
-                // http://localhost:8080/CNPM/webtintuc_PHP_nhom15/admin/admin -> 2nd admin is controller
+                // http://localhost:8080/CNPM/webtintuc_PHP_nhom15/admin/home -> 2nd admin is controller
                 else {
-                    if(file_exists("./app/controllers/admin/{$array[0]}.php")) {
+                    // if(file_exists("./app/controllers/admin/{$array[0]}.php")) {
                         unset($array[0]);
-                        // http://localhost:8080/CNPM/webtintuc_PHP_nhom15/admin/index
+                        // http://localhost:8080/CNPM/webtintuc_PHP_nhom15/admin/home/index
                         if (isset($array[1])) {
                             if(file_exists("./app/controllers/admin/{$array[1]}.php")) {
                                 $this->controller = $array[1];
@@ -35,15 +39,15 @@
                                 }
                             }
                             else {
-                                $this->controller = "admin";
+                                $this->controller = "home";
                             }
                             unset($array[1]);
                         }
                         else {
-                            $this->controller = "admin";
+                            $this->controller = "home";
                         }
                         require_once "./app/controllers/admin/{$this->controller}.php";
-                    }
+                    // }
                 }
             }
             else {

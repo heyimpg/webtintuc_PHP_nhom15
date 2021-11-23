@@ -27,7 +27,6 @@ Công việc cần làm:
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
 -----------HAI------------
-    22/11/2021
 **Note: 
     + Đường link truy cập vào trang quản trị viên: http://localhost/CNPM/webtintuc/admin
     + Khi vào trang quản trị viên yêu cầu phải đăng nhập mới vào được
@@ -40,3 +39,4 @@ Vướng mắc:
     + Đã chuyển các hầu hết các phần từ tiếng Anh sang tiếng Việt
     + Sau khi đăng xuất tài khoản thì chuyển về trang đăng nhập
     + Đang xây dựng dần dần chức năng thêm bài viết
+    + Cần cài đặt ckeditor,ckfinder, filebrowser để chạy chương trình

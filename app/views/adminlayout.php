@@ -49,7 +49,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Khóa">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Đăng xuất" href="admin/admin/signout">
+              <a data-toggle="tooltip" data-placement="top" title="Đăng xuất" href="admin/home/signout">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -69,7 +69,7 @@
 <?php
   } 
   else {
-    require_once "app/views/pages/admin/error/page_403.php";
+    require_once "app/views/pages/include/error/page_403.php";
   }
 ?>
 

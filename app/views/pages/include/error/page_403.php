@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= BASE_URL ?>">
-    <link rel="shortcut icon" href="assets/admin/build/images/favicon.ico"/>
     <title>Từ chối truy cập </title>
-
+    
+    <link rel="shortcut icon" href="./assets/img/core-img/favicon.ico">
     <!-- Bootstrap -->
     <link href="assets/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -29,23 +29,10 @@
             <div class="col-md-12">
                 <div class="col-middle">
                     <div class="text-center text-center">
-                        <h1 class="error-number">403</h1>
-                        <h2>Từ chối truy cập</h2>
-                        <p>Bạn không có quyền truy cập trang. <a href="#">Báo cáo vấn đề này?</a>
+                        <h1 class="error error-number">403</h1>
+                        <h2 class="error">Từ chối truy cập</h2>
+                        <p class="error">Bạn không có quyền truy cập trang. <a class="error-link" href="<?= BASE_URL."admin/#signin"?>">Quay về trang đăng nhập</a>
                         </p>
-                        <div class="mid_center">
-                            <h3>Tìm kiếm</h3>
-                            <form>
-                                <div class="  form-group pull-right top_search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm...">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-secondary" type="button">Tìm!</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>

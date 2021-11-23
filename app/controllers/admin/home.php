@@ -1,9 +1,10 @@
 <?php
 
-    class admin extends Controller
+    class home extends Controller
     {
         private Redirect $redirect;
         private AdminAccountModel $account;
+        private String $template = "admin/home";
         
         public function __construct() {
             $this->account = $this->model("AdminAccountModel");
@@ -12,7 +13,19 @@
         }
 
         public function index() {
-            $this->view("pages/admin/index");
+            if(!isset($_SESSION['loggedIn'])) {
+                $this->view("pages/admin/index");
+            }
+            else {
+                $this->welcome();
+            }
+        }
+
+        public function welcome() {
+            $data = array(
+                "page" => "$this->template/welcome"
+            );
+            $this->view("adminlayout", $data);
         }
 
         public function signin() {
@@ -61,7 +74,7 @@
                         exit();
                     }
                     if(strlen($data["MatKhau_DK"]) < 6){
-                        $this->redirect->flash("dang-ki", "Mật khẩu không hợp lệ");
+                        $this->redirect->flash("dang-ki", "Mật khẩu phải có độ dài hơn 6 kí tự");
                         $this->redirect->redirect(BASE_URL."admin/#signup");
                     } 
                     if($data["MatKhau_DK"] !== $data["XacNhanMatKhau_DK"]){
@@ -91,7 +104,7 @@
             $_SESSION['TenTaiKhoan'] = $user->TenTaiKhoan;
             $_SESSION['MatKhau'] = $user->MatKhau;
             $_SESSION["loggedIn"] = true;
-            $this->redirect->redirect(BASE_URL."admin/category/index");
+            $this->redirect->redirect(BASE_URL."admin/home/welcome");
         }
     
         public function signout(){

@@ -34,7 +34,7 @@
         <div class="login_wrapper">
             <div class="animate form login_form">
                 <section class="login_content">
-                    <form method="post" action="<?= BASE_URL."admin/admin/signin"?>">
+                    <form method="post" action="<?= BASE_URL."admin/home/signin"?>">
                         <h1>Đăng nhập</h1>
                         <?php 
                             $redirect->flash("dang-nhap"); 
@@ -67,7 +67,7 @@
 
             <div id="register" class="animate form registration_form">
                 <section class="login_content">
-                    <form method="post" action="<?= BASE_URL."admin/admin/signup"?>">
+                    <form method="post" action="<?= BASE_URL."admin/home/signup"?>">
                         <h1>Tạo tài khoản mới</h1>
                         <?php 
                             $redirect->flash("dang-ki"); 
