@@ -3,7 +3,6 @@
     $navigation = new navigation();
     $menu = $navigation->getMenu();
     $sub_menu = $navigation->getSubMenu();
-    // var_dump($sub_menu);
 ?>
 <!-- Css -->
 <link rel="stylesheet" href="./assets/css/custom/header_style.css">

@@ -15,8 +15,8 @@
                             <h6><?= $post["GioiThieu"] ?></h6>
                         </a>
                         <div class="post-meta d-flex align-items-center">
-                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#like_comment_field" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span><?=$post['SoLuotThich']?></span></a>
-                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#comment_field" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span><?=count($post['SoBinhLuan'])?></span></a>
+                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#like_comment_field" class="post-like"><i class="fa fa-thumbs-o-up" style="font-size: 18px"></i> <span><?=$post['SoLuotThich']?></span></a>
+                            <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#comment_field" class="post-comment"><i class="fa fa-comment-o" style="font-size: 18px"></i> <span><?=count($post['SoBinhLuan'])?></span></a>
                         </div>
                     </div>
                 </div>

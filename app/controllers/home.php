@@ -38,7 +38,7 @@
                 "NgayDang", false
             );
 
-            //get Comment for per post
+            //get number Comment for per post
                 //featured_post
             $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
             for ($i=0 ; $i < count($featured_post); $i++) {

@@ -37,16 +37,17 @@ Công việc đã làm:
     + Nếu chủ bài viết comment (thêm chút css)
     + Thêm ngày giờ cho comment
     + Show like, comment của các bài viết khác ra
+    + Phần like bài viết
+    + Làm event nút like nè (ajax)
 
 Công việc cần làm:  
-    + Phần like bài viết
     + Phân trang cho việc comment (ajax)
-    + Làm event nút like nè (ajax)
+    + Liên hệ hợp tác: API gmail
 
     + Thêm trang xem thông tin user, đổi password
     + Làm 1 cách chính xác phần navigation (5/5)
     + Xử lý trang 404
-    + Liên hệ hợp tác: API gmail
+    
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
 -----------HAI------------

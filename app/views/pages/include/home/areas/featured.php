@@ -15,12 +15,11 @@
                         <h6><?= $first_post['TieuDe'] ?></h6>
                     </a>
                     <div class="post-meta">
-                        <p class="post-author">By <a href="#">Christinne Williams</a></p>
                         <p class="post-excerp"><?= $first_post['GioiThieu'] ?>...</p>
                         <!-- Post Like & Post Comment -->
                         <div class="d-flex align-items-center">
-                            <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>#like_comment_field" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span><?=$first_post['SoLuotThich']?></span></a>
-                            <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>#comment_field" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span><?=count($first_post['SoBinhLuan'])?></span></a>
+                            <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>#like_comment_field" class="post-like"><i class="fa fa-thumbs-o-up" style="font-size: 18px"></i> <span><?=$first_post['SoLuotThich']?></span></a>
+                            <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>#comment_field" class="post-comment"><i class="fa fa-comment-o" style="font-size: 18px"></i> <span><?=count($first_post['SoBinhLuan'])?></span></a>
                         </div>
                     </div>
                 </div>
@@ -47,8 +46,8 @@
                                 </a>
                                 <!-- Post Like & Post Comment -->
                                 <div class="d-flex align-items-center">
-                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#like_comment_field" class="post-like"><img src="./assets/img/core-img/like.png" alt=""> <span><?=$post['SoLuotThich']?></span></a>
-                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#comment_field" class="post-comment"><img src="./assets/img/core-img/chat.png" alt=""> <span><?=count($post['SoBinhLuan'])?></span></a>
+                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#like_comment_field" class="post-like"><i class="fa fa-thumbs-o-up" style="font-size: 18px"></i> <span><?=$post['SoLuotThich']?></span></a>
+                                    <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>#comment_field" class="post-comment"><i class="fa fa-comment-o" style="font-size: 18px"></i> <span><?=count($post['SoBinhLuan'])?></span></a>
                                 </div>
                             </div>
                         </div>

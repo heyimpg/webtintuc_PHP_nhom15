@@ -32,10 +32,12 @@ class detail extends Controller
         );
         //Relative-post
         $relative_post = $this->postModel->getAllDatafromMultiTable(
-            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe",
+            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, SoLuotThich",
             [$this->postModel->getTable() . ".ID_TheLoai" => $detail_post['ID_TheLoai']]
         );
-            //get author - post detail 
+        
+        
+        //get author - post detail 
         $this->postModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
         $author = $this->postModel->getDatafromMultiTable(
             "TaiKhoan",
@@ -60,8 +62,20 @@ class detail extends Controller
             ["ID_BaiViet" => $ID_BaiViet],
             null, null, null
         );
+            //get number Comment
+        $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
+        for ($i=0 ; $i < count($relative_post); $i++) {
+            $comment = $this->postModel->getAllDatafromMultiTable(
+                "ID_BinhLuan",
+                [$this->postModel->getTable().".ID_BaiViet" => $relative_post[$i]['ID_BaiViet']],
+                null, null, null
+            );
+            $relative_post[$i]['SoBinhLuan'] = $comment;
+        }
 
         $this->postModel->closeConnection();
+        $this->commentModel->closeConnection();
+        $this->accountModel->closeConnection();
         $data = [
             "page" => "home/detail",
             "detail_post" => $detail_post,
