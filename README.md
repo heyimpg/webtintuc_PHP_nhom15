@@ -54,9 +54,6 @@ Công việc đã làm:
     +Đọc code của phần client, chỉnh sửa lại cấu trúc của project và ghép code phần client vào nhánh hai-dev  
     +Thêm hai column slug and type vào trong bảng chitiettheloai  
     +Thêm class Redirect vào phần core, cho ra thông báo khi thêm danh mục bài viết thành công 
-    +Tốn mấy tiếng fix session_start();
-        category: danh mục cha
-        subcategory: danh mục con  
     + Xử lý trang 404
     + Đường link truy cập vào trang quản trị viên: http://localhost/CNPM/webtintuc/admin
     + Khi vào trang quản trị viên yêu cầu phải đăng nhập mới vào được
@@ -68,11 +65,12 @@ Công việc đã làm:
     Đường link truy cập vào trang quản trị bài viết: http://localhost/CNPM/webtintuc/admin/post/index
     + Đã chuyển các hầu hết các phần từ tiếng Anh sang tiếng Việt
     + Sau khi đăng xuất tài khoản thì chuyển về trang đăng nhập
+    + Đăng kí tài khoản thành công thì thông báo cho người dùng
     
 Công việc cần làm:  
     +Hoàn thiện phần danh mục
     +Hoàn thiện phần bài viết
-    +Thêm phần xử lý loại tin
+    +Thêm phần xử lý loại tin  
     + Đang xây dựng dần dần chức năng thêm bài viết
     + Cần cài đặt ckeditor,ckfinder, filebrowser để chạy chương trình
 **Note: 
