@@ -46,7 +46,6 @@ Công việc cần làm:
 
     + Thêm trang xem thông tin user, đổi password
     + Làm 1 cách chính xác phần navigation (5/5)
-    + Xử lý trang 404
     
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
@@ -58,6 +57,8 @@ Công việc đã làm:
     +Tốn mấy tiếng fix session_start();
         category: danh mục cha
         subcategory: danh mục con  
+    + Xử lý trang 404
+    
 Công việc cần làm:  
     +Hoàn thiện phần danh mục
     +Hoàn thiện phần bài viết

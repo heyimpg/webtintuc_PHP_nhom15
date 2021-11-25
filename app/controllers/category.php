@@ -2,10 +2,14 @@
 class category extends Controller
 {
     private PostModel $postModel;
+    private AccountModel $accountModel;
+    private LikeModel $likeModel;
 
     public function __construct()
     {
         $this->postModel = $this->model("PostModel");
+        $this->accountModel = $this->model("AccountModel");
+        $this->likeModel = $this->model("LikeModel");
     }
 
     public function index($ID_TheLoai)
@@ -40,6 +44,19 @@ class category extends Controller
             "NgayDang",
             false
         );
+
+        //get Status Like
+        if(isset($_SESSION["username"])) {
+            $Id_Account = $this->getIdAccount();
+            for ($i=0 ; $i < count($category_post_2); $i++) {
+                $like_status = $this->likeModel->getData(
+                    "DaThich",
+                    ["ID_TaiKhoan" => $Id_Account,
+                        "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']]
+                );
+                $category_post_2[$i]['DaThich'] = isset($like_status['DaThich']) ? $like_status['DaThich'] : 0;
+            }
+        }
 
         $this->postModel->closeConnection();
         $data = [
@@ -97,6 +114,18 @@ class category extends Controller
             );
             $category_post_2[$i]['SoBinhLuan'] = $comment;
         }
+        //get Status Like
+        if(isset($_SESSION["username"])) {
+            $Id_Account = $this->getIdAccount();
+            for ($i=0 ; $i < count($category_post_2); $i++) {
+                $like_status = $this->likeModel->getData(
+                    "DaThich",
+                    ["ID_TaiKhoan" => $Id_Account,
+                        "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']]
+                );
+                $category_post_2[$i]['DaThich'] = isset($like_status['DaThich']) ? $like_status['DaThich'] : 0;
+            }
+        }
 
         $this->postModel->closeConnection();
         $data = [
@@ -149,6 +178,19 @@ class category extends Controller
                 $category_post_2[$i]['SoBinhLuan'] = $comment;
             }
 
+            //get Status Like
+            if(isset($_SESSION["username"])) {
+                $Id_Account = $this->getIdAccount();
+                for ($i=0 ; $i < count($category_post_2); $i++) {
+                    $like_status = $this->likeModel->getData(
+                        "DaThich",
+                        ["ID_TaiKhoan" => $Id_Account,
+                            "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']]
+                    );
+                    $category_post_2[$i]['DaThich'] = isset($like_status['DaThich']) ? $like_status['DaThich'] : 0;
+                }
+            }
+
             $this->postModel->closeConnection();
             $data = [
                 "isCategory" => true,
@@ -162,6 +204,16 @@ class category extends Controller
             $this->view("layout", $data);
         } else {
             header("location:".BASE_URL);
+        }
+    }
+
+    public function getIdAccount() {
+        if(isset($_SESSION["username"])) {
+            $username = $_SESSION["username"];
+            $account = $this->accountModel->getData("ID_TaiKhoan", ["TaiKhoan"=>$username]);
+            return $account["ID_TaiKhoan"];
+        } else {
+            return -1;
         }
     }
 }

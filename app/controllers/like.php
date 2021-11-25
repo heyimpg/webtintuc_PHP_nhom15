@@ -16,12 +16,11 @@
             $ID_BaiViet = $data_array[1];
             //kiểm tra trạng thái
             //đã thích -> thay đổi thành k thích, giảm số lượng like
-            $this->likeModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
             $Id_Account = $this->getIdAccount($username);
             if($Id_Account != -1) {
-                $result = $this->likeModel->getDatafromMultiTable(
+                $result = $this->likeModel->getData(
                     "DaThich",
-                    [$this->likeModel->getTable().".ID_TaiKhoan" => $Id_Account,
+                    ["ID_TaiKhoan" => $Id_Account,
                         "ID_BaiViet" => $ID_BaiViet]
                 );
                 if($result) {

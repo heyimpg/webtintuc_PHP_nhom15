@@ -1,15 +1,4 @@
 <?php date_default_timezone_set('Asia/Ho_Chi_Minh'); ?>
-<?php
-    $arr = ["stt"=>404];
-    $encode = json_encode($arr);
-    echo $encode;
-    // echo gettype($encode);
-    $decode = json_decode($encode);
-    // echo $decode;
-    var_dump($decode);
-    echo $decode->stt;
-
-?>
 <!-- Css -->
 <link rel="stylesheet" href="./assets/css/custom/detail_style.css">
 
