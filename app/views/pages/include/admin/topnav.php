@@ -12,12 +12,6 @@
               <img src="assets/admin/build/images/img.jpg" alt=""><?= $_SESSION["TaiKhoan"] ?>
             </a>
             <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="javascript:;"> Hồ sơ</a>
-              <a class="dropdown-item" href="javascript:;">
-                <span class="badge bg-red pull-right">50%</span>
-                <span>Cài đặt</span>
-              </a>
-              <a class="dropdown-item" href="javascript:;">Trợ giúp</a>
               <a class="dropdown-item" href="<?=BASE_URL."admin/home/signout" ?>"><i
                   class="fa fa-sign-out pull-right"></i> Đăng xuất</a>
             </div>
