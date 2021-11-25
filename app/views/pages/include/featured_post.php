@@ -16,7 +16,7 @@
                                         src="./assets/img/bg-img/<?=$first_post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory"><?= $first_post['TenCTTheLoai'] ?></a>
+                                <a href="<?= CATEGORY_URL.$first_post["ID_TheLoai"] ?>" class="post-catagory"><?= $first_post['TenTheLoai'] ?></a>
                                 <a href="<?= DETAIL_URL.$first_post["ID_BaiViet"] ?>" class="post-title">
                                     <h6><?= $first_post['TieuDe'] ?></h6>
                                 </a>
@@ -25,10 +25,8 @@
                                     <p class="post-excerp"><?=$first_post['GioiThieu']?>...</p>
                                     <!-- Post Like & Post Comment -->
                                     <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt="">
-                                            <span>392</span></a>
-                                        <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png"
-                                                alt=""> <span>10</span></a>
+                                        <a href="#" class="post-like"><i class="fa fa-thumbs-o-up" style="font-size: 18px"></i><span>392</span></a>
+                                        <a href="#" class="post-comment"><i class="fa fa-comment-o" style="font-size: 18px"></i> <span>10</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -50,14 +48,14 @@
                                         src="./assets/img/bg-img/<?=$post['AnhDaiDien']?>" alt=""></a>
                             </div>
                             <div class="post-data">
-                                <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
+                                <a href="<?= CATEGORY_URL.$post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
                                 <div class="post-meta">
                                     <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                         <h6><?=$post['GioiThieu']?>...</h6>
                                     </a>
                                     <!-- Post Like & Post Comment -->
                                     <div class="d-flex align-items-center">
-                                        <a href="#" class="post-like"><img src="./assets/img/core-img/like.png" alt="">
+                                        <a href="#" class="post-like"><i class="fa fa-thumbs-o-up" style="font-size: 18px"></i>
                                             <span>392</span></a>
                                         <a href="#" class="post-comment"><img src="./assets/img/core-img/chat.png"
                                                 alt=""> <span>10</span></a>
@@ -82,7 +80,7 @@
                                 src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
                     </div>
                     <div class="post-data">
-                        <a href="#" class="post-catagory"><?= $post['TenCTTheLoai'] ?></a>
+                        <a href="#" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
                         <div class="post-meta">
                             <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
                                 <h6><?=$post['TieuDe']?></h6>

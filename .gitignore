@@ -1,6 +1,6 @@
 .idea/
 note.txt
 README.md
-assets/admin/ckfinder
-assets/admin/ckeditor
-assets/admin/filebrowser
+assets/admin/ckeditor/
+assets/admin/ckfinder/
+assets/admin/filebrowser/

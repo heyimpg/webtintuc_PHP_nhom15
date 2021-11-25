@@ -1,6 +1,7 @@
 /* Header */
 .top-header-content .logo a h3,
-.top-header-content .logo a p
+.top-header-content .logo a p,
+.top-header-content .name_user
 {
     color: white;
     font-style: oblique;
@@ -10,4 +11,8 @@
 .login-search-area .login a:hover
 {
     opacity: 0.8;
+}
+
+#btn-logout {
+    cursor: pointer;
 }

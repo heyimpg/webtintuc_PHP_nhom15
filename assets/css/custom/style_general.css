@@ -1,0 +1,13 @@
+.show {
+    display: block;
+}
+
+.hide { 
+    display: none;
+}
+
+.post-like:hover,
+.post-comment:hover
+{
+    color: #ee002d;
+}

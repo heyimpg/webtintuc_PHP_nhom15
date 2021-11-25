@@ -9,8 +9,10 @@
         protected $conn;
 
         public function __construct() {
+            // dsn: Data source name
+            $dsn = "mysql:host={$this->host};dbname={$this->database_name}";
             try {
-                $this->conn = new PDO("mysql:host={$this->host};dbname={$this->database_name}", $this->username, $this->password);
+                $this->conn = new PDO($dsn, $this->username, $this->password);
                 // set the PDO error mode to exception
                 $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch(PDOException $ex) {

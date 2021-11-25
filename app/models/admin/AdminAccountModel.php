@@ -16,7 +16,7 @@
         }
 
         public function sign_up($userName, $passWord) {
-            $query = "INSERT INTO taikhoan(TenTaiKhoan, MatKhau) VALUES(?,?)";
+            $query = "INSERT INTO taikhoan(TaiKhoan, MatKhau) VALUES(?,?)";
             $result = $this->conn->prepare($query);
             if($result->execute([$userName,$passWord])) {
                 return true;
@@ -27,7 +27,7 @@
         }
 
         public function findUserByUserName($userName) {
-            $query = "SELECT * FROM $this->table WHERE TenTaiKhoan = ?";
+            $query = "SELECT * FROM $this->table WHERE TaiKhoan = ?";
             $result = $this->conn->prepare($query);
             $result->execute([$userName]);
 

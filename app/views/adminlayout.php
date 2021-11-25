@@ -22,7 +22,7 @@
                 <span>Xin chào,</span>
                 <h2>
                   <?php if(isset($_SESSION["ID_TaiKhoan"])) {
-                      echo explode(" ", $_SESSION["TenTaiKhoan"])[0];
+                      echo explode(" ", $_SESSION["TaiKhoan"])[0];
                     } else {
                       echo "Quản trị viên";
                     }

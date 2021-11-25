@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= BASE_URL?>">
     <title>Trang quản trị</title>
-	<link rel="shortcut icon" href="assets/admin/build/images/favicon.ico"/>
+    <link rel="shortcut icon" href="assets/admin/build/images/favicon.ico"/>
     <!-- Bootstrap -->
     <link href="assets/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -24,7 +24,10 @@
     <link href="assets/admin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="assets/admin/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="assets/admin/build/css/custom.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="assets/admin/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Data Table -->
+    <link rel="stylesheet" href="assets/admin/css/datatables.min.css">
   </head>

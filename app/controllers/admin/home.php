@@ -100,7 +100,7 @@
 
         public function createUserSession($user){
             $_SESSION['ID_TaiKhoan'] = $user->ID_TaiKhoan;
-            $_SESSION['TenTaiKhoan'] = $user->TenTaiKhoan;
+            $_SESSION['TaiKhoan'] = $user->TaiKhoan;
             $_SESSION['MatKhau'] = $user->MatKhau;
             $_SESSION["loggedIn"] = true;
             $this->redirect->redirect(BASE_URL."admin/home/welcome");
@@ -108,7 +108,7 @@
     
         public function signout(){
             unset($_SESSION['ID_TaiKhoan']);
-            unset($_SESSION['TenTaiKhoan']);
+            unset($_SESSION['TaiKhoan']);
             unset($_SESSION['MatKhau']);
             unset($_SESSION['loggedIn']);
             session_destroy();
