@@ -1,6 +1,8 @@
-<?php require_once "app/views/pages/include/admin/header.php"; ?>
-
-  <body class="nav-md">
+<?php
+  if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true) {
+      require_once "app/views/pages/include/admin/header.php"; 
+?>
+<body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -17,8 +19,15 @@
                 <img src="assets/admin/build/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <span>Xin chào,</span>
+                <h2>
+                  <?php if(isset($_SESSION["ID_TaiKhoan"])) {
+                      echo explode(" ", $_SESSION["TenTaiKhoan"])[0];
+                    } else {
+                      echo "Quản trị viên";
+                    }
+                  ?>
+                </h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -31,16 +40,16 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <a data-toggle="tooltip" data-placement="top" title="Cài đặt">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <a data-toggle="tooltip" data-placement="top" title="Toàn màn hình">
                 <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <a data-toggle="tooltip" data-placement="top" title="Khóa">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../index.php">
+              <a data-toggle="tooltip" data-placement="top" title="Đăng xuất" href="admin/home/signout">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -51,12 +60,15 @@
         <!-- top navigation -->
         <?php require_once "app/views/pages/include/admin/topnav.php";?>
         <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
           <?php if(isset($data)) { require_once "app/views/pages/{$data["page"]}.php"; }?>
         </div>
         <!-- /page content -->
-
-<?php require_once "app/views/pages/include/admin/footer.php"; ?>
-
+        <?php require_once "app/views/pages/include/admin/footer.php"; ?>
+<?php
+  } 
+  else {
+    require_once "app/views/pages/include/error/page_403.php";
+  }
+?>

@@ -5,5 +5,4 @@
     require_once "./app/core/Database.php";
     require_once "./app/core/Model.php";
     require_once "./app/core/Redirect.php";
-    session_start();
 ?>
