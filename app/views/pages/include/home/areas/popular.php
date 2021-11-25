@@ -1,6 +1,6 @@
 <!-- Popular News Widget -->
 <div class="popular-news-widget mb-30">
-    <h3>Top tin phổ biến nhất</h3>
+    <h3>Top tin đáng chú ý</h3>
 
     <!-- Single Popular Blog -->
     <?php

@@ -13,7 +13,10 @@
             $result = $this->login->sign_in($username, $password);
             if ($result >= 1)
             {
-                session_start();
+                if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE)
+                {
+                    session_start();
+                }
                 $_SESSION["username"]=$username;
                 echo json_encode(array("statusCode"=>200));
             }
@@ -24,11 +27,25 @@
             $data_array = explode(",", $data_recv); 
             $username = $data_array[0];
             $password = $data_array[1];
+            $re_password = $data_array[2];
+            //Mk không khớp nhau
+            if ($password != $re_password)
+            {
+                echo json_encode(array("statusCode"=>406));
+                return;
+            }
             $result = $this->login->sign_up($username, $password);
-            if ($result >= 1)
+            
+            if ($result >= 1)   //Thành công
                 echo json_encode(array("statusCode"=>201));
-            else
+            elseif ($result == -1)  //Trùng tài khoản
+                echo json_encode(array("statusCode"=>409));
+            else    //Lỗi phát sinh
                 echo json_encode(array("statusCode"=>400));
+        }
+
+        public function logout() {
+            return session_unset();
         }
     }
 ?>

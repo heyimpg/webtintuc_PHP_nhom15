@@ -1,3 +1,4 @@
+<!-- Loại tin lấy từ danh mục -->
 <?php
 if (isset($data)) {
     foreach ($data['category_post'] as $post) {

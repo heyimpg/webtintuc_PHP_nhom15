@@ -1,92 +1,59 @@
-    <!-- ##### Blog Area Start ##### -->
-    <div class="blog-area section-padding-0-80">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-8">
-                    <div class="blog-posts-area">
-                    <!-- Category_2 Post -->           
-                    <?php require_once "./app/views/pages/include/home/areas/category_2.php"; ?>
-                    </div>
+   <?php
+    if (isset($data)) {
+        $URL = $data['isCategory'] ? CATEGORY_URL : CATEGORY_URL . 'subCategory/';
+        $PARAM_URL = isset($data['ID_TheLoai'])? $data['ID_TheLoai'] : '';
+        if(isset($data['search_value'])) {
+            $PARAM_URL = "&search=".$data['search_value'];
+            $URL = CATEGORY_URL . 'searchPost/';
+        }
+    ?>
 
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination mt-50">
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">10</a></li>
-                        </ul>
-                    </nav>
-                </div>
+       <!-- ##### Blog Area Start ##### -->
+       <div class="blog-area section-padding-0-80">
+           <div class="container">
+               <div class="row">
+                   <div class="col-12 col-lg-8">
+                       <div class="blog-posts-area">
+                           <!-- Category_2 Post -->
+                           <?php require_once "./app/views/pages/include/home/areas/category_2.php"; ?>
+                       </div>
+                       <!-- Pagination -->
+                       <nav aria-label="Page navigation example">
+                           <ul class="pagination mt-50">
+                               <?php
+                               if(isset($data['pagination'])) {
+                                if ($data['pagination']['currentPage'] > 3) { ?>
+                                   <li class="page-item"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=1">Đầu</a></li>
+                               <?php }
+                                for ($index = 1; $index <= $data['pagination']['totalPage']; $index++) {
+                                ?>
+                                   <?php if ($index != $data['pagination']['currentPage']) {
+                                        if ($index > $data['pagination']['currentPage'] - 3 && $index < $data['pagination']['currentPage'] + 3) {
+                                    ?>
+                                           <li class="page-item"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=<?= $index ?>"><?= $index ?></a></li>
+                                       <?php }
+                                    } else { ?>
+                                       <li class="page-item active"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=<?= $index ?>"><?= $index ?></a></li>
+                                   <?php } ?>
+                               <?php }
+                                if ($data['pagination']['currentPage'] < $data['pagination']['totalPage'] - 3) { ?>
+                                   <li class="page-item"><a class="page-link" href="<?php echo $URL . $PARAM_URL ?>&page=<?= $data['pagination']['totalPage'] ?>">Cuối</a></li>
+                               <?php }} ?>
+                           </ul>
+                       </nav>
+                   </div>
 
-                <div class="col-12 col-lg-4">
-                    <div class="blog-sidebar-area">
-                    <!-- Popular News -->
-                    <?php require_once "./app/views/pages/include/home/areas/popular.php"; ?>
-                        <!-- Newsletter Widget -->
-                        <div class="newsletter-widget mb-50">
-                            <h4>Newsletter</h4>
-                            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                            <form action="#" method="post">
-                                <input type="text" name="text" placeholder="Name">
-                                <input type="email" name="email" placeholder="Email">
-                                <button type="submit" class="btn w-100">Subscribe</button>
-                            </form>
-                        </div>
+                   <div class="col-12 col-lg-4">
+                       <div class="blog-sidebar-area">
+                           <!-- Popular News -->
+                           <?php require_once "./app/views/pages/include/home/areas/popular.php"; ?>
+                           <!-- Newsletter Widget -->
+                           <?php require_once "./app/views/pages/include/home/areas/news_letter.php"; ?>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!-- ##### Blog Area End ##### -->
 
-                        <!-- Latest Comments Widget -->
-                        <div class="latest-comments-widget">
-                            <h3>Latest Comments</h3>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/29.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/30.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/31.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Comments -->
-                            <div class="single-comments d-flex">
-                                <div class="comments-thumbnail mr-15">
-                                    <img src="img/bg-img/32.jpg" alt="">
-                                </div>
-                                <div class="comments-text">
-                                    <a href="#">Jamie Smith <span>on</span> Facebook is offering facial recognition...</a>
-                                    <p>06:34 am, April 14, 2018</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Blog Area End ##### -->
+   <?php } ?>

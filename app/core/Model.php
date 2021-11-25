@@ -5,8 +5,8 @@
         protected String $table = "";
         private const DEFAULT_LIMIT = 4;
         private const DEFAULT_STR = "*";
-        protected String $second_table;
-        protected String $foreign_key;
+        protected String $second_table = "";
+        protected String $foreign_key = "";
 
         public function getAllData($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
             $sql = "select $data from $this->table ";
@@ -49,12 +49,12 @@
                 $query->execute();
             }
 
-            return $query->fetchAll(PDO::FETCH_ASSOC)[0];
+            return $query->fetch(PDO::FETCH_ASSOC);
         }
 
-        public function getAllDatafromMultiTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
+        public function getAllDatafromMultiTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
             $sql = "select $data from $this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key ";
-            $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit);
+            $sql = $this->queryGetData($sql, $where, $sort, $esc, $limit, $offset);
             if ($where != NULL) {
                 $values = array_values($where);
                 $query = $this->conn->prepare($sql);
@@ -66,7 +66,15 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT) {
+        public function getAllDatafromThirdTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
+            $sql = "select $data 
+            from ($this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key)
+                inner join $this->third_table on $this->second_table.$this->foreign_key = $this->third_table.$this->foreign_key
+            ";
+            
+        }
+
+        public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
             if ($where != NULL) {
                 $fields = array_keys($where);
                 $isFields = true;
@@ -83,15 +91,38 @@
                     $sql .=" order by ";
                     $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
                 }
-                $sql .= " limit $limit";
             }else {
                 if($sort != NULL) {
                     $sql .=' order by ';
                     $sql = $esc? ($sql.$sort) : ($sql.$sort." desc");
                 }
-                $sql .= " limit $limit";
             }
+            if (!is_null($limit)) {
+                $sql .= " limit $limit ";
+                if(!is_null($offset)) {
+                    $sql .= "offset $offset";
+                }
+            }
+           
             return $sql;
+        }
+
+        public function searchPost($data =  self::DEFAULT_STR, $search_value, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
+            $sql = "select $data " 
+            ."from $this->table inner join $this->second_table "
+            ."on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key "
+            ."where TieuDe like CONCAT('%',?,'%')";
+            
+            if (!is_null($limit)) {
+                $sql .= " limit $limit ";
+                if(!is_null($offset)) {
+                    $sql .= "offset $offset";
+                }
+            }
+
+            $query = $this->conn->prepare($sql);
+            $query->execute([$search_value]);
+            return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
         public function addData($data = NULL) {

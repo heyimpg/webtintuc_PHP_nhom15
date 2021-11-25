@@ -1,7 +1,7 @@
 <div class="row">
     <?php
     if (isset($data)) {
-        foreach ($data["side_post"] as $post) {
+        foreach ($data["editor_pick_post"] as $post) {
     ?>
             <!-- Single Post -->
             <div class="col-12 col-lg-4">
