@@ -42,5 +42,7 @@
     <!-- Sweet Alert -->
     <script src="assets/admin/js/sweetalert2.all.min.js"></script>
     <script src="assets/admin/js/custom.js"></script>
+    <!-- Data Table -->
+    <script src="assets/admin/js/datatables.min.js"></script>
   </body>
 </html>

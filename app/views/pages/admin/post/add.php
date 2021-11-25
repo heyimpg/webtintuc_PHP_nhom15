@@ -7,25 +7,29 @@
                 <div class="x_title"></div>
                 <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" enctype="multipart/form-data" action="admin/post/add">
-                        <!-- <div class="item form-group">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post"
+                        enctype="multipart/form-data" action="admin/post/add">
+                        <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_tile">Tiêu đề bài
                                 viết
                                 <span class="required">*</span>
                             </label>
                             <div class="col-md-8 col-sm-8 ">
-                                <input type="text" id="post_tile" required="required" class="form-control" name="post_title">
+                                <input type="text" id="post_tile" required="required" class="form-control"
+                                    name="post_title">
                             </div>
-                        </div> -->
-                        <!-- <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_short_content">Nội dung
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_short_content">Nội
+                                dung
                                 tóm tắt
                                 <span class="required">*</span>
                             </label>
                             <div class="col-md-8 col-sm-8 ">
-                            <textarea id="post_short_content" class="form-control" required="required" style="resize: none;"></textarea>
+                                <textarea id="post_short_content" class="form-control" required="required"
+                                    style="resize: none;" name="post_short_content"></textarea>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_thumbnail">Ảnh đại
                                 diện
@@ -35,14 +39,50 @@
                                 <input id="post_thumbnail" type="file" required="required" name="upload_file">
                             </div>
                         </div>
-                        <!-- <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_content_editor">Nội dung
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_content_editor">Nội
+                                dung
                                 <span class="required">*</span>
                             </label>
                             <div class="col-md-8 col-sm-8">
-                                <textarea id="post_content_editor" class="form-control" required="required" style="resize: none;"></textarea>
+                                <textarea id="post_content_editor" class="form-control" required="required"
+                                    style="resize: none;" name="post_content"></textarea>
                             </div>
-                        </div> -->
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_content_editor">Thể
+                                loại
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8">
+                                <select class="form-control" name="theloai">
+                                    <option value="0" selected disabled hidden>Chọn thể loại</option>
+                                    <?php
+                                        if(isset($data["categories"]) && $data["categories"] != null) {
+                                            foreach ($data["categories"] as $key => $value) {
+                                    ?>
+                                        <option value="<?= $value["ID_TheLoai"] ?>"><?= $value["TenTheLoai"] ?></option>
+                                    <?php } } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_content_editor">Loại
+                                tin
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8">
+                                <select class="form-control" name="loaitin">
+                                    <option value="0" selected disabled hidden>Chọn loại tin</option>
+                                    <?php
+                                        if(isset($data["loaitin"]) && $data["loaitin"] != null) {
+                                            foreach ($data["loaitin"] as $key => $value) {
+                                    ?>
+                                        <option value="<?= $value["ID_LoaiTin"] ?>"><?= $value["TenLoaiTin"] ?></option>
+                                    <?php } } ?>
+                                </select>
+                            </div>
+                        </div>
                         <div class="ln_solid"></div>
                         <div class="form-group row">
                             <div class="col-md-9 col-sm-9 offset-md-3">

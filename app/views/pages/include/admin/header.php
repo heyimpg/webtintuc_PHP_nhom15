@@ -24,10 +24,10 @@
     <link href="assets/admin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="assets/admin/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="assets/admin/build/css/custom.min.css" rel="stylesheet">
-
     <!-- jQuery -->
     <script src="assets/admin/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Data Table -->
+    <link rel="stylesheet" href="assets/admin/css/datatables.min.css">
   </head>
