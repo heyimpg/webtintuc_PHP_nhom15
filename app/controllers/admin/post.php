@@ -39,11 +39,8 @@
                     "ID_TheLoai" => $theloai,
                     "ID_LoaiTin" => $loaitin
                 );
-                var_dump($data_post["NoiDung"]);
-                exit();
                 $result = $this->post_model->addData($data_post);
                 $return = json_decode($result, true);
-                var_dump($return);
             }
             $data = array(
                 "page" => "$this->template/add",
