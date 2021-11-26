@@ -67,11 +67,21 @@ Công việc đã làm:
     + Sau khi đăng xuất tài khoản thì chuyển về trang đăng nhập
     + Đăng kí tài khoản thành công thì thông báo về cho người dùng
     
-Công việc cần làm:  
-    +Hoàn thiện phần danh mục
-    +Hoàn thiện phần bài viết
-    +Đang xây dựng dần dần chức năng thêm bài viết
+    Đăng nhập, đăng ký xong hiện message (done)
+    Thêm bài viết:
+        + Thêm xong chưa có message (done)
+        + Làm mất thông báo khi thêm xong bài viết (done)
+        + Đã hiển thị được nội dung trong bảng danh sách bài viết
     
+Công việc cần làm:  
+    Trang chủ ... ????
+    Quản lý thể loại:
+    + chức năng sửa (chưa có)?
+    + Xảy ra lỗi khi chọn danh mục cha
+    + Chưa xử lý nút tích chọn
+    Bài viết:
+    + Danh sách bài viết (chưa làm) - đã hiển thị được danh sách bài viết
+
 **Note: 
 Những method có thể tái sử dụng được để trong core/Model
 Cần cài đặt ckeditor,ckfinder, filebrowser để chạy chương trình

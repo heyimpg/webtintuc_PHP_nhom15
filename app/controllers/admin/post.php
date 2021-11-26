@@ -20,8 +20,8 @@
         }
 
         public function add() {
-            $categories = $this->category_model->getAllData("theloai.ID_TheLoai, theloai.TenTheLoai", null, null, true, 10);
-            $loaitintuc = $this->loaitin_model->getAllData("loaitin.ID_LoaiTin, loaitin.TenLoaiTin", null, null, true, 10);
+            $categories = $this->category_model->getAllData("theloai.ID_TheLoai, theloai.TenTheLoai", null, null, true, null);
+            $loaitintuc = $this->loaitin_model->getAllData("loaitin.ID_LoaiTin, loaitin.TenLoaiTin", null, null, true, null);
             $data = array(
                 "page" => "$this->template/add",
                 "categories" => $categories,
