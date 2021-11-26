@@ -37,6 +37,7 @@
                     <form method="post" action="<?= BASE_URL."admin/home/signin"?>">
                         <h1>Đăng nhập</h1>
                         <?php 
+                            $redirect->flash("dang-ki");
                             $redirect->flash("dang-nhap"); 
                         ?>
                         <div hidden><input type="text" name="type" value="dang-nhap"></div>
@@ -69,9 +70,6 @@
                 <section class="login_content">
                     <form method="post" action="<?= BASE_URL."admin/home/signup"?>">
                         <h1>Tạo tài khoản mới</h1>
-                        <?php 
-                            $redirect->flash("dang-ki"); 
-                        ?>
                         <div hidden>
                             <input type="text" name="type" value="dang-ki">
                         </div>

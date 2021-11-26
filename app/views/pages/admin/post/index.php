@@ -9,26 +9,14 @@
                 <div class="x_content">
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
-                            <th>Tiêu đề</th>
-                            <th>Giới thiệu</th>
-                            <th>Thể loại</th>
-                            <th>Ngày đăng</th>
-                            <th>Tùy chọn</th>
-                        </thead>
-                        <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>
-                                    <a href="" class="btn btn-success" style="border: none;"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                    <a href="" class="btn btn-danger" style="border: none;"><i class="fa fa-trash"
-                                            aria-hidden="true"></i></a>
-                                </td>
+                                <th>Tiêu đề</th>
+                                <th>Thể loại</th>
+                                <th>Ngày đăng</th>
+                                <th>Số lượt thích</th>
+                                <th>Tùy chọn</th>
                             </tr>
-                        </tbody>
+                        </thead>
                     </table>
                 </div>
             </div>
@@ -39,7 +27,7 @@
 <script>
     $(document).ready(function () {
         $("#datatable").DataTable({
-            language: {
+            "language": {
                 "processing": "Đang xử lý...",
                 "infoFiltered": "(được lọc từ _MAX_ mục)",
                 "aria": {
@@ -181,20 +169,26 @@
                 "zeroRecords": "Không tìm thấy kết quả",
                 "searchPlaceholder": "Tìm kiếm"
             },
-            // serverSide: true,
-            // processing: true,
-            // paging: true,
-            ajax: {
+            "serverSide": true,
+            "processing": true,
+            "paging": true,
+            "pageLength": 10,
+            "ajax": {
                 "url": '<?= BASE_URL."admin/post/test"?>',
-                "type": "post"
+                "type": "post",
+                "dataType":"json"
             },
-            fnCreateRow: function(nRow, aData, iDataIndex) {
-                $(nRow).attr('id', aData[0]);
-            },
-            columnDefs:[{
-                'target': [0, 5],
-                'orderable': false
-            }]
+            "columnDefs": [{
+                'target': [0, 6, 7],
+                'orderable': true
+            }],
+            "columns": [
+                null,
+                { "width": "10%" },
+                { "width": "10%" },
+                { "width": "10%" },
+                null
+            ]
         });
     });
 </script>

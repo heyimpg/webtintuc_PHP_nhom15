@@ -2,6 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
+            <h4 id="display_message"><?php if(isset($data["message"])) { echo $data["message"];} ?></h4>
             <div class="x_panel">
                 <h2>Đăng bài viết</h2>
                 <div class="x_title"></div>
@@ -100,4 +101,5 @@
 <script src="assets/admin/ckeditor/ckeditor.js"></script>
 <script>
     CKEDITOR.replace("post_content_editor");
+    $("#display_message").hide(3000);
 </script>
