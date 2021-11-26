@@ -49,23 +49,23 @@ Công việc cần làm:
     
 Vướng mắc:  
     + Có dùng khóa ngoại k?  
------------HAI------------
+-----------HAI------------  
 Công việc đã làm: 
     +Đọc code của phần client, chỉnh sửa lại cấu trúc của project và ghép code phần client vào nhánh hai-dev  
     +Thêm hai column slug and type vào trong bảng chitiettheloai  
     +Thêm class Redirect vào phần core, cho ra thông báo khi thêm danh mục bài viết thành công  
-    + Xử lý trang 404
-    + Đường link truy cập vào trang quản trị viên: http://localhost/CNPM/webtintuc/admin
-    + Khi vào trang quản trị viên yêu cầu phải đăng nhập mới vào được
-    + Khi chưa đăng nhập thực hiện gõ URL http://localhost/CNPM/webtintuc/admin/post/index sẽ hiển thị trang từ chối truy cập
-    + Đã thực hiện được chức năng đăng nhập đăng kí tài khoản quản trị viên, validate, hiển thị được tên người quản trị viên sau khi đăng nhập
-    + Sau khi đăng nhập sẽ chuyển đến trang chủ danh sách thể loại
-    + Sau khi đăng nhập có thẻ dùng các đường link sau để truy cập:
-    Đường link truy cập vào trang quản trị danh mục: http://localhost/CNPM/webtintuc/admin/category/index
-    Đường link truy cập vào trang quản trị bài viết: http://localhost/CNPM/webtintuc/admin/post/index
-    + Đã chuyển các hầu hết các phần từ tiếng Anh sang tiếng Việt
-    + Sau khi đăng xuất tài khoản thì chuyển về trang đăng nhập
-    + Đăng kí tài khoản thành công thì thông báo về cho người dùng
+    + Xử lý trang 404  
+    + Đường link truy cập vào trang quản trị viên: http://localhost/CNPM/webtintuc/admin  
+    + Khi vào trang quản trị viên yêu cầu phải đăng nhập mới vào được  
+    + Khi chưa đăng nhập thực hiện gõ URL http://localhost/CNPM/webtintuc/admin/post/index sẽ hiển thị trang từ chối truy cập  
+    + Đã thực hiện được chức năng đăng nhập đăng kí tài khoản quản trị viên, validate, hiển thị được tên người quản trị viên sau khi đăng nhập  
+    + Sau khi đăng nhập sẽ chuyển đến trang chủ danh sách thể loại  
+    + Sau khi đăng nhập có thẻ dùng các đường link sau để truy cập:  
+    Đường link truy cập vào trang quản trị danh mục: http://localhost/CNPM/webtintuc/admin/category/index  
+    Đường link truy cập vào trang quản trị bài viết: http://localhost/CNPM/webtintuc/admin/post/index  
+    + Đã chuyển các hầu hết các phần từ tiếng Anh sang tiếng Việt  
+    + Sau khi đăng xuất tài khoản thì chuyển về trang đăng nhập  
+    + Đăng kí tài khoản thành công thì thông báo về cho người dùng  
     
     Đăng nhập, đăng ký xong hiện message (done)
     Thêm bài viết:
@@ -79,14 +79,17 @@ Công việc đã làm:
     cái console.log không xóa được vì nó nằm trong file custom.min.js sợ xóa nhầm  
     Không xóa thông báo khi thêm bài viết nữa (ok)  
     Bài viết mới thêm để ngày mặc định là current_timestamp (ok)  
-    Bổ sung người đăng bài (ok)  
+    Bổ sung người đăng bài (ok)
+    Danh sách bài viết (ok)
     
 Công việc cần làm:  
-    Quản lý thể loại:
-    + chức năng sửa (chưa có)?
-    + Xảy ra lỗi khi chọn danh mục cha
-    Bài viết:
-    + Danh sách bài viết (chưa làm) - đã hiển thị được danh sách bài viết
+    Quản lý thể loại:  
+    + chức năng sửa (chưa có)?  
+    + Xảy ra lỗi khi chọn danh mục cha  
+    Bài viết:  
+    + Chức năng sửa xóa  
+    + Không thể tải lên ảnh đại diện thì cho false, chọn ảnh đại diện khác  
+
 
 **Note: 
 Những method có thể tái sử dụng được để trong core/Model
