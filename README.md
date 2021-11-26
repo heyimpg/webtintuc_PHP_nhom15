@@ -95,3 +95,27 @@ Thầy góp ý (DONE):
     Phần chức năng thêm:
         Liên kết với bảng login -> show ra tên tác giả
         Thêm phần comments, likes
+
+
+**Important:
+Hướng dẫn config email để chạy được phần send mail
+C1: Cài trực tiếp vào config của xampp
+1. Xem video https://youtu.be/JnPuRjwcVDA config theo video
+    lưu ý:
+     đoạn php.ini nhớ comment lại dòng smtp_port=25 vì mặc định chưa comment 
+    (Nhớ cài account - password theo account của mình. Trong môn này đang lấy tạm account của PB
+    ac: testcnpm123@gmail.com
+    pw: phuongbg123
+    )
+2. Cài lại trong file config mail người nhận
+    const EMAIL_UNAME = your_email
+3. Với dạng mail chưa mở security vào link dưới để mở
+    https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4O-Nnffvz5lbNAeElSfF1WikC3IsYkBXKVwP6rcO_Jcyf_4ngedPzPKf2fGrGc4xh0gJfZDKD7YDPeF-KjSugtCCPuDLw
+    
+
+-Một số dir cần thiết để chỉnh sửa
+file đọc error: D:\App\xampp\apache\logs\error.log
+cấu hình ini: D:\App\xampp\php\php.ini
+cấu hình sendmail: D:\App\xampp\sendmail\sendmail.ini
+
+C2: Cài thư viện sendMail vào (hiện đang gặp lỗi)

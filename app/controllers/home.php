@@ -105,5 +105,25 @@
                 return -1;
             }
         }
+        public function sendEmail($data_recv) {
+            $data_array = explode(",", $data_recv); 
+            $name = $data_array[0];
+            $phone = $data_array[1];
+            $email = $data_array[2];
+            if(!strlen($name) || strlen($phone) != 10 || strlen($email) < 10)
+                echo json_encode(array("statusCode"=>400));
+            else
+                {
+                    $to = EMAIL_UNAME;
+                    $subject = "webtintuc - Thư liên hệ hợp tác";
+                    $message = "Tên: $name <br/>SĐT: $phone <br/>Email: $email";
+                    $header = "From: abc@gmail.com \r\n";
+                    $header .= "Content-type: text/html; charset=utf-8";
+                    if(mail($to, $subject, $message, $header))
+                        echo json_encode(array("statusCode"=>200));
+                    else
+                        echo json_encode(array("statusCode"=>400));
+                }
+        }
     }
 ?>
