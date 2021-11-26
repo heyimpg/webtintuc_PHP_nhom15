@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-12">
             <?php if(isset($_SESSION["flash"])) { ?>
-                <h3 class="text-success"><?= $redirect->setFlash("flash"); ?></h3>
+                <h6 id="message_display" class="text-success"><?= $redirect->setFlash("flash"); ?></h6>
             <?php } ?>
         </div>
     </div>
@@ -18,14 +18,10 @@
             <table class="table table-striped jambo_table bulk_action">
                 <thead>
                     <tr class="headings">
-                        <th><input type="checkbox" id="check-all" class="flat"></th>
                         <th class="column-title">Tên danh mục </th>
                         <th class="column-title">Hiển thị</th>
                         <th class="column-title">Ngày Tạo </th>
-                        <th class="column-title no-link last"><span class="nobr">Action</span></th>
-                        <th class="bulk-actions" colspan="7">
-                            <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
-                        </th>
+                        <th class="column-title no-link last"><span class="nobr">Tùy chọn</span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +31,6 @@
                     ?>
                         <?php if($category['ID_TheLoai'] != null) { ?>
                             <tr class="even<?= $category['ID_TheLoai'] ?> pointer">
-                                <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
                                 <td class="align-middle"><?= $category["TenTheLoai"] ?></td>
                                 <td>
                                     <input type="checkbox" class="flat" <?php if($category["HienThiCha"] == 1) {echo "checked";}?>/>
@@ -49,7 +44,6 @@
                         <?php } ?>
                         <?php if(isset($category["TenCTTheLoai"])) { ?>
                             <tr class="even<?= $category['ID_CTTheLoai'] ?> pointer">
-                                <td class="a-center align-middle"><input type="checkbox" id="check-all" class="flat" name="table_records"></td>
                                 <?php if($category['ID_TheLoai'] != null) { ?>
                                     <td class="align-middle">----- <?= $category["TenCTTheLoai"] ?></td>
                                 <?php } else {?>
@@ -71,3 +65,6 @@
         </div>
 </div>
 
+<script>
+    $("#message_display").hide(5000);
+</script>

@@ -169,12 +169,13 @@
                 "zeroRecords": "Không tìm thấy kết quả",
                 "searchPlaceholder": "Tìm kiếm"
             },
+            "bLengthChange": false,
             "serverSide": true,
             "processing": true,
             "paging": true,
             "pageLength": 10,
             "ajax": {
-                "url": '<?= BASE_URL."admin/post/test"?>',
+                "url": '<?= BASE_URL."admin/post/getpostlist"?>',
                 "type": "post",
                 "dataType":"json"
             },

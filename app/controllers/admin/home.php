@@ -42,6 +42,10 @@
                     }
                     if($this->account->findUserByUserName($data["TenTaiKhoan_DN"])) {
                         $loggedInUser = $this->account->sign_in($data["TenTaiKhoan_DN"], $data["MatKhau_DN"]);
+                        if ($loggedInUser->ID_ChucDanh != 1) {
+                            $this->redirect->flash("dang-nhap", "Yêu cầu quyền quản trị viên để đăng nhập vào hệ thống");
+                            $this->redirect->redirect(BASE_URL."admin/#signin");
+                        }
                         if($loggedInUser) {
                             $this->createUserSession($loggedInUser);
                         } else {

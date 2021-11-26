@@ -73,12 +73,18 @@ Công việc đã làm:
         + Làm mất thông báo khi thêm xong bài viết (done)
         + Đã hiển thị được nội dung trong bảng danh sách bài viết
     
+    26/11 PM
+    Check role (ok)  
+    Xóa dòng hiển thị 10 dữ liệu (ok)  
+    cái console.log không xóa được vì nó nằm trong file custom.min.js sợ xóa nhầm  
+    Không xóa thông báo khi thêm bài viết nữa (ok)  
+    Bài viết mới thêm để ngày mặc định là current_timestamp (ok)  
+    Bổ sung người đăng bài (ok)  
+    
 Công việc cần làm:  
-    Trang chủ ... ????
     Quản lý thể loại:
     + chức năng sửa (chưa có)?
     + Xảy ra lỗi khi chọn danh mục cha
-    + Chưa xử lý nút tích chọn
     Bài viết:
     + Danh sách bài viết (chưa làm) - đã hiển thị được danh sách bài viết
 

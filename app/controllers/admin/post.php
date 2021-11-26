@@ -35,6 +35,7 @@
                 $post_content = $_POST["post_content"];
                 $theloai = filter_input(INPUT_POST, 'theloai', FILTER_SANITIZE_STRING);
                 $loaitin = filter_input(INPUT_POST, 'loaitin', FILTER_SANITIZE_STRING);
+                $author = $_POST["author"];
                 // Kiểm tra các trường xem có rỗng hay không
                 if (!empty($post_title) && !empty($post_short_content) && !empty($file_name) && !empty($post_content) && !empty($theloai) && !empty($loaitin) && !strpos($file_name, 'Không thể')) {
                     $data_post = array(
@@ -43,7 +44,8 @@
                         "AnhDaiDien" => $file_name,
                         "NoiDung" => $post_content,
                         "ID_TheLoai" => $theloai,
-                        "ID_LoaiTin" => $loaitin
+                        "ID_LoaiTin" => $loaitin,
+                        "ID_TaiKhoan" => $author
                     );
                     $this->post_model->addData($data_post);
                     $data["message"] = "Thêm bài viết thành công";
@@ -94,7 +96,7 @@
             }
         }
 
-        public function test() {
+        public function getpostlist() {
             $result = $this->post_model->postList();
             echo $result;
         }

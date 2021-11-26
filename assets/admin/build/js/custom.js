@@ -335,7 +335,7 @@ function init_flot_chart() {
 
     if (typeof ($.plot) === 'undefined') { return; }
 
-    console.log('init_flot_chart');
+    // console.log('init_flot_chart');
     var randNum = function () {
         return (Math.floor(Math.random() * (1 + 40 - 20))) + 20;
     };
@@ -542,14 +542,14 @@ function init_flot_chart() {
 
 
     if ($("#chart_plot_01").length) {
-        console.log('Plot1');
+        // console.log('Plot1');
 
         $.plot($("#chart_plot_01"), [arr_data1, arr_data2], chart_plot_01_settings);
     }
 
 
     if ($("#chart_plot_02").length) {
-        console.log('Plot2');
+        // console.log('Plot2');
 
         $.plot($("#chart_plot_02"),
             [{
@@ -566,7 +566,7 @@ function init_flot_chart() {
     }
 
     if ($("#chart_plot_03").length) {
-        console.log('Plot3');
+        // console.log('Plot3');
 
 
         $.plot($("#chart_plot_03"), [{
@@ -590,7 +590,7 @@ function init_flot_chart() {
 function init_starrr() {
 
     if (typeof (starrr) === 'undefined') { return; }
-    console.log('init_starrr');
+    // console.log('init_starrr');
 
     $(".stars").starrr();
 
@@ -615,7 +615,7 @@ function init_JQVmap() {
 
     if (typeof (jQuery.fn.vectorMap) === 'undefined') { return; }
 
-    console.log('init_JQVmap');
+    // console.log('init_JQVmap');
 
     if ($('#world-map-gdp').length) {
 
@@ -657,7 +657,7 @@ function init_JQVmap() {
 function init_skycons() {
 
     if (typeof (Skycons) === 'undefined') { return; }
-    console.log('init_skycons');
+    // console.log('init_skycons');
 
     var icons = new Skycons({
         "color": "#73879C"
@@ -681,7 +681,7 @@ function init_chart_doughnut() {
 
     if (typeof (Chart) === 'undefined') { return; }
 
-    console.log('init_chart_doughnut');
+    // console.log('init_chart_doughnut');
 
     if ($('.canvasDoughnut').length) {
 
@@ -737,7 +737,7 @@ function init_gauge() {
 
     console.log('init_gauge [' + $('.gauge-chart').length + ']');
 
-    console.log('init_gauge');
+    // console.log('init_gauge');
 
 
     var chart_gauge_settings = {
@@ -952,7 +952,7 @@ function init_autosize() {
 function init_parsley() {
 
     if (typeof (parsley) === 'undefined') { return; }
-    console.log('init_parsley');
+    // console.log('init_parsley');
 
     $/*.listen*/('parsley:field:validate', function () {
         validateFront();
@@ -1027,7 +1027,7 @@ function init_TagsInput() {
 function init_select2() {
 
     if (typeof (select2) === 'undefined') { return; }
-    console.log('init_toolbox');
+    // console.log('init_toolbox');
 
     $(".select2_single").select2({
         placeholder: "Select a state",
@@ -1047,7 +1047,7 @@ function init_select2() {
 function init_wysiwyg() {
 
     if (typeof ($.fn.wysiwyg) === 'undefined') { return; }
-    console.log('init_wysiwyg');
+    // console.log('init_wysiwyg');
 
     function init_ToolbarBootstrapBindings() {
         var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
@@ -1122,7 +1122,7 @@ function init_cropper() {
 
 
     if (typeof ($.fn.cropper) === 'undefined') { return; }
-    console.log('init_cropper');
+    // console.log('init_cropper');
 
     var $image = $('#image');
     var $download = $('#download');
@@ -1356,7 +1356,7 @@ function init_cropper() {
 function init_knob() {
 
     if (typeof ($.fn.knob) === 'undefined') { return; }
-    console.log('init_knob');
+    // console.log('init_knob');
 
     $(".knob").knob({
         change: function (value) {
@@ -1462,7 +1462,7 @@ function init_knob() {
 function init_InputMask() {
 
     if (typeof ($.fn.inputmask) === 'undefined') { return; }
-    console.log('init_InputMask');
+    // console.log('init_InputMask');
 
     $(":input").inputmask();
 
@@ -1473,7 +1473,7 @@ function init_InputMask() {
 function init_ColorPicker() {
 
     if (typeof ($.fn.colorpicker) === 'undefined') { return; }
-    console.log('init_ColorPicker');
+    // console.log('init_ColorPicker');
 
     $('.demo1').colorpicker();
     $('.demo2').colorpicker();
@@ -1497,7 +1497,7 @@ function init_ColorPicker() {
 function init_IonRangeSlider() {
 
     if (typeof ($.fn.ionRangeSlider) === 'undefined') { return; }
-    console.log('init_IonRangeSlider');
+    // console.log('init_IonRangeSlider');
 
     $("#range_27").ionRangeSlider({
         type: "double",
@@ -1568,7 +1568,7 @@ function init_IonRangeSlider() {
 function init_daterangepicker() {
 
     if (typeof ($.fn.daterangepicker) === 'undefined') { return; }
-    console.log('init_daterangepicker');
+    // console.log('init_daterangepicker');
 
     var cb = function (start, end, label) {
         console.log(start.toISOString(), end.toISOString(), label);
@@ -1723,7 +1723,7 @@ function init_daterangepicker_right() {
 function init_daterangepicker_single_call() {
 
     if (typeof ($.fn.daterangepicker) === 'undefined') { return; }
-    console.log('init_daterangepicker_single_call');
+    // console.log('init_daterangepicker_single_call');
 
     $('#single_cal1').daterangepicker({
         singleDatePicker: true,
@@ -1757,7 +1757,7 @@ function init_daterangepicker_single_call() {
 function init_daterangepicker_reservation() {
 
     if (typeof ($.fn.daterangepicker) === 'undefined') { return; }
-    console.log('init_daterangepicker_reservation');
+    // console.log('init_daterangepicker_reservation');
 
     $('#reservation').daterangepicker(null, function (start, end, label) {
         console.log(start.toISOString(), end.toISOString(), label);
@@ -1778,7 +1778,7 @@ function init_daterangepicker_reservation() {
 function init_SmartWizard() {
 
     if (typeof ($.fn.smartWizard) === 'undefined') { return; }
-    console.log('init_SmartWizard');
+    // console.log('init_SmartWizard');
 
     $('#wizard').smartWizard();
 
@@ -1798,7 +1798,7 @@ function init_SmartWizard() {
 function init_validator() {
 
     if (typeof (validator) === 'undefined') { return; }
-    console.log('init_validator');
+    // console.log('init_validator');
 
     // initialize the validator function
     validator.message.date = 'not a real date';
@@ -1835,7 +1835,7 @@ function init_validator() {
 function init_PNotify() {
 
     if (typeof (PNotify) === 'undefined') { return; }
-    console.log('init_PNotify');
+    // console.log('init_PNotify');
 };
 
 
@@ -1843,10 +1843,10 @@ function init_PNotify() {
 
 function init_CustomNotification() {
 
-    console.log('run_customtabs');
+    // console.log('run_customtabs');
 
     if (typeof (CustomTabs) === 'undefined') { return; }
-    console.log('init_CustomTabs');
+    // console.log('init_CustomTabs');
 
     var cnt = 10;
 
@@ -1901,7 +1901,7 @@ function init_CustomNotification() {
 function init_EasyPieChart() {
 
     if (typeof ($.fn.easyPieChart) === 'undefined') { return; }
-    console.log('init_EasyPieChart');
+    // console.log('init_EasyPieChart');
 
     $('.chart').easyPieChart({
         easing: 'easeOutElastic',
@@ -1958,11 +1958,11 @@ function init_EasyPieChart() {
 
 function init_charts() {
 
-    console.log('run_charts  typeof [' + typeof (Chart) + ']');
+    // console.log('run_charts  typeof [' + typeof (Chart) + ']');
 
     if (typeof (Chart) === 'undefined') { return; }
 
-    console.log('init_charts');
+    // console.log('init_charts');
 
 
     Chart.defaults.global.legend = {
@@ -2364,7 +2364,7 @@ function init_charts() {
 function init_compose() {
 
     if (typeof ($.fn.slideToggle) === 'undefined') { return; }
-    console.log('init_compose');
+    // console.log('init_compose');
 
     $('#compose, .compose-close').click(function () {
         $('.compose').slideToggle();
@@ -2377,7 +2377,7 @@ function init_compose() {
 function init_calendar() {
 
     if (typeof ($.fn.fullCalendar) === 'undefined') { return; }
-    console.log('init_calendar');
+    // console.log('init_calendar');
 
     var date = new Date(),
         d = date.getDate(),
@@ -2479,10 +2479,10 @@ function init_calendar() {
 
 function init_DataTables() {
 
-    console.log('run_datatables');
+    // console.log('run_datatables');
 
     if (typeof ($.fn.DataTable) === 'undefined') { return; }
-    console.log('init_DataTables');
+    // console.log('init_DataTables');
 
     var handleDataTableButtons = function () {
         if ($("#datatable-buttons").length) {
@@ -2567,7 +2567,7 @@ function init_DataTables() {
 function init_morris_charts() {
 
     if (typeof (Morris) === 'undefined') { return; }
-    console.log('init_morris_charts');
+    // console.log('init_morris_charts');
 
     if ($('#graph_bar').length) {
 
@@ -2727,7 +2727,7 @@ function init_morris_charts() {
 function init_echarts() {
 
     if (typeof (echarts) === 'undefined') { return; }
-    console.log('init_echarts');
+    // console.log('init_echarts');
 
 
     var theme = {

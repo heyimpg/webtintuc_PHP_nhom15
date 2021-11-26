@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
-            <h4 id="display_message"><?php if(isset($data["message"])) { echo $data["message"];} ?></h4>
+            <h6 id="display_message" class="text-danger"><?php if(isset($data["message"])) { echo $data["message"];} ?></h6>
             <div class="x_panel">
                 <h2>Đăng bài viết</h2>
                 <div class="x_title"></div>
@@ -10,6 +10,7 @@
                     <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post"
                         enctype="multipart/form-data" action="admin/post/add">
+                        <input type="text" hidden name="author" value="<?= $_SESSION["ID_TaiKhoan"] ?>">
                         <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align" for="post_tile">Tiêu đề bài
                                 viết
@@ -88,7 +89,7 @@
                         <div class="form-group row">
                             <div class="col-md-9 col-sm-9 offset-md-3">
                                 <button type="submit" name="submit" class="btn btn-success">Đăng bài viết</button>
-                                <button type="button" class="btn btn-primary">Hủy bỏ</button>
+                                <a class="btn btn-danger" href="admin/post/">Hủy bỏ</a>
                             </div>
                         </div>
                     </form>
@@ -100,6 +101,5 @@
 
 <script src="assets/admin/ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace("post_content_editor");
-    $("#display_message").hide(3000);
+    CKEDITOR.replace("post_content_editor", {removePlugins: 'exportpdf'});
 </script>
