@@ -82,13 +82,14 @@
                     }
 
                     if($this->account->findUserByUserName($data["TenTaiKhoan_DK"])) {
-                        $this->redirect->flash("dang-ki", "Người dùng đã tồn tại");
-                        $this->redirect->redirect(BASE_URL."admin/#signup");
+                        $this->redirect->flash("dang-ki", "Tên người dùng đã tồn tại. Vui lòng đăng kí tên tài khoản khác.");
+                        $this->redirect->redirect(BASE_URL."admin/#signin");
                     }
 
                     $data["MatKhau_DK"] = password_hash($data["MatKhau_DK"], PASSWORD_DEFAULT);
 
                     if($this->account->sign_up($data["TenTaiKhoan_DK"], $data["MatKhau_DK"])) {
+                        $this->redirect->flash("dang-ki", "Đăng kí tài khoản thành công", "text-success");
                         $this->redirect->redirect(BASE_URL."admin/#signin");
                     }
                     else {

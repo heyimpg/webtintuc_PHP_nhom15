@@ -103,7 +103,6 @@
                     $sql .= "offset $offset";
                 }
             }
-           
             return $sql;
         }
 

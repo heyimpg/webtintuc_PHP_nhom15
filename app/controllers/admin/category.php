@@ -75,6 +75,18 @@
                 ]);
             }
         }
+
+        public function edit($id) {
+            // $datas = $this->category_model->getData("*", ["id" => $id]);
+            $categories = $this->category_model->executeAddQuery();
+            $data = [
+                "page" => "$this->template/edit",
+                "title" => "Cập nhật $this->title",
+                "template" => $this->template,
+                "categories" => $categories
+            ];
+            $this->view("adminlayout", $data);
+        }
     }
 
 ?>

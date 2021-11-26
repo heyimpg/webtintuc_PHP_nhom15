@@ -2,7 +2,6 @@
     <div class="page-title">
         <div class="title_left">
             <h3><?= $data["title"] ?? null ?></h3>
-            <a href="<?php if(isset($data)) { echo "{$data['template']}/index"; }?>" class="btn btn-primary">Trở về</a>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -35,7 +34,8 @@
                         <input type="checkbox" checked name="data_post[HienThi]" id="publish">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary" name="submit">Thêm mới</button>
+                        <button class="btn btn-primary" name="submit">Cập nhật</button>
+                        <a class="btn btn-info" href="<?= BASE_URL.$data["template"]."/index" ?>">Trở lại</a>
                     </div>
                 </div>
             </div>
