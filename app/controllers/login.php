@@ -28,6 +28,12 @@
             $username = $data_array[0];
             $password = $data_array[1];
             $re_password = $data_array[2];
+            if(empty($username) || empty($password) || empty($re_password)
+                || strlen($username) < 3 || strlen($password) < 6 || strlen($re_password) < 6)
+            {
+                echo json_encode(array("statusCode"=>400));
+                return;
+            }
             //Mk không khớp nhau
             if ($password != $re_password)
             {
@@ -41,7 +47,7 @@
             elseif ($result == -1)  //Trùng tài khoản
                 echo json_encode(array("statusCode"=>409));
             else    //Lỗi phát sinh
-                echo json_encode(array("statusCode"=>400));
+                echo json_encode(array("statusCode"=>404));
         }
 
         public function logout() {

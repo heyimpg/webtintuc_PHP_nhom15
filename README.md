@@ -39,6 +39,7 @@ Công việc đã làm:
     + Show like, comment của các bài viết khác ra
     + Phần like bài viết
     + Làm event nút like nè (ajax)
+    + Thêm validate be cho form login
 
 Công việc cần làm:  
     + Phân trang cho việc comment (ajax)
