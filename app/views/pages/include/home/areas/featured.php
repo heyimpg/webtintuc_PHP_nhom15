@@ -7,7 +7,7 @@
         ?>
             <div class="single-blog-post featured-post">
                 <div class="post-thumb">
-                    <a href="<?= DETAIL_URL . $first_post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $first_post['AnhDaiDien'] ?>" alt=""></a>
+                    <a href="<?= DETAIL_URL . $first_post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $first_post['AnhDaiDien'] ?>" alt="" style="width: 100%; height: 275px;"></a>
                 </div>
                 <div class="post-data">
                     <a href="<?= CATEGORY_URL . $first_post["ID_TheLoai"] ?>" class="post-catagory"><?= $first_post['TenTheLoai'] ?></a>
@@ -45,7 +45,7 @@
         ?>
                     <div class="single-blog-post featured-post-2">
                         <div class="post-thumb">
-                            <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post['AnhDaiDien'] ?>" alt=""></a>
+                            <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post['AnhDaiDien'] ?>" alt="" style="max-height: 160px; width: 100%"></a>
                         </div>
                         <div class="post-data">
                             <a href="<?= CATEGORY_URL.$post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>

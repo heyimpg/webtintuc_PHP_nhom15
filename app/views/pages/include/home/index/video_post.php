@@ -7,7 +7,7 @@
                     <img src="./assets/img/bg-img/video1.jpg" alt="">
                     <!-- Video Button -->
                     <div class="videobtn">
-                        <a href="https://www.youtube.com/watch?v=5BQr-j3BBzU" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/watch?v=bzl1zB3Bx6M" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                     <img src="./assets/img/bg-img/video2.jpg" alt="">
                     <!-- Video Button -->
                     <div class="videobtn">
-                        <a href="https://www.youtube.com/watch?v=5BQr-j3BBzU" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/watch?v=hVTXu8SgVyE" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <img src="./assets/img/bg-img/video3.jpg" alt="">
                     <!-- Video Button -->
                     <div class="videobtn">
-                        <a href="https://www.youtube.com/watch?v=5BQr-j3BBzU" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/watch?v=ON49ad0ie-k" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
