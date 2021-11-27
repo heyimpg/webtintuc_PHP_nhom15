@@ -17,7 +17,8 @@ class navigation extends Controller
     public function getSubMenu() {
         $this->categoryModel->setupSecondTable("chitiettheloai", "ID_TheLoai");
         $sub_menu = $this->categoryModel->getAllDatafromMultiTable(
-            $this->categoryModel->getTable().".ID_TheLoai,ID_CTTheLoai, TenCTTheLoai"
+            $this->categoryModel->getTable().".ID_TheLoai,ID_CTTheLoai, TenCTTheLoai",
+            NULL, NULL, true, 10
         );
         return $sub_menu;
     }
