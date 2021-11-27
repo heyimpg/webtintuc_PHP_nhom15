@@ -16,7 +16,7 @@ foreach ($data['category_post_2'] as $key => $post) {
             </a>
             <div class="post-meta">
                 <p class="post-author">Tác giả: <a href="#"><?= $post["TacGia"] ?></a></p>
-                <p class="post-excerp"><?= $post["GioiThieu"] ?></p>
+                <p class="post-excerp"><?= $post["GioiThieu"] ?>...</p>
                 <!-- Post Like & Post Comment -->
                 <div class="d-flex align-items-center">
                     <?php

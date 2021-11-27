@@ -24,7 +24,7 @@
                                 </a>
                                 <div class="post-meta">
                                     <p class="post-author">Tác giả: <a href="#"><?= $post["TacGia"] ?></a></p>
-                                    <p><?= $post["GioiThieu"] ?></p>
+                                    <p><?= $post["GioiThieu"] ?>...</p>
                                     <p><?= $post["NoiDung"] ?></p>
                                 </div>
                                 <div id="like_comment_field" class="newspaper-post-like d-flex align-items-center" style="padding-top: 100px;">
