@@ -27,7 +27,7 @@
                                     <p><?= $post["GioiThieu"] ?>...</p>
                                     <p><?= $post["NoiDung"] ?></p>
                                 </div>
-                                <div id="like_comment_field" class="newspaper-post-like d-flex align-items-center" style="padding-top: 100px;">
+                                <div id="like_comment_field" class="newspaper-post-like d-flex align-items-center">
                                         <!-- Post Like & Post Comment -->
                                 </div>
                             </div>

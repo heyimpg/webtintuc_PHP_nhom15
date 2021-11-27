@@ -40,14 +40,17 @@ class detail extends Controller
             [$this->postModel->getTable() . ".ID_TheLoai" => $detail_post['ID_TheLoai']]
         );
         
-        
         //get author - post detail 
         $this->postModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
         $author = $this->postModel->getDatafromMultiTable(
             "TaiKhoan",
             [$this->postModel->getTable() . ".ID_TaiKhoan" => $detail_post['ID_TaiKhoan']]
         );
-        $detail_post['TacGia'] = $author['TaiKhoan'];
+        if(isset($author['TaiKhoan']))
+            $detail_post['TacGia'] = $author['TaiKhoan'];
+            else
+            $detail_post['TacGia'] = 'non-author';
+
         //add new comment
         if(isset($_POST['submit_comment'])) {
             $content = $_POST['content'];
