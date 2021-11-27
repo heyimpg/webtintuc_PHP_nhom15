@@ -7,7 +7,7 @@ foreach ($data['category_post_2'] as $key => $post) {
     <!-- Single Featured Post -->
     <div class="single-blog-post featured-post mb-30">
         <div class="post-thumb">
-            <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+            <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" style="width: 100%; height: 400px;" alt=""></a>
         </div>
         <div class="post-data">
             <a href="<?= $URL . $post[$ID_TheLoai] ?>" class="post-catagory"><?= $post[$TenCTTheLoai] ?></a>
@@ -16,7 +16,7 @@ foreach ($data['category_post_2'] as $key => $post) {
             </a>
             <div class="post-meta">
                 <p class="post-author">Tác giả: <a href="#"><?= $post["TacGia"] ?></a></p>
-                <p class="post-excerp"><?= $post["GioiThieu"] ?></p>
+                <p class="post-excerp"><?= $post["GioiThieu"] ?>...</p>
                 <!-- Post Like & Post Comment -->
                 <div class="d-flex align-items-center">
                     <?php

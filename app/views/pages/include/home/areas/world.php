@@ -9,7 +9,7 @@ if (isset($data)) {
             </div>
             <div class="post-data">
                 <a href="<?= DETAIL_URL.$post["ID_BaiViet"] ?>" class="post-title">
-                    <h6><?= $post["GioiThieu"] ?></h6>
+                    <h6><?= $post["TieuDe"] ?></h6>
                 </a>
                 <div class="post-meta">
                     <div class="post-date"><a href="#"><?= $post["NgayDang"] ?></a></div>

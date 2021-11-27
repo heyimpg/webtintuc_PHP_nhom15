@@ -19,11 +19,12 @@
             );
             $category_post = $this->postModel->getAllDatafromMultiTable(
                 $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, NgayDang",
-                [$this->postModel->getTable().".ID_TheLoai"=>2]
+                [$this->postModel->getTable().".ID_TheLoai"=>2], 
+                null, null, 6
             );
             //Latest
             $latest_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu, SoLuotThich",
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu, SoLuotThich, TieuDe",
                 NULL, "NgayDang",false
             );
             $popular_post = $this->postModel->getAllData(
@@ -32,11 +33,11 @@
             );
             //Other
             $editor_pick_post = $this->postModel->getAllData(
-                "ID_BaiViet, AnhDaiDien, GioiThieu, NgayDang",["ID_LoaiTin"=>3],
+                "ID_BaiViet, AnhDaiDien, GioiThieu, NgayDang, TieuDe",["ID_LoaiTin"=>3],
                 "NgayDang", false, 6
             );
             $world_post = $this->postModel->getAllData(
-                "ID_BaiViet, AnhDaiDien, GioiThieu, NgayDang",["ID_LoaiTin"=>4],
+                "ID_BaiViet, AnhDaiDien, GioiThieu, NgayDang, TieuDe",["ID_LoaiTin"=>4],
                 "NgayDang", false
             );
 

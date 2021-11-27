@@ -15,7 +15,7 @@
                         <!-- Single Featured Post -->
                         <div class="single-blog-post featured-post single-post">
                             <div class="post-thumb">
-                                <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+                                <a href="#"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" style="width: 100%; height: 400px;" alt=""></a>
                             </div>
                             <div class="post-data">
                                 <a href="<?= CATEGORY_URL . $post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
@@ -24,24 +24,26 @@
                                 </a>
                                 <div class="post-meta">
                                     <p class="post-author">Tác giả: <a href="#"><?= $post["TacGia"] ?></a></p>
-                                    <p><?= $post["GioiThieu"] ?></p>
+                                    <p><?= $post["GioiThieu"] ?>...</p>
                                     <p><?= $post["NoiDung"] ?></p>
-                                    <div id="like_comment_field" class="newspaper-post-like d-flex align-items-center justify-content-end" style="padding-top: 100px">
-                                        <!-- Post Like & Post Comment -->
-                                        <a href="#" class="post-like" id="like_icon"><i class="fa fa-thumbs-o-up" style="font-size: 25px"></i><span id="like_number"><?= $data['detail_post']['SoLuotThich'] ?></span></a>
-                                        <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>#comment_field" class="post-comment"><i class="fa fa-comment-o" style="font-size: 25px"></i> <span><?= count($data['comments']) ?></span></a>
-                                    </div>
                                 </div>
+                                <div id="like_comment_field" class="newspaper-post-like d-flex align-items-center" style="padding-top: 100px;">
+                                        <!-- Post Like & Post Comment -->
+                                </div>
+                            </div>
+                            <div class="justify-content-end" style="display: flex; gap: 15px">
+                                <a href="#" class="post-like" id="like_icon"><i class="fa fa-thumbs-o-up" style="font-size: 25px"></i><span id="like_number"><?= $data['detail_post']['SoLuotThich'] ?></span></a>
+                                <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>#comment_field" class="post-comment"><i class="fa fa-comment-o" style="font-size: 25px"></i> <span><?= count($data['comments']) ?></span></a>
                             </div>
                         </div>
                     <?php } ?>
 
                     <div class="pager d-flex align-items-center justify-content-between">
                         <div class="prev">
-                            <a href="#" class="active"><i class="fa fa-angle-left"></i> Trước</a>
+                            <a href="<?= DETAIL_URL . ((string)intval($data["ID_BaiViet"])-1) ?>" class="active"><i class="fa fa-angle-left"></i> Trước</a>
                         </div>
                         <div class="next">
-                            <a href="#">Tiếp <i class="fa fa-angle-right"></i></a>
+                            <a href="<?= DETAIL_URL . ((string)intval($data["ID_BaiViet"])+1) ?>">Tiếp <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
 
@@ -57,7 +59,7 @@
                             <div class="col-12 col-md-6">
                                 <div class="single-blog-post style-3 mb-80">
                                     <div class="post-thumb">
-                                        <a href="<?= DETAIL_URL . $post["ID_BaiViet"] ?>"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" alt=""></a>
+                                        <a href="DETAIL_URL"><img src="./assets/img/bg-img/<?= $post["AnhDaiDien"] ?>" style="width: 100%;  height: 200px" alt=""></a>
                                     </div>
                                     <div class="post-data">
                                         <a href="<?= CATEGORY_URL . $post["ID_TheLoai"] ?>" class="post-catagory"><?= $post['TenTheLoai'] ?></a>
