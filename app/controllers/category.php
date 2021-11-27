@@ -75,7 +75,10 @@ class category extends Controller
                 "TaiKhoan",
                 [$this->postModel->getTable() . ".ID_TaiKhoan" => $category_post_2[$i]['ID_TaiKhoan']]
             );
-            $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
+            if(isset($author['TaiKhoan']))
+                $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
+            else
+                $category_post_2[$i]['TacGia'] = 'non-author';
         }
 
         $this->postModel->closeConnection();

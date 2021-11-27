@@ -28,9 +28,9 @@
                 }
             }
             $password_encode = password_hash($passWord, PASSWORD_DEFAULT); 
-            $query = "INSERT INTO $this->table(TaiKhoan, MatKhau) VALUES(?,?)";
+            $query = "INSERT INTO $this->table(TaiKhoan, MatKhau, ID_ChucDanh) VALUES(?,?,?)";
             $result = $this->conn->prepare($query);
-            $result->execute([$userName,$password_encode]);
+            $result->execute([$userName, $password_encode, 2]);
             return $result->rowCount();
         }
     }
