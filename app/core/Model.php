@@ -208,13 +208,13 @@
             if ($query->execute($values_where)) {
                 return json_encode(array(
                     "type" => "success",
-                    "message" => "delete data successfully",
+                    "message" => "Xóa dữ liệu thành công",
                 ));
             }
             else {
                 return json_encode(array(
                     "type" => "failure",
-                    "message" => "delete data unsuccessfully",
+                    "message" => "Xóa dữ liệu thất bại",
                 ));
             }
         }

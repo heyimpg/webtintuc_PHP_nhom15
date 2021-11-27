@@ -64,7 +64,7 @@
 <script src="assets/admin/ckeditor/ckeditor.js"></script>
 <script>
     $(document).ready(function () {
-        $("#datatable").DataTable({
+        let postData = $("#datatable").DataTable({
             "language": {
                 "processing": "Đang xử lý...",
                 "infoFiltered": "(được lọc từ _MAX_ mục)",
@@ -256,7 +256,46 @@
                     CKEDITOR.instances["post_content_editor"].setData(response.NoiDung);
                 }
             });
-        });		
+        });
+        $("#datatable").on('click', '.delete', function(){
+            let postId = $(this).attr("id");
+            Swal.fire({
+                title: 'Bạn có chắc chắn muốn xóa?',
+                text: "Bạn sẽ không thể hoàn tác!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Đồng ý',
+                cancelButtonText: 'Hủy bỏ'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url:"<?= BASE_URL."admin/post/delete"?>",
+                        dataType: "json",
+                        method: "post",
+                        data: {postId:postId},
+                        success: function(response) {
+                            if(response.type === "success") {
+                                Swal.fire({
+                                    icon:'success',
+                                    title: 'Đã xóa!',
+                                    text: 'Xóa thành công bài viết.'
+                                });
+                                postData.ajax.reload();
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Xóa thất bại',
+                                    text: 'Đã có lỗi xảy ra!'
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
     });
     CKEDITOR.replace("post_content_editor", {removePlugins: "exportpdf"});
 </script>

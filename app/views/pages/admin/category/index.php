@@ -35,7 +35,7 @@
                                 <td>
                                     <input type="checkbox" class="flat" <?php if($category["HienThiCha"] == 1) {echo "checked";}?>/>
                                 </td>
-                                <td class="align-middle"><?= $category["NgayKhoiTao"] ?></td>
+                                <td class="align-middle"><?php $date = new DateTime($category["NgayKhoiTao"]); $parentDate = $date->format("d/m/Y"); echo $parentDate;?></td>
                                 <td class=" last">
                                     <a href="<?= BASE_URL.$data['template']."/edit/".$category['ID_CTTheLoai']?>" class="btn btn-success">Sửa</a>
                                     <a id="del_tl_<?= $category['ID_TheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_TheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
@@ -52,7 +52,7 @@
                                 <td>
                                     <input type="checkbox" class="flat" <?php if($category["HienThiCon"] == 1) {echo "checked";}?>/>
                                 </td>
-                                <td class="align-middle"><?= $category["NgayTao"] ?></td>
+                                <td class="align-middle"><?php $date = new DateTime($category["NgayTao"]); $childDate = $date->format("d/m/Y"); echo $childDate;?></td>
                                 <td class=" last">
                                     <a href="<?= BASE_URL.$data['template']."/edit/".$category['ID_CTTheLoai']?>" class="btn btn-success">Sửa</a>
                                     <a id="del_cttl_<?= $category['ID_CTTheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_CTTheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>

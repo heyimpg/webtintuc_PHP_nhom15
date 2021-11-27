@@ -107,7 +107,20 @@
                 echo json_encode($allPost);
             }
             else {
-                echo json_encode("Cap Nhat Bai Viet");
+                echo json_encode([
+                    "type" => false, 
+                    "message" => "Cập nhật bài viết thất bại"
+                ]);
+            }
+        }
+
+        public function delete() {
+            if(isset($_POST)) {
+                $result = $this->post_model->deleteData(["ID_BaiViet" => $_POST["postId"]]);
+                echo $result;
+            }
+            else {
+                echo json_encode("Đã có lỗi xảy ra");
             }
         }
     }
