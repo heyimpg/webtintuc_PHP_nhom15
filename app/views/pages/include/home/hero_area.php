@@ -9,9 +9,9 @@
                     </div>
                     <div id="breakingNewsTicker" class="ticker">
                         <ul>
-                            <li><a href="#">Vụ ám sát tổng thống dẫn tới thành lập mật vụ Mỹ</a></li>
-                            <li><a href="#">Thống đốc bị tát trong lễ nhậm chức</a></li>
-                            <li><a href="#">Sáu tướng Cảnh sát biển bị cách chức, xóa tư cách</a></li>
+                            <li><a href="<?=BASE_URL?>detail/110">Biden muộn họp báo G20 vì 'chuyện dài với thang má</a></li>
+                            <li><a href="<?=BASE_URL?>detail/115">Con trai 'Bầu Hiển' làm Phó tổng giám đốc SHB</a></li>
+                            <li><a href="<?=BASE_URL?>detail/112">Mũ quan triều Nguyễn thắng đấu giá 600.000 euro</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,8 +34,7 @@
             <!-- Hero Add -->
             <div class="col-12 col-lg-4">
                 <div class="hero-add">
-                    <!-- <a href="#"><img src="./assets/img/bg-img/hero-add.gif" alt=""></a> -->
-                    <a href="#"><img src="./assets/img/core-img/newspaper.jpg" alt="" style="height: 130px; width: 400px;"></a>
+                    <a href="#"><img src="./assets/img/core-img/newspaper.jpg" alt="" style="height: 130px; width: 100%;"></a>
                 </div>
             </div>
         </div>

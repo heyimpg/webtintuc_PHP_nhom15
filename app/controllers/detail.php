@@ -20,6 +20,10 @@ class detail extends Controller
             $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan, SoLuotThich",
             ["ID_BaiViet" => $ID_BaiViet]
         );
+        if(!$detail_post) {
+            header("location:".BASE_URL);
+        }
+            
         $category_post = $this->postModel->getAllDatafromMultiTable(
             $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, NgayDang",
             [$this->postModel->getTable() . ".ID_TheLoai" => 2]
@@ -82,7 +86,8 @@ class detail extends Controller
             "category_post" => $category_post,
             "popular_post" => $popular_post,
             "relative_post" => $relative_post,
-            "comments" => $comments
+            "comments" => $comments,
+            "ID_BaiViet" => $ID_BaiViet
         ];
         $this->view("layout", $data);
     }
