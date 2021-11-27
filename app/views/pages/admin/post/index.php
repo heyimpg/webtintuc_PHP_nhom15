@@ -24,7 +24,7 @@
     </div>
 </div>
 <div id="postModal" class="modal fade">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <form method="post" id="postForm" enctype="multipart/form-data">
             <div class="modal-content">
                 <div class="modal-header">
@@ -32,34 +32,30 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group" <label for="postTitle" class="control-label">Tiêu đề bài viết</label>
+                    <div class="form-group"> 
+                        <label for="postTitle" class="control-label">Tiêu đề bài viết *</label>
                         <input type="text" class="form-control" id="postTitle" name="post_title" required>
                     </div>
                     <div class="form-group">
-                        <label for="lastname" class="control-label">Nội dung tóm tắt*</label>
+                        <label for="lastname" class="control-label">Nội dung tóm tắt *</label>
                         <textarea id="post_short_content" class="form-control" required="required"
                                     style="resize: none;" name="post_short_content"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="post_thumbnail" class="control-label">Ảnh đại diện *</label>
-                        <input id="post_thumbnail" type="file" required="required" name="upload_file">
+                        <input class="col-9" id="post_thumbnail" type="file" required="required" name="upload_file">
                     </div>
                     <div class="form-group">
                         <label for="post_content_editor" class="control-label">Nội dung *</label>
                         <textarea id="post_content_editor" class="form-control" required="required"
                                     style="resize: none;" name="post_content"></textarea>
                     </div>
-                    <div class="form-group">
-                        <select name="" id="">
-                            <option value=""></option>
-                        </select>
-                    </div>
                 </div>
                 <div class="modal-footer">
-                    <input type="hidden" name="empId" id="empId" />
+                    <input type="hidden" name="postId" id="postId" />
                     <input type="hidden" name="action" id="action" value="" />
                     <input type="submit" name="save" id="save" class="btn btn-info" value="Lưu" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
                 </div>
             </div>
         </form>
@@ -240,13 +236,27 @@
                 'orderable': true
             }]
         });
-        $('#datatable').on("click", ".update", function(){
-            $('#postModal').modal('show');
+        $("#datatable").on("click", ".update", function(){
             // $('#employeeForm')[0].reset();
             // $('.modal-title').html("<i class='fa fa-plus'></i> Add Employee");
             // $('#action').val('addEmployee');
             // $('#save').val('Add');
+            $("#postModal").modal("show");
+            // lay ra id cua bai viet
+            let postId = $(this).attr("id");
+            $.ajax({
+                "url": "<?= BASE_URL."admin/post/update"?>",
+                "type": "post",
+                "dataType": "json",
+                "data": {postId: postId},
+                "success": function(response) {
+                    console.log(response.NoiDung);
+                    $("#postForm #postTitle").val(response.TieuDe);
+                    $("#postForm #post_short_content").val(response.GioiThieu);
+                    CKEDITOR.instances["post_content_editor"].setData(response.NoiDung);
+                }
+            });
         });		
     });
-    CKEDITOR.replace('post_content_editor', {removePlugins: "exportpdf"});
+    CKEDITOR.replace("post_content_editor", {removePlugins: "exportpdf"});
 </script>
