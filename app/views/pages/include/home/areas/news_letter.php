@@ -5,9 +5,9 @@
         chúng tôi sẽ sớm liên hệ với bạn !</p>
     <!-- <form action="sendEmail" method="post"> -->
     <form action="" method="post" id="form_sendEmail">
-        <input type="text" name="name-send_mail" placeholder="Tên">
-        <input type="number" name="phone-send_mail" placeholder="SDT">
-        <input type="email" name="email-send_mail" placeholder="Email">
+        <input type="text" name="name-send_mail" placeholder="Tên" required maxlength="20">
+        <input type="number" name="phone-send_mail" placeholder="SDT" required maxlength="10">
+        <input type="email" name="email-send_mail" placeholder="Email" required>
         <button type="submit" class="btn w-100">Gửi đi</button>
     </form>
 </div>
