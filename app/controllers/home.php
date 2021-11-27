@@ -20,7 +20,7 @@
             $category_post = $this->postModel->getAllDatafromMultiTable(
                 $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, NgayDang",
                 [$this->postModel->getTable().".ID_TheLoai"=>2], 
-                null, null, 6
+                null, null, 8
             );
             //Latest
             $latest_post = $this->postModel->getAllDatafromMultiTable(
