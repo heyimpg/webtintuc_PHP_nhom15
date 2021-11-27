@@ -35,7 +35,6 @@
                 else {
                     $data_post["TenTheLoai"] = $data_post["TenCTTheLoai"];
                     unset($data_post["TenCTTheLoai"]);
-                    unset($data_post["URL"]);
                     $data_post["HienThiCha"] = $publish;
                     $data_post["NgayKhoiTao"] = gmdate("Y-m-d H:i:s", time() + 7*3600);
                     $result = $this->category_model->addData($data_post);

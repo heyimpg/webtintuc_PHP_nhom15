@@ -13,7 +13,6 @@
                     <div class="form-group">
                         <label for="name">Tên danh mục*</label>
                         <input type="text" onkeyup="removeAccents(this)" class="form-control" name="data_post[TenCTTheLoai]" id="name">
-                        <input hidden type="text" name="data_post[URL]" id="slug">
                     </div>
                     <div class="form-group">
                         <label for="parent_category">Danh mục cha</label>
