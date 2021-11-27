@@ -4,13 +4,22 @@
         protected String $table = "baiviet";
 
         public function postList(){		
-            $sqlQuery = "select baiviet.ID_BaiViet, baiviet.TieuDe, baiviet.NgayDang, baiviet.SoLuotThich, theloai.TenTheLoai from ".$this->table." inner join theloai on baiviet.ID_TheLoai = theloai.ID_TheLoai ";
+            $sqlQuery = "select baiviet.TieuDe, theloai.TenTheLoai, baiviet.NgayDang, baiviet.SoLuotThich, baiviet.ID_BaiViet from ".$this->table." inner join theloai on baiviet.ID_TheLoai = theloai.ID_TheLoai ";
             if(!empty($_POST["search"]["value"])){
                 $sqlQuery .= 'where (ID_BaiViet LIKE "%'.$_POST["search"]["value"].'%" ';
                 $sqlQuery .= ' OR TieuDe LIKE "%'.$_POST["search"]["value"].'%" ';			
                 $sqlQuery .= ' OR AnhDaiDien LIKE "%'.$_POST["search"]["value"].'%" ';
                 $sqlQuery .= ' OR baiviet.ID_TheLoai LIKE "%'.$_POST["search"]["value"].'%" ';
                 $sqlQuery .= ' OR SoLuotThich LIKE "%'.$_POST["search"]["value"].'%") ';
+            }
+            if(!empty($_POST["order"])){
+                $columnNum = (int)$_POST['order']['0']['column'] + 1;
+                $sqlQuery .= 'order by '.$columnNum.' '.$_POST['order']['0']['dir'].' ';
+            }else {
+                $sqlQuery .= 'order by ID_BaiViet asc ';
+            }
+            if($_POST["length"] != -1){
+                $sqlQuery .= 'limit ' . $_POST['start'] . ', ' . $_POST['length'];
             }
             $stmt = $this->conn->prepare($sqlQuery);
             $stmt->execute();
@@ -43,5 +52,7 @@
             );
             echo json_encode($output);
         }
+
+        
     }
 ?>

@@ -101,5 +101,5 @@
 
 <script src="assets/admin/ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace("post_content_editor", {removePlugins: 'exportpdf'});
+    CKEDITOR.replace('post_content_editor', {removePlugins: "exportpdf"});
 </script>

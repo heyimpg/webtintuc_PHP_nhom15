@@ -14,7 +14,7 @@
                                 <th>Thể loại</th>
                                 <th>Ngày đăng</th>
                                 <th>Số lượt thích</th>
-                                <th>Tùy chọn</th>
+                                <th></th>
                             </tr>
                         </thead>
                     </table>
@@ -23,10 +23,48 @@
         </div>
     </div>
 </div>
-
+<div id="postModal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <form method="post" id="postForm" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sửa bài viết</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"> 
+                        <label for="postTitle" class="control-label">Tiêu đề bài viết *</label>
+                        <input type="text" class="form-control" id="postTitle" name="post_title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="control-label">Nội dung tóm tắt *</label>
+                        <textarea id="post_short_content" class="form-control" required="required"
+                                    style="resize: none;" name="post_short_content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="post_thumbnail" class="control-label">Ảnh đại diện *</label>
+                        <input class="col-9" id="post_thumbnail" type="file" required="required" name="upload_file">
+                    </div>
+                    <div class="form-group">
+                        <label for="post_content_editor" class="control-label">Nội dung *</label>
+                        <textarea id="post_content_editor" class="form-control" required="required"
+                                    style="resize: none;" name="post_content"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="postId" id="postId" />
+                    <input type="hidden" name="action" id="action" value="" />
+                    <input type="submit" name="save" id="save" class="btn btn-info" value="Lưu" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="assets/admin/ckeditor/ckeditor.js"></script>
 <script>
     $(document).ready(function () {
-        $("#datatable").DataTable({
+        let postData = $("#datatable").DataTable({
             "language": {
                 "processing": "Đang xử lý...",
                 "infoFiltered": "(được lọc từ _MAX_ mục)",
@@ -169,27 +207,95 @@
                 "zeroRecords": "Không tìm thấy kết quả",
                 "searchPlaceholder": "Tìm kiếm"
             },
-            "bLengthChange": false,
+            "columns": [
+                null,
+                {
+                    "width": "10%"
+                },
+                {
+                    "width": "10%"
+                },
+                {
+                    "width": "10%"
+                },
+                null
+            ],
+            "bLengthChange": true,
             "serverSide": true,
             "processing": true,
+            "order": [],
             "paging": true,
             "pageLength": 10,
             "ajax": {
                 "url": '<?= BASE_URL."admin/post/getpostlist"?>',
                 "type": "post",
-                "dataType":"json"
+                "dataType": "json"
             },
             "columnDefs": [{
                 'target': [0, 6, 7],
                 'orderable': true
-            }],
-            "columns": [
-                null,
-                { "width": "10%" },
-                { "width": "10%" },
-                { "width": "10%" },
-                null
-            ]
+            }]
+        });
+        $("#datatable").on("click", ".update", function(){
+            // $('#employeeForm')[0].reset();
+            // $('.modal-title').html("<i class='fa fa-plus'></i> Add Employee");
+            // $('#action').val('addEmployee');
+            // $('#save').val('Add');
+            $("#postModal").modal("show");
+            // lay ra id cua bai viet
+            let postId = $(this).attr("id");
+            $.ajax({
+                "url": "<?= BASE_URL."admin/post/update"?>",
+                "type": "post",
+                "dataType": "json",
+                "data": {postId: postId},
+                "success": function(response) {
+                    console.log(response.NoiDung);
+                    $("#postForm #postTitle").val(response.TieuDe);
+                    $("#postForm #post_short_content").val(response.GioiThieu);
+                    CKEDITOR.instances["post_content_editor"].setData(response.NoiDung);
+                }
+            });
+        });
+        $("#datatable").on('click', '.delete', function(){
+            let postId = $(this).attr("id");
+            Swal.fire({
+                title: 'Bạn có chắc chắn muốn xóa?',
+                text: "Bạn sẽ không thể hoàn tác!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Đồng ý',
+                cancelButtonText: 'Hủy bỏ'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url:"<?= BASE_URL."admin/post/delete"?>",
+                        dataType: "json",
+                        method: "post",
+                        data: {postId:postId},
+                        success: function(response) {
+                            if(response.type === "success") {
+                                Swal.fire({
+                                    icon:'success',
+                                    title: 'Đã xóa!',
+                                    text: 'Xóa thành công bài viết.'
+                                });
+                                postData.ajax.reload();
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Xóa thất bại',
+                                    text: 'Đã có lỗi xảy ra!'
+                                });
+                            }
+                        }
+                    });
+                }
+            });
         });
     });
+    CKEDITOR.replace("post_content_editor", {removePlugins: "exportpdf"});
 </script>
