@@ -36,22 +36,28 @@
                 $theloai = filter_input(INPUT_POST, 'theloai', FILTER_SANITIZE_STRING);
                 $loaitin = filter_input(INPUT_POST, 'loaitin', FILTER_SANITIZE_STRING);
                 $author = $_POST["author"];
-                // Kiểm tra các trường xem có rỗng hay không
-                if (!empty($post_title) && !empty($post_short_content) && !empty($file_name) && !empty($post_content) && !empty($theloai) && !empty($loaitin) && !strpos($file_name, 'Không thể')) {
-                    $data_post = array(
-                        "TieuDe" => $post_title,
-                        "GioiThieu" => $post_short_content,
-                        "AnhDaiDien" => $file_name,
-                        "NoiDung" => $post_content,
-                        "ID_TheLoai" => $theloai,
-                        "ID_LoaiTin" => $loaitin,
-                        "ID_TaiKhoan" => $author
-                    );
-                    $this->post_model->addData($data_post);
-                    $data["message"] = "Thêm bài viết thành công";
+                // Kiểm tra file tải lên
+                if(strpos($file_name, 'không thể')) {
+                    $data["message"] = $file_name;
                 }
                 else {
-                    $data["message"] = "Bạn chưa điền đầy đủ thông tin bài viết hoặc $file_name";
+                    // Kiểm tra các trường xem có rỗng hay không
+                    if (!empty($post_title) && !empty($post_short_content) && !empty($file_name) && !empty($post_content) && !empty($theloai) && !empty($loaitin)) {
+                        $data_post = array(
+                            "TieuDe" => $post_title,
+                            "GioiThieu" => $post_short_content,
+                            "AnhDaiDien" => $file_name,
+                            "NoiDung" => $post_content,
+                            "ID_TheLoai" => $theloai,
+                            "ID_LoaiTin" => $loaitin,
+                            "ID_TaiKhoan" => $author
+                        );
+                        $this->post_model->addData($data_post);
+                        $data["message"] = "Thêm bài viết thành công";
+                    }
+                    else {
+                        $data["message"] = "Bạn chưa điền đầy đủ thông tin bài viết";
+                    }
                 }
             }
             $this->view("adminlayout", $data);
