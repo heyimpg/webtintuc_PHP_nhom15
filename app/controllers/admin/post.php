@@ -53,6 +53,7 @@
                             "ID_TaiKhoan" => $author
                         );
                         $this->post_model->addData($data_post);
+                        move_uploaded_file($_FILES["upload_file"]["tmp_name"], UPLOAD_FOLDER_PATH.basename($_FILES["upload_file"]["name"]));
                         $data["message"] = "Thêm bài viết thành công";
                     }
                     else {
@@ -93,7 +94,6 @@
                 $flag = false;
             }
             if($flag) {
-                move_uploaded_file($_FILES["upload_file"]["tmp_name"], $file_path);
                 return basename($_FILES["upload_file"]["name"]);
             }
             else {

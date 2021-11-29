@@ -75,8 +75,7 @@
             }
         }
 
-        public function edit($id) {
-            // $datas = $this->category_model->getData("*", ["id" => $id]);
+        public function edit() {
             $categories = $this->category_model->executeAddQuery();
             $data = [
                 "page" => "$this->template/edit",

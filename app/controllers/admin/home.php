@@ -42,15 +42,16 @@
                     }
                     if($this->account->findUserByUserName($data["TenTaiKhoan_DN"])) {
                         $loggedInUser = $this->account->sign_in($data["TenTaiKhoan_DN"], $data["MatKhau_DN"]);
-                        if ($loggedInUser->ID_ChucDanh != 1) {
+                        if ($loggedInUser == -3) {
                             $this->redirect->flash("dang-nhap", "Yêu cầu quyền quản trị viên để đăng nhập vào hệ thống");
+                            $this->redirect->redirect(BASE_URL."admin/#signin");
+                        }
+                        if($loggedInUser == -2) {
+                            $this->redirect->flash("dang-nhap", "Mật khẩu không chính xác");
                             $this->redirect->redirect(BASE_URL."admin/#signin");
                         }
                         if($loggedInUser) {
                             $this->createUserSession($loggedInUser);
-                        } else {
-                            $this->redirect->flash("dang-nhap", "Mật khẩu không chính xác");
-                            $this->redirect->redirect(BASE_URL."admin/#signin");
                         }
                     }
                     else {
