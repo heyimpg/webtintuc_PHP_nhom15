@@ -53,6 +53,7 @@
                             "ID_TaiKhoan" => $author
                         );
                         $this->post_model->addData($data_post);
+                        move_uploaded_file($_FILES["upload_file"]["tmp_name"], UPLOAD_FOLDER_PATH.basename($_FILES["upload_file"]["name"]));
                         $data["message"] = "Thêm bài viết thành công";
                     }
                     else {
@@ -93,7 +94,6 @@
                 $flag = false;
             }
             if($flag) {
-                move_uploaded_file($_FILES["upload_file"]["tmp_name"], $file_path);
                 return basename($_FILES["upload_file"]["name"]);
             }
             else {
@@ -109,8 +109,11 @@
 
         public function update() {
             if(isset($_POST)) {
-                $allPost = $this->post_model->getData("baiviet.TieuDe, baiviet.NgayDang, baiviet.GioiThieu, baiviet.NoiDung, baiviet.ID_TheLoai, baiviet.ID_LoaiTin", ["ID_BaiViet" => $_POST["postId"]], null, true, null);
+                $allPost = $this->post_model->getData("baiviet.TieuDe, baiviet.NgayDang, baiviet.GioiThieu, baiviet.NoiDung, baiviet.ID_BaiViet", ["ID_BaiViet" => $_POST["postId"]], null, true, null);
                 echo json_encode($allPost);
+                if($_POST['empId']) {
+                    $this->post_model->updateData("baiviet.TieuDe, baiviet.GioiThieu");
+                }
             }
             else {
                 echo json_encode([

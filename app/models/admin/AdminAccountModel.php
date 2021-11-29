@@ -5,20 +5,19 @@
 
         public function sign_in($userName, $passWord) {
             $row = $this->findUserByUsername($userName);
-            // Tài khoản đã tồn tại
-            if($row == false) { return false; }
+            // Tài khoản chưa tồn tại trong hệ thống
             $hashedPassword = $row->MatKhau;
+            $role = $row->ID_ChucDanh;
+            if($row == false) { return -1; }
             // Sai mật khẩu
-            if(password_verify($passWord, $hashedPassword)){
-                return $row;
-            }else{
-                return false;
+            else if(!password_verify($passWord, $hashedPassword)){    
+                return -2;
             }
             // Không phải chức danh quản trị viên
-            $role = $row->ID_ChucDanh;
-            if($role != 1) {
-                return false;
-            } else {
+            else if($role != 1) {
+                return -3;
+            }
+            else {
                 return $row;
             }
         }

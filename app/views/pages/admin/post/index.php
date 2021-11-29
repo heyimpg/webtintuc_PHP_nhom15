@@ -237,12 +237,7 @@
             }]
         });
         $("#datatable").on("click", ".update", function(){
-            // $('#employeeForm')[0].reset();
-            // $('.modal-title').html("<i class='fa fa-plus'></i> Add Employee");
-            // $('#action').val('addEmployee');
-            // $('#save').val('Add');
             $("#postModal").modal("show");
-            // lay ra id cua bai viet
             let postId = $(this).attr("id");
             $.ajax({
                 "url": "<?= BASE_URL."admin/post/update"?>",
@@ -250,12 +245,18 @@
                 "dataType": "json",
                 "data": {postId: postId},
                 "success": function(response) {
-                    console.log(response.NoiDung);
                     $("#postForm #postTitle").val(response.TieuDe);
                     $("#postForm #post_short_content").val(response.GioiThieu);
                     CKEDITOR.instances["post_content_editor"].setData(response.NoiDung);
+                    $('#postId').val(response.ID_BaiViet);
                 }
             });
+        });
+        $("#postModal").on("submit", "#postForm", function(event){
+            event.preventDefault();
+            $('#save').attr('disabled','disabled');
+            var formData = $(this).serialize();
+            console.log(formData);
         });
         $("#datatable").on('click', '.delete', function(){
             let postId = $(this).attr("id");

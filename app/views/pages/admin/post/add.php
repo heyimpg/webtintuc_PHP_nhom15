@@ -2,7 +2,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
-            <h6 id="display_message" class="text-danger"><?php if(isset($data["message"])) { echo $data["message"];} ?></h6>
+            <?php 
+                if(isset($data["message"]) && $data["message"] == "Thêm bài viết thành công") { ?>
+                <h6 id="display_message" class="text-success"><?= $data["message"]?></h6>
+            <?php } else if(isset($data["message"])) { ?>
+                <h6 id="display_message" class="text-danger"><?= $data["message"]?></h6>
+            <?php } ?>
             <div class="x_panel">
                 <h2>Đăng bài viết</h2>
                 <div class="x_title"></div>
