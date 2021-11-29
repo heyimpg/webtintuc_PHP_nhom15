@@ -66,14 +66,6 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        public function getAllDatafromThirdTable($data = self::DEFAULT_STR, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
-            $sql = "select $data 
-            from ($this->table inner join $this->second_table on $this->table.$this->foreign_key = $this->second_table.$this->foreign_key)
-                inner join $this->third_table on $this->second_table.$this->foreign_key = $this->third_table.$this->foreign_key
-            ";
-            
-        }
-
         public function queryGetData($sql, $where = NULL, $sort = NULL, $esc = true, $limit = self::DEFAULT_LIMIT, $offset = NULL) {
             if ($where != NULL) {
                 $fields = array_keys($where);

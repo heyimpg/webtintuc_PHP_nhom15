@@ -23,7 +23,9 @@ class category extends Controller
         $allRecord = $this->postModel->getAllDatafromMultiTable(
             "*",
             [$this->postModel->getTable() . ".ID_TheLoai" => $ID_TheLoai],
-            null, null, null
+            null,
+            null,
+            null
         );
         $totalPage = ceil(sizeof($allRecord) / $page_size);
         $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
@@ -46,36 +48,40 @@ class category extends Controller
         );
 
         //get Comment for per post
-            //featured_post
-            $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
-            for ($i=0 ; $i < count($category_post_2); $i++) {
-                $comment = $this->postModel->getAllDatafromMultiTable(
-                    "ID_BinhLuan",
-                    [$this->postModel->getTable().".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
-                    null, null, null
-                );
-                $category_post_2[$i]['SoBinhLuan'] = $comment;
-            }
+        //featured_post
+        $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
+        for ($i = 0; $i < count($category_post_2); $i++) {
+            $comment = $this->postModel->getAllDatafromMultiTable(
+                "ID_BinhLuan",
+                [$this->postModel->getTable() . ".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
+                null,
+                null,
+                null
+            );
+            $category_post_2[$i]['SoBinhLuan'] = $comment;
+        }
         //get Status Like
-        if(isset($_SESSION["username"])) {
+        if (isset($_SESSION["username"])) {
             $Id_Account = $this->getIdAccount();
-            for ($i=0 ; $i < count($category_post_2); $i++) {
+            for ($i = 0; $i < count($category_post_2); $i++) {
                 $like_status = $this->likeModel->getData(
                     "DaThich",
-                    ["ID_TaiKhoan" => $Id_Account,
-                        "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']]
+                    [
+                        "ID_TaiKhoan" => $Id_Account,
+                        "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']
+                    ]
                 );
                 $category_post_2[$i]['DaThich'] = isset($like_status['DaThich']) ? $like_status['DaThich'] : 0;
             }
         }
         //get author
         $this->postModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
-        for ($i=0 ; $i < count($category_post_2); $i++) {
+        for ($i = 0; $i < count($category_post_2); $i++) {
             $author = $this->postModel->getDatafromMultiTable(
                 "TaiKhoan",
                 [$this->postModel->getTable() . ".ID_TaiKhoan" => $category_post_2[$i]['ID_TaiKhoan']]
             );
-            if(isset($author['TaiKhoan']))
+            if (isset($author['TaiKhoan']))
                 $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
             else
                 $category_post_2[$i]['TacGia'] = 'non-author';
@@ -104,7 +110,9 @@ class category extends Controller
         $allRecord = $this->postModel->getAllDatafromMultiTable(
             "*",
             [$this->postModel->getTable() . ".ID_CTTheLoai" => $ID_CTTheLoai],
-            null, null, null
+            null,
+            null,
+            null
         );
         $totalPage = ceil(sizeof($allRecord) / $page_size);
         $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
@@ -127,24 +135,28 @@ class category extends Controller
         );
 
         //get Comment for per post
-            //featured_post
+        //featured_post
         $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
-        for ($i=0 ; $i < count($category_post_2); $i++) {
+        for ($i = 0; $i < count($category_post_2); $i++) {
             $comment = $this->postModel->getAllDatafromMultiTable(
                 "ID_BinhLuan",
-                [$this->postModel->getTable().".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
-                null, null, null
+                [$this->postModel->getTable() . ".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
+                null,
+                null,
+                null
             );
             $category_post_2[$i]['SoBinhLuan'] = $comment;
         }
         //get Status Like
-        if(isset($_SESSION["username"])) {
+        if (isset($_SESSION["username"])) {
             $Id_Account = $this->getIdAccount();
-            for ($i=0 ; $i < count($category_post_2); $i++) {
+            for ($i = 0; $i < count($category_post_2); $i++) {
                 $like_status = $this->likeModel->getData(
                     "DaThich",
-                    ["ID_TaiKhoan" => $Id_Account,
-                        "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']]
+                    [
+                        "ID_TaiKhoan" => $Id_Account,
+                        "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']
+                    ]
                 );
                 $category_post_2[$i]['DaThich'] = isset($like_status['DaThich']) ? $like_status['DaThich'] : 0;
             }
@@ -152,12 +164,15 @@ class category extends Controller
 
         //get author
         $this->postModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
-        for ($i=0 ; $i < count($category_post_2); $i++) {
+        for ($i = 0; $i < count($category_post_2); $i++) {
             $author = $this->postModel->getDatafromMultiTable(
                 "TaiKhoan",
                 [$this->postModel->getTable() . ".ID_TaiKhoan" => $category_post_2[$i]['ID_TaiKhoan']]
             );
-            $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
+            if (isset($author['TaiKhoan']))
+                $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
+            else
+                $category_post_2[$i]['TacGia'] = 'non-author';
         }
 
         $this->postModel->closeConnection();
@@ -181,13 +196,13 @@ class category extends Controller
             $page_size = 2;
             $current_page = !empty($_GET["page"]) ? $_GET["page"] : 1;
             $offset = ($current_page - 1) * $page_size;
-            $allRecord = $this->postModel->searchPost( "*", $search_value, null );
+            $allRecord = $this->postModel->searchPost("*", $search_value, null);
             $totalPage = ceil(sizeof($allRecord) / $page_size);
             $pagination = ["totalPage" => $totalPage, "currentPage" => $current_page];
 
             $category_post_2 = $this->postModel->searchPost(
                 $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, SoLuotThich, ID_TaiKhoan",
-                $search_value, 
+                $search_value,
                 $page_size,
                 $offset
             );
@@ -200,25 +215,29 @@ class category extends Controller
             );
 
             //get Comment for per post
-                //featured_post
+            //featured_post
             $this->postModel->setupSecondTable("binhluan", "ID_BaiViet");
-            for ($i=0 ; $i < count($category_post_2); $i++) {
+            for ($i = 0; $i < count($category_post_2); $i++) {
                 $comment = $this->postModel->getAllDatafromMultiTable(
                     "ID_BinhLuan",
-                    [$this->postModel->getTable().".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
-                    null, null, null
+                    [$this->postModel->getTable() . ".ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']],
+                    null,
+                    null,
+                    null
                 );
                 $category_post_2[$i]['SoBinhLuan'] = $comment;
             }
 
             //get Status Like
-            if(isset($_SESSION["username"])) {
+            if (isset($_SESSION["username"])) {
                 $Id_Account = $this->getIdAccount();
-                for ($i=0 ; $i < count($category_post_2); $i++) {
+                for ($i = 0; $i < count($category_post_2); $i++) {
                     $like_status = $this->likeModel->getData(
                         "DaThich",
-                        ["ID_TaiKhoan" => $Id_Account,
-                            "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']]
+                        [
+                            "ID_TaiKhoan" => $Id_Account,
+                            "ID_BaiViet" => $category_post_2[$i]['ID_BaiViet']
+                        ]
                     );
                     $category_post_2[$i]['DaThich'] = isset($like_status['DaThich']) ? $like_status['DaThich'] : 0;
                 }
@@ -226,12 +245,15 @@ class category extends Controller
 
             //get author
             $this->postModel->setupSecondTable("taikhoan", "ID_TaiKhoan");
-            for ($i=0 ; $i < count($category_post_2); $i++) {
+            for ($i = 0; $i < count($category_post_2); $i++) {
                 $author = $this->postModel->getDatafromMultiTable(
                     "TaiKhoan",
                     [$this->postModel->getTable() . ".ID_TaiKhoan" => $category_post_2[$i]['ID_TaiKhoan']]
                 );
-                $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
+                if (isset($author['TaiKhoan']))
+                    $category_post_2[$i]['TacGia'] = $author['TaiKhoan'];
+                else
+                    $category_post_2[$i]['TacGia'] = 'non-author';
             }
 
             $this->postModel->closeConnection();
@@ -246,14 +268,15 @@ class category extends Controller
 
             $this->view("layout", $data);
         } else {
-            header("location:".BASE_URL);
+            header("location:" . BASE_URL);
         }
     }
 
-    public function getIdAccount() {
-        if(isset($_SESSION["username"])) {
+    public function getIdAccount()
+    {
+        if (isset($_SESSION["username"])) {
             $username = $_SESSION["username"];
-            $account = $this->accountModel->getData("ID_TaiKhoan", ["TaiKhoan"=>$username]);
+            $account = $this->accountModel->getData("ID_TaiKhoan", ["TaiKhoan" => $username]);
             return $account["ID_TaiKhoan"];
         } else {
             return -1;

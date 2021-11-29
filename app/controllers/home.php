@@ -24,7 +24,7 @@
             );
             //Latest
             $latest_post = $this->postModel->getAllDatafromMultiTable(
-                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu, SoLuotThich, TieuDe",
+                $this->postModel->getTable().".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, GioiThieu, SoLuotThich, TieuDe, NgayDang",
                 NULL, "NgayDang",false
             );
             $popular_post = $this->postModel->getAllData(

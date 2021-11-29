@@ -17,7 +17,7 @@ class detail extends Controller
         $this->postModel->setupSecondTable("theloai", "ID_TheLoai");
         //Detail
         $detail_post = $this->postModel->getDatafromMultiTable(
-            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan, SoLuotThich",
+            $this->postModel->getTable() . ".ID_TheLoai, ID_BaiViet, AnhDaiDien, TenTheLoai, TieuDe, GioiThieu, NoiDung, ID_TaiKhoan, SoLuotThich, NgayDang",
             ["ID_BaiViet" => $ID_BaiViet]
         );
         if(!$detail_post) {
