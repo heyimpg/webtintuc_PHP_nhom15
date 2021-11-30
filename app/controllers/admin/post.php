@@ -111,9 +111,9 @@
             if(isset($_POST)) {
                 $allPost = $this->post_model->getData("baiviet.TieuDe, baiviet.NgayDang, baiviet.GioiThieu, baiviet.NoiDung, baiviet.ID_BaiViet", ["ID_BaiViet" => $_POST["postId"]], null, true, null);
                 echo json_encode($allPost);
-                if($_POST['empId']) {
-                    $this->post_model->updateData("baiviet.TieuDe, baiviet.GioiThieu");
-                }
+                // if($_POST['empId']) {
+                //     $this->post_model->updateData("baiviet.TieuDe, baiviet.GioiThieu");
+                // }
             }
             else {
                 echo json_encode([

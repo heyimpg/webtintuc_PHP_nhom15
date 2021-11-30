@@ -16,7 +16,7 @@
                         require_once "./app/controllers/{$this->controller}.php";
                     }
                     else {
-                        require_once "./app/views/pages/include/error/page_404.php";
+                        require_once "./app/views/pages/err/page_404.php";
                         exit();
                     }
                 }

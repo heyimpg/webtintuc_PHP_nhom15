@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= BASE_URL ?>">
-    <title>Từ chối truy cập </title>
+    <title>Đang trong quá trình hoàn thiện</title>
     
     <link rel="shortcut icon" href="./assets/img/core-img/favicon.ico">
     <!-- Bootstrap -->
@@ -33,8 +33,8 @@
                         <img src="assets/admin/build/images/under-construction_geek_woman.png" alt="" class=" img-fluid rounded mx-auto d-block">
                     </div>
                     <div class="text-center text-center">
-                        <h2 class="error">Sản phẩm đang trong quá trình hoàn thiện</h2>
-                        <p class="error"><a class="error-link" href="javascript:window.history.back();">Quay về trang trước</a>
+                        <h2 class="error">Chúng tôi đang trong quá trình hoàn thiện tính năng này.</h2>
+                        <p class="error">Xin lỗi Quý khách vì sự bất tiện. <a class="error-link" href="javascript:window.history.back();">Quay về trang trước</a>
                         </p>
                     </div>
                 </div>

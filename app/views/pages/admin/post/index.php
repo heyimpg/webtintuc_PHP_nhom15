@@ -257,6 +257,7 @@
             $('#save').attr('disabled','disabled');
             var formData = $(this).serialize();
             console.log(formData);
+            window.location.href= "<?= BASE_URL."err"?>";
         });
         $("#datatable").on('click', '.delete', function(){
             let postId = $(this).attr("id");

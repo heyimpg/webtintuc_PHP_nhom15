@@ -37,7 +37,8 @@
                                 </td>
                                 <td class="align-middle"><?php $date = new DateTime($category["NgayKhoiTao"]); $parentDate = $date->format("d/m/Y"); echo $parentDate;?></td>
                                 <td class=" last">
-                                    <a href="<?= BASE_URL.$data['template']."/edit/".$category['ID_CTTheLoai']?>" class="btn btn-success">Sửa</a>
+                                    <?php //BASE_URL.$data['template']."/edit/".$category['ID_CTTheLoai']?>
+                                    <a href="<?= BASE_URL."err" ?>" class="btn btn-success">Sửa</a>
                                     <a id="del_tl_<?= $category['ID_TheLoai'] ?>" href="javascript:void(0)" onclick="del(this.id,<?= $category['ID_TheLoai'] ?>)" data-control="<?= $data['template'] ?>" class="btn btn-danger">Xóa</a>
                                 </td>
                             </tr>

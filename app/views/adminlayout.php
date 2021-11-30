@@ -69,6 +69,6 @@
 <?php
   } 
   else {
-    require_once "app/views/pages/include/error/page_403.php";
+    require_once "app/views/pages/err/page_403.php";
   }
 ?>
